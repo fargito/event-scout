@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.options.json",
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "references": [
+    {
+      "path": "../../contracts/construct-contracts/tsconfig.build.json"
+    }
+  ],
+  "include": ["./**/*.ts"],
+  "exclude": ["./dist"]
+}
