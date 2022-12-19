@@ -1,19 +1,18 @@
-# Swarmion example
+# Event Scout
 
-This template is an example of a project generated with [Swarmion](https://github.com/swarmion/swarmion).
+Easy testing and monitoring for events flows on Amazon EventBridge.
 
-## Documentation
+## Features
 
-Find the Swarmion documentation on [swarmion.dev](https://www.swarmion.dev)
+- Dynamic filter patterns on EventBridge
+- Unlimited parallel event trails
+- Fully Serverless architecture with a scaledown to zero
 
-## Commands
+## Installation
 
-These commands have to be run at the root of the project.
+In order to properly work, EventScout needs to:
 
-- `nvm use`: set the version of node set in `.nvmrc`
-- `pnpm install`: install node dependencies in all packages;
-- `pnpm package`: compile the common packages;
-- `pnpm test`: launch the tests in all packages;
-- `pnpm run deploy`: deploy all the end services in order;
-- `pnpm generate-service myService`: create a simple service in the repository's structure respecting our guidelines
-- `pnpm generate-library myLibrary`: create a simple internal library in the repository's structure respecting our guidelines
+- deploy the necessary resources with [@event-scout/construct](https://github.com/fargito/event-scout/main/packages/construct/README.md)
+- use event trails in your tests with [@event-scout/client](https://github.com/fargito/event-scout/main/packages/client/README.md)
+
+And you're all set! The power of EventScout is yours!
