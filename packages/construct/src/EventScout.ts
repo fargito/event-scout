@@ -1,3 +1,4 @@
+import { RemovalPolicy } from 'aws-cdk-lib';
 import { RestApi } from 'aws-cdk-lib/aws-apigateway';
 import {
   AttributeType,
@@ -41,6 +42,7 @@ export class EventScout extends Construct {
       billingMode: BillingMode.PAY_PER_REQUEST,
       timeToLiveAttribute: '_ttl',
       stream: StreamViewType.NEW_AND_OLD_IMAGES,
+      removalPolicy: RemovalPolicy.DESTROY,
     });
 
     // add Api
