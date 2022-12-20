@@ -18,7 +18,7 @@ export const main = async (
       Item: {
         event,
         PK: event.trailId,
-        SK: `EVENT#${event.source}#${event['detail-type']}#${event.time}`,
+        SK: `EVENT#${event.time}#${event.source}#${event['detail-type']}`,
         _ttl: timeToLive,
       },
     })
