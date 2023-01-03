@@ -162,6 +162,8 @@ importers:
 
   packages/construct:
     specifiers:
+      '@aws-cdk/aws-apigatewayv2-alpha': 2.58.1-alpha.0
+      '@aws-cdk/aws-apigatewayv2-integrations-alpha': 2.58.1-alpha.0
       '@aws-sdk/client-eventbridge': ^3.245.0
       '@babel/cli': ^7.20.7
       '@babel/core': ^7.20.12
@@ -192,6 +194,8 @@ importers:
       vite-tsconfig-paths: ^4.0.3
       vitest: ^0.25.8
     dependencies:
+      '@aws-cdk/aws-apigatewayv2-alpha': 2.58.1-alpha.0_uffgjfcnagwwhb6rjmatskeaee
+      '@aws-cdk/aws-apigatewayv2-integrations-alpha': 2.58.1-alpha.0_rgx35xgj4onjk3xhdqlc6omyfu
       '@aws-sdk/client-eventbridge': 3.245.0
       '@babel/runtime': 7.20.7
       '@event-scout/construct-contracts': link:../../contracts/construct-contracts
@@ -382,6 +386,30 @@ packages:
 
   /@aws-cdk/asset-node-proxy-agent-v5/2.0.38:
     resolution: {integrity: sha512-BBwAjORhuUkTGO3CxGS5Evcp5n20h9v06Sftn2R1DuSm8zIoUlPsNlI1HUk8XqYuoEI4aD7IKRQBLglv09ciJQ==}
+
+  /@aws-cdk/aws-apigatewayv2-alpha/2.58.1-alpha.0_uffgjfcnagwwhb6rjmatskeaee:
+    resolution: {integrity: sha512-Hn5onJgHTIFq9TdlXvEQjdvmSZbFQFrjtOc04XFDlFsYFGXg8MS7sJfgHc2nuFWOT0vIlvCdDhxHnaqkdsVTDg==}
+    engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      aws-cdk-lib: ^2.58.1
+      constructs: ^10.0.0
+    dependencies:
+      aws-cdk-lib: 2.59.0_constructs@10.1.211
+      constructs: 10.1.211
+    dev: false
+
+  /@aws-cdk/aws-apigatewayv2-integrations-alpha/2.58.1-alpha.0_rgx35xgj4onjk3xhdqlc6omyfu:
+    resolution: {integrity: sha512-MXD2TOzexMX0kpAR/F6F/jTTkmtWJQiH4fFaFvpQs94gpzesjXva9mq4t2gwqLliPiI881H3zLkp4ES5ZyVmvA==}
+    engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      '@aws-cdk/aws-apigatewayv2-alpha': 2.58.1-alpha.0
+      aws-cdk-lib: ^2.58.1
+      constructs: ^10.0.0
+    dependencies:
+      '@aws-cdk/aws-apigatewayv2-alpha': 2.58.1-alpha.0_uffgjfcnagwwhb6rjmatskeaee
+      aws-cdk-lib: 2.59.0_constructs@10.1.211
+      constructs: 10.1.211
+    dev: false
 
   /@aws-crypto/ie11-detection/2.0.2:
     resolution: {integrity: sha512-5XDMQY98gMAf/WRTic5G++jfmS/VLM0rwpiOpaainKi4L0nqWMSB1SzsrEG5rjFZGYN6ZAefO+/Yta2dFM0kMw==}

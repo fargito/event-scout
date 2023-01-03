@@ -9,8 +9,8 @@ import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { BundlingOptions } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 
-import { RestApiTrail } from 'constructs/restApiTrail';
-
+import { RestApiTrail } from './constructs/restApiTrail';
+import { WebSocketTrail } from './constructs/webSocketTrail';
 import { defaultEsbuildConfig } from './utils/esbuildConfig';
 
 type EventScoutProps = {
@@ -51,5 +51,7 @@ export class EventScout extends Construct {
       bundling,
     });
     this.endpoint = endpoint;
+
+    new WebSocketTrail(this, 'WebsocketTrail', { table, eventBus, bundling });
   }
 }
