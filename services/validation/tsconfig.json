@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "preserveSymlinks": true,
+    "baseUrl": ".",
+    "esModuleInterop": true
+  },
+  "references": [
+    {
+      "path": "../../packages/serverless-configuration/tsconfig.build.json"
+    }
+  ],
+  "exclude": ["./cdk.out"],
+  "include": ["./**/*.ts"],
+  "ts-node": {
+    "files": true
+  }
+}

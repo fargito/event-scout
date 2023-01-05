@@ -19,6 +19,7 @@
       "**/bundles": true,
       "**/dist": true,
       "**/tsconfig.tsbuildinfo": true,
+      "**/cdk.out": true,
       "pnpm-lock.yaml": true
     },
     "[dotenv][ignore][properties][shellscript]": {
@@ -75,6 +76,10 @@
     {
       "path": "packages/event-scout",
       "name": "event scout [library]"
+    },
+    {
+      "path": "services/validation",
+      "name": "validation [service]"
     }
   ]
 }
