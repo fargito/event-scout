@@ -1,3 +1,4 @@
+import { getCdkHandlerPath } from '@swarmion/serverless-helpers';
 import { Aws, Duration, Fn } from 'aws-cdk-lib';
 import { Table } from 'aws-cdk-lib/aws-dynamodb';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
@@ -12,8 +13,6 @@ import {
 import { DynamoEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
 import { BundlingOptions, NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
-
-import { getCdkHandlerPath } from '../../utils/getCdkHandlerPath';
 
 type Props = {
   table: Table;
