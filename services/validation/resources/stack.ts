@@ -4,6 +4,8 @@ import { Construct } from 'constructs';
 
 import { EventScout } from '@event-scout/construct';
 
+import { restApiEndpointExportName } from 'utils/exportNames';
+
 interface TestProps {
   stage: string;
 }
@@ -21,7 +23,7 @@ export class TestStack extends Stack {
     new CfnOutput(this, 'EventScoutEndpoint', {
       value: endpoint,
       description: 'Watcher endpoint',
-      exportName: 'event-scout-endpoint',
+      exportName: restApiEndpointExportName,
     });
   }
 }

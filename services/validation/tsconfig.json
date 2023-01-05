@@ -1,9 +1,10 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../tsconfig.options.json",
   "compilerOptions": {
-    "preserveSymlinks": true,
     "baseUrl": ".",
-    "esModuleInterop": true
+    "emitDeclarationOnly": false,
+    "isolatedModules": false,
+    "noEmit": true
   },
   "references": [
     {
