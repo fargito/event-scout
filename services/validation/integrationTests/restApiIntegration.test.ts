@@ -10,6 +10,7 @@ describe('E2E integration test', () => {
   const eventScoutClient: EventScoutClient = globalThis.eventScoutClient;
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const eventBridgeClient: EventBridgeClient = globalThis.eventBridgeClient;
+  const eventBusName = globalThis.eventBusName;
 
   beforeAll(
     async () => {
@@ -27,7 +28,7 @@ describe('E2E integration test', () => {
       new PutEventsCommand({
         Entries: [
           {
-            EventBusName: 'toto',
+            EventBusName: eventBusName,
             Source: 'myapp.toto',
             DetailType: 'COUCOU',
             Detail: JSON.stringify({ toto: 'tata' }),

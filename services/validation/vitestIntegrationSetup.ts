@@ -8,7 +8,10 @@ import {
   sharedParams,
 } from '@event-scout/serverless-configuration';
 
-import { restApiEndpointExportName } from 'utils/exportNames';
+import {
+  eventBusExportName,
+  restApiEndpointExportName,
+} from 'utils/exportNames';
 import { buildGetOutputValue } from 'utils/getOutputValue';
 
 // we need to use an environment variable in order to set the right credentials
@@ -28,6 +31,10 @@ const eventScoutEndpoint = await buildGetOutputValue({ credentials, region })(
   restApiEndpointExportName,
 );
 
+const eventBusName = await buildGetOutputValue({ credentials, region })(
+  eventBusExportName,
+);
+
 const eventScoutClient = new EventScoutClient({
   credentials,
   region,
@@ -38,3 +45,4 @@ const eventBridgeClient = new EventBridgeClient({ credentials, region });
 
 globalThis.eventScoutClient = eventScoutClient;
 globalThis.eventBridgeClient = eventBridgeClient;
+globalThis.eventBusName = eventBusName;

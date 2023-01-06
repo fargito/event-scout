@@ -4,7 +4,10 @@ import { Construct } from 'constructs';
 
 import { EventScout } from '@event-scout/construct';
 
-import { restApiEndpointExportName } from 'utils/exportNames';
+import {
+  eventBusExportName,
+  restApiEndpointExportName,
+} from 'utils/exportNames';
 
 interface TestProps {
   stage: string;
@@ -24,6 +27,12 @@ export class TestStack extends Stack {
       value: endpoint,
       description: 'Watcher endpoint',
       exportName: restApiEndpointExportName,
+    });
+
+    new CfnOutput(this, 'EventBusName', {
+      value: eventBus.eventBusName,
+      description: 'EventBusName',
+      exportName: eventBusExportName,
     });
   }
 }
