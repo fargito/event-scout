@@ -1,4 +1,6 @@
-export const main = async (event: unknown): Promise<unknown> => {
+import { APIGatewayProxyWebsocketHandlerV2 } from 'aws-lambda';
+
+export const main: APIGatewayProxyWebsocketHandlerV2 = async event => {
   await Promise.resolve();
   console.log(event);
 
