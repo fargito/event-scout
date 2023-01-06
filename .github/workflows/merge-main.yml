@@ -50,22 +50,14 @@ jobs:
             ${{ runner.os }}-nx-cache-
       - name: '🏗 Package'
         run: pnpm nx affected --target=package --parallel=2
-      - name: '🧪 Test linter'
-        run: pnpm nx affected --target=test-linter --parallel=2
-      - name: '🧪 Test type'
-        run: pnpm nx affected --target=test-type --parallel=2
-      - name: '🧪 Test unit'
-        run: pnpm nx affected --target=test-unit --parallel=2
-      - name: '🧪 Test circular'
-        run: pnpm nx affected --target=test-circular --parallel=2
-      # - name: 'Get serverless stack region'
-      #   id: get-stack-region
-      #   run: |
-      #     echo "AWS_REGION=$(pnpm --silent -C backend/core run sls-get-region)" >> $GITHUB_OUTPUT
-      # - name: Configure AWS Credentials
-      #   uses: aws-actions/configure-aws-credentials@master
-      #   with:
-      #     aws-region: ${{ steps.get-stack-region.outputs.AWS_REGION }}
-      #     role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }} # Create the role in AWS and add it to the secrets
-      # - name: '🚀 Deploy main'
-      #   run: pnpm nx affected --target=deploy-production --parallel=2
+      - name: '🧪 Run tests'
+        run: pnpm nx affected --targets=test-linter,test-type,test-unit,test-circular --parallel=2
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: eu-west-1
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
+      - name: '🚀 Deploy main'
+        run: pnpm nx affected --target=deploy-production --parallel=2
+      - name: '🔎 Run integration tests'
+        run: SLS_ENV=production yarn nx run-many --target=test-integration --parallel=2
