@@ -1,4 +1,3 @@
-import { WebSocketApi } from '@aws-cdk/aws-apigatewayv2-alpha';
 import { getCdkHandlerPath } from '@swarmion/serverless-helpers';
 import { Duration } from 'aws-cdk-lib';
 import { Table } from 'aws-cdk-lib/aws-dynamodb';
@@ -10,7 +9,6 @@ import { Construct } from 'constructs';
 type Props = {
   table: Table;
   bundling: BundlingOptions;
-  webSocketApi: WebSocketApi;
 };
 
 export class OnConnectFunction extends Construct {

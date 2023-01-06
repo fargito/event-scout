@@ -5,6 +5,7 @@ import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { BundlingOptions } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 
+import { OnStartTrailFunction } from './functions/onStartTrail/config';
 import { OnConnectFunction } from './functions/onWebSocketConnect/config';
 import { OnDisconnectFunction } from './functions/onWebSocketDisconnect/config';
 
@@ -34,7 +35,6 @@ export class WebSocketTrail extends Construct {
     const { function: onConnect } = new OnConnectFunction(this, 'OnConnect', {
       bundling,
       table,
-      webSocketApi,
     });
 
     const { function: onDisconnect } = new OnDisconnectFunction(
@@ -43,8 +43,13 @@ export class WebSocketTrail extends Construct {
       {
         bundling,
         table,
-        webSocketApi,
       },
+    );
+
+    const { function: onStartTrail } = new OnStartTrailFunction(
+      this,
+      'OnStartTrail',
+      { bundling, table },
     );
 
     // create routes for API Gateway
@@ -58,6 +63,12 @@ export class WebSocketTrail extends Construct {
       integration: new WebSocketLambdaIntegration(
         'DisconnectIntegration',
         onDisconnect,
+      ),
+    });
+    webSocketApi.addRoute('startTrail', {
+      integration: new WebSocketLambdaIntegration(
+        'StartTrailIntegration',
+        onStartTrail,
       ),
     });
 

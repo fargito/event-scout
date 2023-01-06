@@ -11,13 +11,13 @@ type Props = {
   bundling: BundlingOptions;
 };
 
-export class OnDisconnectFunction extends Construct {
+export class OnStartTrailFunction extends Construct {
   public function: NodejsFunction;
 
   constructor(scope: Construct, id: string, { table, bundling }: Props) {
     super(scope, id);
 
-    this.function = new NodejsFunction(this, 'OnDisconnect', {
+    this.function = new NodejsFunction(this, 'OnStartTrail', {
       entry: getCdkHandlerPath(__dirname, { extension: 'js' }),
       handler: 'main',
       runtime: Runtime.NODEJS_16_X,
@@ -32,7 +32,7 @@ export class OnDisconnectFunction extends Construct {
         new PolicyStatement({
           effect: Effect.ALLOW,
           resources: [table.tableArn],
-          actions: ['dynamodb:DeleteItem'],
+          actions: ['dynamodb:PutItem'],
         }),
       ],
     });
