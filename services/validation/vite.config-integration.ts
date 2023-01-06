@@ -11,6 +11,6 @@ export default defineConfig({
     globals: true,
     include: ['integrationTests/**/*.test.ts'],
     setupFiles: ['vitestIntegrationSetup'],
-    testTimeout: 15 * 1000, // 15 seconds timeout
+    testTimeout: 20 * 1000, // 20 seconds timeout
   },
 });

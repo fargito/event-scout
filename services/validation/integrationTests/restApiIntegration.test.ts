@@ -2,6 +2,7 @@ import {
   EventBridgeClient,
   PutEventsCommand,
 } from '@aws-sdk/client-eventbridge';
+import { randomUUID } from 'crypto';
 
 import { EventScoutClient } from '@event-scout/client';
 
@@ -12,11 +13,19 @@ describe('E2E integration test', () => {
   const eventBridgeClient: EventBridgeClient = globalThis.eventBridgeClient;
   const eventBusName = globalThis.eventBusName;
 
+  const source = 'my-app.toto';
+  const detailType = 'MY_EVENT';
+  const runId = randomUUID();
+
   beforeAll(
     async () => {
       await eventScoutClient.start({
         eventPattern: {
-          source: ['myapp.toto'],
+          source: [source],
+          'detail-type': [detailType],
+          detail: {
+            runId: [runId],
+          },
         },
       });
     },
@@ -27,11 +36,39 @@ describe('E2E integration test', () => {
     await eventBridgeClient.send(
       new PutEventsCommand({
         Entries: [
+          // a matching event
           {
             EventBusName: eventBusName,
-            Source: 'myapp.toto',
-            DetailType: 'COUCOU',
-            Detail: JSON.stringify({ toto: 'tata' }),
+            Source: source,
+            DetailType: detailType,
+            Detail: JSON.stringify({ toto: 'tata', runId }),
+          },
+          // wrong eventBus
+          {
+            Source: source,
+            DetailType: detailType,
+            Detail: JSON.stringify({ toto: 'tata', runId }),
+          },
+          // wrong source
+          {
+            EventBusName: eventBusName,
+            Source: 'another.source',
+            DetailType: detailType,
+            Detail: JSON.stringify({ toto: 'tata', runId }),
+          },
+          // wrong detail-type
+          {
+            EventBusName: eventBusName,
+            Source: source,
+            DetailType: 'ANOTHER_EVENT_TYPE',
+            Detail: JSON.stringify({ toto: 'tata', runId }),
+          },
+          // wrong detail
+          {
+            EventBusName: eventBusName,
+            Source: source,
+            DetailType: detailType,
+            Detail: JSON.stringify({ toto: 'tata', runId: 'blob' }),
           },
         ],
       }),
@@ -42,13 +79,17 @@ describe('E2E integration test', () => {
 
     const messages = await eventScoutClient.query();
 
+    expect(messages).toHaveLength(1);
+
     expect(messages).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          'detail-type': 'COUCOU',
+          source,
+          'detail-type': detailType,
           // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
           detail: expect.objectContaining({
             toto: 'tata',
+            runId,
           }),
         }),
       ]),
