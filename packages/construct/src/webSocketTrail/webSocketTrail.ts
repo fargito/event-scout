@@ -5,8 +5,8 @@ import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { BundlingOptions } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 
-import { OnConnectFunction } from 'functions/onWebSocketConnect/config';
-import { OnDisconnectFunction } from 'functions/onWebSocketDisconnect/config';
+import { OnConnectFunction } from './functions/onWebSocketConnect/config';
+import { OnDisconnectFunction } from './functions/onWebSocketDisconnect/config';
 
 type WebSocketTrailProps = {
   table: Table;

@@ -9,9 +9,9 @@ import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { BundlingOptions } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 
-import { RestApiTrail } from './constructs/restApiTrail';
-import { WebSocketTrail } from './constructs/webSocketTrail';
+import { RestApiTrail } from './restApiTrail/restApiTrail';
 import { defaultEsbuildConfig } from './utils/esbuildConfig';
+import { WebSocketTrail } from './webSocketTrail/webSocketTrail';
 
 type EventScoutProps = {
   eventBus: IEventBus;

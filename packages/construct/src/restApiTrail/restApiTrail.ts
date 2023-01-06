@@ -4,11 +4,11 @@ import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { BundlingOptions } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 
-import { ListEventsFunction } from 'functions/listEvents/config';
-import { StartEventsTrailFunction } from 'functions/startEventsTrail/config';
-import { StopEventsTrailFunction } from 'functions/stopEventsTrail/config';
-import { StoreEventsFunction } from 'functions/storeEvents/config';
-import { TrailGarbageCollectorFunction } from 'functions/trailGarbageCollector/config';
+import { ListEventsFunction } from './functions/listEvents/config';
+import { StartEventsTrailFunction } from './functions/startEventsTrail/config';
+import { StopEventsTrailFunction } from './functions/stopEventsTrail/config';
+import { StoreEventsFunction } from './functions/storeEvents/config';
+import { TrailGarbageCollectorFunction } from './functions/trailGarbageCollector/config';
 
 type RestApiTrailProps = {
   table: Table;
