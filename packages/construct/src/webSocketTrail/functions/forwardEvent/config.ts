@@ -1,16 +1,27 @@
+import { WebSocketApi } from '@aws-cdk/aws-apigatewayv2-alpha';
 import { getCdkHandlerPath } from '@swarmion/serverless-helpers';
 import { Aws, Fn } from 'aws-cdk-lib';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
+import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 import { Architecture, CfnPermission, Runtime } from 'aws-cdk-lib/aws-lambda';
 import { BundlingOptions, NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 
-type Props = { bundling: BundlingOptions; eventBus: IEventBus };
+type Props = {
+  bundling: BundlingOptions;
+  eventBus: IEventBus;
+  webSocketApi: WebSocketApi;
+  stage: string;
+};
 
 export class ForwardEventFunction extends Construct {
   public function: NodejsFunction;
 
-  constructor(scope: Construct, id: string, { bundling, eventBus }: Props) {
+  constructor(
+    scope: Construct,
+    id: string,
+    { bundling, eventBus, webSocketApi, stage }: Props,
+  ) {
     super(scope, id);
 
     this.function = new NodejsFunction(this, 'OnNewWebsocketEvent', {
@@ -20,7 +31,18 @@ export class ForwardEventFunction extends Construct {
       architecture: Architecture.ARM_64,
       awsSdkConnectionReuse: true,
       bundling,
-      environment: {},
+      environment: {
+        WEBSOCKET_ENDPOINT: `${webSocketApi.apiEndpoint}/${stage}`,
+      },
+      initialPolicy: [
+        new PolicyStatement({
+          effect: Effect.ALLOW,
+          resources: [
+            `arn:aws:execute-api:${Aws.REGION}:${Aws.ACCOUNT_ID}:${webSocketApi.apiId}/*`,
+          ],
+          actions: ['execute-api:ManageConnections'],
+        }),
+      ],
     });
 
     // enable **any** rule on our bus to trigger the lambda
