@@ -32,7 +32,7 @@ export class OnStartTrailFunction extends Construct {
         new PolicyStatement({
           effect: Effect.ALLOW,
           resources: [table.tableArn],
-          actions: ['dynamodb:PutItem'],
+          actions: ['dynamodb:UpdateItem'],
         }),
       ],
     });
