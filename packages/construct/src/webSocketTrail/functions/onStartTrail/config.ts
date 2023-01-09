@@ -11,6 +11,7 @@ type Props = {
   table: Table;
   bundling: BundlingOptions;
   eventBus: IEventBus;
+  forwardEvent: NodejsFunction;
 };
 
 export class OnStartTrailFunction extends Construct {
