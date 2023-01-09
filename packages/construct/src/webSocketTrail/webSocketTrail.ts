@@ -24,7 +24,7 @@ export class WebSocketTrail extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { bundling, table }: WebSocketTrailProps,
+    { bundling, table, eventBus }: WebSocketTrailProps,
   ) {
     super(scope, id);
 
@@ -49,7 +49,7 @@ export class WebSocketTrail extends Construct {
     const { function: onStartTrail } = new OnStartTrailFunction(
       this,
       'OnStartTrail',
-      { bundling, table },
+      { bundling, table, eventBus },
     );
 
     // create routes for API Gateway
