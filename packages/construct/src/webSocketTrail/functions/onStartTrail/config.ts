@@ -20,7 +20,7 @@ export class OnStartTrailFunction extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { table, bundling, eventBus }: Props,
+    { table, bundling, eventBus, forwardEvent }: Props,
   ) {
     super(scope, id);
 
@@ -35,6 +35,7 @@ export class OnStartTrailFunction extends Construct {
       environment: {
         TEST_TABLE_NAME: table.tableName,
         EVENT_BUS_NAME: eventBus.eventBusName,
+        FORWARD_EVENT_LAMBDA_ARN: forwardEvent.functionArn,
       },
       initialPolicy: [
         new PolicyStatement({

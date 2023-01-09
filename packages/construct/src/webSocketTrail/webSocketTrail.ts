@@ -35,7 +35,7 @@ export class WebSocketTrail extends Construct {
 
     const { function: forwardEvent } = new ForwardEventFunction(
       this,
-      'OnNewEvent',
+      'ForwardEvent',
       { bundling, eventBus },
     );
 
@@ -50,6 +50,7 @@ export class WebSocketTrail extends Construct {
       {
         bundling,
         table,
+        eventBus,
       },
     );
 

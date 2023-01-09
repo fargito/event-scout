@@ -1,6 +1,7 @@
 import { getCdkHandlerPath } from '@swarmion/serverless-helpers';
-import { Duration } from 'aws-cdk-lib';
+import { Aws, Duration, Fn } from 'aws-cdk-lib';
 import { Table } from 'aws-cdk-lib/aws-dynamodb';
+import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 import { Architecture, Runtime } from 'aws-cdk-lib/aws-lambda';
 import { BundlingOptions, NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
@@ -9,12 +10,17 @@ import { Construct } from 'constructs';
 type Props = {
   table: Table;
   bundling: BundlingOptions;
+  eventBus: IEventBus;
 };
 
 export class OnDisconnectFunction extends Construct {
   public function: NodejsFunction;
 
-  constructor(scope: Construct, id: string, { table, bundling }: Props) {
+  constructor(
+    scope: Construct,
+    id: string,
+    { table, bundling, eventBus }: Props,
+  ) {
     super(scope, id);
 
     this.function = new NodejsFunction(this, 'OnDisconnect', {
@@ -27,12 +33,27 @@ export class OnDisconnectFunction extends Construct {
       timeout: Duration.seconds(15),
       environment: {
         TEST_TABLE_NAME: table.tableName,
+        EVENT_BUS_NAME: eventBus.eventBusName,
       },
       initialPolicy: [
         new PolicyStatement({
           effect: Effect.ALLOW,
           resources: [table.tableArn],
           actions: ['dynamodb:DeleteItem'],
+        }),
+        new PolicyStatement({
+          effect: Effect.ALLOW,
+          resources: [
+            Fn.join(':', [
+              'arn',
+              Aws.PARTITION,
+              'events',
+              Aws.REGION,
+              Aws.ACCOUNT_ID,
+              Fn.join('/', ['rule', eventBus.eventBusName, '*']),
+            ]),
+          ],
+          actions: ['events:DeleteRule', 'events:RemoveTargets'],
         }),
       ],
     });

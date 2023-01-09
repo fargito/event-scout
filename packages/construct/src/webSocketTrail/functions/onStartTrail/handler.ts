@@ -1,3 +1,4 @@
+import { EventBridgeClient } from '@aws-sdk/client-eventbridge';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
 import Ajv from 'ajv';
 import type { APIGatewayProxyWebsocketHandlerV2 } from 'aws-lambda';
@@ -8,8 +9,18 @@ import {
   startWebsocketEventTrailBodySchema,
 } from '@event-scout/construct-contracts';
 
+import { buildCreateEventBridgeRuleAndTarget } from 'utils/createEventBridgeRuleAndTarget';
+
+const eventBridgeClient = new EventBridgeClient({});
+const eventBusName = getEnvVariable('EVENT_BUS_NAME');
+const forwardEventLambdaArn = getEnvVariable('FORWARD_EVENT_LAMBDA_ARN');
 const tableName = getEnvVariable('TEST_TABLE_NAME');
 const documentClient = new DocumentClient();
+
+const createEventBridgeRuleAndTarget = buildCreateEventBridgeRuleAndTarget({
+  eventBridgeClient,
+  eventBusName,
+});
 
 export const main: APIGatewayProxyWebsocketHandlerV2 = async event => {
   const { connectionId } = event.requestContext;
@@ -48,6 +59,13 @@ export const main: APIGatewayProxyWebsocketHandlerV2 = async event => {
       },
     })
     .promise();
+
+  // create the rule and target
+  await createEventBridgeRuleAndTarget({
+    eventPattern,
+    targetArn: forwardEventLambdaArn,
+    trailId: connectionId,
+  });
 
   return { statusCode: 200, body: 'Ok' };
 };
