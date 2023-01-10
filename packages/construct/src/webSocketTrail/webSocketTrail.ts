@@ -15,6 +15,7 @@ type WebSocketTrailProps = {
   table: Table;
   bundling: BundlingOptions;
   eventBus: IEventBus;
+  stage: string;
 };
 
 export class WebSocketTrail extends Construct {
@@ -26,11 +27,9 @@ export class WebSocketTrail extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { bundling, table, eventBus }: WebSocketTrailProps,
+    { bundling, table, eventBus, stage }: WebSocketTrailProps,
   ) {
     super(scope, id);
-
-    const stage = 'dev';
 
     const webSocketApi = new WebSocketApi(this, 'WebSocket');
 

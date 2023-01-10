@@ -13,6 +13,7 @@ type RestApiTrailProps = {
   table: Table;
   bundling: BundlingOptions;
   eventBus: IEventBus;
+  stage: string;
 };
 
 export class RestApiTrail extends Construct {
@@ -27,12 +28,14 @@ export class RestApiTrail extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { table, bundling, eventBus }: RestApiTrailProps,
+    { table, bundling, eventBus, stage }: RestApiTrailProps,
   ) {
     super(scope, id);
 
     // add Api
-    const restApi = new RestApi(this, 'RestApi');
+    const restApi = new RestApi(this, 'RestApi', {
+      deployOptions: { stageName: stage },
+    });
     this.endpoint = restApi.url;
 
     // Lambda to store events in DynamoDB

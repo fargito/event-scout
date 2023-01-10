@@ -17,6 +17,7 @@ import { WebSocketTrail } from './webSocketTrail/webSocketTrail';
 type EventScoutProps = {
   eventBus: IEventBus;
   bundling?: Partial<BundlingOptions>;
+  stage?: string;
 };
 
 export class EventScout extends Construct {
@@ -28,7 +29,7 @@ export class EventScout extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { eventBus, bundling: bundlingOverrides }: EventScoutProps,
+    { eventBus, bundling: bundlingOverrides, stage = 'dev' }: EventScoutProps,
   ) {
     super(scope, id);
 
@@ -58,9 +59,15 @@ export class EventScout extends Construct {
       table,
       eventBus,
       bundling,
+      stage,
     });
     this.endpoint = endpoint;
 
-    new WebSocketTrail(this, 'WebsocketTrail', { table, eventBus, bundling });
+    new WebSocketTrail(this, 'WebsocketTrail', {
+      table,
+      eventBus,
+      bundling,
+      stage,
+    });
   }
 }
