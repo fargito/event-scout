@@ -7,4 +7,11 @@ const webSocketEndpoint = 'wss://xxxx.execute-api.eu-west-1.amazonaws.com/dev/';
 const credentials = fromIni({ profile: 'xxxx' });
 const region = 'eu-west-1';
 
-void listenToWebSocket({ webSocketEndpoint, credentials, region });
+const eventPattern = { source: ['toto'] };
+
+void listenToWebSocket({
+  webSocketEndpoint,
+  credentials,
+  region,
+  eventPattern,
+});

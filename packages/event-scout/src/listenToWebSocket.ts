@@ -3,16 +3,20 @@ import { SignatureV4 } from '@aws-sdk/signature-v4';
 import { AwsCredentialIdentityProvider } from '@aws-sdk/types';
 import WebSocket from 'ws';
 
+import { EventPattern } from '@event-scout/construct-contracts';
+
 type ListenToWebSocketArgs = {
   webSocketEndpoint: string;
   credentials: AwsCredentialIdentityProvider;
   region: string;
+  eventPattern: EventPattern;
 };
 
 export const listenToWebSocket = async ({
   webSocketEndpoint,
   region,
   credentials,
+  eventPattern,
 }: ListenToWebSocketArgs): Promise<void> => {
   const service = 'execute-api';
 
@@ -56,7 +60,7 @@ export const listenToWebSocket = async ({
     client.send(
       JSON.stringify({
         action: 'startTrail',
-        eventPattern: { source: ['toto'] },
+        eventPattern,
       }),
     );
   });
