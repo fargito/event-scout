@@ -21,7 +21,7 @@ type EventScoutProps = {
 };
 
 export class EventScout extends Construct {
-  endpoint: string;
+  restEndpoint: string;
   webSocketEndpoint: string;
 
   /**
@@ -56,13 +56,13 @@ export class EventScout extends Construct {
     });
 
     // create all necessary resource
-    const { endpoint } = new RestApiTrail(this, 'RestApiTrail', {
+    const { restEndpoint } = new RestApiTrail(this, 'RestApiTrail', {
       table,
       eventBus,
       bundling,
       stage,
     });
-    this.endpoint = endpoint;
+    this.restEndpoint = restEndpoint;
 
     const { webSocketEndpoint } = new WebSocketTrail(this, 'WebsocketTrail', {
       table,

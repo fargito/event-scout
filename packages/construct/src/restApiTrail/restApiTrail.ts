@@ -17,7 +17,7 @@ type RestApiTrailProps = {
 };
 
 export class RestApiTrail extends Construct {
-  endpoint: string;
+  restEndpoint: string;
 
   /**
    * all the required resources to implement the rest api trail, i.e. that
@@ -36,7 +36,7 @@ export class RestApiTrail extends Construct {
     const restApi = new RestApi(this, 'RestApi', {
       deployOptions: { stageName: stage },
     });
-    this.endpoint = restApi.url;
+    this.restEndpoint = restApi.url;
 
     // Lambda to store events in DynamoDB
     const { function: storeEvents } = new StoreEventsFunction(

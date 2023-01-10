@@ -19,12 +19,12 @@ export class TestStack extends Stack {
 
     const eventBus = new EventBus(this, 'EventBus');
 
-    const { endpoint } = new EventScout(this, 'Watcher', {
+    const { restEndpoint } = new EventScout(this, 'Watcher', {
       eventBus,
     });
 
     new CfnOutput(this, 'EventScoutEndpoint', {
-      value: endpoint,
+      value: restEndpoint,
       description: 'Watcher endpoint',
       exportName: restApiEndpointExportName,
     });
