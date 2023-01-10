@@ -1,8 +1,6 @@
-import { fromEnv, fromIni } from '@aws-sdk/credential-providers';
 import { Command } from 'commander';
 
-import { EventPattern } from '@event-scout/construct-contracts';
-
+import { buildArguments } from './buildArguments';
 import { listenToWebSocket } from './listenToWebSocket';
 
 const program = new Command()
@@ -14,25 +12,8 @@ const program = new Command()
 
 const options = program.opts();
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-const awsProfile: string | undefined = options.awsProfile;
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-const awsRegion: string | undefined = options.awsRegion;
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-const endpoint: string | undefined = options.endpoint;
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-const pattern: string | undefined = options.pattern;
-
-const credentials =
-  awsProfile !== undefined ? fromIni({ profile: awsProfile }) : fromEnv();
-
-const region = awsRegion ?? 'eu-west-1';
-
-const webSocketEndpoint = endpoint ?? '';
-
-// TODO add validation
-const eventPattern =
-  pattern !== undefined ? (JSON.parse(pattern) as EventPattern) : {};
+const { webSocketEndpoint, credentials, region, eventPattern } =
+  buildArguments(options);
 
 void listenToWebSocket({
   webSocketEndpoint,
