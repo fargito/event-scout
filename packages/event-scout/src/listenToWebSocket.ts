@@ -60,9 +60,12 @@ export const listenToWebSocket = async ({
       }),
     );
   });
+
   client.on('error', error => console.error('error', error));
+
   client.on('message', data => {
     const message = data.toString();
-    console.log(message);
+    const formattedMessage = JSON.stringify(JSON.parse(message), null, 4);
+    console.log(formattedMessage);
   });
 };
