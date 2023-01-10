@@ -8,7 +8,6 @@ import { ListEventsFunction } from './functions/listEvents/config';
 import { StartEventsTrailFunction } from './functions/startEventsTrail/config';
 import { StopEventsTrailFunction } from './functions/stopEventsTrail/config';
 import { StoreEventsFunction } from './functions/storeEvents/config';
-import { TrailGarbageCollectorFunction } from './functions/trailGarbageCollector/config';
 
 type RestApiTrailProps = {
   table: Table;
@@ -65,14 +64,6 @@ export class RestApiTrail extends Construct {
       table,
       bundling,
       restApi,
-    });
-
-    // Lambda to listen to trail items deletion and delete the eventBridge resources
-    // therefore it is safe to not call the stop lambda
-    new TrailGarbageCollectorFunction(this, 'TrailGarbageCollectorFunction', {
-      table,
-      bundling,
-      eventBus,
     });
   }
 }

@@ -3,7 +3,7 @@ import { getEnvVariable } from '@swarmion/serverless-helpers';
 import { APIGatewayProxyWebsocketHandlerV2 } from 'aws-lambda';
 import { DocumentClient } from 'aws-sdk/clients/dynamodb';
 
-import { buildDeleteEventBridgeRuleAndTarget } from 'utils/deleteEventBridgeRuleAndTarget';
+import { buildDeleteEventBridgeRuleAndTarget } from 'common/utils/deleteEventBridgeRuleAndTarget';
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');
@@ -16,15 +16,15 @@ const deleteEventBridgeRuleAndTarget = buildDeleteEventBridgeRuleAndTarget({
 });
 
 export const main: APIGatewayProxyWebsocketHandlerV2 = async event => {
-  const { connectionId } = event.requestContext;
+  const { connectionId: trailId } = event.requestContext;
 
-  await deleteEventBridgeRuleAndTarget(connectionId);
+  await deleteEventBridgeRuleAndTarget(trailId);
 
   // remove the trail item from DynamoDB
   await documentClient
     .delete({
       TableName: tableName,
-      Key: { PK: connectionId, SK: `CONNECTION` },
+      Key: { PK: trailId, SK: `TRAIL` },
     })
     .promise();
 

@@ -9,7 +9,7 @@ import {
   startWebsocketEventTrailBodySchema,
 } from '@event-scout/construct-contracts';
 
-import { buildCreateEventBridgeRuleAndTarget } from 'utils/createEventBridgeRuleAndTarget';
+import { buildCreateEventBridgeRuleAndTarget } from 'common/utils/createEventBridgeRuleAndTarget';
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');
@@ -23,7 +23,7 @@ const createEventBridgeRuleAndTarget = buildCreateEventBridgeRuleAndTarget({
 });
 
 export const main: APIGatewayProxyWebsocketHandlerV2 = async event => {
-  const { connectionId } = event.requestContext;
+  const { connectionId: trailId } = event.requestContext;
   const { body } = event;
 
   if (body === undefined) {
@@ -50,8 +50,8 @@ export const main: APIGatewayProxyWebsocketHandlerV2 = async event => {
     .update({
       TableName: tableName,
       Key: {
-        PK: connectionId,
-        SK: `CONNECTION`,
+        PK: trailId,
+        SK: `TRAIL`,
       },
       UpdateExpression: 'SET eventPattern = :eventPattern',
       ExpressionAttributeValues: {
@@ -64,7 +64,7 @@ export const main: APIGatewayProxyWebsocketHandlerV2 = async event => {
   await createEventBridgeRuleAndTarget({
     eventPattern,
     targetArn: forwardEventLambdaArn,
-    trailId: connectionId,
+    trailId: trailId,
   });
 
   return { statusCode: 200, body: 'Ok' };

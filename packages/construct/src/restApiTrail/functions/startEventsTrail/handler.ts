@@ -6,7 +6,7 @@ import { randomUUID } from 'crypto';
 
 import { startEventsTrailContract } from '@event-scout/construct-contracts';
 
-import { buildCreateEventBridgeRuleAndTarget } from 'utils/createEventBridgeRuleAndTarget';
+import { buildCreateEventBridgeRuleAndTarget } from 'common/utils/createEventBridgeRuleAndTarget';
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');

@@ -6,7 +6,7 @@ const tableName = getEnvVariable('TEST_TABLE_NAME');
 const documentClient = new DocumentClient();
 
 export const main: APIGatewayProxyWebsocketHandlerV2 = async event => {
-  const { connectionId } = event.requestContext;
+  const { connectionId: trailId } = event.requestContext;
 
   // timestamp must be in seconds
   // see https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/time-to-live-ttl-before-you-start.html
@@ -18,10 +18,10 @@ export const main: APIGatewayProxyWebsocketHandlerV2 = async event => {
     .put({
       TableName: tableName,
       Item: {
-        PK: connectionId,
-        SK: `CONNECTION`,
+        PK: trailId,
+        SK: `TRAIL`,
         _ttl: timeToLive,
-        connectionId,
+        trailId,
       },
     })
     .promise();

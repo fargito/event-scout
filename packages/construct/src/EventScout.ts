@@ -9,8 +9,9 @@ import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { BundlingOptions } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 
+import { defaultEsbuildConfig } from './common/utils/esbuildConfig';
+import { TrailGarbageCollectorFunction } from './restApiTrail/functions/trailGarbageCollector/config';
 import { RestApiTrail } from './restApiTrail/restApiTrail';
-import { defaultEsbuildConfig } from './utils/esbuildConfig';
 import { WebSocketTrail } from './webSocketTrail/webSocketTrail';
 
 type EventScoutProps = {
@@ -42,6 +43,14 @@ export class EventScout extends Construct {
       timeToLiveAttribute: '_ttl',
       stream: StreamViewType.NEW_AND_OLD_IMAGES,
       removalPolicy: RemovalPolicy.DESTROY,
+    });
+
+    // Lambda to listen to trail items deletion and delete the eventBridge resources
+    // therefore it is safe to not call the stop lambda
+    new TrailGarbageCollectorFunction(this, 'TrailGarbageCollectorFunction', {
+      table,
+      bundling,
+      eventBus,
     });
 
     // create all necessary resource
