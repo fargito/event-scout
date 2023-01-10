@@ -235,6 +235,10 @@ importers:
 
   packages/event-scout:
     specifiers:
+      '@aws-crypto/sha256-js': ^2.0.2
+      '@aws-sdk/credential-providers': ^3.245.0
+      '@aws-sdk/signature-v4': ^3.226.0
+      '@aws-sdk/types': ^3.226.0
       '@babel/cli': ^7.20.7
       '@babel/core': ^7.20.12
       '@babel/plugin-transform-runtime': ^7.19.6
@@ -242,6 +246,7 @@ importers:
       '@babel/preset-typescript': ^7.18.6
       '@babel/runtime': ^7.20.7
       '@types/node': ^18.11.18
+      '@types/ws': ^8.5.4
       '@vitest/coverage-c8': ^0.26.0
       babel-plugin-module-resolver: ^4.1.0
       concurrently: ^7.6.0
@@ -256,8 +261,14 @@ importers:
       vite: ^4.0.4
       vite-tsconfig-paths: ^4.0.3
       vitest: ^0.26.0
+      ws: ^8.12.0
     dependencies:
+      '@aws-crypto/sha256-js': 2.0.2
+      '@aws-sdk/credential-providers': 3.245.0
+      '@aws-sdk/signature-v4': 3.226.0
+      '@aws-sdk/types': 3.226.0
       '@babel/runtime': 7.20.7
+      ws: 8.12.0
     devDependencies:
       '@babel/cli': 7.20.7_@babel+core@7.20.12
       '@babel/core': 7.20.12
@@ -265,6 +276,7 @@ importers:
       '@babel/preset-env': 7.20.2_@babel+core@7.20.12
       '@babel/preset-typescript': 7.18.6_@babel+core@7.20.12
       '@types/node': 18.11.18
+      '@types/ws': 8.5.4
       '@vitest/coverage-c8': 0.26.3
       babel-plugin-module-resolver: 4.1.0
       concurrently: 7.6.0
@@ -4386,6 +4398,12 @@ packages:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
     dev: true
 
+  /@types/ws/8.5.4:
+    resolution: {integrity: sha512-zdQDHKUgcX/zBc4GrwsE/7dVdAD8JR4EuiAXiiUhhfyIJXXb2+PrGshFyeXWQPMmmZ2XxgaqclgpIC7eTXc1mg==}
+    dependencies:
+      '@types/node': 18.11.18
+    dev: true
+
   /@typescript-eslint/eslint-plugin/5.48.0_k73wpmdolxikpyqun3p36akaaq:
     resolution: {integrity: sha512-SVLafp0NXpoJY7ut6VFVUU9I+YeFsDzeQwtK0WZ+xbRN3mtxJ08je+6Oi2N89qDn087COdO0u3blKZNv9VetRQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -5052,7 +5070,7 @@ packages:
     resolution: {integrity: sha512-xq+q3SRMOxGivLhBNaUdC64hDTQwejJ+H0T/NB1XMtTVEwNTrfFF3gAxiyW0Bu/xWEGhjVKgUcMhCrUy2+uCWg==}
     dependencies:
       base64-js: 1.5.1
-      ieee754: 1.1.13
+      ieee754: 1.2.1
       isarray: 1.0.0
 
   /buffer/5.7.1:
@@ -6994,7 +7012,6 @@ packages:
 
   /ieee754/1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
-    dev: true
 
   /ignore-walk/5.0.1:
     resolution: {integrity: sha512-yemi4pMf51WKT7khInJqAvsIGzoqYXblnsz0ql8tM+yi1EKYTY1evX4NAbJrLL/Aanr2HyZeluqU+Oi7MGHokw==}
@@ -10481,6 +10498,19 @@ packages:
       type-fest: 0.4.1
       write-json-file: 3.2.0
     dev: true
+
+  /ws/8.12.0:
+    resolution: {integrity: sha512-kU62emKIdKVeEIOIKVegvqpXMSTAMLJozpHZaJNDYqBjzlSYXQGviYwN1osDLJ9av68qHd4a2oSjd7yD4pacig==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+    dev: false
 
   /xml2js/0.4.19:
     resolution: {integrity: sha512-esZnJZJOiJR9wWKMyuvSE1y6Dq5LCuJanqhxslH2bxM6duahNZ+HMpCLhBQGZkbX6xRf8x1Y2eJlgt2q3qo49Q==}
