@@ -248,8 +248,10 @@ importers:
       '@event-scout/construct-contracts': workspace:^
       '@types/node': ^18.11.18
       '@types/ws': ^8.5.4
+      '@vercel/ncc': ^0.36.0
       '@vitest/coverage-c8': ^0.26.0
       babel-plugin-module-resolver: ^4.1.0
+      commander: ^9.5.0
       concurrently: ^7.6.0
       dependency-cruiser: ^12.3.0
       eslint: ^8.31.0
@@ -270,6 +272,7 @@ importers:
       '@aws-sdk/types': 3.226.0
       '@babel/runtime': 7.20.7
       '@event-scout/construct-contracts': link:../../contracts/construct-contracts
+      commander: 9.5.0
       ws: 8.12.0
     devDependencies:
       '@babel/cli': 7.20.7_@babel+core@7.20.12
@@ -279,6 +282,7 @@ importers:
       '@babel/preset-typescript': 7.18.6_@babel+core@7.20.12
       '@types/node': 18.11.18
       '@types/ws': 8.5.4
+      '@vercel/ncc': 0.36.0
       '@vitest/coverage-c8': 0.26.3
       babel-plugin-module-resolver: 4.1.0
       concurrently: 7.6.0
@@ -4535,6 +4539,11 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
+  /@vercel/ncc/0.36.0:
+    resolution: {integrity: sha512-/ZTUJ/ZkRt694k7KJNimgmHjtQcRuVwsST2Z6XfYveQIuBbHR+EqkTc1jfgPkQmMyk/vtpxo3nVxe8CNuau86A==}
+    hasBin: true
+    dev: true
+
   /@vitest/coverage-c8/0.25.8:
     resolution: {integrity: sha512-fWgzQoK2KNzTTNnDcLCyibfO9/pbcpPOMtZ9Yvq/Eggpi2X8lewx/OcKZkO5ba5q9dl6+BBn6d5hTcS1709rZw==}
     dependencies:
@@ -5387,6 +5396,10 @@ packages:
     resolution: {integrity: sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==}
     engines: {node: ^12.20.0 || >=14}
     dev: true
+
+  /commander/9.5.0:
+    resolution: {integrity: sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==}
+    engines: {node: ^12.20.0 || >=14}
 
   /common-ancestor-path/1.0.1:
     resolution: {integrity: sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==}
@@ -9903,7 +9916,7 @@ packages:
     hasBin: true
     dependencies:
       chokidar: 3.5.3
-      commander: 9.4.1
+      commander: 9.5.0
       globby: 11.1.0
       mylas: 2.1.13
       normalize-path: 3.0.0

@@ -1,13 +1,38 @@
-import { fromIni } from '@aws-sdk/credential-providers';
+import { fromEnv, fromIni } from '@aws-sdk/credential-providers';
+import { Command } from 'commander';
+
+import { EventPattern } from '@event-scout/construct-contracts';
 
 import { listenToWebSocket } from './listenToWebSocket';
 
-const webSocketEndpoint = 'wss://xxxx.execute-api.eu-west-1.amazonaws.com/dev/';
+const program = new Command()
+  .option('-p, --aws-profile <aws-profile>', 'aws profile')
+  .option('-r, --aws-region <aws-region>', 'aws region')
+  .option('--endpoint <endpoint>', 'websocket endpoint')
+  .option('--pattern <patter>', 'event pattern')
+  .parse(process.argv);
 
-const credentials = fromIni({ profile: 'xxxx' });
-const region = 'eu-west-1';
+const options = program.opts();
 
-const eventPattern = { source: ['toto'] };
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+const awsProfile: string | undefined = options.awsProfile;
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+const awsRegion: string | undefined = options.awsRegion;
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+const endpoint: string | undefined = options.endpoint;
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+const pattern: string | undefined = options.pattern;
+
+const credentials =
+  awsProfile !== undefined ? fromIni({ profile: awsProfile }) : fromEnv();
+
+const region = awsRegion ?? 'eu-west-1';
+
+const webSocketEndpoint = endpoint ?? '';
+
+// TODO add validation
+const eventPattern =
+  pattern !== undefined ? (JSON.parse(pattern) as EventPattern) : {};
 
 void listenToWebSocket({
   webSocketEndpoint,
