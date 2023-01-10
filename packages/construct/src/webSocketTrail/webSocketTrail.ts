@@ -1,4 +1,5 @@
 import { WebSocketApi, WebSocketStage } from '@aws-cdk/aws-apigatewayv2-alpha';
+import { WebSocketIamAuthorizer } from '@aws-cdk/aws-apigatewayv2-authorizers-alpha';
 import { WebSocketLambdaIntegration } from '@aws-cdk/aws-apigatewayv2-integrations-alpha';
 import { Table } from 'aws-cdk-lib/aws-dynamodb';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
@@ -31,7 +32,7 @@ export class WebSocketTrail extends Construct {
 
     const stage = 'dev';
 
-    const webSocketApi = new WebSocketApi(this, 'Websocket');
+    const webSocketApi = new WebSocketApi(this, 'WebSocket');
 
     const { function: forwardEvent } = new ForwardEventFunction(
       this,
@@ -66,6 +67,7 @@ export class WebSocketTrail extends Construct {
         'ConnectIntegration',
         onConnect,
       ),
+      authorizer: new WebSocketIamAuthorizer(),
     });
     webSocketApi.addRoute('$disconnect', {
       integration: new WebSocketLambdaIntegration(

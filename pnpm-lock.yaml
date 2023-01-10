@@ -163,6 +163,7 @@ importers:
   packages/construct:
     specifiers:
       '@aws-cdk/aws-apigatewayv2-alpha': 2.58.1-alpha.0
+      '@aws-cdk/aws-apigatewayv2-authorizers-alpha': 2.59.0-alpha.0
       '@aws-cdk/aws-apigatewayv2-integrations-alpha': 2.58.1-alpha.0
       '@aws-sdk/client-apigatewaymanagementapi': ^3.245.0
       '@aws-sdk/client-eventbridge': ^3.245.0
@@ -197,6 +198,7 @@ importers:
       vitest: ^0.25.8
     dependencies:
       '@aws-cdk/aws-apigatewayv2-alpha': 2.58.1-alpha.0_uffgjfcnagwwhb6rjmatskeaee
+      '@aws-cdk/aws-apigatewayv2-authorizers-alpha': 2.59.0-alpha.0_rgx35xgj4onjk3xhdqlc6omyfu
       '@aws-cdk/aws-apigatewayv2-integrations-alpha': 2.58.1-alpha.0_rgx35xgj4onjk3xhdqlc6omyfu
       '@aws-sdk/client-apigatewaymanagementapi': 3.245.0
       '@aws-sdk/client-eventbridge': 3.245.0
@@ -398,6 +400,19 @@ packages:
       aws-cdk-lib: ^2.58.1
       constructs: ^10.0.0
     dependencies:
+      aws-cdk-lib: 2.59.0_constructs@10.1.211
+      constructs: 10.1.211
+    dev: false
+
+  /@aws-cdk/aws-apigatewayv2-authorizers-alpha/2.59.0-alpha.0_rgx35xgj4onjk3xhdqlc6omyfu:
+    resolution: {integrity: sha512-J6EdrjbU/riYDW18WYnHs7KuUXuuWQwmbQLaAsbh6fVgrc8c8DGG+He3PhETTYScChkmOUXXxz2y45R0E5g7dA==}
+    engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      '@aws-cdk/aws-apigatewayv2-alpha': 2.59.0-alpha.0
+      aws-cdk-lib: ^2.59.0
+      constructs: ^10.0.0
+    dependencies:
+      '@aws-cdk/aws-apigatewayv2-alpha': 2.58.1-alpha.0_uffgjfcnagwwhb6rjmatskeaee
       aws-cdk-lib: 2.59.0_constructs@10.1.211
       constructs: 10.1.211
     dev: false
