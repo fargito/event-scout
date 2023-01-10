@@ -19,6 +19,7 @@ type WebSocketTrailProps = {
 };
 
 export class WebSocketTrail extends Construct {
+  webSocketEndpoint: string;
   /**
    * all the required resources to implement the websocket trail
    *
@@ -32,11 +33,13 @@ export class WebSocketTrail extends Construct {
     super(scope, id);
 
     const webSocketApi = new WebSocketApi(this, 'WebSocket');
+    const webSocketEndpoint = `${webSocketApi.apiEndpoint}/${stage}`;
+    this.webSocketEndpoint = webSocketEndpoint;
 
     const { function: forwardEvent } = new ForwardEventFunction(
       this,
       'ForwardEvent',
-      { bundling, eventBus, webSocketApi, stage },
+      { bundling, eventBus, webSocketApi, webSocketEndpoint },
     );
 
     const { function: onConnect } = new OnConnectFunction(this, 'OnConnect', {

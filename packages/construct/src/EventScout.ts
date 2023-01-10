@@ -22,6 +22,7 @@ type EventScoutProps = {
 
 export class EventScout extends Construct {
   endpoint: string;
+  webSocketEndpoint: string;
 
   /**
    * The construct to provide all necessary resources for EventScout.
@@ -63,11 +64,12 @@ export class EventScout extends Construct {
     });
     this.endpoint = endpoint;
 
-    new WebSocketTrail(this, 'WebsocketTrail', {
+    const { webSocketEndpoint } = new WebSocketTrail(this, 'WebsocketTrail', {
       table,
       eventBus,
       bundling,
       stage,
     });
+    this.webSocketEndpoint = webSocketEndpoint;
   }
 }

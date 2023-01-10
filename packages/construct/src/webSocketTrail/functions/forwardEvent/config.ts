@@ -11,7 +11,7 @@ type Props = {
   bundling: BundlingOptions;
   eventBus: IEventBus;
   webSocketApi: WebSocketApi;
-  stage: string;
+  webSocketEndpoint: string;
 };
 
 export class ForwardEventFunction extends Construct {
@@ -20,7 +20,7 @@ export class ForwardEventFunction extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { bundling, eventBus, webSocketApi, stage }: Props,
+    { bundling, eventBus, webSocketApi, webSocketEndpoint }: Props,
   ) {
     super(scope, id);
 
@@ -32,7 +32,7 @@ export class ForwardEventFunction extends Construct {
       awsSdkConnectionReuse: true,
       bundling,
       environment: {
-        WEBSOCKET_ENDPOINT: `${webSocketApi.apiEndpoint}/${stage}`,
+        WEBSOCKET_ENDPOINT: webSocketEndpoint,
       },
       initialPolicy: [
         new PolicyStatement({
