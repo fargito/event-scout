@@ -42,11 +42,16 @@
     "watch": "pnpm clean dist && concurrently 'pnpm:package-* --watch'"
   },
   "dependencies": {
+    "@aws-cdk/aws-apigatewayv2-alpha": "2.58.1-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-authorizers-alpha": "2.59.0-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "2.58.1-alpha.0",
+    "@aws-sdk/client-apigatewaymanagementapi": "^3.245.0",
     "@aws-sdk/client-eventbridge": "^3.245.0",
     "@babel/runtime": "^7.20.7",
     "@event-scout/construct-contracts": "^0.1.9",
     "@swarmion/serverless-contracts": "^0.17.0",
     "@swarmion/serverless-helpers": "^0.17.0",
+    "ajv": "^8.12.0",
     "aws-cdk-lib": "^2.59.0",
     "aws-sdk": "^2.1289.0",
     "constructs": "^10.1.211"

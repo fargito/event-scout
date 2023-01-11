@@ -4,6 +4,8 @@ import {
   RemoveTargetsCommand,
 } from '@aws-sdk/client-eventbridge';
 
+import { getRuleAndTargetName } from './getRuleAndTargetName';
+
 type Args = {
   eventBridgeClient: EventBridgeClient;
   eventBusName: string;
@@ -14,8 +16,7 @@ type DeleteEventBridgeRuleAndTarget = (trailId: string) => Promise<void>;
 export const buildDeleteEventBridgeRuleAndTarget =
   ({ eventBridgeClient, eventBusName }: Args): DeleteEventBridgeRuleAndTarget =>
   async trailId => {
-    const ruleName = `test-rule-${trailId}`;
-    const targetName = `test-target-${trailId}`;
+    const { ruleName, targetName } = getRuleAndTargetName(trailId);
 
     try {
       // remove the target

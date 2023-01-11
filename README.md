@@ -36,5 +36,6 @@ In order to properly work, EventScout needs to:
 
 - deploy the necessary resources with [@event-scout/construct](./packages/construct/README.md)
 - use event trails in your tests with [@event-scout/client](./packages/client/README.md)
+- monitor your events in real-time with [event-scout](./packages/event-scout/README.md) CLI
 
 And you're all set! The power of EventScout is yours!

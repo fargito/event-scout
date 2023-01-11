@@ -34,13 +34,13 @@ import { CfnOutput } from 'aws-cdk-lib';
 import { EventBus } from 'aws-cdk-lib/aws-events';
 
 // create the necessary resources
-const { endpoint } = new EventScout(this, 'EventScout', {
+const { restEndpoint } = new EventScout(this, 'EventScout', {
   eventBus: EventBus.fromEventBusName(this, 'EventBus', eventBusName),
 });
 
 // export the endpoint value for easier use in tests
 new CfnOutput(this, 'EventScoutEndpoint', {
-  value: endpoint,
+  value: restEndpoint,
   description: 'EventScout endpoint',
   exportName: '<your export name>',
 });
