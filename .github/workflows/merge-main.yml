@@ -4,10 +4,16 @@ on:
       - main
 
 name: 🚀 Deploy main
+concurrency: deploy_main
 
 permissions:
-  id-token: write # This is required for requesting the JWT
-  contents: read # This is required for actions/checkout
+  id-token: write # this is required for AWS https://github.com/aws-actions/configure-aws-credentials#usage
+  contents: read # this is required for Nx https://github.com/nrwl/nx-set-shas#permissions-in-v2
+  actions: read # this is required for Nx https://github.com/nrwl/nx-set-shas#permissions-in-v2
+
+env:
+  CI: true
+  AWS_REGION: eu-west-1
 
 defaults:
   run:
@@ -26,16 +32,14 @@ jobs:
           fetch-depth: 0
       - uses: nrwl/nx-set-shas@v3
       - uses: pnpm/action-setup@v2.2.3
-        with:
-          version: 7.13.4
-      - name: Use Node.js ${{ env.NODE_VERSION }}
+      - name: Setup Node.js
+        id: setup-node
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
           cache: 'pnpm'
       - name: Install dependencies
-        run: pnpm install
-        shell: bash
+        run: pnpm install --frozen-lockfile
       - name: 💾 Cache Nx cache
         id: package-cache
         uses: actions/cache@v3
@@ -43,19 +47,18 @@ jobs:
           path: |
             nx-cache
           # Cache will be updated at every run: https://github.com/actions/cache/blob/main/workarounds.md#update-a-cache
-          key: ${{ runner.os }}-nx-cache-${{ env.NODE_VERSION }}-${{github.event.number}}-${{ github.run_id }}
+          key: ${{ runner.os }}-nx-cache-${{ steps.setup-node.outputs.node-version }}-${{ github.run_id }}
           restore-keys: |
-            ${{ runner.os }}-nx-cache-${{ env.NODE_VERSION }}-${{github.event.number}}-
-            ${{ runner.os }}-nx-cache-${{ env.NODE_VERSION }}-
+            ${{ runner.os }}-nx-cache-${{ steps.setup-node.outputs.node-version }}-
             ${{ runner.os }}-nx-cache-
       - name: '🏗 Package'
         run: pnpm nx affected --target=package --parallel=2
       - name: '🧪 Run tests'
         run: pnpm nx affected --targets=test-linter,test-type,test-unit,test-circular --parallel=2
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v1-node16
         with:
-          aws-region: eu-west-1
+          aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
       - name: '🚀 Deploy main'
         run: pnpm nx affected --target=deploy-production --parallel=2
