@@ -40,7 +40,8 @@
     "watch": "pnpm clean dist && concurrently 'pnpm:package-* --watch'"
   },
   "dependencies": {
-    "@swarmion/serverless-contracts": "^0.23.1"
+    "@swarmion/serverless-contracts": "^0.23.1",
+    "json-schema-to-ts": "^2.6.2"
   },
   "devDependencies": {
     "@types/node": "^18.11.19",
@@ -48,7 +49,6 @@
     "concurrently": "^7.6.0",
     "dependency-cruiser": "^12.7.0",
     "eslint": "^8.33.0",
-    "json-schema-to-ts": "^2.6.2",
     "prettier": "^2.8.3",
     "rimraf": "^4.1.2",
     "ts-node": "^10.9.1",
