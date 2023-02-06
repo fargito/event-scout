@@ -30,7 +30,7 @@ In order to use the EventScout client, you will need:
 
 - the `endpoint` exported by [@event-scout/construct](https://github.com/fargito/event-scout/main/packages/construct/README.md)
 - the AWS `region` in which you run your tests
-- valid AWS `credentials`. Check out [the AWS SDK v3 docs on how to build credentials]().
+- valid AWS `credentials`. Check out [the AWS SDK v3 docs on how to build credentials](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/modules/_aws_sdk_credential_providers.html).
 
 Instantiate the client:
 
