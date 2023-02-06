@@ -6,10 +6,7 @@
       "source.fixAll.eslint": true,
       "source.fixAll.stylelint": true
     },
-    "stylelint.validate": [
-      "typescript",
-      "typescriptreact"
-    ],
+    "stylelint.validate": ["typescript", "typescriptreact"],
     "stylelint.customSyntax": "@stylelint/postcss-css-in-js",
     "search.exclude": {
       "**/coverage": true,
@@ -30,13 +27,8 @@
     },
     "typescript.tsdk": "node_modules/typescript/lib",
     "vitest.commandLine": "pnpm vitest",
-    "vitest.disabledWorkspaceFolders": [
-      "event-scout root"
-    ],
-    "cSpell.words": [
-      "esbuild",
-      "swarmion"
-    ]
+    "vitest.disabledWorkspaceFolders": ["event-scout root"],
+    "cSpell.words": ["esbuild", "swarmion", "tsup"]
   },
   "extensions": {
     "recommendations": [
