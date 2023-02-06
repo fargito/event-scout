@@ -60,4 +60,4 @@ jobs:
       - name: '🚀 Deploy main'
         run: pnpm nx affected --target=deploy-production --parallel=2
       - name: '🔎 Run integration tests'
-        run: SLS_ENV=production yarn nx run-many --target=test-integration --parallel=2
+        run: SLS_ENV=production pnpm nx run-many --target=test-integration --parallel=2
