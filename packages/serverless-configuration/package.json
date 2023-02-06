@@ -1,7 +1,7 @@
 {
   "name": "@event-scout/serverless-configuration",
   "private": true,
-  "version": "0.2.1",
+  "version": "0.3.0",
   "license": "MIT",
   "sideEffects": false,
   "files": [
@@ -26,7 +26,6 @@
     "test-type": "tsc --noEmit --emitDeclarationOnly false",
     "watch": "pnpm clean && concurrently 'pnpm:package-* --watch'"
   },
-  "dependencies": {},
   "devDependencies": {
     "@serverless/typescript": "^3.27.0",
     "@types/node": "^18.11.19",
