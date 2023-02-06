@@ -5,7 +5,7 @@
  * default esbuild config for our lambdas
  */
 export const defaultEsbuildConfig = {
-  packager: 'yarn',
+  packager: 'pnpm',
   bundle: true,
   minify: true,
   keepNames: true,
