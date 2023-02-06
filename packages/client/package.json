@@ -20,8 +20,9 @@
   "files": [
     "dist"
   ],
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
@@ -29,15 +30,14 @@
     "lint-fix-all": "pnpm lint-fix .",
     "linter-base-config": "eslint --ext=js,ts",
     "package": "pnpm clean && pnpm package-transpile && pnpm package-types && pnpm package-types-aliases",
-    "package-transpile": "tsup src/index.ts",
+    "package-transpile": "tsup",
     "package-types": "tsc -p tsconfig.build.json",
     "package-types-aliases": "tsc-alias -p tsconfig.build.json",
     "test": "pnpm test-linter && pnpm test-type && pnpm test-unit && pnpm test-circular",
-    "test-circular": "pnpm depcruise --validate .dependency-cruiser.js src",
+    "test-circular": "pnpm depcruise --config -- .",
     "test-linter": "pnpm linter-base-config .",
     "test-type": "tsc --noEmit --emitDeclarationOnly false",
-    "test-unit": "vitest run --coverage --passWithNoTests",
-    "watch": "pnpm clean dist && concurrently 'pnpm:package-* --watch'"
+    "test-unit": "vitest run --coverage --passWithNoTests"
   },
   "dependencies": {
     "@aws-crypto/sha256-js": "^3.0.0",

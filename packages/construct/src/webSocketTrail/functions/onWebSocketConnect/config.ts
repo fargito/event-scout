@@ -18,7 +18,11 @@ export class OnConnectFunction extends Construct {
     super(scope, id);
 
     this.function = new NodejsFunction(this, 'OnConnect', {
-      entry: getCdkHandlerPath(__dirname, { extension: 'js' }),
+      entry: getCdkHandlerPath(__dirname, {
+        // due to bundling, we need to reference the generated entrypoint. This is because of tsup.config.ts
+        extension: 'js',
+        fileName: 'onWebSocketConnect',
+      }),
       handler: 'main',
       runtime: Runtime.NODEJS_16_X,
       architecture: Architecture.ARM_64,
