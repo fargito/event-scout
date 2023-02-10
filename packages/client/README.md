@@ -35,6 +35,8 @@ In order to use the EventScout client, you will need:
 Instantiate the client:
 
 ```ts
+import { EventScoutClient } from '@event-scout/client';
+
 const eventScoutClient = new EventScoutClient({
   credentials,
   region,
