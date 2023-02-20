@@ -1,4 +1,4 @@
-import { getHandler } from '@swarmion/serverless-contracts';
+import { getHandler, HttpStatusCodes } from '@swarmion/serverless-contracts';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
 import { DocumentClient } from 'aws-sdk/clients/dynamodb';
 
@@ -15,5 +15,5 @@ export const main = getHandler(listEventsContract)(async event => {
 
   const events = await listAllTrailEvents(trailId);
 
-  return events;
+  return { statusCode: HttpStatusCodes.OK, body: events };
 });
