@@ -40,35 +40,35 @@
     "test-unit": "vitest run --coverage --passWithNoTests"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2-alpha": "2.64.0-alpha.0",
-    "@aws-cdk/aws-apigatewayv2-authorizers-alpha": "2.64.0-alpha.0",
-    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "2.64.0-alpha.0",
-    "@aws-sdk/client-apigatewaymanagementapi": "^3.267.0",
-    "@aws-sdk/client-eventbridge": "^3.267.0",
+    "@aws-cdk/aws-apigatewayv2-alpha": "2.65.0-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-authorizers-alpha": "2.65.0-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "2.65.0-alpha.0",
+    "@aws-sdk/client-apigatewaymanagementapi": "^3.272.0",
+    "@aws-sdk/client-eventbridge": "^3.272.0",
     "@event-scout/construct-contracts": "^0.3.1",
-    "@swarmion/serverless-contracts": "^0.24.2",
-    "@swarmion/serverless-helpers": "^0.24.2",
+    "@swarmion/serverless-contracts": "^0.25.0",
+    "@swarmion/serverless-helpers": "^0.25.0",
     "ajv": "^8.12.0",
-    "aws-cdk-lib": "^2.64.0",
-    "aws-sdk": "^2.1313.0",
-    "constructs": "^10.1.246"
+    "aws-cdk-lib": "^2.65.0",
+    "aws-sdk": "^2.1318.0",
+    "constructs": "^10.1.255"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.110",
-    "@types/node": "^18.13.0",
-    "@vitest/coverage-c8": "^0.28.4",
+    "@types/node": "^18.14.0",
+    "@vitest/coverage-c8": "^0.28.5",
     "concurrently": "^7.6.0",
-    "dependency-cruiser": "^12.7.1",
+    "dependency-cruiser": "^12.10.0",
     "eslint": "^8.34.0",
     "json-schema-to-ts": "^2.6.2",
     "prettier": "^2.8.4",
     "rimraf": "^4.1.2",
     "ts-node": "^10.9.1",
     "tsc-alias": "^1.8.2",
-    "tsup": "^6.6.0",
+    "tsup": "^6.6.3",
     "typescript": "^4.9.5",
-    "vite": "^4.1.1",
+    "vite": "^4.1.3",
     "vite-tsconfig-paths": "^4.0.5",
-    "vitest": "^0.28.4"
+    "vitest": "^0.28.5"
   }
 }

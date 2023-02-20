@@ -1,4 +1,7 @@
-import { ApiGatewayContract } from '@swarmion/serverless-contracts';
+import {
+  ApiGatewayContract,
+  HttpStatusCodes,
+} from '@swarmion/serverless-contracts';
 
 import { eventPatternSchema } from 'entities/eventPattern';
 
@@ -28,5 +31,5 @@ export const startEventsTrailContract = new ApiGatewayContract({
   queryStringParametersSchema: undefined,
   headersSchema: undefined,
   bodySchema,
-  outputSchema,
+  outputSchemas: { [HttpStatusCodes.OK]: outputSchema },
 });

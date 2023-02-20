@@ -1,4 +1,7 @@
-import { ApiGatewayContract } from '@swarmion/serverless-contracts';
+import {
+  ApiGatewayContract,
+  HttpStatusCodes,
+} from '@swarmion/serverless-contracts';
 
 const pathParametersSchema = {
   type: 'object',
@@ -7,10 +10,6 @@ const pathParametersSchema = {
   },
   required: ['trailId'],
   additionalProperties: false,
-} as const;
-
-const outputSchema = {
-  type: 'array',
 } as const;
 
 export const listEventsContract = new ApiGatewayContract({
@@ -23,5 +22,9 @@ export const listEventsContract = new ApiGatewayContract({
   queryStringParametersSchema: undefined,
   headersSchema: undefined,
   bodySchema: undefined,
-  outputSchema,
+  outputSchemas: {
+    [HttpStatusCodes.OK]: {
+      type: 'array',
+    } as const,
+  },
 });

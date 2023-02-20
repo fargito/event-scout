@@ -1,5 +1,5 @@
 import { EventBridgeClient } from '@aws-sdk/client-eventbridge';
-import { getHandler } from '@swarmion/serverless-contracts';
+import { getHandler, HttpStatusCodes } from '@swarmion/serverless-contracts';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
 import { DocumentClient } from 'aws-sdk/clients/dynamodb';
 import { randomUUID } from 'crypto';
@@ -44,5 +44,5 @@ export const main = getHandler(startEventsTrailContract)(async event => {
     trailId,
   });
 
-  return { trailId };
+  return { statusCode: HttpStatusCodes.OK, body: { trailId } };
 });

@@ -1,5 +1,5 @@
 import { EventBridgeClient } from '@aws-sdk/client-eventbridge';
-import { getHandler } from '@swarmion/serverless-contracts';
+import { getHandler, HttpStatusCodes } from '@swarmion/serverless-contracts';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
 import { DocumentClient } from 'aws-sdk/clients/dynamodb';
 
@@ -27,5 +27,5 @@ export const main = getHandler(stopEventsTrailContract)(async event => {
     .delete({ TableName: tableName, Key: { PK: trailId, SK: `TRAIL` } })
     .promise();
 
-  return { trailId };
+  return { statusCode: HttpStatusCodes.OK, body: { trailId } };
 });
