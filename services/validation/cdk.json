@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node-esm --prefer-ts-exts resources/index.ts",
+  "app": "node --loader @swc-node/register/esm resources/index.ts",
   "requireApproval": "never",
   "watch": {
     "include": ["**"],

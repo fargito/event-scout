@@ -11,7 +11,7 @@ export const defaultEsbuildConfig = {
   keepNames: true,
   sourcemap: true,
   exclude: ['aws-sdk'],
-  target: 'node16',
+  target: 'node18',
   platform: 'node',
   /**
    * Sets the resolution order for esbuild.
