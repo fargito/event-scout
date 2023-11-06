@@ -1,6 +1,6 @@
 import { Sha256 } from '@aws-crypto/sha256-js';
-import { SignatureV4 } from '@aws-sdk/signature-v4';
 import { AwsCredentialIdentityProvider } from '@aws-sdk/types';
+import { SignatureV4 } from '@smithy/signature-v4';
 import { getRequestParameters } from '@swarmion/serverless-contracts';
 import axios, { AxiosRequestConfig } from 'axios';
 
