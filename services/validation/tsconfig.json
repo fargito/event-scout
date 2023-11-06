@@ -4,16 +4,19 @@
     "baseUrl": ".",
     "emitDeclarationOnly": false,
     "isolatedModules": false,
-    "noEmit": true
+    "noEmit": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
   },
   "references": [
     {
       "path": "../../packages/serverless-configuration/tsconfig.build.json"
     }
   ],
-  "exclude": ["./cdk.out"],
-  "include": ["./**/*.ts"],
-  "ts-node": {
-    "files": true
-  }
+  "exclude": [
+    "./cdk.out"
+  ],
+  "include": [
+    "./**/*.ts"
+  ]
 }

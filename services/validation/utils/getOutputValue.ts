@@ -29,7 +29,7 @@ export const buildGetOutputValue = ({
       cfOutput => cfOutput.Name === exportName,
     );
 
-    if (outputValue === undefined || outputValue.Value === undefined) {
+    if (outputValue?.Value === undefined) {
       throw new Error('unable to retrieve output value');
     }
 

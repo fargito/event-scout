@@ -26,7 +26,7 @@ export class StoreEventsFunction extends Construct {
         fileName: 'storeEvents',
       }),
       handler: 'main',
-      runtime: Runtime.NODEJS_16_X,
+      runtime: Runtime.NODEJS_18_X,
       architecture: Architecture.ARM_64,
       awsSdkConnectionReuse: true,
       bundling,

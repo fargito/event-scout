@@ -1,6 +1,6 @@
 import { Sha256 } from '@aws-crypto/sha256-js';
-import { SignatureV4 } from '@aws-sdk/signature-v4';
 import { AwsCredentialIdentityProvider } from '@aws-sdk/types';
+import { SignatureV4 } from '@smithy/signature-v4';
 import WebSocket from 'ws';
 
 import { EventPattern } from '@event-scout/construct-contracts';
@@ -68,7 +68,7 @@ export const listenToWebSocket = async ({
   client.on('error', error => console.error('error', error));
 
   client.on('message', data => {
-    const message = data.toString();
+    const message = data.toLocaleString();
     const formattedMessage = JSON.stringify(JSON.parse(message), null, 4);
     console.log(formattedMessage);
   });
