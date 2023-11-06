@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.3.2",
   "license": "UNLICENSED",
+  "type": "module",
   "scripts": {
     "bootstrap": "cdk bootstrap --profile event-scout-developer",
     "bootstrap-production": "cdk bootstrap --context stage=production",
@@ -48,6 +49,7 @@
     "lodash": "^4.17.21",
     "node-fetch": "^3.3.2",
     "ts-node": "^10.9.1",
+    "ts-node-esm": "^0.0.6",
     "typescript": "^5.2.2",
     "vite": "^4.5.0",
     "vite-tsconfig-paths": "^4.2.1",
