@@ -1,6 +1,7 @@
 import { EventBridgeClient } from '@aws-sdk/client-eventbridge';
 import { getHandler, HttpStatusCodes } from '@swarmion/serverless-contracts';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
+import Ajv from 'ajv';
 import { DocumentClient } from 'aws-sdk/clients/dynamodb';
 
 import { stopEventsTrailContract } from '@event-scout/construct-contracts';
@@ -17,7 +18,11 @@ const deleteEventBridgeRuleAndTarget = buildDeleteEventBridgeRuleAndTarget({
   eventBusName,
 });
 
-export const main = getHandler(stopEventsTrailContract)(async event => {
+export const main = getHandler(stopEventsTrailContract, {
+  ajv: new Ajv(),
+  validateInput: true,
+  validateOutput: true,
+})(async event => {
   const { trailId } = event.body;
 
   await deleteEventBridgeRuleAndTarget(trailId);

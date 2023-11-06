@@ -1,6 +1,7 @@
 import { EventBridgeClient } from '@aws-sdk/client-eventbridge';
 import { getHandler, HttpStatusCodes } from '@swarmion/serverless-contracts';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
+import Ajv from 'ajv';
 import { DocumentClient } from 'aws-sdk/clients/dynamodb';
 import { randomUUID } from 'crypto';
 
@@ -19,7 +20,11 @@ const createEventBridgeRuleAndTarget = buildCreateEventBridgeRuleAndTarget({
   eventBusName,
 });
 
-export const main = getHandler(startEventsTrailContract)(async event => {
+export const main = getHandler(startEventsTrailContract, {
+  ajv: new Ajv(),
+  validateInput: true,
+  validateOutput: true,
+})(async event => {
   const { eventPattern } = event.body;
 
   const trailId = randomUUID();

@@ -1,5 +1,6 @@
 import { getHandler, HttpStatusCodes } from '@swarmion/serverless-contracts';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
+import Ajv from 'ajv';
 import { DocumentClient } from 'aws-sdk/clients/dynamodb';
 
 import { listEventsContract } from '@event-scout/construct-contracts';
@@ -10,7 +11,11 @@ const tableName = getEnvVariable('TEST_TABLE_NAME');
 const documentClient = new DocumentClient();
 const listAllTrailEvents = buildListAllTrailEvents(documentClient, tableName);
 
-export const main = getHandler(listEventsContract)(async event => {
+export const main = getHandler(listEventsContract, {
+  ajv: new Ajv(),
+  validateInput: true,
+  validateOutput: true,
+})(async event => {
   const { trailId } = event.pathParameters;
 
   const events = await listAllTrailEvents(trailId);
