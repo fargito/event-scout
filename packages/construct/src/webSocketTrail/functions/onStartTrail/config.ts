@@ -31,7 +31,7 @@ export class OnStartTrailFunction extends Construct {
         fileName: 'onStartTrail',
       }),
       handler: 'main',
-      runtime: Runtime.NODEJS_18_X,
+      runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,
       awsSdkConnectionReuse: true,
       bundling,
