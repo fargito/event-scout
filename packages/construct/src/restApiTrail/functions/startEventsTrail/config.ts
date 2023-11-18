@@ -37,7 +37,7 @@ export class StartEventsTrailFunction extends Construct {
         fileName: 'startEventsTrail',
       }),
       handler: 'main',
-      runtime: Runtime.NODEJS_18_X,
+      runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,
       awsSdkConnectionReuse: true,
       timeout: Duration.seconds(15),
