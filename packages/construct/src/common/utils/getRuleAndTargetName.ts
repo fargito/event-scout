@@ -4,8 +4,8 @@ export const getRuleAndTargetName = (
   // rule and target must not have "="
   const normalizedTrailId = trailId.replace(/=/, '');
 
-  const ruleName = `test-rule-${normalizedTrailId}`;
-  const targetName = `test-target-${normalizedTrailId}`;
+  const ruleName = `event-scout-rule-${normalizedTrailId}`;
+  const targetName = `event-scout-target-${normalizedTrailId}`;
 
   return { ruleName, targetName };
 };
