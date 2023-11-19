@@ -1,9 +1,23 @@
-name: 🔖 Release
-
 on:
   push:
     tags:
       - 'v*'
+
+name: 🔖 Release
+concurrency: release
+
+permissions:
+  id-token: write # this is required for AWS https://github.com/aws-actions/configure-aws-credentials#usage
+  contents: read # this is required for Nx https://github.com/nrwl/nx-set-shas#permissions-in-v2
+  actions: read # this is required for Nx https://github.com/nrwl/nx-set-shas#permissions-in-v2
+
+env:
+  CI: true
+  AWS_REGION: eu-west-1
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   release:
