@@ -8,7 +8,7 @@ concurrency: release
 
 permissions:
   id-token: write # this is required for AWS https://github.com/aws-actions/configure-aws-credentials#usage
-  contents: read # this is required for Nx https://github.com/nrwl/nx-set-shas#permissions-in-v2
+  contents: write # this is required for Nx https://github.com/nrwl/nx-set-shas#permissions-in-v2
   actions: read # this is required for Nx https://github.com/nrwl/nx-set-shas#permissions-in-v2
 
 env:
