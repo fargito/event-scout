@@ -10,7 +10,7 @@ export const defaultEsbuildConfig = {
   minify: true,
   keepNames: true,
   sourcemap: true,
-  exclude: ['aws-sdk'],
+  exclude: ['aws-sdk', '@aws-sdk/*'], // since we are on node20, we should get these out-of the box from the runtime
   target: 'node20',
   platform: 'node',
   /**
