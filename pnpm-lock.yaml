@@ -216,7 +216,7 @@ importers:
         version: 0.31.0(@serverless/typescript@3.38.0)(ajv@8.12.0)(aws-cdk-lib@2.121.1)
       '@swarmion/serverless-helpers':
         specifier: ^0.31.0
-        version: 0.31.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.121.1)
+        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.121.1)
       ajv:
         specifier: ^8.12.0
         version: 8.12.0
@@ -414,7 +414,7 @@ importers:
         version: link:../../packages/serverless-configuration
       '@swarmion/serverless-helpers':
         specifier: ^0.31.0
-        version: 0.31.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.121.1)
+        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.121.1)
       '@swc-node/register':
         specifier: ^1.6.8
         version: 1.6.8(@swc/core@1.4.7)(typescript@5.3.3)
@@ -5285,6 +5285,7 @@ packages:
       '@serverless/typescript': 3.38.0
       aws-cdk-lib: 2.121.1(constructs@10.3.0)
       json-schema-to-ts: 3.0.0
+    dev: false
 
   /@swarmion/serverless-helpers@0.31.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1):
     resolution: {integrity: sha512-E6NLOkXpv7uMzNAPwSL1z7etDQmR03OJFtkdKw8quQz2N1qaAvLAJ7uDLDuH0/sGjZ/5Zj3+qvBEeLQhxfP/5g==}
@@ -5296,6 +5297,16 @@ packages:
       aws-cdk-lib: 2.132.1(constructs@10.3.0)
       json-schema-to-ts: 3.0.0
     dev: false
+
+  /@swarmion/serverless-helpers@0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.121.1):
+    resolution: {integrity: sha512-osQ1nXfyXyOdcAasOFyajncph4902BVhwpgllFa90IJQ8M8LRQ55MDiNlxPdGIzsGvLxWLJhmBB5hruCAZaD7w==}
+    peerDependencies:
+      '@serverless/typescript': '>=3'
+      aws-cdk-lib: ^2.60.0
+    dependencies:
+      '@serverless/typescript': 3.38.0
+      aws-cdk-lib: 2.121.1(constructs@10.3.0)
+      json-schema-to-ts: 3.0.0
 
   /@swc-node/core@1.10.6(@swc/core@1.4.7):
     resolution: {integrity: sha512-lDIi/rPosmKIknWzvs2/Fi9zWRtbkx8OJ9pQaevhsoGzJSal8Pd315k1W5AIrnknfdAB4HqRN12fk6AhqnrEEw==}
