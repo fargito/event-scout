@@ -143,10 +143,10 @@ importers:
         version: 2.0.19
       '@swarmion/serverless-contracts':
         specifier: ^0.31.0
-        version: 0.31.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1)(axios@1.6.5)
+        version: 0.31.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1)(axios@1.6.7)
       axios:
         specifier: ^1.6.5
-        version: 1.6.5
+        version: 1.6.7
     devDependencies:
       '@types/node':
         specifier: ^20.11.4
@@ -5275,7 +5275,7 @@ packages:
       - aws-crt
     dev: false
 
-  /@swarmion/serverless-contracts@0.31.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1)(axios@1.6.5):
+  /@swarmion/serverless-contracts@0.31.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1)(axios@1.6.7):
     resolution: {integrity: sha512-tJbmXord7DV9ekMEoPNBKnPzaCC5J4r5F05ccX2ph/s/0f9t+qqbAaJoTvFMWhN3OyZlxWiykmgPk/YSXGZlyw==}
     peerDependencies:
       '@serverless/typescript': '>=3'
@@ -5294,7 +5294,7 @@ packages:
       '@swarmion/serverless-helpers': 0.31.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1)
       '@types/aws-lambda': 8.10.136
       '@types/http-errors': 2.0.4
-      axios: 1.6.5
+      axios: 1.6.7
       http-errors: 2.0.0
       json-schema-faker: 0.5.4
       json-schema-to-ts: 3.0.0
@@ -6212,6 +6212,7 @@ packages:
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
+    dev: true
 
   /axios@1.6.7:
     resolution: {integrity: sha512-/hDJGff6/c7u0hDkvkGxR/oy6CbCs8ziCsC7SqmhjfozqiJGc8Z11wrv9z9lYfY4K8l+H9TpjcMDX0xOZmx+RA==}
@@ -6221,7 +6222,6 @@ packages:
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
-    dev: true
 
   /babel-plugin-const-enum@1.2.0(@babel/core@7.24.0):
     resolution: {integrity: sha512-o1m/6iyyFnp9MRsK1dHF3bneqyf3AlM2q3A/YbgQr2pCat6B6XJVDv2TXqzfY2RYUi4mak6WAksSBPlyYGx9dg==}
@@ -10189,7 +10189,7 @@ packages:
       '@yarnpkg/lockfile': 1.1.0
       '@yarnpkg/parsers': 3.0.0-rc.46
       '@zkochan/js-yaml': 0.0.6
-      axios: 1.6.5
+      axios: 1.6.7
       chalk: 4.1.0
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
