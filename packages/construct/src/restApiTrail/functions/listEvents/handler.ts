@@ -1,4 +1,10 @@
-import { getHandler, HttpStatusCodes } from '@swarmion/serverless-contracts';
+import {
+  // this type import is necessary to infer the handler type
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  type ApiGatewayHandler as _ApiGatewayHandler,
+  getHandler,
+  HttpStatusCodes,
+} from '@swarmion/serverless-contracts';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
 import Ajv from 'ajv';
 import { DocumentClient } from 'aws-sdk/clients/dynamodb';
