@@ -1,6 +1,6 @@
-import { WebSocketApi, WebSocketStage } from '@aws-cdk/aws-apigatewayv2-alpha';
-import { WebSocketIamAuthorizer } from '@aws-cdk/aws-apigatewayv2-authorizers-alpha';
-import { WebSocketLambdaIntegration } from '@aws-cdk/aws-apigatewayv2-integrations-alpha';
+import { WebSocketApi, WebSocketStage } from 'aws-cdk-lib/aws-apigatewayv2';
+import { WebSocketIamAuthorizer } from 'aws-cdk-lib/aws-apigatewayv2-authorizers';
+import { WebSocketLambdaIntegration } from 'aws-cdk-lib/aws-apigatewayv2-integrations';
 import { Table } from 'aws-cdk-lib/aws-dynamodb';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { BundlingOptions } from 'aws-cdk-lib/aws-lambda-nodejs';
