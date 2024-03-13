@@ -1,6 +1,6 @@
-import { WebSocketApi } from '@aws-cdk/aws-apigatewayv2-alpha';
 import { getCdkHandlerPath } from '@swarmion/serverless-helpers';
 import { Aws, Fn } from 'aws-cdk-lib';
+import { WebSocketApi } from 'aws-cdk-lib/aws-apigatewayv2';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 import { Architecture, CfnPermission, Runtime } from 'aws-cdk-lib/aws-lambda';
