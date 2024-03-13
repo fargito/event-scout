@@ -195,13 +195,13 @@ importers:
     dependencies:
       '@aws-cdk/aws-apigatewayv2-alpha':
         specifier: 2.114.1-alpha.0
-        version: 2.114.1-alpha.0(aws-cdk-lib@2.121.1)(constructs@10.3.0)
+        version: 2.114.1-alpha.0(aws-cdk-lib@2.132.1)(constructs@10.3.0)
       '@aws-cdk/aws-apigatewayv2-authorizers-alpha':
         specifier: 2.114.1-alpha.0
-        version: 2.114.1-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.114.1-alpha.0)(aws-cdk-lib@2.121.1)(constructs@10.3.0)
+        version: 2.114.1-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.114.1-alpha.0)(aws-cdk-lib@2.132.1)(constructs@10.3.0)
       '@aws-cdk/aws-apigatewayv2-integrations-alpha':
         specifier: 2.114.1-alpha.0
-        version: 2.114.1-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.114.1-alpha.0)(aws-cdk-lib@2.121.1)(constructs@10.3.0)
+        version: 2.114.1-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.114.1-alpha.0)(aws-cdk-lib@2.132.1)(constructs@10.3.0)
       '@aws-sdk/client-apigatewaymanagementapi':
         specifier: ^3.490.0
         version: 3.490.0
@@ -213,16 +213,16 @@ importers:
         version: link:../../contracts/construct-contracts
       '@swarmion/serverless-contracts':
         specifier: ^0.31.0
-        version: 0.31.0(@serverless/typescript@3.38.0)(ajv@8.12.0)(aws-cdk-lib@2.121.1)
+        version: 0.31.0(@serverless/typescript@3.38.0)(ajv@8.12.0)(aws-cdk-lib@2.132.1)
       '@swarmion/serverless-helpers':
         specifier: ^0.31.0
-        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.121.1)
+        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1)
       ajv:
         specifier: ^8.12.0
         version: 8.12.0
       aws-cdk-lib:
         specifier: ^2.121.1
-        version: 2.121.1(constructs@10.3.0)
+        version: 2.132.1(constructs@10.3.0)
       aws-sdk:
         specifier: ^2.1536.0
         version: 2.1536.0
@@ -414,7 +414,7 @@ importers:
         version: link:../../packages/serverless-configuration
       '@swarmion/serverless-helpers':
         specifier: ^0.31.0
-        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.121.1)
+        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1)
       '@swc-node/register':
         specifier: ^1.6.8
         version: 1.6.8(@swc/core@1.4.7)(typescript@5.3.3)
@@ -426,10 +426,10 @@ importers:
         version: 1.2.0(vitest@1.2.0)
       aws-cdk:
         specifier: ^2.121.1
-        version: 2.121.1
+        version: 2.132.1
       aws-cdk-lib:
         specifier: ^2.121.1
-        version: 2.121.1(constructs@10.3.0)
+        version: 2.132.1(constructs@10.3.0)
       constructs:
         specifier: ^10.3.0
         version: 10.3.0
@@ -491,12 +491,8 @@ packages:
     resolution: {integrity: sha512-gFPqTG7otEJ8uP6wrhDv6mqwGWYZKNvAcCq6u9hOj0c+IKCEsY4L1oC9trPq2SaWIzAfHvqfBDxF591JkMf+kg==}
     dev: true
 
-  /@aws-cdk/asset-awscli-v1@2.2.201:
-    resolution: {integrity: sha512-INZqcwDinNaIdb5CtW3ez5s943nX5stGBQS6VOP2JDlOFP81hM3fds/9NDknipqfUkZM43dx+HgVvkXYXXARCQ==}
-
   /@aws-cdk/asset-awscli-v1@2.2.202:
     resolution: {integrity: sha512-JqlF0D4+EVugnG5dAsNZMqhu3HW7ehOXm5SDMxMbXNDMdsF0pxtQKNHRl52z1U9igsHmaFpUgSGjbhAJ+0JONg==}
-    dev: false
 
   /@aws-cdk/asset-kubectl-v20@2.1.2:
     resolution: {integrity: sha512-3M2tELJOxQv0apCIiuKQ4pAbncz9GuLwnKFqxifWfe77wuMxyTRPmxssYHs42ePqzap1LT6GDcPygGs+hHstLg==}
@@ -504,18 +500,18 @@ packages:
   /@aws-cdk/asset-node-proxy-agent-v6@2.0.1:
     resolution: {integrity: sha512-DDt4SLdLOwWCjGtltH4VCST7hpOI5DzieuhGZsBpZ+AgJdSI2GCjklCXm0GCTwJG/SolkL5dtQXyUKgg9luBDg==}
 
-  /@aws-cdk/aws-apigatewayv2-alpha@2.114.1-alpha.0(aws-cdk-lib@2.121.1)(constructs@10.3.0):
+  /@aws-cdk/aws-apigatewayv2-alpha@2.114.1-alpha.0(aws-cdk-lib@2.132.1)(constructs@10.3.0):
     resolution: {integrity: sha512-+urpw7rGrtdGvnHQlDXVfpI3TmQJpjuT9jTOeuuG5dNDczLJrUokBvQdj6H6KsngdmBC07WfWU+yL2MBp71ozA==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       aws-cdk-lib: ^2.114.1
       constructs: ^10.0.0
     dependencies:
-      aws-cdk-lib: 2.121.1(constructs@10.3.0)
+      aws-cdk-lib: 2.132.1(constructs@10.3.0)
       constructs: 10.3.0
     dev: false
 
-  /@aws-cdk/aws-apigatewayv2-authorizers-alpha@2.114.1-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.114.1-alpha.0)(aws-cdk-lib@2.121.1)(constructs@10.3.0):
+  /@aws-cdk/aws-apigatewayv2-authorizers-alpha@2.114.1-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.114.1-alpha.0)(aws-cdk-lib@2.132.1)(constructs@10.3.0):
     resolution: {integrity: sha512-wvQ7l+VsDf8SgcOylLnp/6SirDcE5D3WNyQMl5ynxtmzuK5OKSnlC07bruKtKpYVT4A/6tBq/VVILfCBphyMJg==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
@@ -523,12 +519,12 @@ packages:
       aws-cdk-lib: ^2.114.1
       constructs: ^10.0.0
     dependencies:
-      '@aws-cdk/aws-apigatewayv2-alpha': 2.114.1-alpha.0(aws-cdk-lib@2.121.1)(constructs@10.3.0)
-      aws-cdk-lib: 2.121.1(constructs@10.3.0)
+      '@aws-cdk/aws-apigatewayv2-alpha': 2.114.1-alpha.0(aws-cdk-lib@2.132.1)(constructs@10.3.0)
+      aws-cdk-lib: 2.132.1(constructs@10.3.0)
       constructs: 10.3.0
     dev: false
 
-  /@aws-cdk/aws-apigatewayv2-integrations-alpha@2.114.1-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.114.1-alpha.0)(aws-cdk-lib@2.121.1)(constructs@10.3.0):
+  /@aws-cdk/aws-apigatewayv2-integrations-alpha@2.114.1-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.114.1-alpha.0)(aws-cdk-lib@2.132.1)(constructs@10.3.0):
     resolution: {integrity: sha512-iB7vHoTguDKLeatJS4p/8OBqH4oLCG2xBn1toUFwMD9iWoRGahGiK0pYuq24baab3SuNS1LFThJw5Zu0R+cZGA==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
@@ -536,8 +532,8 @@ packages:
       aws-cdk-lib: ^2.114.1
       constructs: ^10.0.0
     dependencies:
-      '@aws-cdk/aws-apigatewayv2-alpha': 2.114.1-alpha.0(aws-cdk-lib@2.121.1)(constructs@10.3.0)
-      aws-cdk-lib: 2.121.1(constructs@10.3.0)
+      '@aws-cdk/aws-apigatewayv2-alpha': 2.114.1-alpha.0(aws-cdk-lib@2.132.1)(constructs@10.3.0)
+      aws-cdk-lib: 2.132.1(constructs@10.3.0)
       constructs: 10.3.0
     dev: false
 
@@ -5037,7 +5033,7 @@ packages:
       - verdaccio
     dev: true
 
-  /@swarmion/serverless-contracts@0.31.0(@serverless/typescript@3.38.0)(ajv@8.12.0)(aws-cdk-lib@2.121.1):
+  /@swarmion/serverless-contracts@0.31.0(@serverless/typescript@3.38.0)(ajv@8.12.0)(aws-cdk-lib@2.132.1):
     resolution: {integrity: sha512-tJbmXord7DV9ekMEoPNBKnPzaCC5J4r5F05ccX2ph/s/0f9t+qqbAaJoTvFMWhN3OyZlxWiykmgPk/YSXGZlyw==}
     peerDependencies:
       '@serverless/typescript': '>=3'
@@ -5053,7 +5049,7 @@ packages:
     dependencies:
       '@aws-sdk/client-eventbridge': 3.485.0
       '@serverless/typescript': 3.38.0
-      '@swarmion/serverless-helpers': 0.31.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.121.1)
+      '@swarmion/serverless-helpers': 0.31.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1)
       '@types/aws-lambda': 8.10.136
       '@types/http-errors': 2.0.4
       ajv: 8.12.0
@@ -5132,17 +5128,6 @@ packages:
       - aws-crt
     dev: false
 
-  /@swarmion/serverless-helpers@0.31.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.121.1):
-    resolution: {integrity: sha512-E6NLOkXpv7uMzNAPwSL1z7etDQmR03OJFtkdKw8quQz2N1qaAvLAJ7uDLDuH0/sGjZ/5Zj3+qvBEeLQhxfP/5g==}
-    peerDependencies:
-      '@serverless/typescript': '>=3'
-      aws-cdk-lib: ^2.60.0
-    dependencies:
-      '@serverless/typescript': 3.38.0
-      aws-cdk-lib: 2.121.1(constructs@10.3.0)
-      json-schema-to-ts: 3.0.1
-    dev: false
-
   /@swarmion/serverless-helpers@0.31.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1):
     resolution: {integrity: sha512-E6NLOkXpv7uMzNAPwSL1z7etDQmR03OJFtkdKw8quQz2N1qaAvLAJ7uDLDuH0/sGjZ/5Zj3+qvBEeLQhxfP/5g==}
     peerDependencies:
@@ -5154,14 +5139,14 @@ packages:
       json-schema-to-ts: 3.0.1
     dev: false
 
-  /@swarmion/serverless-helpers@0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.121.1):
+  /@swarmion/serverless-helpers@0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1):
     resolution: {integrity: sha512-osQ1nXfyXyOdcAasOFyajncph4902BVhwpgllFa90IJQ8M8LRQ55MDiNlxPdGIzsGvLxWLJhmBB5hruCAZaD7w==}
     peerDependencies:
       '@serverless/typescript': '>=3'
       aws-cdk-lib: ^2.60.0
     dependencies:
       '@serverless/typescript': 3.38.0
-      aws-cdk-lib: 2.121.1(constructs@10.3.0)
+      aws-cdk-lib: 2.132.1(constructs@10.3.0)
       json-schema-to-ts: 3.0.1
 
   /@swc-node/core@1.10.6(@swc/core@1.4.7):
@@ -5960,28 +5945,6 @@ packages:
     resolution: {integrity: sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==}
     engines: {node: '>= 0.4'}
 
-  /aws-cdk-lib@2.121.1(constructs@10.3.0):
-    resolution: {integrity: sha512-wrOHDDQqVuH2tRTH7p2LaMPVI3V2bqr8X//Qrhy+hOFA04u2MVetQYev+NgMXPjNzU9IGX2wy1Fs9Y/ntq2sQA==}
-    engines: {node: '>= 14.15.0'}
-    peerDependencies:
-      constructs: ^10.0.0
-    dependencies:
-      '@aws-cdk/asset-awscli-v1': 2.2.201
-      '@aws-cdk/asset-kubectl-v20': 2.1.2
-      '@aws-cdk/asset-node-proxy-agent-v6': 2.0.1
-      constructs: 10.3.0
-    bundledDependencies:
-      - '@balena/dockerignore'
-      - case
-      - fs-extra
-      - ignore
-      - jsonschema
-      - minimatch
-      - punycode
-      - semver
-      - table
-      - yaml
-
   /aws-cdk-lib@2.132.1(constructs@10.3.0):
     resolution: {integrity: sha512-VheC7WcvmxiteNaZPucS9J9haGQZwbUtwNiNqsbTaEiru6ETUhf/yIOIamLto1kOKEPxCw2bfLkgYrWoCzwOpw==}
     engines: {node: '>= 14.15.0'}
@@ -5992,7 +5955,6 @@ packages:
       '@aws-cdk/asset-kubectl-v20': 2.1.2
       '@aws-cdk/asset-node-proxy-agent-v6': 2.0.1
       constructs: 10.3.0
-    dev: false
     bundledDependencies:
       - '@balena/dockerignore'
       - case
@@ -6006,8 +5968,8 @@ packages:
       - yaml
       - mime-types
 
-  /aws-cdk@2.121.1:
-    resolution: {integrity: sha512-T8UFuNGDnXNmcHagCGeQ8xQA3zU/o2ENuyGXO/ho+U3KyYs7tnWIr++ovrp2FvhiBpmBv6SuKiueBA6OW7utBw==}
+  /aws-cdk@2.132.1:
+    resolution: {integrity: sha512-aIZXfX5YGNvqhbTUoUrNeXWVt6CL3d7RDSEXrPifX5OpEgI2jqtZQVpHaUzuTzTd8niuyucwvlmZmKN8xBg2/A==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
     optionalDependencies:
