@@ -82,7 +82,7 @@ importers:
     dependencies:
       '@swarmion/serverless-contracts':
         specifier: ^0.31.0
-        version: 0.31.3(@serverless/typescript@3.38.0)(ajv@8.12.0)(aws-cdk-lib@2.132.1)
+        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1)
       json-schema-to-ts:
         specifier: ^3.0.0
         version: 3.0.1
@@ -198,7 +198,7 @@ importers:
         version: 3.533.0
       '@aws-sdk/client-eventbridge':
         specifier: ^3.490.0
-        version: 3.533.0
+        version: 3.534.0
       '@event-scout/construct-contracts':
         specifier: ^0.5.5
         version: link:../../contracts/construct-contracts
@@ -383,7 +383,7 @@ importers:
         version: 3.533.0
       '@aws-sdk/client-eventbridge':
         specifier: ^3.490.0
-        version: 3.533.0
+        version: 3.534.0
       '@aws-sdk/client-ssm':
         specifier: ^3.490.0
         version: 3.533.0
@@ -708,6 +708,54 @@ packages:
       '@aws-sdk/middleware-logger': 3.533.0
       '@aws-sdk/middleware-recursion-detection': 3.533.0
       '@aws-sdk/middleware-signing': 3.533.0
+      '@aws-sdk/middleware-user-agent': 3.533.0
+      '@aws-sdk/region-config-resolver': 3.533.0
+      '@aws-sdk/signature-v4-multi-region': 3.533.0
+      '@aws-sdk/types': 3.533.0
+      '@aws-sdk/util-endpoints': 3.533.0
+      '@aws-sdk/util-user-agent-browser': 3.533.0
+      '@aws-sdk/util-user-agent-node': 3.533.0
+      '@smithy/config-resolver': 2.1.5
+      '@smithy/fetch-http-handler': 2.4.5
+      '@smithy/hash-node': 2.1.4
+      '@smithy/invalid-dependency': 2.1.4
+      '@smithy/middleware-content-length': 2.1.4
+      '@smithy/middleware-endpoint': 2.4.6
+      '@smithy/middleware-retry': 2.1.7
+      '@smithy/middleware-serde': 2.2.1
+      '@smithy/middleware-stack': 2.1.4
+      '@smithy/node-config-provider': 2.2.5
+      '@smithy/node-http-handler': 2.4.3
+      '@smithy/protocol-http': 3.2.2
+      '@smithy/smithy-client': 2.4.5
+      '@smithy/types': 2.11.0
+      '@smithy/url-parser': 2.1.4
+      '@smithy/util-base64': 2.2.1
+      '@smithy/util-body-length-browser': 2.1.1
+      '@smithy/util-body-length-node': 2.2.2
+      '@smithy/util-defaults-mode-browser': 2.1.7
+      '@smithy/util-defaults-mode-node': 2.2.7
+      '@smithy/util-endpoints': 1.1.5
+      '@smithy/util-retry': 2.1.4
+      '@smithy/util-utf8': 2.2.0
+      tslib: 2.6.2
+    transitivePeerDependencies:
+      - aws-crt
+    dev: false
+
+  /@aws-sdk/client-eventbridge@3.534.0:
+    resolution: {integrity: sha512-Jgf6To/AFkxQ/XHFwk1wRpS7SD6c3jekVVFQAJKC3c5hJYq/Pk2Ue1YfgXJ5F/GAWGEkXhX2fRoAwIqX3LIESg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-crypto/sha256-browser': 3.0.0
+      '@aws-crypto/sha256-js': 3.0.0
+      '@aws-sdk/client-sts': 3.533.0(@aws-sdk/credential-provider-node@3.533.0)
+      '@aws-sdk/core': 3.533.0
+      '@aws-sdk/credential-provider-node': 3.533.0
+      '@aws-sdk/middleware-host-header': 3.533.0
+      '@aws-sdk/middleware-logger': 3.533.0
+      '@aws-sdk/middleware-recursion-detection': 3.533.0
+      '@aws-sdk/middleware-signing': 3.534.0
       '@aws-sdk/middleware-user-agent': 3.533.0
       '@aws-sdk/region-config-resolver': 3.533.0
       '@aws-sdk/signature-v4-multi-region': 3.533.0
@@ -1140,6 +1188,19 @@ packages:
 
   /@aws-sdk/middleware-signing@3.533.0:
     resolution: {integrity: sha512-qJZBoNKoSacIkHZfHcQfxmrogQcb0OPEaeEwwH563f8D5qYjQ3yuSaq7X9BKL7W8f9GjUYUJYZJwK3tbDh1ccg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@aws-sdk/types': 3.533.0
+      '@smithy/property-provider': 2.1.4
+      '@smithy/protocol-http': 3.2.2
+      '@smithy/signature-v4': 2.1.4
+      '@smithy/types': 2.11.0
+      '@smithy/util-middleware': 2.1.4
+      tslib: 2.6.2
+    dev: false
+
+  /@aws-sdk/middleware-signing@3.534.0:
+    resolution: {integrity: sha512-TUjCjK6o8TZ5w4NEllGtGFaq4kVet0ysoocnjMoOqBUTKBSYLwRe6bkrd5rF+onJj0fMIazGz6vaQyy/0iRNjQ==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@aws-sdk/types': 3.533.0
@@ -4446,12 +4507,43 @@ packages:
       axios:
         optional: true
     dependencies:
-      '@aws-sdk/client-eventbridge': 3.533.0
+      '@aws-sdk/client-eventbridge': 3.534.0
       '@serverless/typescript': 3.38.0
       '@swarmion/serverless-helpers': 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1)
       '@types/aws-lambda': 8.10.136
       '@types/http-errors': 2.0.4
       ajv: 8.12.0
+      http-errors: 2.0.0
+      json-schema-faker: 0.5.6
+      json-schema-to-ts: 3.0.0
+      lodash: 4.17.21
+      openapi-types: 12.1.3
+      seedrandom: 3.0.5
+      ts-toolbelt: 9.6.0
+    transitivePeerDependencies:
+      - aws-cdk-lib
+      - aws-crt
+    dev: false
+
+  /@swarmion/serverless-contracts@0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1):
+    resolution: {integrity: sha512-vOzUo4qy2lYyssjAHLQ0Qucd6kv+2zeks+k0QLoNWA3zwTA7bnL9BTTtt9hJKeJqiF5QciWqsMGI/YFWl5/how==}
+    peerDependencies:
+      '@serverless/typescript': '>=3'
+      ajv: '>=8'
+      axios: '>=1'
+    peerDependenciesMeta:
+      '@serverless/typescript':
+        optional: true
+      ajv:
+        optional: true
+      axios:
+        optional: true
+    dependencies:
+      '@aws-sdk/client-eventbridge': 3.533.0
+      '@serverless/typescript': 3.38.0
+      '@swarmion/serverless-helpers': 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1)
+      '@types/aws-lambda': 8.10.136
+      '@types/http-errors': 2.0.4
       http-errors: 2.0.0
       json-schema-faker: 0.5.6
       json-schema-to-ts: 3.0.0
@@ -4478,7 +4570,7 @@ packages:
       axios:
         optional: true
     dependencies:
-      '@aws-sdk/client-eventbridge': 3.533.0
+      '@aws-sdk/client-eventbridge': 3.534.0
       '@serverless/typescript': 3.38.0
       '@swarmion/serverless-helpers': 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.132.1)
       '@types/aws-lambda': 8.10.136
