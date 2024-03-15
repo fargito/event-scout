@@ -143,10 +143,10 @@ importers:
         version: 2.2.0
       '@swarmion/serverless-contracts':
         specifier: ^0.31.0
-        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.133.0)(axios@1.6.7)
+        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.133.0)(axios@1.6.8)
       axios:
         specifier: ^1.6.5
-        version: 1.6.7
+        version: 1.6.8
     devDependencies:
       '@types/node':
         specifier: ^20.11.4
@@ -4541,7 +4541,7 @@ packages:
       - aws-crt
     dev: false
 
-  /@swarmion/serverless-contracts@0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.133.0)(axios@1.6.7):
+  /@swarmion/serverless-contracts@0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.133.0)(axios@1.6.8):
     resolution: {integrity: sha512-vOzUo4qy2lYyssjAHLQ0Qucd6kv+2zeks+k0QLoNWA3zwTA7bnL9BTTtt9hJKeJqiF5QciWqsMGI/YFWl5/how==}
     peerDependencies:
       '@serverless/typescript': '>=3'
@@ -4560,7 +4560,7 @@ packages:
       '@swarmion/serverless-helpers': 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.133.0)
       '@types/aws-lambda': 8.10.136
       '@types/http-errors': 2.0.4
-      axios: 1.6.7
+      axios: 1.6.8
       http-errors: 2.0.0
       json-schema-faker: 0.5.6
       json-schema-to-ts: 3.0.0
@@ -5418,11 +5418,22 @@ packages:
   /axios@1.6.7:
     resolution: {integrity: sha512-/hDJGff6/c7u0hDkvkGxR/oy6CbCs8ziCsC7SqmhjfozqiJGc8Z11wrv9z9lYfY4K8l+H9TpjcMDX0xOZmx+RA==}
     dependencies:
-      follow-redirects: 1.15.5
+      follow-redirects: 1.15.6
       form-data: 4.0.0
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
+    dev: true
+
+  /axios@1.6.8:
+    resolution: {integrity: sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==}
+    dependencies:
+      follow-redirects: 1.15.6
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   /babel-plugin-const-enum@1.2.0(@babel/core@7.24.0):
     resolution: {integrity: sha512-o1m/6iyyFnp9MRsK1dHF3bneqyf3AlM2q3A/YbgQr2pCat6B6XJVDv2TXqzfY2RYUi4mak6WAksSBPlyYGx9dg==}
@@ -7203,8 +7214,8 @@ packages:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==}
     dev: true
 
-  /follow-redirects@1.15.5:
-    resolution: {integrity: sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==}
+  /follow-redirects@1.15.6:
+    resolution: {integrity: sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
