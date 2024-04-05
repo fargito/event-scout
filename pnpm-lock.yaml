@@ -82,7 +82,7 @@ importers:
     dependencies:
       '@swarmion/serverless-contracts':
         specifier: ^0.31.0
-        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.135.0)
+        version: 0.31.3(@serverless/typescript@3.38.0)(ajv@8.12.0)(aws-cdk-lib@2.135.0)
       json-schema-to-ts:
         specifier: ^3.0.0
         version: 3.0.1
@@ -223,7 +223,7 @@ importers:
     devDependencies:
       '@types/aws-lambda':
         specifier: ^8.10.131
-        version: 8.10.136
+        version: 8.10.137
       '@types/node':
         specifier: ^20.11.4
         version: 20.12.4
@@ -5193,43 +5193,12 @@ packages:
       axios:
         optional: true
     dependencies:
-      '@aws-sdk/client-eventbridge': 3.549.0
-      '@serverless/typescript': 3.38.0
-      '@swarmion/serverless-helpers': 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.135.0)
-      '@types/aws-lambda': 8.10.136
-      '@types/http-errors': 2.0.4
-      ajv: 8.12.0
-      http-errors: 2.0.0
-      json-schema-faker: 0.5.6
-      json-schema-to-ts: 3.0.0
-      lodash: 4.17.21
-      openapi-types: 12.1.3
-      seedrandom: 3.0.5
-      ts-toolbelt: 9.6.0
-    transitivePeerDependencies:
-      - aws-cdk-lib
-      - aws-crt
-    dev: false
-
-  /@swarmion/serverless-contracts@0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.135.0):
-    resolution: {integrity: sha512-vOzUo4qy2lYyssjAHLQ0Qucd6kv+2zeks+k0QLoNWA3zwTA7bnL9BTTtt9hJKeJqiF5QciWqsMGI/YFWl5/how==}
-    peerDependencies:
-      '@serverless/typescript': '>=3'
-      ajv: '>=8'
-      axios: '>=1'
-    peerDependenciesMeta:
-      '@serverless/typescript':
-        optional: true
-      ajv:
-        optional: true
-      axios:
-        optional: true
-    dependencies:
       '@aws-sdk/client-eventbridge': 3.533.0
       '@serverless/typescript': 3.38.0
       '@swarmion/serverless-helpers': 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.135.0)
       '@types/aws-lambda': 8.10.136
       '@types/http-errors': 2.0.4
+      ajv: 8.12.0
       http-errors: 2.0.0
       json-schema-faker: 0.5.6
       json-schema-to-ts: 3.0.0
@@ -5256,7 +5225,7 @@ packages:
       axios:
         optional: true
     dependencies:
-      '@aws-sdk/client-eventbridge': 3.549.0
+      '@aws-sdk/client-eventbridge': 3.533.0
       '@serverless/typescript': 3.38.0
       '@swarmion/serverless-helpers': 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.135.0)
       '@types/aws-lambda': 8.10.136
@@ -5495,6 +5464,11 @@ packages:
 
   /@types/aws-lambda@8.10.136:
     resolution: {integrity: sha512-cmmgqxdVGhxYK9lZMYYXYRJk6twBo53ivtXjIUEFZxfxe4TkZTZBK3RRWrY2HjJcUIix0mdifn15yjOAat5lTA==}
+    dev: false
+
+  /@types/aws-lambda@8.10.137:
+    resolution: {integrity: sha512-YNFwzVarXAOXkjuFxONyDw1vgRNzyH8AuyN19s0bM+ChSu/bzxb5XPxYFLXoqoM+tvgzwR3k7fXcEOW125yJxg==}
+    dev: true
 
   /@types/conventional-commits-parser@5.0.0:
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
