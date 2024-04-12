@@ -380,7 +380,7 @@ importers:
     dependencies:
       '@aws-sdk/client-cloudformation':
         specifier: ^3.490.0
-        version: 3.554.0
+        version: 3.555.0
       '@aws-sdk/client-eventbridge':
         specifier: ^3.490.0
         version: 3.554.0
@@ -589,8 +589,8 @@ packages:
       - aws-crt
     dev: false
 
-  /@aws-sdk/client-cloudformation@3.554.0:
-    resolution: {integrity: sha512-dj9Th3GA6UZvygnTTukQ0QSb0kRlIkKNLQGdG1AV2nFlrvE59+ZrrVGs3HQNP6crwemPwskX/XGwjvqGVzbChw==}
+  /@aws-sdk/client-cloudformation@3.555.0:
+    resolution: {integrity: sha512-gm+qteiSwG/Y25lrIdjiP/GQkYSCdxhTAcHHUGmC85pDTLRsZbTXUm79rhvT3SfoLX3/Hh4JHoVSiFL+wxKeww==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
@@ -5031,14 +5031,6 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@smithy/util-buffer-from@2.1.1:
-    resolution: {integrity: sha512-clhNjbyfqIv9Md2Mg6FffGVrJxw7bgK7s3Iax36xnfVj6cg0fUG7I4RH0XgXJF8bxi+saY5HR21g2UPKSxVCXg==}
-    engines: {node: '>=14.0.0'}
-    dependencies:
-      '@smithy/is-array-buffer': 2.2.0
-      tslib: 2.6.2
-    dev: false
-
   /@smithy/util-buffer-from@2.2.0:
     resolution: {integrity: sha512-IJdWBbTcMQ6DA0gdNhh/BwrLkDR+ADW5Kr1aZmd4k3DIF6ezMV4R2NIAmT08wQJ3yUK82thHWmC/TnK/wpMMIA==}
     engines: {node: '>=14.0.0'}
@@ -5136,7 +5128,7 @@ packages:
     resolution: {integrity: sha512-qOiVORSPm6Ce4/Yu6hbSgNHABLP2VMv8QOC3tTDNHHlWY19pPyc++fBTbZPtx6egPXi4HQxKDnMxVxpbtX2GoA==}
     engines: {node: '>=14.0.0'}
     dependencies:
-      '@smithy/util-buffer-from': 2.1.1
+      '@smithy/util-buffer-from': 2.2.0
       tslib: 2.6.2
     dev: false
 
