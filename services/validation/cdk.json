@@ -1,5 +1,5 @@
 {
-  "app": "node --loader @swc-node/register/esm resources/index.ts",
+  "app": "node --import @swc-node/register/esm-register resources/index.ts",
   "requireApproval": "never",
   "watch": {
     "include": ["**"],
