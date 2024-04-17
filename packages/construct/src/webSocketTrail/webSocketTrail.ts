@@ -5,10 +5,10 @@ import { Table } from 'aws-cdk-lib/aws-dynamodb';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Construct } from 'constructs';
 
-import { ForwardEventFunction } from './functions/forwardEvent/config';
-import { OnStartTrailFunction } from './functions/onStartTrail/config';
-import { OnConnectFunction } from './functions/onWebSocketConnect/config';
-import { OnDisconnectFunction } from './functions/onWebSocketDisconnect/config';
+import { ForwardEventFunction } from './functions/forwardEvent';
+import { OnStartTrailFunction } from './functions/onStartTrail';
+import { OnConnectFunction } from './functions/onWebSocketConnect';
+import { OnDisconnectFunction } from './functions/onWebSocketDisconnect';
 
 type WebSocketTrailProps = {
   table: Table;

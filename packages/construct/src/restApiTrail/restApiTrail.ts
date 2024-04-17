@@ -3,10 +3,10 @@ import { Table } from 'aws-cdk-lib/aws-dynamodb';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Construct } from 'constructs';
 
-import { ListEventsFunction } from './functions/listEvents/config';
-import { StartEventsTrailFunction } from './functions/startEventsTrail/config';
-import { StopEventsTrailFunction } from './functions/stopEventsTrail/config';
-import { StoreEventsFunction } from './functions/storeEvents/config';
+import { ListEventsFunction } from './functions/listEvents';
+import { StartEventsTrailFunction } from './functions/startEventsTrail';
+import { StopEventsTrailFunction } from './functions/stopEventsTrail';
+import { StoreEventsFunction } from './functions/storeEvents';
 
 type RestApiTrailProps = {
   table: Table;

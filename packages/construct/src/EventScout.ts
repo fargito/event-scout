@@ -8,7 +8,7 @@ import {
 import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Construct } from 'constructs';
 
-import { TrailGarbageCollectorFunction } from './restApiTrail/functions/trailGarbageCollector/config';
+import { TrailGarbageCollectorFunction } from './restApiTrail/functions/trailGarbageCollector';
 import { RestApiTrail } from './restApiTrail/restApiTrail';
 import { WebSocketTrail } from './webSocketTrail/webSocketTrail';
 
