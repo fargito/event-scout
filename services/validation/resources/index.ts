@@ -1,6 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 
-import { defaultEnvironment } from '@event-scout/serverless-configuration';
+import { defaultEnvironment } from 'utils/sharedConfig';
 
 import { TestStack } from './stack';
 

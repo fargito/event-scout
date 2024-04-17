@@ -343,42 +343,6 @@ importers:
         specifier: ^1.2.0
         version: 1.5.0(@types/node@20.12.7)
 
-  packages/serverless-configuration:
-    devDependencies:
-      '@serverless/typescript':
-        specifier: ^3.38.0
-        version: 3.38.0
-      '@types/node':
-        specifier: ^20.11.4
-        version: 20.12.7
-      concurrently:
-        specifier: ^8.2.2
-        version: 8.2.2
-      dependency-cruiser:
-        specifier: ^16.0.0
-        version: 16.3.1
-      eslint:
-        specifier: ^8.56.0
-        version: 8.57.0
-      prettier:
-        specifier: ^3.2.2
-        version: 3.2.5
-      rimraf:
-        specifier: ^5.0.5
-        version: 5.0.5
-      tsc-alias:
-        specifier: ^1.8.8
-        version: 1.8.8
-      tsup:
-        specifier: ^8.0.1
-        version: 8.0.2(@swc/core@1.4.14)(postcss@8.4.38)(ts-node@10.9.1(@swc/core@1.4.14)(@types/node@20.12.7)(typescript@5.4.5))(typescript@5.4.5)
-      typescript:
-        specifier: ^5.3.3
-        version: 5.4.5
-      vitest:
-        specifier: ^1.2.0
-        version: 1.5.0(@types/node@20.12.7)
-
   services/validation:
     dependencies:
       '@aws-sdk/client-cloudformation':
@@ -403,9 +367,6 @@ importers:
         specifier: workspace:^
         version: link:../../packages/construct
     devDependencies:
-      '@event-scout/serverless-configuration':
-        specifier: workspace:^
-        version: link:../../packages/serverless-configuration
       '@swarmion/serverless-helpers':
         specifier: ^0.31.0
         version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.137.0(constructs@10.3.0))
