@@ -110,7 +110,7 @@ module.exports = {
   },
   plugins: ['prefer-arrow', 'import'],
   parserOptions: {
-    ecmaVersion: 9,
+    ecmaVersion: 'latest',
     sourceType: 'module',
   },
   overrides: [
