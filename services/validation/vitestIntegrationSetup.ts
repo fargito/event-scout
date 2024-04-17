@@ -6,16 +6,12 @@ import { EventBridgeClient } from '@aws-sdk/client-eventbridge';
 import { fromEnv, fromIni } from '@aws-sdk/credential-providers';
 
 import { EventScoutClient } from '@event-scout/client';
-import {
-  defaultEnvironment,
-  region,
-  sharedParams,
-} from '@event-scout/serverless-configuration';
 
 import {
   eventBusExportName,
   restApiEndpointExportName,
 } from 'utils/exportNames';
+import { defaultEnvironment, region, sharedParams } from 'utils/sharedConfig';
 
 // we need to use an environment variable in order to set the right credentials
 const serverlessEnv = process.env.SLS_ENV ?? defaultEnvironment;
