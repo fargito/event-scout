@@ -1,50 +1,38 @@
 import { getCdkHandlerPath } from '@swarmion/serverless-helpers';
 import { Aws, Fn } from 'aws-cdk-lib';
-import { WebSocketApi } from 'aws-cdk-lib/aws-apigatewayv2';
+import { Table } from 'aws-cdk-lib/aws-dynamodb';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 import { Architecture, CfnPermission, Runtime } from 'aws-cdk-lib/aws-lambda';
-import { BundlingOptions, NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
+import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 
-type Props = {
-  bundling: BundlingOptions;
-  eventBus: IEventBus;
-  webSocketApi: WebSocketApi;
-  webSocketEndpoint: string;
-};
+type Props = { table: Table; eventBus: IEventBus };
 
-export class ForwardEventFunction extends Construct {
+export class StoreEventsFunction extends Construct {
   public function: NodejsFunction;
 
-  constructor(
-    scope: Construct,
-    id: string,
-    { bundling, eventBus, webSocketApi, webSocketEndpoint }: Props,
-  ) {
+  constructor(scope: Construct, id: string, { table, eventBus }: Props) {
     super(scope, id);
 
-    this.function = new NodejsFunction(this, 'OnNewWebsocketEvent', {
+    this.function = new NodejsFunction(this, 'StoreEvents', {
       entry: getCdkHandlerPath(__dirname, {
-        // due to bundling, we need to reference the generated entrypoint. This is because of tsup.config.ts
+        // due to bundling, we need to reference the generated entrypoint. This is because of esbuild.build.js
         extension: 'js',
-        fileName: 'forwardEvent',
+        fileName: 'storeEvents',
       }),
       handler: 'main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,
       awsSdkConnectionReuse: true,
-      bundling,
       environment: {
-        WEBSOCKET_ENDPOINT: webSocketEndpoint,
+        TEST_TABLE_NAME: table.tableName,
       },
       initialPolicy: [
         new PolicyStatement({
           effect: Effect.ALLOW,
-          resources: [
-            `arn:aws:execute-api:${Aws.REGION}:${Aws.ACCOUNT_ID}:${webSocketApi.apiId}/*`,
-          ],
-          actions: ['execute-api:ManageConnections'],
+          resources: [table.tableArn],
+          actions: ['dynamodb:PutItem'],
         }),
       ],
     });

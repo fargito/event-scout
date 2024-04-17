@@ -9,49 +9,45 @@ import { Table } from 'aws-cdk-lib/aws-dynamodb';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 import { Architecture, Runtime } from 'aws-cdk-lib/aws-lambda';
-import { BundlingOptions, NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
+import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 
 type Props = {
   table: Table;
-  bundling: BundlingOptions;
   restApi: RestApi;
   eventBus: IEventBus;
-  storeEvents: NodejsFunction;
 };
 
-export class StartEventsTrailFunction extends Construct {
+export class StopEventsTrailFunction extends Construct {
   public function: NodejsFunction;
 
   constructor(
     scope: Construct,
     id: string,
-    { table, bundling, restApi, eventBus, storeEvents }: Props,
+    { table, restApi, eventBus }: Props,
   ) {
     super(scope, id);
 
-    this.function = new NodejsFunction(this, 'StartEventsTrail', {
+    this.function = new NodejsFunction(this, 'StopEventsTrail', {
       entry: getCdkHandlerPath(__dirname, {
-        // due to bundling, we need to reference the generated entrypoint. This is because of tsup.config.ts
+        // due to bundling, we need to reference the generated entrypoint. This is because of esbuild.build.js
         extension: 'js',
-        fileName: 'startEventsTrail',
+        fileName: 'stopEventsTrail',
       }),
       handler: 'main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,
       awsSdkConnectionReuse: true,
       timeout: Duration.seconds(15),
-      bundling,
       environment: {
         TEST_TABLE_NAME: table.tableName,
         EVENT_BUS_NAME: eventBus.eventBusName,
-        STORE_EVENTS_LAMBDA_ARN: storeEvents.functionArn,
       },
       initialPolicy: [
         new PolicyStatement({
           effect: Effect.ALLOW,
           resources: [table.tableArn],
-          actions: ['dynamodb:PutItem'],
+          actions: ['dynamodb:DeleteItem'],
         }),
         new PolicyStatement({
           effect: Effect.ALLOW,
@@ -65,12 +61,12 @@ export class StartEventsTrailFunction extends Construct {
               Fn.join('/', ['rule', eventBus.eventBusName, '*']),
             ]),
           ],
-          actions: ['events:PutRule', 'events:PutTargets'],
+          actions: ['events:DeleteRule', 'events:RemoveTargets'],
         }),
       ],
     });
 
-    const trail = restApi.root.addResource('start-events-trail');
+    const trail = restApi.root.addResource('stop-events-trail');
     trail.addMethod('POST', new LambdaIntegration(this.function), {
       authorizationType: AuthorizationType.IAM,
     });

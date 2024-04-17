@@ -2,7 +2,7 @@ import { EventBridgeClient } from '@aws-sdk/client-eventbridge';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
 import { DynamoDBStreamEvent } from 'aws-lambda';
 
-import { buildDeleteEventBridgeRuleAndTarget } from 'common/utils/deleteEventBridgeRuleAndTarget';
+import { buildDeleteEventBridgeRuleAndTarget } from 'lambdas/utils/deleteEventBridgeRuleAndTarget';
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');

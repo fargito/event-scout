@@ -11,7 +11,7 @@ import { DocumentClient } from 'aws-sdk/clients/dynamodb';
 
 import { listEventsContract } from '@event-scout/construct-contracts';
 
-import { buildListAllTrailEvents } from 'common/utils/listAllTrailEvents';
+import { buildListAllTrailEvents } from 'lambdas/utils/listAllTrailEvents';
 
 const tableName = getEnvVariable('TEST_TABLE_NAME');
 const documentClient = new DocumentClient();

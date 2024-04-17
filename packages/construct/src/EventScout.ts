@@ -6,17 +6,14 @@ import {
   Table,
 } from 'aws-cdk-lib/aws-dynamodb';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
-import { BundlingOptions } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 
-import { defaultEsbuildConfig } from './common/utils/esbuildConfig';
-import { TrailGarbageCollectorFunction } from './restApiTrail/functions/trailGarbageCollector/config';
+import { TrailGarbageCollectorFunction } from './restApiTrail/functions/trailGarbageCollector';
 import { RestApiTrail } from './restApiTrail/restApiTrail';
 import { WebSocketTrail } from './webSocketTrail/webSocketTrail';
 
 type EventScoutProps = {
   eventBus: IEventBus;
-  bundling?: Partial<BundlingOptions>;
   stage?: string;
 };
 
@@ -30,12 +27,9 @@ export class EventScout extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { eventBus, bundling: bundlingOverrides, stage = 'dev' }: EventScoutProps,
+    { eventBus, stage = 'dev' }: EventScoutProps,
   ) {
     super(scope, id);
-
-    // merge the overrides with the default configuration
-    const bundling = { ...defaultEsbuildConfig, ...bundlingOverrides };
 
     // provision the Table
     const table = new Table(this, 'Table', {
@@ -51,7 +45,6 @@ export class EventScout extends Construct {
     // therefore it is safe to not call the stop lambda
     new TrailGarbageCollectorFunction(this, 'TrailGarbageCollectorFunction', {
       table,
-      bundling,
       eventBus,
     });
 
@@ -59,7 +52,6 @@ export class EventScout extends Construct {
     const { restEndpoint } = new RestApiTrail(this, 'RestApiTrail', {
       table,
       eventBus,
-      bundling,
       stage,
     });
     this.restEndpoint = restEndpoint;
@@ -67,7 +59,6 @@ export class EventScout extends Construct {
     const { webSocketEndpoint } = new WebSocketTrail(this, 'WebsocketTrail', {
       table,
       eventBus,
-      bundling,
       stage,
     });
     this.webSocketEndpoint = webSocketEndpoint;

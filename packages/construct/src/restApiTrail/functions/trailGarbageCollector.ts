@@ -11,28 +11,23 @@ import {
   StartingPosition,
 } from 'aws-cdk-lib/aws-lambda';
 import { DynamoEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
-import { BundlingOptions, NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
+import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 
 type Props = {
   table: Table;
-  bundling: BundlingOptions;
   eventBus: IEventBus;
 };
 
 export class TrailGarbageCollectorFunction extends Construct {
   public function: NodejsFunction;
 
-  constructor(
-    scope: Construct,
-    id: string,
-    { table, bundling, eventBus }: Props,
-  ) {
+  constructor(scope: Construct, id: string, { table, eventBus }: Props) {
     super(scope, id);
 
     this.function = new NodejsFunction(this, 'TrailGarbageCollector', {
       entry: getCdkHandlerPath(__dirname, {
-        // due to bundling, we need to reference the generated entrypoint. This is because of tsup.config.ts
+        // due to bundling, we need to reference the generated entrypoint. This is because of esbuild.build.js
         extension: 'js',
         fileName: 'trailGarbageCollector',
       }),
@@ -40,7 +35,6 @@ export class TrailGarbageCollectorFunction extends Construct {
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,
       awsSdkConnectionReuse: true,
-      bundling,
       timeout: Duration.minutes(1),
       environment: {
         EVENT_BUS_NAME: eventBus.eventBusName,
