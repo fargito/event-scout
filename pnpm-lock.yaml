@@ -136,8 +136,8 @@ importers:
         specifier: ^3.489.0
         version: 3.535.0
       '@event-scout/construct-contracts':
-        specifier: ^0.5.5
-        version: 0.5.5(@serverless/typescript@3.38.0)(ajv@8.12.0)(aws-cdk-lib@2.137.0(constructs@10.3.0))(axios@1.6.8)
+        specifier: workspace:^0.5.5
+        version: link:../../contracts/construct-contracts
       '@smithy/signature-v4':
         specifier: ^2.0.19
         version: 2.3.0
@@ -200,8 +200,8 @@ importers:
         specifier: ^3.490.0
         version: 3.556.0
       '@event-scout/construct-contracts':
-        specifier: ^0.5.5
-        version: 0.5.5(@serverless/typescript@3.38.0)(ajv@8.12.0)(aws-cdk-lib@2.137.0(constructs@10.3.0))(axios@1.6.8)
+        specifier: workspace:^0.5.5
+        version: link:../../contracts/construct-contracts
       '@swarmion/serverless-contracts':
         specifier: ^0.31.0
         version: 0.31.3(@serverless/typescript@3.38.0)(ajv@8.12.0)(aws-cdk-lib@2.137.0(constructs@10.3.0))(axios@1.6.8)
@@ -1710,9 +1710,6 @@ packages:
   '@eslint/js@8.57.0':
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-
-  '@event-scout/construct-contracts@0.5.5':
-    resolution: {integrity: sha512-G4gbuG8TVm9Zu5ZlKGsBfNW4NYKZGZmxv5NR5B3e1xQhBVQr4PJ5zFeHllD9Vbq+/ZL094k9dtiBb6v2JnVSJQ==}
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -8557,17 +8554,6 @@ snapshots:
       - supports-color
 
   '@eslint/js@8.57.0': {}
-
-  '@event-scout/construct-contracts@0.5.5(@serverless/typescript@3.38.0)(ajv@8.12.0)(aws-cdk-lib@2.137.0(constructs@10.3.0))(axios@1.6.8)':
-    dependencies:
-      '@swarmion/serverless-contracts': 0.31.3(@serverless/typescript@3.38.0)(ajv@8.12.0)(aws-cdk-lib@2.137.0(constructs@10.3.0))(axios@1.6.8)
-      json-schema-to-ts: 3.0.1
-    transitivePeerDependencies:
-      - '@serverless/typescript'
-      - ajv
-      - aws-cdk-lib
-      - aws-crt
-      - axios
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
