@@ -4,11 +4,10 @@ import { WebSocketApi } from 'aws-cdk-lib/aws-apigatewayv2';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 import { Architecture, CfnPermission, Runtime } from 'aws-cdk-lib/aws-lambda';
-import { BundlingOptions, NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
+import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 
 type Props = {
-  bundling: BundlingOptions;
   eventBus: IEventBus;
   webSocketApi: WebSocketApi;
   webSocketEndpoint: string;
@@ -20,13 +19,13 @@ export class ForwardEventFunction extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { bundling, eventBus, webSocketApi, webSocketEndpoint }: Props,
+    { eventBus, webSocketApi, webSocketEndpoint }: Props,
   ) {
     super(scope, id);
 
     this.function = new NodejsFunction(this, 'OnNewWebsocketEvent', {
       entry: getCdkHandlerPath(__dirname, {
-        // due to bundling, we need to reference the generated entrypoint. This is because of tsup.config.ts
+        // due to bundling, we need to reference the generated entrypoint. This is because of esbuild.build.js
         extension: 'js',
         fileName: 'forwardEvent',
       }),
@@ -34,7 +33,6 @@ export class ForwardEventFunction extends Construct {
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,
       awsSdkConnectionReuse: true,
-      bundling,
       environment: {
         WEBSOCKET_ENDPOINT: webSocketEndpoint,
       },

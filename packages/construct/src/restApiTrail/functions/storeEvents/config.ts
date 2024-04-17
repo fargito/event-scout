@@ -4,24 +4,20 @@ import { Table } from 'aws-cdk-lib/aws-dynamodb';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 import { Architecture, CfnPermission, Runtime } from 'aws-cdk-lib/aws-lambda';
-import { BundlingOptions, NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
+import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 
-type Props = { table: Table; bundling: BundlingOptions; eventBus: IEventBus };
+type Props = { table: Table; eventBus: IEventBus };
 
 export class StoreEventsFunction extends Construct {
   public function: NodejsFunction;
 
-  constructor(
-    scope: Construct,
-    id: string,
-    { table, bundling, eventBus }: Props,
-  ) {
+  constructor(scope: Construct, id: string, { table, eventBus }: Props) {
     super(scope, id);
 
     this.function = new NodejsFunction(this, 'StoreEvents', {
       entry: getCdkHandlerPath(__dirname, {
-        // due to bundling, we need to reference the generated entrypoint. This is because of tsup.config.ts
+        // due to bundling, we need to reference the generated entrypoint. This is because of esbuild.build.js
         extension: 'js',
         fileName: 'storeEvents',
       }),
@@ -29,7 +25,6 @@ export class StoreEventsFunction extends Construct {
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,
       awsSdkConnectionReuse: true,
-      bundling,
       environment: {
         TEST_TABLE_NAME: table.tableName,
       },

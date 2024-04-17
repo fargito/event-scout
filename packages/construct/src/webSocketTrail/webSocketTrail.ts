@@ -3,7 +3,6 @@ import { WebSocketIamAuthorizer } from 'aws-cdk-lib/aws-apigatewayv2-authorizers
 import { WebSocketLambdaIntegration } from 'aws-cdk-lib/aws-apigatewayv2-integrations';
 import { Table } from 'aws-cdk-lib/aws-dynamodb';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
-import { BundlingOptions } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 
 import { ForwardEventFunction } from './functions/forwardEvent/config';
@@ -13,7 +12,6 @@ import { OnDisconnectFunction } from './functions/onWebSocketDisconnect/config';
 
 type WebSocketTrailProps = {
   table: Table;
-  bundling: BundlingOptions;
   eventBus: IEventBus;
   stage: string;
 };
@@ -28,7 +26,7 @@ export class WebSocketTrail extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { bundling, table, eventBus, stage }: WebSocketTrailProps,
+    { table, eventBus, stage }: WebSocketTrailProps,
   ) {
     super(scope, id);
 
@@ -39,11 +37,10 @@ export class WebSocketTrail extends Construct {
     const { function: forwardEvent } = new ForwardEventFunction(
       this,
       'ForwardEvent',
-      { bundling, eventBus, webSocketApi, webSocketEndpoint },
+      { eventBus, webSocketApi, webSocketEndpoint },
     );
 
     const { function: onConnect } = new OnConnectFunction(this, 'OnConnect', {
-      bundling,
       table,
     });
 
@@ -51,7 +48,6 @@ export class WebSocketTrail extends Construct {
       this,
       'OnDisconnect',
       {
-        bundling,
         table,
         eventBus,
       },
@@ -60,7 +56,7 @@ export class WebSocketTrail extends Construct {
     const { function: onStartTrail } = new OnStartTrailFunction(
       this,
       'OnStartTrail',
-      { bundling, table, eventBus, forwardEvent },
+      { table, eventBus, forwardEvent },
     );
 
     // create routes for API Gateway
