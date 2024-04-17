@@ -12,7 +12,7 @@ import { DocumentClient } from 'aws-sdk/clients/dynamodb';
 
 import { stopEventsTrailContract } from '@event-scout/construct-contracts';
 
-import { buildDeleteEventBridgeRuleAndTarget } from 'common/utils/deleteEventBridgeRuleAndTarget';
+import { buildDeleteEventBridgeRuleAndTarget } from 'lambdas/utils/deleteEventBridgeRuleAndTarget';
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');

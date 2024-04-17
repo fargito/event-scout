@@ -3,7 +3,7 @@ import { getEnvVariable } from '@swarmion/serverless-helpers';
 import { APIGatewayProxyWebsocketHandlerV2 } from 'aws-lambda';
 import { DocumentClient } from 'aws-sdk/clients/dynamodb';
 
-import { buildDeleteEventBridgeRuleAndTarget } from 'common/utils/deleteEventBridgeRuleAndTarget';
+import { buildDeleteEventBridgeRuleAndTarget } from 'lambdas/utils/deleteEventBridgeRuleAndTarget';
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');
