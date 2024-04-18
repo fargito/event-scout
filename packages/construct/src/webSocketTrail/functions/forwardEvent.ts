@@ -1,11 +1,16 @@
-import { getCdkHandlerPath } from '@swarmion/serverless-helpers';
 import { Aws, Fn } from 'aws-cdk-lib';
 import { WebSocketApi } from 'aws-cdk-lib/aws-apigatewayv2';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
-import { Architecture, CfnPermission, Runtime } from 'aws-cdk-lib/aws-lambda';
-import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
+import {
+  Architecture,
+  CfnPermission,
+  Code,
+  Function as LambdaFunction,
+  Runtime,
+} from 'aws-cdk-lib/aws-lambda';
 import { Construct } from 'constructs';
+import { join } from 'path';
 
 type Props = {
   eventBus: IEventBus;
@@ -14,7 +19,7 @@ type Props = {
 };
 
 export class ForwardEventFunction extends Construct {
-  public function: NodejsFunction;
+  public function: LambdaFunction;
 
   constructor(
     scope: Construct,
@@ -23,17 +28,13 @@ export class ForwardEventFunction extends Construct {
   ) {
     super(scope, id);
 
-    this.function = new NodejsFunction(this, 'OnNewWebsocketEvent', {
-      entry: getCdkHandlerPath(__dirname, {
-        // due to bundling, we need to reference the generated entrypoint. This is because of esbuild.build.js
-        extension: 'js',
-        fileName: 'forwardEvent',
-      }),
-      handler: 'main',
+    this.function = new LambdaFunction(this, 'OnNewWebsocketEvent', {
+      code: Code.fromAsset(join(__dirname, 'forwardEvent.zip')),
+      handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,
-      awsSdkConnectionReuse: true,
       environment: {
+        AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
         WEBSOCKET_ENDPOINT: webSocketEndpoint,
       },
       initialPolicy: [

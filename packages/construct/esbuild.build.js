@@ -1,23 +1,29 @@
+import { execSync } from 'child_process';
 import esbuild from 'esbuild';
+import path, { join } from 'path';
+import { fileURLToPath } from 'url';
+
+const lambdas = [
+  'startEventsTrail',
+  'listEvents',
+  'stopEventsTrail',
+  'storeEvents',
+  'trailGarbageCollector',
+  'forwardEvent',
+  'onStartTrail',
+  'onWebSocketConnect',
+  'onWebSocketDisconnect',
+];
 
 await esbuild.build({
-  entryPoints: [
-    'src/lambdas/startEventsTrail.ts',
-    'src/lambdas/listEvents.ts',
-    'src/lambdas/stopEventsTrail.ts',
-    'src/lambdas/storeEvents.ts',
-    'src/lambdas/trailGarbageCollector.ts',
-    'src/lambdas/forwardEvent.ts',
-    'src/lambdas/onStartTrail.ts',
-    'src/lambdas/onWebSocketConnect.ts',
-    'src/lambdas/onWebSocketDisconnect.ts',
-  ],
-  outdir: 'dist/',
+  entryPoints: lambdas.map(name => `src/lambdas/${name}.ts`),
+  outdir: '.esbuild',
   bundle: true,
   minify: true,
+  entryNames: '[name]/handler',
   keepNames: true,
   sourcemap: true,
-  external: ['aws-sdk', '@aws-sdk/*'], // since we are on node20, we should get these out-of the box from the runtime
+  external: ['@aws-sdk/*'], // since we are on node20, we should get these out-of the box from the runtime
   target: 'node20',
   platform: 'node',
   /**
@@ -29,3 +35,12 @@ await esbuild.build({
    */
   mainFields: ['module', 'main'],
 });
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+for (const lambda of lambdas) {
+  execSync(
+    `cd .esbuild/${lambda} && zip -r ${lambda}.zip . && mv ${lambda}.zip ${join(__dirname, 'dist')} && cd ${__dirname}`,
+  );
+}
