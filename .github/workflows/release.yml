@@ -49,9 +49,6 @@ jobs:
             nx-cache
           # Cache will be updated at every run: https://github.com/actions/cache/blob/main/workarounds.md#update-a-cache
           key: ${{ runner.os }}-nx-cache-${{ steps.setup-node.outputs.node-version }}-${{ github.run_id }}
-          restore-keys: |
-            ${{ runner.os }}-nx-cache-${{ steps.setup-node.outputs.node-version }}-
-            ${{ runner.os }}-nx-cache-
       - name: '🏗 Package'
         run: pnpm nx affected --targets=package,build --parallel=2
       - name: '🧪 Run tests'
