@@ -1,4 +1,3 @@
-import { getCdkHandlerPath } from '@swarmion/serverless-helpers';
 import { Aws, Duration, Fn } from 'aws-cdk-lib';
 import {
   AuthorizationType,
@@ -8,19 +7,24 @@ import {
 import { Table } from 'aws-cdk-lib/aws-dynamodb';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
-import { Architecture, Runtime } from 'aws-cdk-lib/aws-lambda';
-import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
+import {
+  Architecture,
+  Code,
+  Function as LambdaFunction,
+  Runtime,
+} from 'aws-cdk-lib/aws-lambda';
 import { Construct } from 'constructs';
+import { join } from 'path';
 
 type Props = {
   table: Table;
   restApi: RestApi;
   eventBus: IEventBus;
-  storeEvents: NodejsFunction;
+  storeEvents: LambdaFunction;
 };
 
 export class StartEventsTrailFunction extends Construct {
-  public function: NodejsFunction;
+  public function: LambdaFunction;
 
   constructor(
     scope: Construct,
@@ -29,18 +33,14 @@ export class StartEventsTrailFunction extends Construct {
   ) {
     super(scope, id);
 
-    this.function = new NodejsFunction(this, 'StartEventsTrail', {
-      entry: getCdkHandlerPath(__dirname, {
-        // due to bundling, we need to reference the generated entrypoint. This is because of esbuild.build.js
-        extension: 'js',
-        fileName: 'startEventsTrail',
-      }),
-      handler: 'main',
+    this.function = new LambdaFunction(this, 'StartEventsTrail', {
+      code: Code.fromAsset(join(__dirname, 'startEventsTrail.zip')),
+      handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,
-      awsSdkConnectionReuse: true,
       timeout: Duration.seconds(15),
       environment: {
+        AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
         TEST_TABLE_NAME: table.tableName,
         EVENT_BUS_NAME: eventBus.eventBusName,
         STORE_EVENTS_LAMBDA_ARN: storeEvents.functionArn,

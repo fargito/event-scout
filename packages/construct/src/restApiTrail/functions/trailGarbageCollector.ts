@@ -1,18 +1,19 @@
-import { getCdkHandlerPath } from '@swarmion/serverless-helpers';
 import { Aws, Duration, Fn } from 'aws-cdk-lib';
 import { Table } from 'aws-cdk-lib/aws-dynamodb';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 import {
   Architecture,
+  Code,
   FilterCriteria,
   FilterRule,
+  Function as LambdaFunction,
   Runtime,
   StartingPosition,
 } from 'aws-cdk-lib/aws-lambda';
 import { DynamoEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
-import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
+import { join } from 'path';
 
 type Props = {
   table: Table;
@@ -20,23 +21,19 @@ type Props = {
 };
 
 export class TrailGarbageCollectorFunction extends Construct {
-  public function: NodejsFunction;
+  public function: LambdaFunction;
 
   constructor(scope: Construct, id: string, { table, eventBus }: Props) {
     super(scope, id);
 
-    this.function = new NodejsFunction(this, 'TrailGarbageCollector', {
-      entry: getCdkHandlerPath(__dirname, {
-        // due to bundling, we need to reference the generated entrypoint. This is because of esbuild.build.js
-        extension: 'js',
-        fileName: 'trailGarbageCollector',
-      }),
-      handler: 'main',
+    this.function = new LambdaFunction(this, 'TrailGarbageCollector', {
+      code: Code.fromAsset(join(__dirname, 'trailGarbageCollector.zip')),
+      handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,
-      awsSdkConnectionReuse: true,
       timeout: Duration.minutes(1),
       environment: {
+        AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
         EVENT_BUS_NAME: eventBus.eventBusName,
       },
       initialPolicy: [

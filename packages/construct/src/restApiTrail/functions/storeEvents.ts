@@ -1,31 +1,32 @@
-import { getCdkHandlerPath } from '@swarmion/serverless-helpers';
 import { Aws, Fn } from 'aws-cdk-lib';
 import { Table } from 'aws-cdk-lib/aws-dynamodb';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
-import { Architecture, CfnPermission, Runtime } from 'aws-cdk-lib/aws-lambda';
-import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
+import {
+  Architecture,
+  CfnPermission,
+  Code,
+  Function as LambdaFunction,
+  Runtime,
+} from 'aws-cdk-lib/aws-lambda';
 import { Construct } from 'constructs';
+import { join } from 'path';
 
 type Props = { table: Table; eventBus: IEventBus };
 
 export class StoreEventsFunction extends Construct {
-  public function: NodejsFunction;
+  public function: LambdaFunction;
 
   constructor(scope: Construct, id: string, { table, eventBus }: Props) {
     super(scope, id);
 
-    this.function = new NodejsFunction(this, 'StoreEvents', {
-      entry: getCdkHandlerPath(__dirname, {
-        // due to bundling, we need to reference the generated entrypoint. This is because of esbuild.build.js
-        extension: 'js',
-        fileName: 'storeEvents',
-      }),
-      handler: 'main',
+    this.function = new LambdaFunction(this, 'StoreEvents', {
+      code: Code.fromAsset(join(__dirname, 'storeEvents.zip')),
+      handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,
-      awsSdkConnectionReuse: true,
       environment: {
+        AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
         TEST_TABLE_NAME: table.tableName,
       },
       initialPolicy: [
