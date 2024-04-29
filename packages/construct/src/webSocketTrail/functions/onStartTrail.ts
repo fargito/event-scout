@@ -6,15 +6,19 @@ import {
   Architecture,
   Code,
   Function as LambdaFunction,
+  LogFormat,
   Runtime,
 } from 'aws-cdk-lib/aws-lambda';
+import { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 import { join } from 'path';
 
 type Props = {
   table: Table;
   eventBus: IEventBus;
+  logGroup: ILogGroup;
   forwardEvent: LambdaFunction;
+  baseLambdaDirectory: string;
 };
 
 export class OnStartTrailFunction extends Construct {
@@ -23,12 +27,12 @@ export class OnStartTrailFunction extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { table, eventBus, forwardEvent }: Props,
+    { table, eventBus, logGroup, forwardEvent, baseLambdaDirectory }: Props,
   ) {
     super(scope, id);
 
     this.function = new LambdaFunction(this, 'OnStartTrail', {
-      code: Code.fromAsset(join(__dirname, 'onStartTrail.zip')),
+      code: Code.fromAsset(join(baseLambdaDirectory, 'onStartTrail.zip')),
       handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,
@@ -39,6 +43,8 @@ export class OnStartTrailFunction extends Construct {
         EVENT_BUS_NAME: eventBus.eventBusName,
         FORWARD_EVENT_LAMBDA_ARN: forwardEvent.functionArn,
       },
+      logFormat: LogFormat.JSON,
+      logGroup,
       initialPolicy: [
         new PolicyStatement({
           effect: Effect.ALLOW,

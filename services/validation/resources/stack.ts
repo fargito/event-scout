@@ -6,7 +6,7 @@ import { EventScout } from '@event-scout/construct';
 
 import {
   eventBusExportName,
-  restApiEndpointExportName,
+  httpApiEndpointExportName,
   websocketEndpointExportName,
 } from 'utils/exportNames';
 
@@ -20,7 +20,7 @@ export class TestStack extends Stack {
 
     const eventBus = new EventBus(this, 'EventBus');
 
-    const { restEndpoint, webSocketEndpoint } = new EventScout(
+    const { httpEndpoint, webSocketEndpoint } = new EventScout(
       this,
       'Watcher',
       {
@@ -29,9 +29,9 @@ export class TestStack extends Stack {
     );
 
     new CfnOutput(this, 'EventScoutEndpoint', {
-      value: restEndpoint,
+      value: httpEndpoint,
       description: 'Watcher endpoint',
-      exportName: restApiEndpointExportName,
+      exportName: httpApiEndpointExportName,
     });
 
     new CfnOutput(this, 'EventScoutWebSocket', {

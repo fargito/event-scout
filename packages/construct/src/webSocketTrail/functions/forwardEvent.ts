@@ -7,13 +7,17 @@ import {
   CfnPermission,
   Code,
   Function as LambdaFunction,
+  LogFormat,
   Runtime,
 } from 'aws-cdk-lib/aws-lambda';
+import { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 import { join } from 'path';
 
 type Props = {
   eventBus: IEventBus;
+  logGroup: ILogGroup;
+  baseLambdaDirectory: string;
   webSocketApi: WebSocketApi;
   webSocketEndpoint: string;
 };
@@ -24,12 +28,18 @@ export class ForwardEventFunction extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { eventBus, webSocketApi, webSocketEndpoint }: Props,
+    {
+      eventBus,
+      logGroup,
+      baseLambdaDirectory,
+      webSocketApi,
+      webSocketEndpoint,
+    }: Props,
   ) {
     super(scope, id);
 
     this.function = new LambdaFunction(this, 'OnNewWebsocketEvent', {
-      code: Code.fromAsset(join(__dirname, 'forwardEvent.zip')),
+      code: Code.fromAsset(join(baseLambdaDirectory, 'forwardEvent.zip')),
       handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,
@@ -37,6 +47,8 @@ export class ForwardEventFunction extends Construct {
         AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
         WEBSOCKET_ENDPOINT: webSocketEndpoint,
       },
+      logFormat: LogFormat.JSON,
+      logGroup,
       initialPolicy: [
         new PolicyStatement({
           effect: Effect.ALLOW,

@@ -25,7 +25,7 @@ export const startEventsTrailContract = new ApiGatewayContract({
   id: 'tests-startEventsTrail',
   method: 'POST',
   path: '/start-events-trail',
-  integrationType: 'restApi',
+  integrationType: 'httpApi',
   authorizerType: 'aws_iam',
   pathParametersSchema: undefined,
   queryStringParametersSchema: undefined,

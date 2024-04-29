@@ -3,6 +3,7 @@ import { WebSocketIamAuthorizer } from 'aws-cdk-lib/aws-apigatewayv2-authorizers
 import { WebSocketLambdaIntegration } from 'aws-cdk-lib/aws-apigatewayv2-integrations';
 import { Table } from 'aws-cdk-lib/aws-dynamodb';
 import { IEventBus } from 'aws-cdk-lib/aws-events';
+import { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 
 import { ForwardEventFunction } from './functions/forwardEvent';
@@ -13,6 +14,8 @@ import { OnDisconnectFunction } from './functions/onWebSocketDisconnect';
 type WebSocketTrailProps = {
   table: Table;
   eventBus: IEventBus;
+  logGroup: ILogGroup;
+  baseLambdaDirectory: string;
   stage: string;
 };
 
@@ -26,7 +29,13 @@ export class WebSocketTrail extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { table, eventBus, stage }: WebSocketTrailProps,
+    {
+      table,
+      eventBus,
+      logGroup,
+      baseLambdaDirectory,
+      stage,
+    }: WebSocketTrailProps,
   ) {
     super(scope, id);
 
@@ -37,11 +46,19 @@ export class WebSocketTrail extends Construct {
     const { function: forwardEvent } = new ForwardEventFunction(
       this,
       'ForwardEvent',
-      { eventBus, webSocketApi, webSocketEndpoint },
+      {
+        eventBus,
+        logGroup,
+        baseLambdaDirectory,
+        webSocketApi,
+        webSocketEndpoint,
+      },
     );
 
     const { function: onConnect } = new OnConnectFunction(this, 'OnConnect', {
       table,
+      logGroup,
+      baseLambdaDirectory,
     });
 
     const { function: onDisconnect } = new OnDisconnectFunction(
@@ -50,13 +67,15 @@ export class WebSocketTrail extends Construct {
       {
         table,
         eventBus,
+        logGroup,
+        baseLambdaDirectory,
       },
     );
 
     const { function: onStartTrail } = new OnStartTrailFunction(
       this,
       'OnStartTrail',
-      { table, eventBus, forwardEvent },
+      { table, eventBus, logGroup, baseLambdaDirectory, forwardEvent },
     );
 
     // create routes for API Gateway

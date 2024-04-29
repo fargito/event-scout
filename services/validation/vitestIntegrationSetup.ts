@@ -9,7 +9,7 @@ import { EventScoutClient } from '@event-scout/client';
 
 import {
   eventBusExportName,
-  restApiEndpointExportName,
+  httpApiEndpointExportName,
 } from 'utils/exportNames';
 import { defaultEnvironment, region, sharedParams } from 'utils/sharedConfig';
 
@@ -35,7 +35,7 @@ const cloudformationClient = new CloudFormationClient({
 const cfOutputs = await cloudformationClient.send(new ListExportsCommand({}));
 
 const eventScoutEndpoint = cfOutputs.Exports?.find(
-  o => o.Name === restApiEndpointExportName,
+  o => o.Name === httpApiEndpointExportName,
 )?.Value;
 
 const eventBusName = cfOutputs.Exports?.find(

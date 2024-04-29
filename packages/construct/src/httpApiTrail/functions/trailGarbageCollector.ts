@@ -8,26 +8,36 @@ import {
   FilterCriteria,
   FilterRule,
   Function as LambdaFunction,
+  LogFormat,
   Runtime,
   StartingPosition,
 } from 'aws-cdk-lib/aws-lambda';
 import { DynamoEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
+import { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 import { join } from 'path';
 
 type Props = {
   table: Table;
   eventBus: IEventBus;
+  logGroup: ILogGroup;
+  baseLambdaDirectory: string;
 };
 
 export class TrailGarbageCollectorFunction extends Construct {
   public function: LambdaFunction;
 
-  constructor(scope: Construct, id: string, { table, eventBus }: Props) {
+  constructor(
+    scope: Construct,
+    id: string,
+    { table, eventBus, baseLambdaDirectory, logGroup }: Props,
+  ) {
     super(scope, id);
 
     this.function = new LambdaFunction(this, 'TrailGarbageCollector', {
-      code: Code.fromAsset(join(__dirname, 'trailGarbageCollector.zip')),
+      code: Code.fromAsset(
+        join(baseLambdaDirectory, 'trailGarbageCollector.zip'),
+      ),
       handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,
@@ -36,6 +46,8 @@ export class TrailGarbageCollectorFunction extends Construct {
         AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
         EVENT_BUS_NAME: eventBus.eventBusName,
       },
+      logFormat: LogFormat.JSON,
+      logGroup,
       initialPolicy: [
         new PolicyStatement({
           effect: Effect.ALLOW,
