@@ -16,7 +16,7 @@ export const listEventsContract = new ApiGatewayContract({
   id: 'tests-listEvents',
   method: 'GET',
   path: '/trail/{trailId}',
-  integrationType: 'restApi',
+  integrationType: 'httpApi',
   authorizerType: 'aws_iam',
   pathParametersSchema,
   queryStringParametersSchema: undefined,

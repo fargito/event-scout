@@ -5,19 +5,22 @@ import {
   Architecture,
   Code,
   Function as LambdaFunction,
+  LogFormat,
   Runtime,
 } from 'aws-cdk-lib/aws-lambda';
+import { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 import { join } from 'path';
 
 type Props = {
   table: Table;
+  logGroup: ILogGroup;
 };
 
 export class OnConnectFunction extends Construct {
   public function: LambdaFunction;
 
-  constructor(scope: Construct, id: string, { table }: Props) {
+  constructor(scope: Construct, id: string, { table, logGroup }: Props) {
     super(scope, id);
 
     this.function = new LambdaFunction(this, 'OnConnect', {
@@ -30,6 +33,8 @@ export class OnConnectFunction extends Construct {
         AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
         TEST_TABLE_NAME: table.tableName,
       },
+      logFormat: LogFormat.JSON,
+      logGroup,
       initialPolicy: [
         new PolicyStatement({
           effect: Effect.ALLOW,

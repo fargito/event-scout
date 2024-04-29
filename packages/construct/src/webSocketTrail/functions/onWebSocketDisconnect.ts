@@ -6,20 +6,27 @@ import {
   Architecture,
   Code,
   Function as LambdaFunction,
+  LogFormat,
   Runtime,
 } from 'aws-cdk-lib/aws-lambda';
+import { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 import { join } from 'path';
 
 type Props = {
   table: Table;
+  logGroup: ILogGroup;
   eventBus: IEventBus;
 };
 
 export class OnDisconnectFunction extends Construct {
   public function: LambdaFunction;
 
-  constructor(scope: Construct, id: string, { table, eventBus }: Props) {
+  constructor(
+    scope: Construct,
+    id: string,
+    { table, logGroup, eventBus }: Props,
+  ) {
     super(scope, id);
 
     this.function = new LambdaFunction(this, 'OnDisconnect', {
@@ -33,6 +40,8 @@ export class OnDisconnectFunction extends Construct {
         TEST_TABLE_NAME: table.tableName,
         EVENT_BUS_NAME: eventBus.eventBusName,
       },
+      logFormat: LogFormat.JSON,
+      logGroup,
       initialPolicy: [
         new PolicyStatement({
           effect: Effect.ALLOW,

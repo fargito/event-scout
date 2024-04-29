@@ -7,13 +7,16 @@ import {
   CfnPermission,
   Code,
   Function as LambdaFunction,
+  LogFormat,
   Runtime,
 } from 'aws-cdk-lib/aws-lambda';
+import { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 import { join } from 'path';
 
 type Props = {
   eventBus: IEventBus;
+  logGroup: ILogGroup;
   webSocketApi: WebSocketApi;
   webSocketEndpoint: string;
 };
@@ -24,7 +27,7 @@ export class ForwardEventFunction extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { eventBus, webSocketApi, webSocketEndpoint }: Props,
+    { eventBus, logGroup, webSocketApi, webSocketEndpoint }: Props,
   ) {
     super(scope, id);
 
@@ -37,6 +40,8 @@ export class ForwardEventFunction extends Construct {
         AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
         WEBSOCKET_ENDPOINT: webSocketEndpoint,
       },
+      logFormat: LogFormat.JSON,
+      logGroup,
       initialPolicy: [
         new PolicyStatement({
           effect: Effect.ALLOW,
