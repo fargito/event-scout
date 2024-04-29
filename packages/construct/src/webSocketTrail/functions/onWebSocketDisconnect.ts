@@ -17,6 +17,7 @@ type Props = {
   table: Table;
   logGroup: ILogGroup;
   eventBus: IEventBus;
+  baseLambdaDirectory: string;
 };
 
 export class OnDisconnectFunction extends Construct {
@@ -25,12 +26,14 @@ export class OnDisconnectFunction extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { table, logGroup, eventBus }: Props,
+    { table, logGroup, eventBus, baseLambdaDirectory }: Props,
   ) {
     super(scope, id);
 
     this.function = new LambdaFunction(this, 'OnDisconnect', {
-      code: Code.fromAsset(join(__dirname, 'onWebSocketDisconnect.zip')),
+      code: Code.fromAsset(
+        join(baseLambdaDirectory, 'onWebSocketDisconnect.zip'),
+      ),
       handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,

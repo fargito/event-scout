@@ -16,6 +16,10 @@ import { WebSocketTrail } from './webSocketTrail/webSocketTrail';
 type EventScoutProps = {
   eventBus: IEventBus;
   stage?: string;
+  /**
+   * internal parameter, for tests only
+   */
+  __baseLambdaDirectory?: string;
 };
 
 export class EventScout extends Construct {
@@ -32,7 +36,11 @@ export class EventScout extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { eventBus, stage = 'dev' }: EventScoutProps,
+    {
+      eventBus,
+      __baseLambdaDirectory: baseLambdaDirectory = __dirname,
+      stage = 'dev',
+    }: EventScoutProps,
   ) {
     super(scope, id);
 
@@ -57,6 +65,7 @@ export class EventScout extends Construct {
       table,
       eventBus,
       logGroup,
+      baseLambdaDirectory,
     });
 
     // create all necessary resource
@@ -64,6 +73,7 @@ export class EventScout extends Construct {
       table,
       eventBus,
       logGroup,
+      baseLambdaDirectory,
     });
     this.httpEndpoint = httpEndpoint;
     this.restEndpoint = httpEndpoint;
@@ -72,6 +82,7 @@ export class EventScout extends Construct {
       table,
       eventBus,
       logGroup,
+      baseLambdaDirectory,
       stage,
     });
     this.webSocketEndpoint = webSocketEndpoint;

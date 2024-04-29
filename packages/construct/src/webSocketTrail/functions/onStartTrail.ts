@@ -18,6 +18,7 @@ type Props = {
   eventBus: IEventBus;
   logGroup: ILogGroup;
   forwardEvent: LambdaFunction;
+  baseLambdaDirectory: string;
 };
 
 export class OnStartTrailFunction extends Construct {
@@ -26,12 +27,12 @@ export class OnStartTrailFunction extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { table, eventBus, logGroup, forwardEvent }: Props,
+    { table, eventBus, logGroup, forwardEvent, baseLambdaDirectory }: Props,
   ) {
     super(scope, id);
 
     this.function = new LambdaFunction(this, 'OnStartTrail', {
-      code: Code.fromAsset(join(__dirname, 'onStartTrail.zip')),
+      code: Code.fromAsset(join(baseLambdaDirectory, 'onStartTrail.zip')),
       handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,

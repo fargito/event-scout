@@ -21,6 +21,7 @@ type Props = {
   table: Table;
   eventBus: IEventBus;
   logGroup: ILogGroup;
+  baseLambdaDirectory: string;
 };
 
 export class TrailGarbageCollectorFunction extends Construct {
@@ -29,12 +30,14 @@ export class TrailGarbageCollectorFunction extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { table, eventBus, logGroup }: Props,
+    { table, eventBus, baseLambdaDirectory, logGroup }: Props,
   ) {
     super(scope, id);
 
     this.function = new LambdaFunction(this, 'TrailGarbageCollector', {
-      code: Code.fromAsset(join(__dirname, 'trailGarbageCollector.zip')),
+      code: Code.fromAsset(
+        join(baseLambdaDirectory, 'trailGarbageCollector.zip'),
+      ),
       handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,

@@ -14,7 +14,12 @@ import { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 import { join } from 'path';
 
-type Props = { table: Table; eventBus: IEventBus; logGroup: ILogGroup };
+type Props = {
+  table: Table;
+  eventBus: IEventBus;
+  logGroup: ILogGroup;
+  baseLambdaDirectory: string;
+};
 
 export class StoreEventsFunction extends Construct {
   public function: LambdaFunction;
@@ -22,12 +27,12 @@ export class StoreEventsFunction extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { table, eventBus, logGroup }: Props,
+    { table, eventBus, logGroup, baseLambdaDirectory }: Props,
   ) {
     super(scope, id);
 
     this.function = new LambdaFunction(this, 'StoreEvents', {
-      code: Code.fromAsset(join(__dirname, 'storeEvents.zip')),
+      code: Code.fromAsset(join(baseLambdaDirectory, 'storeEvents.zip')),
       handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,

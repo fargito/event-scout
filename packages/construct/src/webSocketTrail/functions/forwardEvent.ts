@@ -17,6 +17,7 @@ import { join } from 'path';
 type Props = {
   eventBus: IEventBus;
   logGroup: ILogGroup;
+  baseLambdaDirectory: string;
   webSocketApi: WebSocketApi;
   webSocketEndpoint: string;
 };
@@ -27,12 +28,18 @@ export class ForwardEventFunction extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { eventBus, logGroup, webSocketApi, webSocketEndpoint }: Props,
+    {
+      eventBus,
+      logGroup,
+      baseLambdaDirectory,
+      webSocketApi,
+      webSocketEndpoint,
+    }: Props,
   ) {
     super(scope, id);
 
     this.function = new LambdaFunction(this, 'OnNewWebsocketEvent', {
-      code: Code.fromAsset(join(__dirname, 'forwardEvent.zip')),
+      code: Code.fromAsset(join(baseLambdaDirectory, 'forwardEvent.zip')),
       handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,

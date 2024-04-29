@@ -22,6 +22,7 @@ type HttpApiTrailProps = {
   table: Table;
   eventBus: IEventBus;
   logGroup: ILogGroup;
+  baseLambdaDirectory: string;
 };
 
 type LambdaConfig = {
@@ -43,7 +44,7 @@ export class HttpApiTrail extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { table, eventBus, logGroup }: HttpApiTrailProps,
+    { table, eventBus, baseLambdaDirectory, logGroup }: HttpApiTrailProps,
   ) {
     super(scope, id);
 
@@ -57,7 +58,7 @@ export class HttpApiTrail extends Construct {
     const { function: storeEvents } = new StoreEventsFunction(
       this,
       'StoreEvents',
-      { table, eventBus, logGroup },
+      { table, eventBus, logGroup, baseLambdaDirectory },
     );
 
     const syncLambdas: Record<string, LambdaConfig> = {
@@ -133,7 +134,7 @@ export class HttpApiTrail extends Construct {
       const lambda = new LambdaFunction(this, lambdaName, {
         architecture: Architecture.ARM_64,
         runtime: Runtime.NODEJS_20_X,
-        code: Code.fromAsset(join(__dirname, lambdaConfig.codePath)),
+        code: Code.fromAsset(join(baseLambdaDirectory, lambdaConfig.codePath)),
         handler: 'handler.main',
         memorySize: 1024,
         logFormat: LogFormat.JSON,

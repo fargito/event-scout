@@ -15,6 +15,7 @@ type WebSocketTrailProps = {
   table: Table;
   eventBus: IEventBus;
   logGroup: ILogGroup;
+  baseLambdaDirectory: string;
   stage: string;
 };
 
@@ -28,7 +29,13 @@ export class WebSocketTrail extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { table, eventBus, logGroup, stage }: WebSocketTrailProps,
+    {
+      table,
+      eventBus,
+      logGroup,
+      baseLambdaDirectory,
+      stage,
+    }: WebSocketTrailProps,
   ) {
     super(scope, id);
 
@@ -39,12 +46,19 @@ export class WebSocketTrail extends Construct {
     const { function: forwardEvent } = new ForwardEventFunction(
       this,
       'ForwardEvent',
-      { eventBus, logGroup, webSocketApi, webSocketEndpoint },
+      {
+        eventBus,
+        logGroup,
+        baseLambdaDirectory,
+        webSocketApi,
+        webSocketEndpoint,
+      },
     );
 
     const { function: onConnect } = new OnConnectFunction(this, 'OnConnect', {
       table,
       logGroup,
+      baseLambdaDirectory,
     });
 
     const { function: onDisconnect } = new OnDisconnectFunction(
@@ -54,13 +68,14 @@ export class WebSocketTrail extends Construct {
         table,
         eventBus,
         logGroup,
+        baseLambdaDirectory,
       },
     );
 
     const { function: onStartTrail } = new OnStartTrailFunction(
       this,
       'OnStartTrail',
-      { table, eventBus, logGroup, forwardEvent },
+      { table, eventBus, logGroup, baseLambdaDirectory, forwardEvent },
     );
 
     // create routes for API Gateway
