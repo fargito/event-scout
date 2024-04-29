@@ -1,20 +1,23 @@
-import { DocumentClient } from 'aws-sdk/clients/dynamodb';
+import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
+import { QueryCommand } from '@aws-sdk/lib-dynamodb';
 
 type ListAllTrailEvents = (trailId: string) => Promise<unknown[]>;
 
 export const buildListAllTrailEvents =
-  (documentClient: DocumentClient, tableName: string): ListAllTrailEvents =>
+  (dynamodbClient: DynamoDBClient, tableName: string): ListAllTrailEvents =>
   async trailId => {
-    const { Items: events } = (await documentClient
-      .query({
-        TableName: tableName,
-        KeyConditionExpression: 'PK = :PK and begins_with(SK, :SK)',
-        ExpressionAttributeValues: {
-          ':PK': trailId,
-          ':SK': 'EVENT#',
-        },
-      })
-      .promise()) as unknown as {
+    const command = new QueryCommand({
+      TableName: tableName,
+      KeyConditionExpression: 'PK = :PK and begins_with(SK, :SK)',
+      ExpressionAttributeValues: {
+        ':PK': trailId,
+        ':SK': 'EVENT#',
+      },
+    });
+
+    const { Items: events } = (await dynamodbClient.send(
+      command,
+    )) as unknown as {
       Items: { event: unknown; SK: string; PK: string }[];
     };
 

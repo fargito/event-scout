@@ -1,14 +1,9 @@
+import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { EventBridgeClient } from '@aws-sdk/client-eventbridge';
-import {
-  // this type import is necessary to infer the handler type
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  type ApiGatewayHandler as _ApiGatewayHandler,
-  getHandler,
-  HttpStatusCodes,
-} from '@swarmion/serverless-contracts';
+import { PutCommand } from '@aws-sdk/lib-dynamodb';
+import { getHandler, HttpStatusCodes } from '@swarmion/serverless-contracts';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
 import Ajv from 'ajv';
-import { DocumentClient } from 'aws-sdk/clients/dynamodb';
 import { randomUUID } from 'crypto';
 
 import { startEventsTrailContract } from '@event-scout/construct-contracts';
@@ -19,7 +14,7 @@ const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');
 const storeEventsLambdaArn = getEnvVariable('STORE_EVENTS_LAMBDA_ARN');
 const tableName = getEnvVariable('TEST_TABLE_NAME');
-const documentClient = new DocumentClient();
+const dynamodbClient = new DynamoDBClient();
 
 const createEventBridgeRuleAndTarget = buildCreateEventBridgeRuleAndTarget({
   eventBridgeClient,
@@ -41,12 +36,12 @@ export const main = getHandler(startEventsTrailContract, {
 
   // store an item in DynamoDB to represent the trail. This will enable automatic cleanup
   // if the user forget to call the stop route
-  await documentClient
-    .put({
+  await dynamodbClient.send(
+    new PutCommand({
       TableName: tableName,
       Item: { PK: trailId, SK: `TRAIL`, _ttl: timeToLive, trailId },
-    })
-    .promise();
+    }),
+  );
 
   // create the rule and target
   await createEventBridgeRuleAndTarget({
