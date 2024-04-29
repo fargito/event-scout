@@ -1,21 +1,15 @@
-import {
-  // this type import is necessary to infer the handler type
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  type ApiGatewayHandler as _ApiGatewayHandler,
-  getHandler,
-  HttpStatusCodes,
-} from '@swarmion/serverless-contracts';
+import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
+import { getHandler, HttpStatusCodes } from '@swarmion/serverless-contracts';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
 import Ajv from 'ajv';
-import { DocumentClient } from 'aws-sdk/clients/dynamodb';
 
 import { listEventsContract } from '@event-scout/construct-contracts';
 
 import { buildListAllTrailEvents } from 'lambdas/utils/listAllTrailEvents';
 
 const tableName = getEnvVariable('TEST_TABLE_NAME');
-const documentClient = new DocumentClient();
-const listAllTrailEvents = buildListAllTrailEvents(documentClient, tableName);
+const dynamodbClient = new DynamoDBClient();
+const listAllTrailEvents = buildListAllTrailEvents(dynamodbClient, tableName);
 
 export const main = getHandler(listEventsContract, {
   ajv: new Ajv(),

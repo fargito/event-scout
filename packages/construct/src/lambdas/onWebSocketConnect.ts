@@ -1,9 +1,10 @@
+import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
+import { PutCommand } from '@aws-sdk/lib-dynamodb';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
 import type { APIGatewayProxyWebsocketHandlerV2 } from 'aws-lambda';
-import { DocumentClient } from 'aws-sdk/clients/dynamodb';
 
 const tableName = getEnvVariable('TEST_TABLE_NAME');
-const documentClient = new DocumentClient();
+const dynamodbClient = new DynamoDBClient();
 
 export const main: APIGatewayProxyWebsocketHandlerV2 = async event => {
   const { connectionId: trailId } = event.requestContext;
@@ -14,8 +15,8 @@ export const main: APIGatewayProxyWebsocketHandlerV2 = async event => {
 
   // store an item in DynamoDB to represent the trail. This will enable automatic cleanup
   // if the user forget to call the stop route
-  await documentClient
-    .put({
+  await dynamodbClient.send(
+    new PutCommand({
       TableName: tableName,
       Item: {
         PK: trailId,
@@ -23,8 +24,8 @@ export const main: APIGatewayProxyWebsocketHandlerV2 = async event => {
         _ttl: timeToLive,
         trailId,
       },
-    })
-    .promise();
+    }),
+  );
 
   return { statusCode: 200, body: 'Connected' };
 };
