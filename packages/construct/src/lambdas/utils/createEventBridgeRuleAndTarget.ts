@@ -4,7 +4,7 @@ import {
   PutTargetsCommand,
 } from '@aws-sdk/client-eventbridge';
 
-import { EventPattern } from '@event-scout/construct-contracts';
+import type { EventPattern } from '@event-scout/construct-contracts';
 
 import { getRuleAndTargetName } from './getRuleAndTargetName';
 

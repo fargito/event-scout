@@ -8,7 +8,7 @@ import {
   LogFormat,
   Runtime,
 } from 'aws-cdk-lib/aws-lambda';
-import { ILogGroup } from 'aws-cdk-lib/aws-logs';
+import type { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 import { join } from 'path';
 

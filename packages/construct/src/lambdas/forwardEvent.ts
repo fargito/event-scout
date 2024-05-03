@@ -3,7 +3,7 @@ import {
   PostToConnectionCommand,
 } from '@aws-sdk/client-apigatewaymanagementapi';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
-import { EventBridgeEvent } from 'aws-lambda';
+import type { EventBridgeEvent } from 'aws-lambda';
 
 const webSocketEndpoint = getEnvVariable('WEBSOCKET_ENDPOINT');
 const endpoint = webSocketEndpoint.replace('wss', 'https');

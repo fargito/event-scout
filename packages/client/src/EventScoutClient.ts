@@ -1,11 +1,11 @@
 import { Sha256 } from '@aws-crypto/sha256-js';
-import { AwsCredentialIdentityProvider } from '@aws-sdk/types';
+import type { AwsCredentialIdentityProvider } from '@aws-sdk/types';
 import { SignatureV4 } from '@smithy/signature-v4';
 import { getRequestParameters } from '@swarmion/serverless-contracts';
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { type AxiosRequestConfig } from 'axios';
 
 import {
-  EventPattern,
+  type EventPattern,
   listEventsContract,
   startEventsTrailContract,
   stopEventsTrailContract,

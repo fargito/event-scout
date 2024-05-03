@@ -2,8 +2,8 @@ import { WebSocketApi, WebSocketStage } from 'aws-cdk-lib/aws-apigatewayv2';
 import { WebSocketIamAuthorizer } from 'aws-cdk-lib/aws-apigatewayv2-authorizers';
 import { WebSocketLambdaIntegration } from 'aws-cdk-lib/aws-apigatewayv2-integrations';
 import { Table } from 'aws-cdk-lib/aws-dynamodb';
-import { IEventBus } from 'aws-cdk-lib/aws-events';
-import { ILogGroup } from 'aws-cdk-lib/aws-logs';
+import type { IEventBus } from 'aws-cdk-lib/aws-events';
+import type { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 
 import { ForwardEventFunction } from './functions/forwardEvent';

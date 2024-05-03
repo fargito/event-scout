@@ -1,7 +1,7 @@
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { PutCommand } from '@aws-sdk/lib-dynamodb';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
-import { EventBridgeEvent } from 'aws-lambda';
+import type { EventBridgeEvent } from 'aws-lambda';
 
 const tableName = getEnvVariable('TEST_TABLE_NAME');
 const dynamodbClient = new DynamoDBClient();

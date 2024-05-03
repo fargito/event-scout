@@ -1,9 +1,9 @@
 import { Sha256 } from '@aws-crypto/sha256-js';
-import { AwsCredentialIdentityProvider } from '@aws-sdk/types';
+import type { AwsCredentialIdentityProvider } from '@aws-sdk/types';
 import { SignatureV4 } from '@smithy/signature-v4';
 import WebSocket from 'ws';
 
-import { EventPattern } from '@event-scout/construct-contracts';
+import type { EventPattern } from '@event-scout/construct-contracts';
 
 type ListenToWebSocketArgs = {
   webSocketEndpoint: string;

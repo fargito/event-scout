@@ -2,7 +2,7 @@ import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { EventBridgeClient } from '@aws-sdk/client-eventbridge';
 import { DeleteCommand } from '@aws-sdk/lib-dynamodb';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
-import { APIGatewayProxyWebsocketHandlerV2 } from 'aws-lambda';
+import type { APIGatewayProxyWebsocketHandlerV2 } from 'aws-lambda';
 
 import { buildDeleteEventBridgeRuleAndTarget } from 'lambdas/utils/deleteEventBridgeRuleAndTarget';
 
