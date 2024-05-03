@@ -1,6 +1,6 @@
 import { Aws, Duration, Fn } from 'aws-cdk-lib';
 import { Table } from 'aws-cdk-lib/aws-dynamodb';
-import { IEventBus } from 'aws-cdk-lib/aws-events';
+import type { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 import {
   Architecture,
@@ -9,7 +9,7 @@ import {
   LogFormat,
   Runtime,
 } from 'aws-cdk-lib/aws-lambda';
-import { ILogGroup } from 'aws-cdk-lib/aws-logs';
+import type { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 import { join } from 'path';
 

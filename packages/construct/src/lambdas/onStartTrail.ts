@@ -6,7 +6,7 @@ import Ajv from 'ajv';
 import type { APIGatewayProxyWebsocketHandlerV2 } from 'aws-lambda';
 
 import {
-  StartWebsocketEventTrailBody,
+  type StartWebsocketEventTrailBody,
   startWebsocketEventTrailBodySchema,
 } from '@event-scout/construct-contracts';
 

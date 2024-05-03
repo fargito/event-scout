@@ -1,10 +1,10 @@
 import { fromEnv, fromIni } from '@aws-sdk/credential-providers';
-import { AwsCredentialIdentityProvider } from '@aws-sdk/types';
+import type { AwsCredentialIdentityProvider } from '@aws-sdk/types';
 import Ajv from 'ajv';
-import { OptionValues } from 'commander';
+import type { OptionValues } from 'commander';
 
 import {
-  EventPattern,
+  type EventPattern,
   eventPatternSchema,
 } from '@event-scout/construct-contracts';
 

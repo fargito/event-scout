@@ -1,6 +1,6 @@
 import { EventBridgeClient } from '@aws-sdk/client-eventbridge';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
-import { DynamoDBStreamEvent } from 'aws-lambda';
+import type { DynamoDBStreamEvent } from 'aws-lambda';
 
 import { buildDeleteEventBridgeRuleAndTarget } from 'lambdas/utils/deleteEventBridgeRuleAndTarget';
 

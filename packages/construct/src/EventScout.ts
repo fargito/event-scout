@@ -5,7 +5,7 @@ import {
   StreamViewType,
   Table,
 } from 'aws-cdk-lib/aws-dynamodb';
-import { IEventBus } from 'aws-cdk-lib/aws-events';
+import type { IEventBus } from 'aws-cdk-lib/aws-events';
 import { LogGroup, RetentionDays } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 
