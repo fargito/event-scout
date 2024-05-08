@@ -16,10 +16,10 @@ importers:
         version: 19.2.2
       '@nrwl/workspace':
         specifier: ^19.0.0
-        version: 19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
+        version: 19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
       '@swarmion/nx-plugin':
         specifier: ^0.31.0
-        version: 0.31.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(js-yaml@4.1.0)(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))(typescript@5.4.5)
+        version: 0.31.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(js-yaml@4.1.0)(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))(typescript@5.4.5)
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.0.0
         version: 7.8.0(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
@@ -64,7 +64,7 @@ importers:
         version: 4.17.21
       nx:
         specifier: ^19.0.0
-        version: 19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
+        version: 19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
       prettier:
         specifier: ^3.2.2
         version: 3.2.5
@@ -1971,8 +1971,8 @@ packages:
   '@nrwl/devkit@18.0.8':
     resolution: {integrity: sha512-cKtXq2I/3y/t1I+jMn8XVfhtSjGxJHKGSmxStMdRPMcUim8iaS2V3fDUdF2CGrXrtbmDtYwBC8413YY+nVh0Gw==}
 
-  '@nrwl/devkit@19.0.0':
-    resolution: {integrity: sha512-fUDTZorVrnqALzxpLHHUd7/ShrE1pxR9la86crFR8gYoIKQPNAgqTAKr+loCG8duYGx2ZObYHrWpH6Xf7MFXNw==}
+  '@nrwl/devkit@19.0.1':
+    resolution: {integrity: sha512-6mYYEAHI/OOEoVjMB50cho6YxtwdZmxhPywkEGSxvkSwqRcsMpKuIqgJ7bhFlWEW2+mH7Vpc+aaJ+olRwFgBXQ==}
 
   '@nrwl/js@18.0.8':
     resolution: {integrity: sha512-5VWvJD7zWFFEVfVFpKj5NQQVn9YBiNALIcHtq1A6/GEe/SrWGjTwyeK+5uVSYegTR8BXX2SpBaE53bOunWuTrQ==}
@@ -1985,23 +1985,23 @@ packages:
     resolution: {integrity: sha512-+7KsDYmGj1cvNaXZcjSYOPN1h17hsGFBtVX7MqnpJLLkQTUhKg2rQxqyluzshJ+RoDUVtYPGyHg1AizlB66RIA==}
     hasBin: true
 
-  '@nrwl/tao@19.0.0':
-    resolution: {integrity: sha512-JPLlATFEsal5G4v8zxGbEkeo1v19QUn0cH3iNEOUz8Abms7oPDfkITq1ElB6Ck8FjePmtP4fdZzU091NUKA1zQ==}
+  '@nrwl/tao@19.0.1':
+    resolution: {integrity: sha512-DrpZPLidBJy/oA8IVfLhXTzkxq9fT4Ua+gtmOl+VLsKJymnbcgOejX8u13eoy3hSaymKT9X+mcnmFr0LkqMS2A==}
     hasBin: true
 
   '@nrwl/workspace@18.0.8':
     resolution: {integrity: sha512-K1Fhfa1OqdhlZ46nPOFka9EBGt5bChLSIeJDs/JVZHyIlmGWeIQMy78oE2DPhrpW+ZowVxwVPdFgilESdfriQQ==}
 
-  '@nrwl/workspace@19.0.0':
-    resolution: {integrity: sha512-Y6VK95Z1lYXaFBQ+fuodXiaAnSPWgT1T6/TDbCuvmn5pvuNjv6heiJFgkDxx9dXVxn5FiNuTue/AEqMhomnIbw==}
+  '@nrwl/workspace@19.0.1':
+    resolution: {integrity: sha512-lOfBYLdKmR3ouG7f/ZUmFGUqCcriJCcJqg3X4Z5SqHuhmwasUz23w70H0mq6O2DZuT2IqRwHPJKICuQNHT/Xfw==}
 
   '@nx/devkit@18.0.8':
     resolution: {integrity: sha512-df56bzmhF8yhVCCChe0ATjCsc9r9SNcpks5/bABGqR91vHVGfsz0H33RYO7P2jrPwFBRYnf+aWWFY1d6NpEdxw==}
     peerDependencies:
       nx: '>= 16 <= 18'
 
-  '@nx/devkit@19.0.0':
-    resolution: {integrity: sha512-Zch2oCBSrPgMVg5ONMjaLlyFCgQ/kVxaSBKoq/ASOEyjYJb5OtfFg+NwWoEkU4v++a1I14uD01xoO0JjBqK0nw==}
+  '@nx/devkit@19.0.1':
+    resolution: {integrity: sha512-whEUgASqCiD94/ZGrSxkl7mLcIeYuQ5YbT79De+sIXWtBNFI2CqNHJX3/nOwrO/tO2Z88Wg6PM9PL6EiysYwjQ==}
     peerDependencies:
       nx: '>= 17 <= 20'
 
@@ -2036,8 +2036,8 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
-  '@nx/nx-darwin-arm64@19.0.0':
-    resolution: {integrity: sha512-EP0OtW3YGi5WjwFmraXotAaSwU686FJULRuUBQH1rqOvtb11iaCENUp5M39tDe67k/YPnLII+8ZZ7CzOBRWUYA==}
+  '@nx/nx-darwin-arm64@19.0.1':
+    resolution: {integrity: sha512-LYjrQ5lDKlXV/QHlubTp0of9JjcjrZ1heafu8jn+ieabGAnZ4Aow1amg/hjF5yKYDYJbCR9DhOMv9JJ1tkPa1w==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
@@ -2054,8 +2054,8 @@ packages:
     cpu: [x64]
     os: [darwin]
 
-  '@nx/nx-darwin-x64@19.0.0':
-    resolution: {integrity: sha512-2mOm3TyksRzXOZdimAwwRKjStdJleiOBJWWUgOhru6SxRLyny613mWIqiTDmKJrytwmeZeaGz3LcxwEJKIeqyA==}
+  '@nx/nx-darwin-x64@19.0.1':
+    resolution: {integrity: sha512-i7IqDRiGhU9NkOrhBMudLXcYsQv9mkPUOU8BECWk5qaeXK5LLXkroNVK5fsvOPaDtQci58VoeXQeZHxOl5Om/w==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
@@ -2072,8 +2072,8 @@ packages:
     cpu: [x64]
     os: [freebsd]
 
-  '@nx/nx-freebsd-x64@19.0.0':
-    resolution: {integrity: sha512-mGxYvOaDCDnVLnIAJo640/jPygfTJ6I7qaU7kj6Pwy4UTQVxzLdHILeqU6UAkgQNl/7fvC3shRsH0JIlogD8ZA==}
+  '@nx/nx-freebsd-x64@19.0.1':
+    resolution: {integrity: sha512-2zaDWAyJXu+hkMhzoC/I/HTFISVoTwP76YTdaJG8JIfF7Ns/AZXZMzAtPNjL/I5Pgq/7brn6CpUExSYINxORrQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [freebsd]
@@ -2090,8 +2090,8 @@ packages:
     cpu: [arm]
     os: [linux]
 
-  '@nx/nx-linux-arm-gnueabihf@19.0.0':
-    resolution: {integrity: sha512-pbnbuxyeRaqidh9SVnkDc7sPgvAcjFrvDG/js8cULwqmQUtEqfk8ue50D1kNH76X53AVrP7ijsJQG96SGjfDxg==}
+  '@nx/nx-linux-arm-gnueabihf@19.0.1':
+    resolution: {integrity: sha512-gZXphCxoaRIpAS+ZzjJgtCrRjDdbBoeOvaDRpmhKyUyAk9Z7Sgh9F+FyaT3TkV2ZVZJipzO5xcLIFCkTDS6CCQ==}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [linux]
@@ -2108,8 +2108,8 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  '@nx/nx-linux-arm64-gnu@19.0.0':
-    resolution: {integrity: sha512-lP+nb0aYy4tBuodHIBibWqKCidwoW6psfWkbabrzLwUqqD2tpjCsZxwpvU3jgTRQZsHPWZF2ELYfRuGVnLrqdg==}
+  '@nx/nx-linux-arm64-gnu@19.0.1':
+    resolution: {integrity: sha512-W4o+V1S2N/0pLiyIavt/pcei9vOzScpGmd35UoDwtEKXIAifeJZbA6LtsTTmP/8o43TNYL3HALBcLnECt0m0iA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -2126,8 +2126,8 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  '@nx/nx-linux-arm64-musl@19.0.0':
-    resolution: {integrity: sha512-/dgFejPLv7l0/3T21Y/bhSZPOOfhvzGkvdRulBnGkMC13VCdFlqFIpZf0ghzO+kslOc/W4z5sp+7xTf4CDqp1A==}
+  '@nx/nx-linux-arm64-musl@19.0.1':
+    resolution: {integrity: sha512-sm/bqAQXVjT9cF4oKIN+lmC0LIP4W1QDBJb4ZSoWqVcww+4fsPb3M95Egv5QbzHZOjEeRdIXRdLnWt1CRpP1eA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -2144,8 +2144,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@nx/nx-linux-x64-gnu@19.0.0':
-    resolution: {integrity: sha512-GBCDFhfi6F9fkQBCYBr4Ef8TzdlQMX6iGQ44cAqzrQjjslBGb7n9xcMhB2b869crMJEPLgOkjEWOJH/52Hr5ng==}
+  '@nx/nx-linux-x64-gnu@19.0.1':
+    resolution: {integrity: sha512-P+J2PaU2oNy5l8JSkt3DaqCa/psvL+gqKufofHoWNmRkXZM5zzJI1yVyagoKviG3vB4K2vBp6KyEFSmjBw2y9Q==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -2162,8 +2162,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@nx/nx-linux-x64-musl@19.0.0':
-    resolution: {integrity: sha512-soT/eLXBmWK8IHGK+SVgjf98xvPCjGVac/yMl7/ivvcF6LM56h5baN+0vhYbWoYVrkodoG/j7RRnD/Tiobe7Eg==}
+  '@nx/nx-linux-x64-musl@19.0.1':
+    resolution: {integrity: sha512-rIqsHeK4dZM8nd7IzwgS5yYgtYbSQkExVlY4kkEn1p5RgJ5N2jiZR4FrGQr6KYNBWyfOjjv5hKUlfqTb5xfNew==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -2180,8 +2180,8 @@ packages:
     cpu: [arm64]
     os: [win32]
 
-  '@nx/nx-win32-arm64-msvc@19.0.0':
-    resolution: {integrity: sha512-FJ9msRTLGR/IVceXk63a3E3fyYR8OO1tW8WBNgnmAjZlnJhMPk/UWxglVeV5FdK6+kurwrThbIjlgPsCnSGJfQ==}
+  '@nx/nx-win32-arm64-msvc@19.0.1':
+    resolution: {integrity: sha512-eOeYLYIuI386y/3OOUOLjDI+WU5IdfcOcN27Dt26poRjsiBoi4a19B0Kmu2l7DGwOHTPIv0ktkcCloSGyB2ycg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
@@ -2198,8 +2198,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@nx/nx-win32-x64-msvc@19.0.0':
-    resolution: {integrity: sha512-Vf7PcmTbKj349AAmIHM6y9EDJJHdkpbO5vr0f4kEp4P1WQwglY0/sMu2ocsFzxGCW8D9GjiDiJokxtv309hvZA==}
+  '@nx/nx-win32-x64-msvc@19.0.1':
+    resolution: {integrity: sha512-6N5P9an5QDnHyXS0Ai/yP2kG7ESlzwiZdFdPnF5azJ520OdVRpj8wklACqq5usbxg1SufusBs5RI5HA5/mzXSw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -2207,8 +2207,8 @@ packages:
   '@nx/workspace@18.0.8':
     resolution: {integrity: sha512-y4s+PUgCWKd8tyvTjM0M05usIbPvl5wcTmoU9R4UriPAmNYzttvKYjweNcPJKsqdng1iwx7eECY1SmiOVRaTag==}
 
-  '@nx/workspace@19.0.0':
-    resolution: {integrity: sha512-CHGG7PkiDz5BxlxMuGB9abWb+6j97msZXMOW1KjctgK+nsLci4c5XMOKIKhyZPJbfmwnPeRmYyANok3BOIs8GQ==}
+  '@nx/workspace@19.0.1':
+    resolution: {integrity: sha512-w3FH+0ioyS97lIQqnzuXWIcJHF651igrB3hLw3c/qR82AbFYoakb73PFgdpr2fGf/Xf0kdKRROT2cvp/am2tog==}
 
   '@octokit/auth-token@3.0.4':
     resolution: {integrity: sha512-TWFX7cZF2LXoCvdmJWY7XVPi74aSY0+FfBZNSXEXFkMpjcqsQwDSYVv5FhRFaI0V1ECnwbz4j59T/G+rXNWaIQ==}
@@ -4646,6 +4646,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  jake@10.9.1:
+    resolution: {integrity: sha512-61btcOHNnLnsOdtLgA5efqQWjnSi/vow5HbI7HMdKKWqvrKR1bLK3BPlJn9gcSaP2ewuamUSMB5XEy76KUIS2w==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   jest-diff@29.7.0:
     resolution: {integrity: sha512-LMIgiIrhigmPrs03JHpxUh2yISK3vLFPkAodPeo0+BuF7wA2FoQbkEg1u8gBYBThncu7e1oEDUfIXVuTqLRUjw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -5278,8 +5283,8 @@ packages:
       '@swc/core':
         optional: true
 
-  nx@19.0.0:
-    resolution: {integrity: sha512-+9gykv680iCeF7W+8FtQpeS0Z2NOIyBbvKZv4J3XQq+6g+2fHXicSmsurx2z1VmaRZlOZPH32SbKk+4GNcwJCg==}
+  nx@19.0.1:
+    resolution: {integrity: sha512-zhXlXv9fbkTOJe4tlwwWw1dLCbSszvLJQmktUW8JS7ezuT1bWMYgdqIMZNRPpgQkU5ryC+ahs4yTBDk07kdWRw==}
     hasBin: true
     peerDependencies:
       '@swc-node/register': ^1.8.0
@@ -5890,6 +5895,11 @@ packages:
 
   semver@7.6.0:
     resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  semver@7.6.1:
+    resolution: {integrity: sha512-f/vbBsu+fOiYt+lmwZV0rVwJScl46HppnOA1ZvIuBWKOTlllpyJ3bfVax76/OrhCH38dyxoDIA8K7uB963IYgA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -8761,7 +8771,7 @@ snapshots:
   '@commitlint/is-ignored@19.2.2':
     dependencies:
       '@commitlint/types': 19.0.3
-      semver: 7.6.0
+      semver: 7.6.1
 
   '@commitlint/lint@19.2.2':
     dependencies:
@@ -9267,21 +9277,21 @@ snapshots:
     transitivePeerDependencies:
       - nx
 
-  '@nrwl/devkit@18.0.8(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))':
+  '@nrwl/devkit@18.0.8(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))':
     dependencies:
-      '@nx/devkit': 18.0.8(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
+      '@nx/devkit': 18.0.8(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
     transitivePeerDependencies:
       - nx
 
-  '@nrwl/devkit@19.0.0(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))':
+  '@nrwl/devkit@19.0.1(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))':
     dependencies:
-      '@nx/devkit': 19.0.0(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
+      '@nx/devkit': 19.0.1(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
     transitivePeerDependencies:
       - nx
 
-  '@nrwl/js@18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))(typescript@5.3.3)':
+  '@nrwl/js@18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))(typescript@5.3.3)':
     dependencies:
-      '@nx/js': 18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))(typescript@5.3.3)
+      '@nx/js': 18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))(typescript@5.3.3)
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -9312,9 +9322,9 @@ snapshots:
       - '@swc/core'
       - debug
 
-  '@nrwl/tao@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)':
+  '@nrwl/tao@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)':
     dependencies:
-      nx: 19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
+      nx: 19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
       tslib: 2.6.2
     transitivePeerDependencies:
       - '@swc-node/register'
@@ -9329,9 +9339,9 @@ snapshots:
       - '@swc/core'
       - debug
 
-  '@nrwl/workspace@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)':
+  '@nrwl/workspace@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)':
     dependencies:
-      '@nx/workspace': 19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
+      '@nx/workspace': 19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
@@ -9344,7 +9354,7 @@ snapshots:
       enquirer: 2.3.6
       ignore: 5.3.1
       nx: 18.0.8(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
-      semver: 7.6.0
+      semver: 7.6.1
       tmp: 0.2.3
       tslib: 2.6.2
       yargs-parser: 21.1.1
@@ -9356,41 +9366,41 @@ snapshots:
       enquirer: 2.3.6
       ignore: 5.3.1
       nx: 18.3.4(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
-      semver: 7.6.0
+      semver: 7.6.1
       tmp: 0.2.3
       tslib: 2.6.2
       yargs-parser: 21.1.1
 
-  '@nx/devkit@18.0.8(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))':
+  '@nx/devkit@18.0.8(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 18.0.8(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
+      '@nrwl/devkit': 18.0.8(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
       ejs: 3.1.9
       enquirer: 2.3.6
       ignore: 5.3.1
-      nx: 19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
-      semver: 7.6.0
+      nx: 19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
+      semver: 7.6.1
       tmp: 0.2.3
       tslib: 2.6.2
       yargs-parser: 21.1.1
 
-  '@nx/devkit@19.0.0(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))':
+  '@nx/devkit@19.0.1(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.0.0(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.0.1(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.1
       minimatch: 9.0.3
-      nx: 19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
-      semver: 7.6.0
+      nx: 19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
+      semver: 7.6.1
       tmp: 0.2.3
       tslib: 2.6.2
       yargs-parser: 21.1.1
 
-  '@nx/eslint@18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(js-yaml@4.1.0)(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))':
+  '@nx/eslint@18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(js-yaml@4.1.0)(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))':
     dependencies:
-      '@nx/devkit': 18.0.8(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
-      '@nx/js': 18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))(typescript@5.3.3)
-      '@nx/linter': 18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(js-yaml@4.1.0)(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
+      '@nx/devkit': 18.0.8(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
+      '@nx/js': 18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))(typescript@5.3.3)
+      '@nx/linter': 18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(js-yaml@4.1.0)(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
       eslint: 8.57.0
       tslib: 2.6.2
       typescript: 5.3.3
@@ -9407,7 +9417,7 @@ snapshots:
       - supports-color
       - verdaccio
 
-  '@nx/js@18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))(typescript@5.3.3)':
+  '@nx/js@18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))(typescript@5.3.3)':
     dependencies:
       '@babel/core': 7.24.0
       '@babel/plugin-proposal-decorators': 7.24.0(@babel/core@7.24.0)
@@ -9416,8 +9426,8 @@ snapshots:
       '@babel/preset-env': 7.24.0(@babel/core@7.24.0)
       '@babel/preset-typescript': 7.23.3(@babel/core@7.24.0)
       '@babel/runtime': 7.24.5
-      '@nrwl/js': 18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))(typescript@5.3.3)
-      '@nx/devkit': 18.0.8(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
+      '@nrwl/js': 18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))(typescript@5.3.3)
+      '@nx/devkit': 18.0.8(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
       '@nx/workspace': 18.0.8(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
       '@phenomnomnominal/tsquery': 5.0.1(typescript@5.3.3)
       babel-plugin-const-enum: 1.2.0(@babel/core@7.24.0)
@@ -9434,7 +9444,7 @@ snapshots:
       npm-package-arg: 11.0.1
       npm-run-path: 4.0.1
       ora: 5.3.0
-      semver: 7.6.0
+      semver: 7.6.1
       source-map-support: 0.5.19
       ts-node: 10.9.1(@swc/core@1.4.14)(@types/node@20.12.10)(typescript@5.3.3)
       tsconfig-paths: 4.2.0
@@ -9450,9 +9460,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@nx/linter@18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(js-yaml@4.1.0)(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))':
+  '@nx/linter@18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(js-yaml@4.1.0)(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))':
     dependencies:
-      '@nx/eslint': 18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(js-yaml@4.1.0)(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
+      '@nx/eslint': 18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(js-yaml@4.1.0)(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -9471,7 +9481,7 @@ snapshots:
   '@nx/nx-darwin-arm64@18.3.4':
     optional: true
 
-  '@nx/nx-darwin-arm64@19.0.0':
+  '@nx/nx-darwin-arm64@19.0.1':
     optional: true
 
   '@nx/nx-darwin-x64@18.0.8':
@@ -9480,7 +9490,7 @@ snapshots:
   '@nx/nx-darwin-x64@18.3.4':
     optional: true
 
-  '@nx/nx-darwin-x64@19.0.0':
+  '@nx/nx-darwin-x64@19.0.1':
     optional: true
 
   '@nx/nx-freebsd-x64@18.0.8':
@@ -9489,7 +9499,7 @@ snapshots:
   '@nx/nx-freebsd-x64@18.3.4':
     optional: true
 
-  '@nx/nx-freebsd-x64@19.0.0':
+  '@nx/nx-freebsd-x64@19.0.1':
     optional: true
 
   '@nx/nx-linux-arm-gnueabihf@18.0.8':
@@ -9498,7 +9508,7 @@ snapshots:
   '@nx/nx-linux-arm-gnueabihf@18.3.4':
     optional: true
 
-  '@nx/nx-linux-arm-gnueabihf@19.0.0':
+  '@nx/nx-linux-arm-gnueabihf@19.0.1':
     optional: true
 
   '@nx/nx-linux-arm64-gnu@18.0.8':
@@ -9507,7 +9517,7 @@ snapshots:
   '@nx/nx-linux-arm64-gnu@18.3.4':
     optional: true
 
-  '@nx/nx-linux-arm64-gnu@19.0.0':
+  '@nx/nx-linux-arm64-gnu@19.0.1':
     optional: true
 
   '@nx/nx-linux-arm64-musl@18.0.8':
@@ -9516,7 +9526,7 @@ snapshots:
   '@nx/nx-linux-arm64-musl@18.3.4':
     optional: true
 
-  '@nx/nx-linux-arm64-musl@19.0.0':
+  '@nx/nx-linux-arm64-musl@19.0.1':
     optional: true
 
   '@nx/nx-linux-x64-gnu@18.0.8':
@@ -9525,7 +9535,7 @@ snapshots:
   '@nx/nx-linux-x64-gnu@18.3.4':
     optional: true
 
-  '@nx/nx-linux-x64-gnu@19.0.0':
+  '@nx/nx-linux-x64-gnu@19.0.1':
     optional: true
 
   '@nx/nx-linux-x64-musl@18.0.8':
@@ -9534,7 +9544,7 @@ snapshots:
   '@nx/nx-linux-x64-musl@18.3.4':
     optional: true
 
-  '@nx/nx-linux-x64-musl@19.0.0':
+  '@nx/nx-linux-x64-musl@19.0.1':
     optional: true
 
   '@nx/nx-win32-arm64-msvc@18.0.8':
@@ -9543,7 +9553,7 @@ snapshots:
   '@nx/nx-win32-arm64-msvc@18.3.4':
     optional: true
 
-  '@nx/nx-win32-arm64-msvc@19.0.0':
+  '@nx/nx-win32-arm64-msvc@19.0.1':
     optional: true
 
   '@nx/nx-win32-x64-msvc@18.0.8':
@@ -9552,7 +9562,7 @@ snapshots:
   '@nx/nx-win32-x64-msvc@18.3.4':
     optional: true
 
-  '@nx/nx-win32-x64-msvc@19.0.0':
+  '@nx/nx-win32-x64-msvc@19.0.1':
     optional: true
 
   '@nx/workspace@18.0.8(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)':
@@ -9569,13 +9579,13 @@ snapshots:
       - '@swc/core'
       - debug
 
-  '@nx/workspace@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)':
+  '@nx/workspace@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)':
     dependencies:
-      '@nrwl/workspace': 19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
-      '@nx/devkit': 19.0.0(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
+      '@nrwl/workspace': 19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
+      '@nx/devkit': 19.0.1(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
       chalk: 4.1.2
       enquirer: 2.3.6
-      nx: 19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
+      nx: 19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
       tslib: 2.6.2
       yargs-parser: 21.1.1
     transitivePeerDependencies:
@@ -10081,10 +10091,10 @@ snapshots:
       '@smithy/types': 2.12.0
       tslib: 2.6.2
 
-  '@swarmion/nx-plugin@0.31.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(js-yaml@4.1.0)(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))(typescript@5.4.5)':
+  '@swarmion/nx-plugin@0.31.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(js-yaml@4.1.0)(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))(typescript@5.4.5)':
     dependencies:
-      '@nx/devkit': 18.0.8(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
-      '@nx/linter': 18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(js-yaml@4.1.0)(nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
+      '@nx/devkit': 18.0.8(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
+      '@nx/linter': 18.0.8(@babel/traverse@7.24.0)(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)(@types/node@20.12.10)(js-yaml@4.1.0)(nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14))
       typescript: 5.4.5
       yaml: 2.4.1
     transitivePeerDependencies:
@@ -10320,7 +10330,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.4
-      semver: 7.6.0
+      semver: 7.6.1
       ts-api-utils: 1.3.0(typescript@5.4.5)
     optionalDependencies:
       typescript: 5.4.5
@@ -11267,7 +11277,7 @@ snapshots:
 
   ejs@3.1.10:
     dependencies:
-      jake: 10.8.7
+      jake: 10.9.1
 
   ejs@3.1.9:
     dependencies:
@@ -12413,6 +12423,13 @@ snapshots:
       filelist: 1.0.4
       minimatch: 3.1.2
 
+  jake@10.9.1:
+    dependencies:
+      async: 3.2.5
+      chalk: 4.1.2
+      filelist: 1.0.4
+      minimatch: 3.1.2
+
   jest-diff@29.7.0:
     dependencies:
       chalk: 4.1.2
@@ -13090,7 +13107,7 @@ snapshots:
     dependencies:
       hosted-git-info: 7.0.1
       proc-log: 3.0.0
-      semver: 7.6.0
+      semver: 7.6.1
       validate-npm-package-name: 5.0.0
 
   npm-package-arg@11.0.2:
@@ -13190,7 +13207,7 @@ snapshots:
       npm-run-path: 4.0.1
       open: 8.4.2
       ora: 5.3.0
-      semver: 7.6.0
+      semver: 7.6.1
       string-width: 4.2.3
       strong-log-transformer: 2.1.0
       tar-stream: 2.2.0
@@ -13222,7 +13239,7 @@ snapshots:
       '@yarnpkg/parsers': 3.0.0-rc.46
       '@zkochan/js-yaml': 0.0.6
       axios: 1.6.8
-      chalk: 4.1.2
+      chalk: 4.1.0
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
       cliui: 8.0.1
@@ -13267,9 +13284,9 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  nx@19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14):
+  nx@19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14):
     dependencies:
-      '@nrwl/tao': 19.0.0(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
+      '@nrwl/tao': 19.0.1(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
       '@yarnpkg/lockfile': 1.1.0
       '@yarnpkg/parsers': 3.0.0-rc.46
       '@zkochan/js-yaml': 0.0.6
@@ -13294,7 +13311,7 @@ snapshots:
       npm-run-path: 4.0.1
       open: 8.4.2
       ora: 5.3.0
-      semver: 7.6.0
+      semver: 7.6.1
       string-width: 4.2.3
       strong-log-transformer: 2.1.0
       tar-stream: 2.2.0
@@ -13304,16 +13321,16 @@ snapshots:
       yargs: 17.7.2
       yargs-parser: 21.1.1
     optionalDependencies:
-      '@nx/nx-darwin-arm64': 19.0.0
-      '@nx/nx-darwin-x64': 19.0.0
-      '@nx/nx-freebsd-x64': 19.0.0
-      '@nx/nx-linux-arm-gnueabihf': 19.0.0
-      '@nx/nx-linux-arm64-gnu': 19.0.0
-      '@nx/nx-linux-arm64-musl': 19.0.0
-      '@nx/nx-linux-x64-gnu': 19.0.0
-      '@nx/nx-linux-x64-musl': 19.0.0
-      '@nx/nx-win32-arm64-msvc': 19.0.0
-      '@nx/nx-win32-x64-msvc': 19.0.0
+      '@nx/nx-darwin-arm64': 19.0.1
+      '@nx/nx-darwin-x64': 19.0.1
+      '@nx/nx-freebsd-x64': 19.0.1
+      '@nx/nx-linux-arm-gnueabihf': 19.0.1
+      '@nx/nx-linux-arm64-gnu': 19.0.1
+      '@nx/nx-linux-arm64-musl': 19.0.1
+      '@nx/nx-linux-x64-gnu': 19.0.1
+      '@nx/nx-linux-x64-musl': 19.0.1
+      '@nx/nx-win32-arm64-msvc': 19.0.1
+      '@nx/nx-win32-x64-msvc': 19.0.1
       '@swc-node/register': 1.9.1(@swc/core@1.4.14)(@swc/types@0.1.6)(typescript@5.4.5)
       '@swc/core': 1.4.14
     transitivePeerDependencies:
@@ -13414,7 +13431,7 @@ snapshots:
       bl: 4.1.0
       chalk: 4.1.2
       cli-cursor: 3.1.0
-      cli-spinners: 2.9.2
+      cli-spinners: 2.6.1
       is-interactive: 1.0.0
       log-symbols: 4.1.0
       strip-ansi: 6.0.1
@@ -13965,6 +13982,8 @@ snapshots:
   semver@7.6.0:
     dependencies:
       lru-cache: 6.0.0
+
+  semver@7.6.1: {}
 
   set-blocking@2.0.0: {}
 
