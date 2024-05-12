@@ -22,7 +22,6 @@
   ],
   "scripts": {
     "build": "ncc build ./src/index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
-    "clean": "rimraf dist",
     "lint-fix": "pnpm linter-base-config --fix",
     "lint-fix-all": "pnpm lint-fix .",
     "linter-base-config": "eslint --ext=js,ts",
@@ -53,7 +52,6 @@
     "eslint": "^8.56.0",
     "json-schema-to-ts": "^3.0.0",
     "prettier": "^3.2.2",
-    "rimraf": "^5.0.5",
     "tsc-alias": "^1.8.8",
     "typescript": "^5.3.3",
     "vite": "^5.0.11",
