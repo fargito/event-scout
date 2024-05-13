@@ -1,5 +1,3 @@
-// this rule is useless in this file, since we bundle it before shipping
-/* eslint-disable import/no-extraneous-dependencies */
 import {
   EventBridgeClient,
   PutRuleCommand,

@@ -4,12 +4,9 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit",
-      "source.fixAll.stylelint": "explicit"
+      "source.fixAll.stylelint": "explicit",
     },
-    "stylelint.validate": [
-      "typescript",
-      "typescriptreact"
-    ],
+    "stylelint.validate": ["typescript", "typescriptreact"],
     "stylelint.customSyntax": "@stylelint/postcss-css-in-js",
     "search.exclude": {
       "**/coverage": true,
@@ -21,24 +18,18 @@
       "**/dist": true,
       "**/tsconfig.tsbuildinfo": true,
       "**/cdk.out": true,
-      "pnpm-lock.yaml": true
+      "pnpm-lock.yaml": true,
     },
     "[dotenv][ignore][properties][shellscript]": {
-      "editor.defaultFormatter": "foxundermoon.shell-format"
+      "editor.defaultFormatter": "foxundermoon.shell-format",
     },
     "[html][javascript][json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
     },
     "typescript.tsdk": "node_modules/typescript/lib",
     "vitest.commandLine": "pnpm vitest",
-    "vitest.disabledWorkspaceFolders": [
-      "event-scout root"
-    ],
-    "cSpell.words": [
-      "esbuild",
-      "swarmion",
-      "tsup"
-    ]
+    "vitest.disabledWorkspaceFolders": ["event-scout root"],
+    "cSpell.words": ["esbuild", "swarmion", "tsup"],
   },
   "extensions": {
     "recommendations": [
@@ -51,33 +42,37 @@
       "streetsidesoftware.code-spell-checker-french",
       "stylelint.vscode-stylelint",
       "styled-components.vscode-styled-components",
-      "SebastianBille.iam-legend"
-    ]
+      "SebastianBille.iam-legend",
+    ],
   },
   "folders": [
     {
       "path": ".",
-      "name": "event-scout root"
+      "name": "event-scout root",
     },
     {
       "path": "packages/construct",
-      "name": "construct [library]"
+      "name": "construct [library]",
+    },
+    {
+      "path": "packages/lambda-assets",
+      "name": "lambda assets [library]",
     },
     {
       "path": "contracts/construct-contracts",
-      "name": "construct contracts [library]"
+      "name": "construct contracts [library]",
     },
     {
       "path": "packages/client",
-      "name": "client [library]"
+      "name": "client [library]",
     },
     {
       "path": "packages/event-scout",
-      "name": "event scout [library]"
+      "name": "event scout [library]",
     },
     {
       "path": "services/validation",
-      "name": "validation [service]"
-    }
-  ]
+      "name": "validation [service]",
+    },
+  ],
 }

@@ -59,9 +59,6 @@ importers:
       lint-staged:
         specifier: ^15.2.0
         version: 15.2.2
-      lodash:
-        specifier: ^4.17.21
-        version: 4.17.21
       nx:
         specifier: ^19.0.0
         version: 19.0.2(@swc-node/register@1.9.1(@swc/core@1.4.14)(typescript@5.4.5))(@swc/core@1.4.14)
@@ -157,9 +154,6 @@ importers:
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
-      json-schema-to-ts:
-        specifier: ^3.0.0
-        version: 3.1.0
       prettier:
         specifier: ^3.2.2
         version: 3.2.5
@@ -184,6 +178,9 @@ importers:
 
   packages/construct:
     dependencies:
+      '@event-scout/lambda-assets':
+        specifier: workspace:^0.7.3
+        version: link:../lambda-assets
       aws-cdk-lib:
         specifier: ^2.121.1
         version: 2.141.0(constructs@10.3.0)
@@ -191,54 +188,18 @@ importers:
         specifier: ^10.3.0
         version: 10.3.0
     devDependencies:
-      '@aws-sdk/client-apigatewaymanagementapi':
-        specifier: ^3.490.0
-        version: 3.574.0
-      '@aws-sdk/client-dynamodb':
-        specifier: ^3.564.0
-        version: 3.574.0
-      '@aws-sdk/client-eventbridge':
-        specifier: ^3.490.0
-        version: 3.574.0
-      '@aws-sdk/lib-dynamodb':
-        specifier: ^3.564.0
-        version: 3.574.0(@aws-sdk/client-dynamodb@3.574.0)
-      '@event-scout/construct-contracts':
-        specifier: workspace:^0.7.3
-        version: link:../../contracts/construct-contracts
-      '@swarmion/serverless-contracts':
-        specifier: ^0.31.0
-        version: 0.31.3(@serverless/typescript@3.38.0)(ajv@8.13.0)(aws-cdk-lib@2.141.0(constructs@10.3.0))(axios@1.6.8)
-      '@swarmion/serverless-helpers':
-        specifier: ^0.31.0
-        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.141.0(constructs@10.3.0))
-      '@types/aws-lambda':
-        specifier: ^8.10.131
-        version: 8.10.137
       '@types/node':
         specifier: ^20.11.4
         version: 20.12.11
       '@vitest/coverage-v8':
         specifier: ^1.2.0
         version: 1.6.0(vitest@1.6.0(@types/node@20.12.11))
-      ajv:
-        specifier: ^8.12.0
-        version: 8.13.0
-      concurrently:
-        specifier: ^8.2.2
-        version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
         version: 16.3.2
-      esbuild:
-        specifier: ^0.21.0
-        version: 0.21.2
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
-      json-schema-to-ts:
-        specifier: ^3.0.0
-        version: 3.1.0
       prettier:
         specifier: ^3.2.2
         version: 3.2.5
@@ -309,9 +270,6 @@ importers:
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
-      json-schema-to-ts:
-        specifier: ^3.0.0
-        version: 3.1.0
       prettier:
         specifier: ^3.2.2
         version: 3.2.5
@@ -331,6 +289,66 @@ importers:
         specifier: ^1.2.0
         version: 1.6.0(@types/node@20.12.11)
 
+  packages/lambda-assets:
+    devDependencies:
+      '@aws-sdk/client-apigatewaymanagementapi':
+        specifier: ^3.490.0
+        version: 3.574.0
+      '@aws-sdk/client-dynamodb':
+        specifier: ^3.564.0
+        version: 3.574.0
+      '@aws-sdk/client-eventbridge':
+        specifier: ^3.490.0
+        version: 3.574.0
+      '@aws-sdk/lib-dynamodb':
+        specifier: ^3.564.0
+        version: 3.574.0(@aws-sdk/client-dynamodb@3.574.0)
+      '@event-scout/construct-contracts':
+        specifier: ^0.7.3
+        version: 0.7.3(@serverless/typescript@3.38.0)(ajv@8.13.0)(aws-cdk-lib@2.141.0(constructs@10.3.0))(axios@1.6.8)
+      '@swarmion/serverless-contracts':
+        specifier: ^0.31.0
+        version: 0.31.3(@serverless/typescript@3.38.0)(ajv@8.13.0)(aws-cdk-lib@2.141.0(constructs@10.3.0))(axios@1.6.8)
+      '@swarmion/serverless-helpers':
+        specifier: ^0.31.0
+        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.141.0(constructs@10.3.0))
+      '@types/aws-lambda':
+        specifier: ^8.10.131
+        version: 8.10.137
+      '@types/node':
+        specifier: ^20.12.11
+        version: 20.12.11
+      '@vitest/coverage-v8':
+        specifier: ^0.34.6
+        version: 0.34.6(vitest@0.34.6)
+      ajv:
+        specifier: ^8.12.0
+        version: 8.13.0
+      concurrently:
+        specifier: ^8.2.2
+        version: 8.2.2
+      dependency-cruiser:
+        specifier: ^16.3.2
+        version: 16.3.2
+      esbuild:
+        specifier: ^0.21.0
+        version: 0.21.2
+      eslint:
+        specifier: ^8.56.0
+        version: 8.57.0
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+      vite-tsconfig-paths:
+        specifier: ^4.3.2
+        version: 4.3.2(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.11))
+      vitest:
+        specifier: ^0.34.6
+        version: 0.34.6
+
   services/validation:
     dependencies:
       '@aws-sdk/client-cloudformation':
@@ -344,7 +362,7 @@ importers:
         version: 3.574.0
       '@aws-sdk/credential-providers':
         specifier: ^3.490.0
-        version: 3.574.0(@aws-sdk/client-sso-oidc@3.574.0(@aws-sdk/client-sts@3.574.0))
+        version: 3.574.0(@aws-sdk/client-sso-oidc@3.574.0)
       '@aws-sdk/types':
         specifier: ^3.489.0
         version: 3.567.0
@@ -385,12 +403,6 @@ importers:
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
-      json-schema-to-ts:
-        specifier: ^3.0.0
-        version: 3.1.0
-      lodash:
-        specifier: ^4.17.21
-        version: 4.17.21
       node-fetch:
         specifier: ^3.3.2
         version: 3.3.2
@@ -1863,6 +1875,9 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
+  '@event-scout/construct-contracts@0.7.3':
+    resolution: {integrity: sha512-A6v1NFWcYvu5L6qTi3DDT/KdGm96WFc4PppRIkWKr1RIuolxYuN1cZR22IsjTWt+JTucf2Ptc30Md8hfZfgFxA==}
+
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
@@ -2752,6 +2767,12 @@ packages:
   '@types/aws-lambda@8.10.137':
     resolution: {integrity: sha512-YNFwzVarXAOXkjuFxONyDw1vgRNzyH8AuyN19s0bM+ChSu/bzxb5XPxYFLXoqoM+tvgzwR3k7fXcEOW125yJxg==}
 
+  '@types/chai-subset@1.3.5':
+    resolution: {integrity: sha512-c2mPnw+xHtXDoHmdtcCXGwyLMiauiAyxWMzhGpqHC4nqI/Y5G2XhTampslK2rb59kpcuHon03UH8W6iYUzw88A==}
+
+  '@types/chai@4.3.16':
+    resolution: {integrity: sha512-PatH4iOdyh3MyWtmHVFXLWCCIhUbopaltqddG9BzB+gMIzee2MJrvd+jouii9Z3wzQJruGWAm7WOMjgfG8hQlQ==}
+
   '@types/conventional-commits-parser@5.0.0':
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
 
@@ -2760,6 +2781,9 @@ packages:
 
   '@types/http-errors@2.0.4':
     resolution: {integrity: sha512-D0CFMMtydbJAegzOyHjtiKPLlvnm3iTZyZRSZoLq2mRhDdmLfIWOCYPfQJ4cu2erKghU++QvjcUjp/5h7hESpA==}
+
+  '@types/istanbul-lib-coverage@2.0.6':
+    resolution: {integrity: sha512-2QF/t/auWm0lsy8XtKVPG19v3sSOQlJe/YHZgfjb/KBBHOGSV+J2q/S671rcq9uTBrLAXmZpqJiaQbMT+zNU1w==}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -2853,22 +2877,42 @@ packages:
     resolution: {integrity: sha512-IBBb+iI2NLu4VQn3Vwldyi2QwaXt5+hTyh58ggAMoCGE6DJmPvwL3KPBWcJl1m9LYPChBLE980Jw+CS4Wokqxw==}
     hasBin: true
 
+  '@vitest/coverage-v8@0.34.6':
+    resolution: {integrity: sha512-fivy/OK2d/EsJFoEoxHFEnNGTg+MmdZBAVK9Ka4qhXR2K3J0DS08vcGVwzDtXSuUMabLv4KtPcpSKkcMXFDViw==}
+    peerDependencies:
+      vitest: '>=0.32.0 <1'
+
   '@vitest/coverage-v8@1.6.0':
     resolution: {integrity: sha512-KvapcbMY/8GYIG0rlwwOKCVNRc0OL20rrhFkg/CHNzncV03TE2XWvO5w9uZYoxNiMEBacAJt3unSOiZ7svePew==}
     peerDependencies:
       vitest: 1.6.0
 
+  '@vitest/expect@0.34.6':
+    resolution: {integrity: sha512-QUzKpUQRc1qC7qdGo7rMK3AkETI7w18gTCUrsNnyjjJKYiuUB9+TQK3QnR1unhCnWRC0AbKv2omLGQDF/mIjOw==}
+
   '@vitest/expect@1.6.0':
     resolution: {integrity: sha512-ixEvFVQjycy/oNgHjqsL6AZCDduC+tflRluaHIzKIsdbzkLn2U/iBnVeJwB6HsIjQBdfMR8Z0tRxKUsvFJEeWQ==}
+
+  '@vitest/runner@0.34.6':
+    resolution: {integrity: sha512-1CUQgtJSLF47NnhN+F9X2ycxUP0kLHQ/JWvNHbeBfwW8CzEGgeskzNnHDyv1ieKTltuR6sdIHV+nmR6kPxQqzQ==}
 
   '@vitest/runner@1.6.0':
     resolution: {integrity: sha512-P4xgwPjwesuBiHisAVz/LSSZtDjOTPYZVmNAnpHHSR6ONrf8eCJOFRvUwdHn30F5M1fxhqtl7QZQUk2dprIXAg==}
 
+  '@vitest/snapshot@0.34.6':
+    resolution: {integrity: sha512-B3OZqYn6k4VaN011D+ve+AA4whM4QkcwcrwaKwAbyyvS/NB1hCWjFIBQxAQQSQir9/RtyAAGuq+4RJmbn2dH4w==}
+
   '@vitest/snapshot@1.6.0':
     resolution: {integrity: sha512-+Hx43f8Chus+DCmygqqfetcAZrDJwvTj0ymqjQq4CvmpKFSTVteEOBzCusu1x2tt4OJcvBflyHUE0DZSLgEMtQ==}
 
+  '@vitest/spy@0.34.6':
+    resolution: {integrity: sha512-xaCvneSaeBw/cz8ySmF7ZwGvL0lBjfvqc1LpQ/vcdHEvpLn3Ff1vAvjw+CoGn0802l++5L/pxb7whwcWAw+DUQ==}
+
   '@vitest/spy@1.6.0':
     resolution: {integrity: sha512-leUTap6B/cqi/bQkXUu6bQV5TZPx7pmMBKBQiI0rJA8c3pB56ZsaTbREnF7CJfmvAS4V2cXIBAh/3rVwrrCYgw==}
+
+  '@vitest/utils@0.34.6':
+    resolution: {integrity: sha512-IG5aDD8S6zlvloDsnzHw0Ut5xczlF+kv2BOTo+iXfPr54Yhi5qbVOgGB1hZaVq4iJ4C/MZ2J0y15IlsV/ZcI0A==}
 
   '@vitest/utils@1.6.0':
     resolution: {integrity: sha512-21cPiuGMoMZwiOHa2i4LXkMkMkCGzA+MVFV70jRwHo95dL4x/ts5GZhML1QWuy7yfp3WzK3lRvZi3JnXTYqrBw==}
@@ -4581,6 +4625,10 @@ packages:
     resolution: {integrity: sha512-GCfE1mtsHGOELCU8e/Z7YWzpmybrx/+dSTfLrvY8qRmaY6zXTKWn6WQIjaAFw069icm6GVMNkgu0NzI4iPZUNw==}
     engines: {node: '>=10'}
 
+  istanbul-lib-source-maps@4.0.1:
+    resolution: {integrity: sha512-n3s8EwkdFIJCG3BPKBYvskgXGoy88ARzvegkitk60NxRdwltLOTaH7CUiMRXvwYorl0Q712iEjcWB+fK/MrWVw==}
+    engines: {node: '>=10'}
+
   istanbul-lib-source-maps@5.0.4:
     resolution: {integrity: sha512-wHOoEsNJTVltaJp8eVkm8w+GVkVNHT2YDYo53YdzQEL2gWm1hBX5cGFR9hQJtuGLebidVX7et3+dmDZrmclduw==}
     engines: {node: '>=10'}
@@ -4778,6 +4826,10 @@ packages:
   load-tsconfig@0.2.5:
     resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  local-pkg@0.4.3:
+    resolution: {integrity: sha512-SFppqq5p42fe2qcZQqqEOiVRXl+WCP1MdT6k7BDEW1j++sp5fIY+/fdRQitvKgB5BrBcmrs5m/L0v2FrU5MY1g==}
+    engines: {node: '>=14'}
 
   local-pkg@0.5.0:
     resolution: {integrity: sha512-ok6z3qlYyCDS4ZEU27HaU6x/xZa9Whf8jD4ptH5UZTQYZVYeb9bnZ3ojVhiJNLiXK1Hfc0GNbLXcmZ5plLDDBg==}
@@ -6064,6 +6116,9 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
+  strip-literal@1.3.0:
+    resolution: {integrity: sha512-PugKzOsyXpArk0yWmUwqOZecSO0GH0bPoctLcqNDH9J04pVW3lflYE0ujElBGTloevcxF5MofAOZ7C5l2b+wLg==}
+
   strip-literal@2.1.0:
     resolution: {integrity: sha512-Op+UycaUt/8FbN/Z2TWPBLge3jWrP3xj10f3fnYxf052bKuS3EKs1ZQcVGjnEMdsNVAM+plXRdmjrZ/KgG3Skw==}
 
@@ -6158,6 +6213,10 @@ packages:
 
   tinybench@2.8.0:
     resolution: {integrity: sha512-1/eK7zUnIklz4JUUlL+658n58XO2hHLQfSk1Zf2LKieUjxidN16eKFEoDEfjHc3ohofSSqK3X5yO6VGb6iW8Lw==}
+
+  tinypool@0.7.0:
+    resolution: {integrity: sha512-zSYNUlYSMhJ6Zdou4cJwo/p7w5nmAH17GRfU/ui3ctvjXFErXXkruT4MWW6poDeXgCaIBlGLrfU6TbTXxyGMww==}
+    engines: {node: '>=14.0.0'}
 
   tinypool@0.8.4:
     resolution: {integrity: sha512-i11VH5gS6IFeLY3gMBQ00/MmLncVP7JLXOw1vlgkytLmJK7QnEr7NXf0LBdxfmNPAeyetukOk0bOYrJrFGjYJQ==}
@@ -6431,6 +6490,10 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
+  v8-to-istanbul@9.2.0:
+    resolution: {integrity: sha512-/EH/sDgxU2eGxajKdwLCDmQ4FWq+kpi3uCmBGpw1xJtnAxEjlD8j8PEiGWpCIMIs3ciNAgH0d3TTJiUkYzyZjA==}
+    engines: {node: '>=10.12.0'}
+
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
 
@@ -6444,6 +6507,11 @@ packages:
   validate-npm-package-name@5.0.1:
     resolution: {integrity: sha512-OljLrQ9SQdOUqTaQxqL5dEfZWrXExyyWsozYlAWFawPVNuD83igl7uJD2RTkNMbniIYgt8l81eCJGIdQF7avLQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
+
+  vite-node@0.34.6:
+    resolution: {integrity: sha512-nlBMJ9x6n7/Amaz6F3zJ97EBwR2FkzhBRxF5e+jE6LA3yi6Wtc2lyTij1OnDMIr34v5g/tVQtsVAzhT0jc5ygA==}
+    engines: {node: '>=v14.18.0'}
+    hasBin: true
 
   vite-node@1.6.0:
     resolution: {integrity: sha512-de6HJgzC+TFzOu0NTC4RAIsyf/DY/ibWDYQUcuEA84EMHhcefTUGkjFHKKEJhQN4A+6I0u++kr3l36ZF2d7XRw==}
@@ -6484,6 +6552,37 @@ packages:
       sugarss:
         optional: true
       terser:
+        optional: true
+
+  vitest@0.34.6:
+    resolution: {integrity: sha512-+5CALsOvbNKnS+ZHMXtuUC7nL8/7F1F2DnHGjSsszX8zCjWSSviphCb/NuS9Nzf4Q03KyyDRBAXhF/8lffME4Q==}
+    engines: {node: '>=v14.18.0'}
+    hasBin: true
+    peerDependencies:
+      '@edge-runtime/vm': '*'
+      '@vitest/browser': '*'
+      '@vitest/ui': '*'
+      happy-dom: '*'
+      jsdom: '*'
+      playwright: '*'
+      safaridriver: '*'
+      webdriverio: '*'
+    peerDependenciesMeta:
+      '@edge-runtime/vm':
+        optional: true
+      '@vitest/browser':
+        optional: true
+      '@vitest/ui':
+        optional: true
+      happy-dom:
+        optional: true
+      jsdom:
+        optional: true
+      playwright:
+        optional: true
+      safaridriver:
+        optional: true
+      webdriverio:
         optional: true
 
   vitest@1.6.0:
@@ -6774,7 +6873,7 @@ snapshots:
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sso-oidc': 3.574.0(@aws-sdk/client-sts@3.574.0)
+      '@aws-sdk/client-sso-oidc': 3.574.0
       '@aws-sdk/client-sts': 3.574.0
       '@aws-sdk/core': 3.572.0
       '@aws-sdk/credential-provider-node': 3.572.0(@aws-sdk/client-sso-oidc@3.574.0(@aws-sdk/client-sts@3.574.0))(@aws-sdk/client-sts@3.574.0)
@@ -7610,28 +7709,6 @@ snapshots:
       '@smithy/property-provider': 2.2.0
       '@smithy/types': 2.12.0
       tslib: 2.6.2
-
-  '@aws-sdk/credential-providers@3.574.0(@aws-sdk/client-sso-oidc@3.574.0(@aws-sdk/client-sts@3.574.0))':
-    dependencies:
-      '@aws-sdk/client-cognito-identity': 3.574.0
-      '@aws-sdk/client-sso': 3.572.0
-      '@aws-sdk/client-sts': 3.574.0
-      '@aws-sdk/credential-provider-cognito-identity': 3.574.0
-      '@aws-sdk/credential-provider-env': 3.568.0
-      '@aws-sdk/credential-provider-http': 3.568.0
-      '@aws-sdk/credential-provider-ini': 3.572.0(@aws-sdk/client-sso-oidc@3.574.0(@aws-sdk/client-sts@3.574.0))(@aws-sdk/client-sts@3.574.0)
-      '@aws-sdk/credential-provider-node': 3.572.0(@aws-sdk/client-sso-oidc@3.574.0(@aws-sdk/client-sts@3.574.0))(@aws-sdk/client-sts@3.574.0)
-      '@aws-sdk/credential-provider-process': 3.572.0
-      '@aws-sdk/credential-provider-sso': 3.572.0(@aws-sdk/client-sso-oidc@3.574.0(@aws-sdk/client-sts@3.574.0))
-      '@aws-sdk/credential-provider-web-identity': 3.568.0(@aws-sdk/client-sts@3.574.0)
-      '@aws-sdk/types': 3.567.0
-      '@smithy/credential-provider-imds': 2.3.0
-      '@smithy/property-provider': 2.2.0
-      '@smithy/types': 2.12.0
-      tslib: 2.6.2
-    transitivePeerDependencies:
-      - '@aws-sdk/client-sso-oidc'
-      - aws-crt
 
   '@aws-sdk/credential-providers@3.574.0(@aws-sdk/client-sso-oidc@3.574.0)':
     dependencies:
@@ -9033,6 +9110,17 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
+  '@event-scout/construct-contracts@0.7.3(@serverless/typescript@3.38.0)(ajv@8.13.0)(aws-cdk-lib@2.141.0(constructs@10.3.0))(axios@1.6.8)':
+    dependencies:
+      '@swarmion/serverless-contracts': 0.31.3(@serverless/typescript@3.38.0)(ajv@8.13.0)(aws-cdk-lib@2.141.0(constructs@10.3.0))(axios@1.6.8)
+      json-schema-to-ts: 3.1.0
+    transitivePeerDependencies:
+      - '@serverless/typescript'
+      - ajv
+      - aws-cdk-lib
+      - aws-crt
+      - axios
+
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.2
@@ -10182,6 +10270,12 @@ snapshots:
 
   '@types/aws-lambda@8.10.137': {}
 
+  '@types/chai-subset@1.3.5':
+    dependencies:
+      '@types/chai': 4.3.16
+
+  '@types/chai@4.3.16': {}
+
   '@types/conventional-commits-parser@5.0.0':
     dependencies:
       '@types/node': 20.12.11
@@ -10189,6 +10283,8 @@ snapshots:
   '@types/estree@1.0.5': {}
 
   '@types/http-errors@2.0.4': {}
+
+  '@types/istanbul-lib-coverage@2.0.6': {}
 
   '@types/json-schema@7.0.15': {}
 
@@ -10302,6 +10398,23 @@ snapshots:
 
   '@vercel/ncc@0.38.1': {}
 
+  '@vitest/coverage-v8@0.34.6(vitest@0.34.6)':
+    dependencies:
+      '@ampproject/remapping': 2.3.0
+      '@bcoe/v8-coverage': 0.2.3
+      istanbul-lib-coverage: 3.2.2
+      istanbul-lib-report: 3.0.1
+      istanbul-lib-source-maps: 4.0.1
+      istanbul-reports: 3.1.7
+      magic-string: 0.30.10
+      picocolors: 1.0.0
+      std-env: 3.7.0
+      test-exclude: 6.0.0
+      v8-to-istanbul: 9.2.0
+      vitest: 0.34.6
+    transitivePeerDependencies:
+      - supports-color
+
   '@vitest/coverage-v8@1.6.0(vitest@1.6.0(@types/node@20.12.11))':
     dependencies:
       '@ampproject/remapping': 2.3.0
@@ -10321,11 +10434,23 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@vitest/expect@0.34.6':
+    dependencies:
+      '@vitest/spy': 0.34.6
+      '@vitest/utils': 0.34.6
+      chai: 4.4.1
+
   '@vitest/expect@1.6.0':
     dependencies:
       '@vitest/spy': 1.6.0
       '@vitest/utils': 1.6.0
       chai: 4.4.1
+
+  '@vitest/runner@0.34.6':
+    dependencies:
+      '@vitest/utils': 0.34.6
+      p-limit: 4.0.0
+      pathe: 1.1.2
 
   '@vitest/runner@1.6.0':
     dependencies:
@@ -10333,15 +10458,31 @@ snapshots:
       p-limit: 5.0.0
       pathe: 1.1.2
 
+  '@vitest/snapshot@0.34.6':
+    dependencies:
+      magic-string: 0.30.10
+      pathe: 1.1.2
+      pretty-format: 29.7.0
+
   '@vitest/snapshot@1.6.0':
     dependencies:
       magic-string: 0.30.10
       pathe: 1.1.2
       pretty-format: 29.7.0
 
+  '@vitest/spy@0.34.6':
+    dependencies:
+      tinyspy: 2.2.1
+
   '@vitest/spy@1.6.0':
     dependencies:
       tinyspy: 2.2.1
+
+  '@vitest/utils@0.34.6':
+    dependencies:
+      diff-sequences: 29.6.3
+      loupe: 2.3.7
+      pretty-format: 29.7.0
 
   '@vitest/utils@1.6.0':
     dependencies:
@@ -12314,6 +12455,14 @@ snapshots:
       make-dir: 4.0.0
       supports-color: 7.2.0
 
+  istanbul-lib-source-maps@4.0.1:
+    dependencies:
+      debug: 4.3.4
+      istanbul-lib-coverage: 3.2.2
+      source-map: 0.6.1
+    transitivePeerDependencies:
+      - supports-color
+
   istanbul-lib-source-maps@5.0.4:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
@@ -12343,13 +12492,13 @@ snapshots:
   jake@10.9.1:
     dependencies:
       async: 3.2.5
-      chalk: 4.1.0
+      chalk: 4.1.2
       filelist: 1.0.4
       minimatch: 3.1.2
 
   jest-diff@29.7.0:
     dependencies:
-      chalk: 4.1.0
+      chalk: 4.1.2
       diff-sequences: 29.6.3
       jest-get-type: 29.6.3
       pretty-format: 29.7.0
@@ -12603,6 +12752,8 @@ snapshots:
       type-fest: 0.6.0
 
   load-tsconfig@0.2.5: {}
+
+  local-pkg@0.4.3: {}
 
   local-pkg@0.5.0:
     dependencies:
@@ -12905,7 +13056,7 @@ snapshots:
       array-differ: 3.0.0
       array-union: 2.1.0
       arrify: 2.0.1
-      minimatch: 3.0.5
+      minimatch: 3.1.2
 
   mute-stream@0.0.8: {}
 
@@ -14086,6 +14237,10 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
+  strip-literal@1.3.0:
+    dependencies:
+      acorn: 8.11.3
+
   strip-literal@2.1.0:
     dependencies:
       js-tokens: 9.0.0
@@ -14202,6 +14357,8 @@ snapshots:
   tightrope@0.2.0: {}
 
   tinybench@2.8.0: {}
+
+  tinypool@0.7.0: {}
 
   tinypool@0.8.4: {}
 
@@ -14472,6 +14629,12 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
+  v8-to-istanbul@9.2.0:
+    dependencies:
+      '@jridgewell/trace-mapping': 0.3.25
+      '@types/istanbul-lib-coverage': 2.0.6
+      convert-source-map: 2.0.0
+
   validate-npm-package-license@3.0.4:
     dependencies:
       spdx-correct: 3.2.0
@@ -14486,6 +14649,24 @@ snapshots:
       builtins: 5.1.0
 
   validate-npm-package-name@5.0.1: {}
+
+  vite-node@0.34.6(@types/node@20.12.11):
+    dependencies:
+      cac: 6.7.14
+      debug: 4.3.4
+      mlly: 1.7.0
+      pathe: 1.1.2
+      picocolors: 1.0.0
+      vite: 5.2.11(@types/node@20.12.11)
+    transitivePeerDependencies:
+      - '@types/node'
+      - less
+      - lightningcss
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
 
   vite-node@1.6.0(@types/node@20.12.11):
     dependencies:
@@ -14523,6 +14704,41 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.12.11
       fsevents: 2.3.3
+
+  vitest@0.34.6:
+    dependencies:
+      '@types/chai': 4.3.16
+      '@types/chai-subset': 1.3.5
+      '@types/node': 20.12.11
+      '@vitest/expect': 0.34.6
+      '@vitest/runner': 0.34.6
+      '@vitest/snapshot': 0.34.6
+      '@vitest/spy': 0.34.6
+      '@vitest/utils': 0.34.6
+      acorn: 8.11.3
+      acorn-walk: 8.3.2
+      cac: 6.7.14
+      chai: 4.4.1
+      debug: 4.3.4
+      local-pkg: 0.4.3
+      magic-string: 0.30.10
+      pathe: 1.1.2
+      picocolors: 1.0.0
+      std-env: 3.7.0
+      strip-literal: 1.3.0
+      tinybench: 2.8.0
+      tinypool: 0.7.0
+      vite: 5.2.11(@types/node@20.12.11)
+      vite-node: 0.34.6(@types/node@20.12.11)
+      why-is-node-running: 2.2.2
+    transitivePeerDependencies:
+      - less
+      - lightningcss
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
 
   vitest@1.6.0(@types/node@20.12.11):
     dependencies:

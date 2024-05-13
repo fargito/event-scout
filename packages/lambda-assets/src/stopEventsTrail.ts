@@ -1,5 +1,3 @@
-// this rule is useless in this file, since we bundle it before shipping
-/* eslint-disable import/no-extraneous-dependencies */
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { EventBridgeClient } from '@aws-sdk/client-eventbridge';
 import { DeleteCommand } from '@aws-sdk/lib-dynamodb';
@@ -9,7 +7,7 @@ import Ajv from 'ajv';
 
 import { stopEventsTrailContract } from '@event-scout/construct-contracts';
 
-import { buildDeleteEventBridgeRuleAndTarget } from 'lambdas/utils/deleteEventBridgeRuleAndTarget';
+import { buildDeleteEventBridgeRuleAndTarget } from './utils/deleteEventBridgeRuleAndTarget';
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');

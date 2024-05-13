@@ -1,0 +1,66 @@
+{
+  "name": "@event-scout/lambda-assets",
+  "description": "EventScout: lambda code for EventScout",
+  "version": "0.7.3",
+  "author": "fargito",
+  "license": "MIT",
+  "homepage": "https://github.com/fargito/event-scout",
+  "bugs": "https://github.com/fargito/event-scout/issues",
+  "repository": "fargito/event-scout.git",
+  "keywords": [
+    "AWS Lambda",
+    "EventBridge",
+    "Serverless"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    "./startEventsTrail": "./dist/startEventsTrail.zip",
+    "./listEvents": "./dist/listEvents.zip",
+    "./stopEventsTrail": "./dist/stopEventsTrail.zip",
+    "./storeEvents": "./dist/storeEvents.zip",
+    "./trailGarbageCollector": "./dist/trailGarbageCollector.zip",
+    "./forwardEvent": "./dist/forwardEvent.zip",
+    "./onStartTrail": "./dist/onStartTrail.zip",
+    "./onWebSocketConnect": "./dist/onWebSocketConnect.zip",
+    "./onWebSocketDisconnect": "./dist/onWebSocketDisconnect.zip"
+  },
+  "scripts": {
+    "lint-fix": "pnpm linter-base-config --fix",
+    "lint-fix-all": "pnpm lint-fix .",
+    "linter-base-config": "eslint --ext=js,ts",
+    "package": "node ./esbuild.build.js",
+    "test": "pnpm test-linter && pnpm test-type && pnpm test-unit && pnpm test-circular",
+    "test-circular": "pnpm depcruise --config -- src",
+    "test-linter": "pnpm linter-base-config .",
+    "test-type": "tsc --noEmit --emitDeclarationOnly false",
+    "test-unit": "vitest run --coverage --passWithNoTests"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-apigatewaymanagementapi": "^3.490.0",
+    "@aws-sdk/client-dynamodb": "^3.564.0",
+    "@aws-sdk/client-eventbridge": "^3.490.0",
+    "@aws-sdk/lib-dynamodb": "^3.564.0",
+    "@event-scout/construct-contracts": "^0.7.3",
+    "@swarmion/serverless-contracts": "^0.31.0",
+    "@swarmion/serverless-helpers": "^0.31.0",
+    "@types/aws-lambda": "^8.10.131",
+    "@types/node": "^20.12.11",
+    "@vitest/coverage-v8": "^0.34.6",
+    "ajv": "^8.12.0",
+    "concurrently": "^8.2.2",
+    "dependency-cruiser": "^16.3.2",
+    "esbuild": "^0.21.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^0.34.6"
+  }
+}

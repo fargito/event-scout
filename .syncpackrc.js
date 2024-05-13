@@ -33,6 +33,7 @@ module.exports = {
     'main',
     'module',
     'types',
+    'exports',
     'contracts',
     'generators',
     'scripts',

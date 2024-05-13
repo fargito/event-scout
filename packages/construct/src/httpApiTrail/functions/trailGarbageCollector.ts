@@ -15,13 +15,11 @@ import {
 import { DynamoEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
 import type { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
-import { join } from 'path';
 
 type Props = {
   table: Table;
   eventBus: IEventBus;
   logGroup: ILogGroup;
-  baseLambdaDirectory: string;
 };
 
 export class TrailGarbageCollectorFunction extends Construct {
@@ -30,13 +28,13 @@ export class TrailGarbageCollectorFunction extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { table, eventBus, baseLambdaDirectory, logGroup }: Props,
+    { table, eventBus, logGroup }: Props,
   ) {
     super(scope, id);
 
     this.function = new LambdaFunction(this, 'TrailGarbageCollector', {
       code: Code.fromAsset(
-        join(baseLambdaDirectory, 'trailGarbageCollector.zip'),
+        require.resolve('@event-scout/lambda-assets/trailGarbageCollector'),
       ),
       handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,

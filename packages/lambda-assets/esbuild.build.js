@@ -1,5 +1,6 @@
 import { execSync } from 'child_process';
 import esbuild from 'esbuild';
+import { existsSync, mkdirSync } from 'node:fs';
 import path, { join } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -16,7 +17,7 @@ const lambdas = [
 ];
 
 await esbuild.build({
-  entryPoints: lambdas.map(name => `src/lambdas/${name}.ts`),
+  entryPoints: lambdas.map(name => `src/${name}.ts`),
   outdir: '.esbuild',
   bundle: true,
   minify: true,
@@ -38,6 +39,10 @@ await esbuild.build({
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+if (!existsSync('dist')) {
+  mkdirSync('dist');
+}
 
 for (const lambda of lambdas) {
   execSync(

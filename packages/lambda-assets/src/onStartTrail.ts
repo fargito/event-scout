@@ -1,5 +1,3 @@
-// this rule is useless in this file, since we bundle it before shipping
-/* eslint-disable import/no-extraneous-dependencies */
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { EventBridgeClient } from '@aws-sdk/client-eventbridge';
 import { UpdateCommand } from '@aws-sdk/lib-dynamodb';
@@ -12,7 +10,7 @@ import {
   startWebsocketEventTrailBodySchema,
 } from '@event-scout/construct-contracts';
 
-import { buildCreateEventBridgeRuleAndTarget } from 'lambdas/utils/createEventBridgeRuleAndTarget';
+import { buildCreateEventBridgeRuleAndTarget } from './utils/createEventBridgeRuleAndTarget';
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');
