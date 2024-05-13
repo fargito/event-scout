@@ -12,12 +12,10 @@ import {
 } from 'aws-cdk-lib/aws-lambda';
 import type { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
-import { join } from 'path';
 
 type Props = {
   eventBus: IEventBus;
   logGroup: ILogGroup;
-  baseLambdaDirectory: string;
   webSocketApi: WebSocketApi;
   webSocketEndpoint: string;
 };
@@ -28,18 +26,14 @@ export class ForwardEventFunction extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    {
-      eventBus,
-      logGroup,
-      baseLambdaDirectory,
-      webSocketApi,
-      webSocketEndpoint,
-    }: Props,
+    { eventBus, logGroup, webSocketApi, webSocketEndpoint }: Props,
   ) {
     super(scope, id);
 
     this.function = new LambdaFunction(this, 'OnNewWebsocketEvent', {
-      code: Code.fromAsset(join(baseLambdaDirectory, 'forwardEvent.zip')),
+      code: Code.fromAsset(
+        require.resolve('@event-scout/lambda-assets/forwardEvent'),
+      ),
       handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,
       architecture: Architecture.ARM_64,

@@ -21,15 +21,15 @@
   ],
   "type": "module",
   "exports": {
-    "startEventsTrail": "./dist/startEventsTrail.zip",
-    "listEvents": "./dist/listEvents.zip",
-    "stopEventsTrail": "./dist/stopEventsTrail.zip",
-    "storeEvents": "./dist/storeEvents.zip",
-    "trailGarbageCollector": "./dist/trailGarbageCollector.zip",
-    "forwardEvent": "./dist/forwardEvent.zip",
-    "onStartTrail": "./dist/onStartTrail.zip",
-    "onWebSocketConnect": "./dist/onWebSocketConnect.zip",
-    "onWebSocketDisconnect": "./dist/onWebSocketDisconnect.zip"
+    "./startEventsTrail": "./dist/startEventsTrail.zip",
+    "./listEvents": "./dist/listEvents.zip",
+    "./stopEventsTrail": "./dist/stopEventsTrail.zip",
+    "./storeEvents": "./dist/storeEvents.zip",
+    "./trailGarbageCollector": "./dist/trailGarbageCollector.zip",
+    "./forwardEvent": "./dist/forwardEvent.zip",
+    "./onStartTrail": "./dist/onStartTrail.zip",
+    "./onWebSocketConnect": "./dist/onWebSocketConnect.zip",
+    "./onWebSocketDisconnect": "./dist/onWebSocketDisconnect.zip"
   },
   "scripts": {
     "lint-fix": "pnpm linter-base-config --fix",

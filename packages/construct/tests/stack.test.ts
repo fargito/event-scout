@@ -1,7 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
 import { EventBus } from 'aws-cdk-lib/aws-events';
-import { join } from 'node:path';
 
 import { EventScout } from '../src/EventScout';
 
@@ -13,7 +12,6 @@ test('Resources are properly created', () => {
 
   new EventScout(stack, 'EventScout', {
     eventBus,
-    __baseLambdaDirectory: join(__dirname, '__mocks__'),
   });
 
   const template = Template.fromStack(stack);

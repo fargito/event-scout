@@ -14,7 +14,6 @@ import {
 } from 'aws-cdk-lib/aws-lambda';
 import type { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
-import { join } from 'node:path';
 
 import { StoreEventsFunction } from './functions/storeEvents';
 
@@ -22,7 +21,6 @@ type HttpApiTrailProps = {
   table: Table;
   eventBus: IEventBus;
   logGroup: ILogGroup;
-  baseLambdaDirectory: string;
 };
 
 type LambdaConfig = {
@@ -44,7 +42,7 @@ export class HttpApiTrail extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { table, eventBus, baseLambdaDirectory, logGroup }: HttpApiTrailProps,
+    { table, eventBus, logGroup }: HttpApiTrailProps,
   ) {
     super(scope, id);
 
@@ -58,12 +56,12 @@ export class HttpApiTrail extends Construct {
     const { function: storeEvents } = new StoreEventsFunction(
       this,
       'StoreEvents',
-      { table, eventBus, logGroup, baseLambdaDirectory },
+      { table, eventBus, logGroup },
     );
 
     const syncLambdas: Record<string, LambdaConfig> = {
       StartEventsTrail: {
-        codePath: 'startEventsTrail.zip',
+        codePath: 'startEventsTrail',
         httpMethod: HttpMethod.POST,
         httpPath: '/start-events-trail',
         policy: [
@@ -89,7 +87,7 @@ export class HttpApiTrail extends Construct {
         ],
       },
       StopEventsTrail: {
-        codePath: 'stopEventsTrail.zip',
+        codePath: 'stopEventsTrail',
         httpMethod: HttpMethod.POST,
         httpPath: '/stop-events-trail',
         policy: [
@@ -115,7 +113,7 @@ export class HttpApiTrail extends Construct {
         ],
       },
       ListEvents: {
-        codePath: 'listEvents.zip',
+        codePath: 'listEvents',
         httpMethod: HttpMethod.GET,
         httpPath: '/trail/{trailId}',
         policy: [
@@ -134,7 +132,11 @@ export class HttpApiTrail extends Construct {
       const lambda = new LambdaFunction(this, lambdaName, {
         architecture: Architecture.ARM_64,
         runtime: Runtime.NODEJS_20_X,
-        code: Code.fromAsset(join(baseLambdaDirectory, lambdaConfig.codePath)),
+        code: Code.fromAsset(
+          require.resolve(
+            `@event-scout/lambda-assets/${lambdaConfig.codePath}`,
+          ),
+        ),
         handler: 'handler.main',
         memorySize: 1024,
         logFormat: LogFormat.JSON,

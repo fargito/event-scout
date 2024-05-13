@@ -178,6 +178,9 @@ importers:
 
   packages/construct:
     dependencies:
+      '@event-scout/lambda-assets':
+        specifier: workspace:^0.7.3
+        version: link:../lambda-assets
       aws-cdk-lib:
         specifier: ^2.121.1
         version: 2.141.0(constructs@10.3.0)
@@ -185,48 +188,15 @@ importers:
         specifier: ^10.3.0
         version: 10.3.0
     devDependencies:
-      '@aws-sdk/client-apigatewaymanagementapi':
-        specifier: ^3.490.0
-        version: 3.574.0
-      '@aws-sdk/client-dynamodb':
-        specifier: ^3.564.0
-        version: 3.574.0
-      '@aws-sdk/client-eventbridge':
-        specifier: ^3.490.0
-        version: 3.574.0
-      '@aws-sdk/lib-dynamodb':
-        specifier: ^3.564.0
-        version: 3.574.0(@aws-sdk/client-dynamodb@3.574.0)
-      '@event-scout/construct-contracts':
-        specifier: workspace:^0.7.3
-        version: link:../../contracts/construct-contracts
-      '@swarmion/serverless-contracts':
-        specifier: ^0.31.0
-        version: 0.31.3(@serverless/typescript@3.38.0)(ajv@8.13.0)(aws-cdk-lib@2.141.0(constructs@10.3.0))(axios@1.6.8)
-      '@swarmion/serverless-helpers':
-        specifier: ^0.31.0
-        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.141.0(constructs@10.3.0))
-      '@types/aws-lambda':
-        specifier: ^8.10.131
-        version: 8.10.137
       '@types/node':
         specifier: ^20.11.4
         version: 20.12.11
       '@vitest/coverage-v8':
         specifier: ^1.2.0
         version: 1.6.0(vitest@1.6.0(@types/node@20.12.11))
-      ajv:
-        specifier: ^8.12.0
-        version: 8.13.0
-      concurrently:
-        specifier: ^8.2.2
-        version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
         version: 16.3.2
-      esbuild:
-        specifier: ^0.21.0
-        version: 0.21.2
       eslint:
         specifier: ^8.56.0
         version: 8.57.0

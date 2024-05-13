@@ -11,13 +11,11 @@ import {
 } from 'aws-cdk-lib/aws-lambda';
 import type { ILogGroup } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
-import { join } from 'path';
 
 type Props = {
   table: Table;
   logGroup: ILogGroup;
   eventBus: IEventBus;
-  baseLambdaDirectory: string;
 };
 
 export class OnDisconnectFunction extends Construct {
@@ -26,13 +24,13 @@ export class OnDisconnectFunction extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    { table, logGroup, eventBus, baseLambdaDirectory }: Props,
+    { table, logGroup, eventBus }: Props,
   ) {
     super(scope, id);
 
     this.function = new LambdaFunction(this, 'OnDisconnect', {
       code: Code.fromAsset(
-        join(baseLambdaDirectory, 'onWebSocketDisconnect.zip'),
+        require.resolve('@event-scout/lambda-assets/onWebSocketDisconnect'),
       ),
       handler: 'handler.main',
       runtime: Runtime.NODEJS_20_X,
