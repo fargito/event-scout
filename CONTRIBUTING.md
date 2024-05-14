@@ -30,8 +30,9 @@ pnpm package --skip-nx-cache
 pnpm build --skip-nx-cache
 ```
 
-Release:
+Version & publish:
 
 ```bash
-pnpm release
+pnpm lerna version --force-publish
+pnpm publish --recursive --access public
 ```
