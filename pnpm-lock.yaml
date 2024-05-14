@@ -304,8 +304,8 @@ importers:
         specifier: ^3.564.0
         version: 3.575.0(@aws-sdk/client-dynamodb@3.575.0)
       '@event-scout/construct-contracts':
-        specifier: ^0.7.3
-        version: 0.7.3(@serverless/typescript@3.38.0)(ajv@8.13.0)(aws-cdk-lib@2.141.0(constructs@10.3.0))(axios@1.6.8)
+        specifier: workspace:^0.7.3
+        version: link:../../contracts/construct-contracts
       '@swarmion/serverless-contracts':
         specifier: ^0.31.0
         version: 0.31.3(@serverless/typescript@3.38.0)(ajv@8.13.0)(aws-cdk-lib@2.141.0(constructs@10.3.0))(axios@1.6.8)
@@ -1874,9 +1874,6 @@ packages:
   '@eslint/js@8.57.0':
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-
-  '@event-scout/construct-contracts@0.7.3':
-    resolution: {integrity: sha512-A6v1NFWcYvu5L6qTi3DDT/KdGm96WFc4PppRIkWKr1RIuolxYuN1cZR22IsjTWt+JTucf2Ptc30Md8hfZfgFxA==}
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -9047,17 +9044,6 @@ snapshots:
       - supports-color
 
   '@eslint/js@8.57.0': {}
-
-  '@event-scout/construct-contracts@0.7.3(@serverless/typescript@3.38.0)(ajv@8.13.0)(aws-cdk-lib@2.141.0(constructs@10.3.0))(axios@1.6.8)':
-    dependencies:
-      '@swarmion/serverless-contracts': 0.31.3(@serverless/typescript@3.38.0)(ajv@8.13.0)(aws-cdk-lib@2.141.0(constructs@10.3.0))(axios@1.6.8)
-      json-schema-to-ts: 3.1.0
-    transitivePeerDependencies:
-      - '@serverless/typescript'
-      - ajv
-      - aws-cdk-lib
-      - aws-crt
-      - axios
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
