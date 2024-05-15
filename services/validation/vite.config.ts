@@ -7,7 +7,10 @@ export default defineConfig({
   plugins,
   test: {
     globals: true,
-    coverage: { provider: 'v8' },
+    coverage: {
+      provider: 'v8',
+      exclude: [...(configDefaults.coverage.exclude ?? []), 'cdk.out'],
+    },
     exclude: [...configDefaults.exclude, 'cdk.out/**', 'integrationTests/*'],
   },
 });
