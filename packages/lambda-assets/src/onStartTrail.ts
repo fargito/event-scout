@@ -1,6 +1,7 @@
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { EventBridgeClient } from '@aws-sdk/client-eventbridge';
 import { UpdateCommand } from '@aws-sdk/lib-dynamodb';
+import { HttpStatusCodes } from '@swarmion/serverless-contracts';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
 import Ajv from 'ajv';
 import type { APIGatewayProxyWebsocketHandlerV2 } from 'aws-lambda';
@@ -11,11 +12,12 @@ import {
 } from '@event-scout/construct-contracts';
 
 import { buildCreateEventBridgeRuleAndTarget } from './utils/createEventBridgeRuleAndTarget';
+import { version } from '../package.json';
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');
 const forwardEventLambdaArn = getEnvVariable('FORWARD_EVENT_LAMBDA_ARN');
-const tableName = getEnvVariable('TEST_TABLE_NAME');
+const tableName = getEnvVariable('EVENT_SCOUT_TABLE_NAME');
 const dynamodbClient = new DynamoDBClient();
 
 const createEventBridgeRuleAndTarget = buildCreateEventBridgeRuleAndTarget({
@@ -68,5 +70,9 @@ export const main: APIGatewayProxyWebsocketHandlerV2 = async event => {
     trailId: trailId,
   });
 
-  return { statusCode: 200, body: 'Ok' };
+  return {
+    statusCode: HttpStatusCodes.OK,
+    headers: { 'x-event-scout-version': version },
+    body: 'Ok',
+  };
 };

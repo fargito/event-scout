@@ -8,10 +8,11 @@ import Ajv from 'ajv';
 import { stopEventsTrailContract } from '@event-scout/construct-contracts';
 
 import { buildDeleteEventBridgeRuleAndTarget } from './utils/deleteEventBridgeRuleAndTarget';
+import { version } from '../package.json';
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');
-const tableName = getEnvVariable('TEST_TABLE_NAME');
+const tableName = getEnvVariable('EVENT_SCOUT_TABLE_NAME');
 const dynamodbClient = new DynamoDBClient();
 
 const deleteEventBridgeRuleAndTarget = buildDeleteEventBridgeRuleAndTarget({
@@ -36,5 +37,9 @@ export const main = getHandler(stopEventsTrailContract, {
     }),
   );
 
-  return { statusCode: HttpStatusCodes.OK, body: { trailId } };
+  return {
+    statusCode: HttpStatusCodes.OK,
+    headers: { 'x-event-scout-version': version },
+    body: { trailId },
+  };
 });

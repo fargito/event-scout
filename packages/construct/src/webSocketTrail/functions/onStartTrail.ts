@@ -39,7 +39,7 @@ export class OnStartTrailFunction extends Construct {
       timeout: Duration.seconds(15),
       environment: {
         AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
-        TEST_TABLE_NAME: table.tableName,
+        EVENT_SCOUT_TABLE_NAME: table.tableName,
         EVENT_BUS_NAME: eventBus.eventBusName,
         FORWARD_EVENT_LAMBDA_ARN: forwardEvent.functionArn,
       },

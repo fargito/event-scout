@@ -3,7 +3,7 @@ import { PutCommand } from '@aws-sdk/lib-dynamodb';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
 import type { EventBridgeEvent } from 'aws-lambda';
 
-const tableName = getEnvVariable('TEST_TABLE_NAME');
+const tableName = getEnvVariable('EVENT_SCOUT_TABLE_NAME');
 const dynamodbClient = new DynamoDBClient();
 
 export const main = async (
