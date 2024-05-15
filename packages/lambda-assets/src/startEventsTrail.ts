@@ -9,6 +9,7 @@ import { randomUUID } from 'crypto';
 import { startEventsTrailContract } from '@event-scout/construct-contracts';
 
 import { buildCreateEventBridgeRuleAndTarget } from './utils/createEventBridgeRuleAndTarget';
+import { version } from '../package.json';
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');
@@ -50,5 +51,9 @@ export const main = getHandler(startEventsTrailContract, {
     trailId,
   });
 
-  return { statusCode: HttpStatusCodes.OK, body: { trailId } };
+  return {
+    statusCode: HttpStatusCodes.OK,
+    headers: { 'x-event-scout-version': version },
+    body: { trailId },
+  };
 });

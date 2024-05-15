@@ -1,7 +1,10 @@
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { PutCommand } from '@aws-sdk/lib-dynamodb';
+import { HttpStatusCodes } from '@swarmion/serverless-contracts';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
 import type { APIGatewayProxyWebsocketHandlerV2 } from 'aws-lambda';
+
+import { version } from '../package.json';
 
 const tableName = getEnvVariable('EVENT_SCOUT_TABLE_NAME');
 const dynamodbClient = new DynamoDBClient();
@@ -27,5 +30,9 @@ export const main: APIGatewayProxyWebsocketHandlerV2 = async event => {
     }),
   );
 
-  return { statusCode: 200, body: 'Connected' };
+  return {
+    statusCode: HttpStatusCodes.OK,
+    headers: { 'x-event-scout-version': version },
+    body: 'Connected',
+  };
 };

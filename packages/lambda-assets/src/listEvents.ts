@@ -6,6 +6,7 @@ import Ajv from 'ajv';
 import { listEventsContract } from '@event-scout/construct-contracts';
 
 import { buildListAllTrailEvents } from './utils/listAllTrailEvents';
+import { version } from '../package.json';
 
 const tableName = getEnvVariable('EVENT_SCOUT_TABLE_NAME');
 const dynamodbClient = new DynamoDBClient();
@@ -20,5 +21,9 @@ export const main = getHandler(listEventsContract, {
 
   const events = await listAllTrailEvents(trailId);
 
-  return { statusCode: HttpStatusCodes.OK, body: events };
+  return {
+    statusCode: HttpStatusCodes.OK,
+    headers: { 'x-event-scout-version': version },
+    body: events,
+  };
 });
