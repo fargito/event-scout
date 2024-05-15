@@ -38,7 +38,7 @@ export class StoreEventsFunction extends Construct {
       architecture: Architecture.ARM_64,
       environment: {
         AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
-        TEST_TABLE_NAME: table.tableName,
+        EVENT_SCOUT_TABLE_NAME: table.tableName,
       },
       logFormat: LogFormat.JSON,
       logGroup,

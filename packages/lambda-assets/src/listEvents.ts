@@ -7,7 +7,7 @@ import { listEventsContract } from '@event-scout/construct-contracts';
 
 import { buildListAllTrailEvents } from './utils/listAllTrailEvents';
 
-const tableName = getEnvVariable('TEST_TABLE_NAME');
+const tableName = getEnvVariable('EVENT_SCOUT_TABLE_NAME');
 const dynamodbClient = new DynamoDBClient();
 const listAllTrailEvents = buildListAllTrailEvents(dynamodbClient, tableName);
 

@@ -15,7 +15,7 @@ import { buildCreateEventBridgeRuleAndTarget } from './utils/createEventBridgeRu
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');
 const forwardEventLambdaArn = getEnvVariable('FORWARD_EVENT_LAMBDA_ARN');
-const tableName = getEnvVariable('TEST_TABLE_NAME');
+const tableName = getEnvVariable('EVENT_SCOUT_TABLE_NAME');
 const dynamodbClient = new DynamoDBClient();
 
 const createEventBridgeRuleAndTarget = buildCreateEventBridgeRuleAndTarget({

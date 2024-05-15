@@ -8,7 +8,7 @@ import { buildDeleteEventBridgeRuleAndTarget } from './utils/deleteEventBridgeRu
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');
-const tableName = getEnvVariable('TEST_TABLE_NAME');
+const tableName = getEnvVariable('EVENT_SCOUT_TABLE_NAME');
 const dynamodbClient = new DynamoDBClient();
 
 const deleteEventBridgeRuleAndTarget = buildDeleteEventBridgeRuleAndTarget({
