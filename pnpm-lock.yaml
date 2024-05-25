@@ -76,7 +76,7 @@ importers:
     dependencies:
       '@swarmion/serverless-contracts':
         specifier: ^0.31.0
-        version: 0.31.3(@serverless/typescript@3.38.0)(ajv@8.13.0)(aws-cdk-lib@2.143.0(constructs@10.3.0))(axios@1.7.2)
+        version: 0.31.3(@serverless/typescript@3.38.0)(ajv@8.14.0)(aws-cdk-lib@2.143.0(constructs@10.3.0))(axios@1.7.2)
       json-schema-to-ts:
         specifier: ^3.0.0
         version: 3.1.0
@@ -134,7 +134,7 @@ importers:
         version: 3.0.0
       '@swarmion/serverless-contracts':
         specifier: ^0.31.0
-        version: 0.31.3(@serverless/typescript@3.38.0)(ajv@8.13.0)(aws-cdk-lib@2.143.0(constructs@10.3.0))(axios@1.7.2)
+        version: 0.31.3(@serverless/typescript@3.38.0)(ajv@8.14.0)(aws-cdk-lib@2.143.0(constructs@10.3.0))(axios@1.7.2)
       axios:
         specifier: ^1.6.8
         version: 1.7.2
@@ -241,7 +241,7 @@ importers:
         version: 3.0.0
       ajv:
         specifier: ^8.12.0
-        version: 8.13.0
+        version: 8.14.0
       commander:
         specifier: ^12.0.0
         version: 12.1.0
@@ -308,7 +308,7 @@ importers:
         version: link:../../contracts/construct-contracts
       '@swarmion/serverless-contracts':
         specifier: ^0.31.0
-        version: 0.31.3(@serverless/typescript@3.38.0)(ajv@8.13.0)(aws-cdk-lib@2.143.0(constructs@10.3.0))(axios@1.7.2)
+        version: 0.31.3(@serverless/typescript@3.38.0)(ajv@8.14.0)(aws-cdk-lib@2.143.0(constructs@10.3.0))(axios@1.7.2)
       '@swarmion/serverless-helpers':
         specifier: ^0.31.0
         version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.143.0(constructs@10.3.0))
@@ -323,7 +323,7 @@ importers:
         version: 1.6.0(vitest@1.6.0(@types/node@20.12.12))
       ajv:
         specifier: ^8.12.0
-        version: 8.13.0
+        version: 8.14.0
       concurrently:
         specifier: ^8.2.2
         version: 8.2.2
@@ -3083,6 +3083,9 @@ packages:
   ajv@8.13.0:
     resolution: {integrity: sha512-PRA911Blj99jR5RMeTunVbNXMF6Lp4vZXnk5GQjcnUWUTsrXtekg/pnmFFI2u/I36Y/2bITGS30GZCXei6uNkA==}
 
+  ajv@8.14.0:
+    resolution: {integrity: sha512-oYs1UUtO97ZO2lJ4bwnWeQW8/zvOIQLGKcvPTsWmvc2SYgBb+upuNS5NxoLaMU4h8Ju3Nbj6Cq8mD2LQoqVKFA==}
+
   ansi-colors@4.1.3:
     resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
     engines: {node: '>=6'}
@@ -4288,10 +4291,12 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
     engines: {node: '>=12'}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   glob@9.3.5:
     resolution: {integrity: sha512-e1LleDykUz2Iu+MTYdkSsuWX8lvAjAcs0Xef0lNIu0S2wOAzuTxCJtcd9S3cijlwYF18EsU3rzb8jPVobxDh9Q==}
@@ -5906,6 +5911,7 @@ packages:
 
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rimraf@4.4.1:
@@ -8854,7 +8860,7 @@ snapshots:
   '@commitlint/config-validator@19.0.3':
     dependencies:
       '@commitlint/types': 19.0.3
-      ajv: 8.13.0
+      ajv: 8.14.0
 
   '@commitlint/ensure@19.0.3':
     dependencies:
@@ -10429,7 +10435,7 @@ snapshots:
       - supports-color
       - verdaccio
 
-  '@swarmion/serverless-contracts@0.31.3(@serverless/typescript@3.38.0)(ajv@8.13.0)(aws-cdk-lib@2.143.0(constructs@10.3.0))(axios@1.7.2)':
+  '@swarmion/serverless-contracts@0.31.3(@serverless/typescript@3.38.0)(ajv@8.14.0)(aws-cdk-lib@2.143.0(constructs@10.3.0))(axios@1.7.2)':
     dependencies:
       '@aws-sdk/client-eventbridge': 3.533.0
       '@swarmion/serverless-helpers': 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.143.0(constructs@10.3.0))
@@ -10444,7 +10450,7 @@ snapshots:
       ts-toolbelt: 9.6.0
     optionalDependencies:
       '@serverless/typescript': 3.38.0
-      ajv: 8.13.0
+      ajv: 8.14.0
       axios: 1.7.2
     transitivePeerDependencies:
       - aws-cdk-lib
@@ -10790,6 +10796,13 @@ snapshots:
       uri-js: 4.4.1
 
   ajv@8.13.0:
+    dependencies:
+      fast-deep-equal: 3.1.3
+      json-schema-traverse: 1.0.0
+      require-from-string: 2.0.2
+      uri-js: 4.4.1
+
+  ajv@8.14.0:
     dependencies:
       fast-deep-equal: 3.1.3
       json-schema-traverse: 1.0.0
