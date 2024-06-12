@@ -229,7 +229,7 @@ importers:
         version: 5.2.0
       '@aws-sdk/credential-providers':
         specifier: ^3.490.0
-        version: 3.592.0(@aws-sdk/client-sso-oidc@3.592.0)
+        version: 3.592.0(@aws-sdk/client-sso-oidc@3.592.0(@aws-sdk/client-sts@3.592.0))
       '@aws-sdk/types':
         specifier: ^3.489.0
         version: 3.577.0
@@ -310,8 +310,8 @@ importers:
         specifier: ^0.32.0
         version: 0.32.0(@serverless/typescript@3.38.0)(ajv@8.16.0)(aws-cdk-lib@2.145.0(constructs@10.3.0))(axios@1.7.2)
       '@swarmion/serverless-helpers':
-        specifier: ^0.31.0
-        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.145.0(constructs@10.3.0))
+        specifier: ^0.32.0
+        version: 0.32.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.145.0(constructs@10.3.0))
       '@types/aws-lambda':
         specifier: ^8.10.131
         version: 8.10.138
@@ -362,7 +362,7 @@ importers:
         version: 3.592.0
       '@aws-sdk/credential-providers':
         specifier: ^3.490.0
-        version: 3.592.0(@aws-sdk/client-sso-oidc@3.592.0)
+        version: 3.592.0(@aws-sdk/client-sso-oidc@3.592.0(@aws-sdk/client-sts@3.592.0))
       '@aws-sdk/types':
         specifier: ^3.489.0
         version: 3.577.0
@@ -374,8 +374,8 @@ importers:
         version: link:../../packages/construct
     devDependencies:
       '@swarmion/serverless-helpers':
-        specifier: ^0.31.0
-        version: 0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.145.0(constructs@10.3.0))
+        specifier: ^0.32.0
+        version: 0.32.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.145.0(constructs@10.3.0))
       '@swc-node/register':
         specifier: ^1.6.8
         version: 1.9.2(@swc/core@1.4.14)(@swc/types@0.1.8)(typescript@5.4.5)
@@ -2370,12 +2370,6 @@ packages:
         optional: true
       axios:
         optional: true
-
-  '@swarmion/serverless-helpers@0.31.3':
-    resolution: {integrity: sha512-osQ1nXfyXyOdcAasOFyajncph4902BVhwpgllFa90IJQ8M8LRQ55MDiNlxPdGIzsGvLxWLJhmBB5hruCAZaD7w==}
-    peerDependencies:
-      '@serverless/typescript': '>=3'
-      aws-cdk-lib: ^2.60.0
 
   '@swarmion/serverless-helpers@0.32.0':
     resolution: {integrity: sha512-iXzEASnMtXzO1Ab2WhfzKj9CVKY9mQXKoTFhhyd/X3GD8qvIFqahgwV8E3K6bOM0DYFJIX6E39KVtVZ8VylaIg==}
@@ -7047,7 +7041,7 @@ snapshots:
       '@smithy/types': 3.0.0
       tslib: 2.6.3
 
-  '@aws-sdk/credential-providers@3.592.0(@aws-sdk/client-sso-oidc@3.592.0)':
+  '@aws-sdk/credential-providers@3.592.0(@aws-sdk/client-sso-oidc@3.592.0(@aws-sdk/client-sts@3.592.0))':
     dependencies:
       '@aws-sdk/client-cognito-identity': 3.592.0
       '@aws-sdk/client-sso': 3.592.0
@@ -9234,12 +9228,6 @@ snapshots:
     transitivePeerDependencies:
       - aws-cdk-lib
       - aws-crt
-
-  '@swarmion/serverless-helpers@0.31.3(@serverless/typescript@3.38.0)(aws-cdk-lib@2.145.0(constructs@10.3.0))':
-    dependencies:
-      '@serverless/typescript': 3.38.0
-      aws-cdk-lib: 2.145.0(constructs@10.3.0)
-      json-schema-to-ts: 3.1.0
 
   '@swarmion/serverless-helpers@0.32.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.145.0(constructs@10.3.0))':
     dependencies:
