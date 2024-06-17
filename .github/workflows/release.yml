@@ -27,10 +27,6 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          # We need to fetch all branches and commits so that Nx affected has a base to compare against.
-          fetch-depth: 0
       - uses: nrwl/nx-set-shas@v4
       - uses: pnpm/action-setup@v4.0.0
       - name: Setup Node.js
@@ -52,7 +48,7 @@ jobs:
       - name: '🏗 Package'
         run: pnpm nx affected --targets=package,build --parallel=2
       - name: '🧪 Run tests'
-        run: pnpm nx affected --targets=test-linter,test-type,test-unit,test-circular --parallel=2
+        run: pnpm nx affected --targets=test-linter,test-type,test-unit,test-circular,test-cdk --parallel=2
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -68,7 +64,7 @@ jobs:
       - name: Get latest release matching release tag type
         id: get-latest-release
         uses: rez0n/actions-github-release@main
-        env:
+        with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           # 'prerelease' if tag inclues 'alpha', otherwise 'stable'

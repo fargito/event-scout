@@ -6,7 +6,7 @@ import {
   Architecture,
   Code,
   Function as LambdaFunction,
-  LogFormat,
+  LoggingFormat,
   Runtime,
 } from 'aws-cdk-lib/aws-lambda';
 import type { ILogGroup } from 'aws-cdk-lib/aws-logs';
@@ -43,7 +43,7 @@ export class OnStartTrailFunction extends Construct {
         EVENT_BUS_NAME: eventBus.eventBusName,
         FORWARD_EVENT_LAMBDA_ARN: forwardEvent.functionArn,
       },
-      logFormat: LogFormat.JSON,
+      loggingFormat: LoggingFormat.JSON,
       logGroup,
       initialPolicy: [
         new PolicyStatement({

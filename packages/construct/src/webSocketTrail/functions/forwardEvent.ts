@@ -7,7 +7,7 @@ import {
   CfnPermission,
   Code,
   Function as LambdaFunction,
-  LogFormat,
+  LoggingFormat,
   Runtime,
 } from 'aws-cdk-lib/aws-lambda';
 import type { ILogGroup } from 'aws-cdk-lib/aws-logs';
@@ -41,7 +41,7 @@ export class ForwardEventFunction extends Construct {
         AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
         WEBSOCKET_ENDPOINT: webSocketEndpoint,
       },
-      logFormat: LogFormat.JSON,
+      loggingFormat: LoggingFormat.JSON,
       logGroup,
       initialPolicy: [
         new PolicyStatement({

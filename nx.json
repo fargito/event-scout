@@ -78,6 +78,10 @@
     "test-circular": {
       "inputs": ["default", "^production"],
       "dependsOn": ["^package"]
+    },
+    "test-cdk": {
+      "inputs": ["production", "^production"],
+      "dependsOn": ["^package", "build", "^build"]
     }
   }
 }

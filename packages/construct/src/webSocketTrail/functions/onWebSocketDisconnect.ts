@@ -6,7 +6,7 @@ import {
   Architecture,
   Code,
   Function as LambdaFunction,
-  LogFormat,
+  LoggingFormat,
   Runtime,
 } from 'aws-cdk-lib/aws-lambda';
 import type { ILogGroup } from 'aws-cdk-lib/aws-logs';
@@ -41,7 +41,7 @@ export class OnDisconnectFunction extends Construct {
         EVENT_SCOUT_TABLE_NAME: table.tableName,
         EVENT_BUS_NAME: eventBus.eventBusName,
       },
-      logFormat: LogFormat.JSON,
+      loggingFormat: LoggingFormat.JSON,
       logGroup,
       initialPolicy: [
         new PolicyStatement({
