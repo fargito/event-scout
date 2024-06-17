@@ -52,7 +52,7 @@ jobs:
       - name: '🏗 Package'
         run: pnpm nx affected --targets=package,build --parallel=2
       - name: '🧪 Run tests'
-        run: pnpm nx affected --targets=test-linter,test-type,test-unit,test-circular --parallel=2
+        run: pnpm nx affected --targets=test-linter,test-type,test-unit,test-circular,test-cdk --parallel=2
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
