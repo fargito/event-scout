@@ -5,7 +5,7 @@ import {
   Architecture,
   Code,
   Function as LambdaFunction,
-  LogFormat,
+  LoggingFormat,
   Runtime,
 } from 'aws-cdk-lib/aws-lambda';
 import type { ILogGroup } from 'aws-cdk-lib/aws-logs';
@@ -34,7 +34,7 @@ export class OnConnectFunction extends Construct {
         AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
         EVENT_SCOUT_TABLE_NAME: table.tableName,
       },
-      logFormat: LogFormat.JSON,
+      loggingFormat: LoggingFormat.JSON,
       logGroup,
       initialPolicy: [
         new PolicyStatement({

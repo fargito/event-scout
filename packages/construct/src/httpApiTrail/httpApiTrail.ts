@@ -9,7 +9,7 @@ import {
   Architecture,
   Code,
   Function as LambdaFunction,
-  LogFormat,
+  LoggingFormat,
   Runtime,
 } from 'aws-cdk-lib/aws-lambda';
 import type { ILogGroup } from 'aws-cdk-lib/aws-logs';
@@ -139,7 +139,7 @@ export class HttpApiTrail extends Construct {
         ),
         handler: 'handler.main',
         memorySize: 1024,
-        logFormat: LogFormat.JSON,
+        loggingFormat: LoggingFormat.JSON,
         logGroup,
         environment: {
           AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',

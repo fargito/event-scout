@@ -8,7 +8,7 @@ import {
   FilterCriteria,
   FilterRule,
   Function as LambdaFunction,
-  LogFormat,
+  LoggingFormat,
   Runtime,
   StartingPosition,
 } from 'aws-cdk-lib/aws-lambda';
@@ -44,7 +44,7 @@ export class TrailGarbageCollectorFunction extends Construct {
         AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
         EVENT_BUS_NAME: eventBus.eventBusName,
       },
-      logFormat: LogFormat.JSON,
+      loggingFormat: LoggingFormat.JSON,
       logGroup,
       initialPolicy: [
         new PolicyStatement({
