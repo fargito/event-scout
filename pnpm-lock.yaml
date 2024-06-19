@@ -377,8 +377,8 @@ importers:
         specifier: ^0.32.0
         version: 0.32.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.146.0(constructs@10.3.0))
       '@swc-node/register':
-        specifier: 1.9.1
-        version: 1.9.1(@swc/core@1.4.14)(@swc/types@0.1.8)(typescript@5.4.5)
+        specifier: 1.9.2
+        version: 1.9.2(@swc/core@1.4.14)(@swc/types@0.1.8)(typescript@5.4.5)
       '@swc/types':
         specifier: ^0.1.8
         version: 0.1.8
@@ -2539,12 +2539,6 @@ packages:
     peerDependencies:
       '@swc/core': '>= 1.4.13'
       '@swc/types': '>= 0.1'
-
-  '@swc-node/register@1.9.1':
-    resolution: {integrity: sha512-z//TBXJdRWXoISCXlQmVz+NMm8Qm/UvcfKiGC0tSJdfeVYf5EZkGqvk2OiRH4SIJ6OGFfS9T0YrvA2pDKzWtPA==}
-    peerDependencies:
-      '@swc/core': '>= 1.4.13'
-      typescript: '>= 4.3'
 
   '@swc-node/register@1.9.2':
     resolution: {integrity: sha512-BBjg0QNuEEmJSoU/++JOXhrjWdu3PTyYeJWsvchsI0Aqtj8ICkz/DqlwtXbmZVZ5vuDPpTfFlwDBZe81zgShMA==}
@@ -9708,7 +9702,7 @@ snapshots:
 
   '@smithy/is-array-buffer@2.2.0':
     dependencies:
-      tslib: 2.6.2
+      tslib: 2.6.3
 
   '@smithy/is-array-buffer@3.0.0':
     dependencies:
@@ -9941,7 +9935,7 @@ snapshots:
   '@smithy/util-buffer-from@2.2.0':
     dependencies:
       '@smithy/is-array-buffer': 2.2.0
-      tslib: 2.6.2
+      tslib: 2.6.3
 
   '@smithy/util-buffer-from@3.0.0':
     dependencies:
@@ -10050,7 +10044,7 @@ snapshots:
   '@smithy/util-utf8@2.3.0':
     dependencies:
       '@smithy/util-buffer-from': 2.2.0
-      tslib: 2.6.2
+      tslib: 2.6.3
 
   '@smithy/util-utf8@3.0.0':
     dependencies:
@@ -10117,7 +10111,7 @@ snapshots:
       '@swc/core': 1.4.14
       '@swc/types': 0.1.8
 
-  '@swc-node/register@1.9.1(@swc/core@1.4.14)(@swc/types@0.1.8)(typescript@5.4.5)':
+  '@swc-node/register@1.9.2(@swc/core@1.4.14)(@swc/types@0.1.8)(typescript@5.4.5)':
     dependencies:
       '@swc-node/core': 1.13.1(@swc/core@1.4.14)(@swc/types@0.1.8)
       '@swc-node/sourcemap-support': 0.5.0
@@ -10130,21 +10124,6 @@ snapshots:
     transitivePeerDependencies:
       - '@swc/types'
       - supports-color
-
-  '@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.4.5)':
-    dependencies:
-      '@swc-node/core': 1.13.1(@swc/core@1.4.14)(@swc/types@0.1.8)
-      '@swc-node/sourcemap-support': 0.5.0
-      '@swc/core': 1.4.14
-      colorette: 2.0.20
-      debug: 4.3.5
-      pirates: 4.0.6
-      tslib: 2.6.3
-      typescript: 5.4.5
-    transitivePeerDependencies:
-      - '@swc/types'
-      - supports-color
-    optional: true
 
   '@swc-node/sourcemap-support@0.5.0':
     dependencies:
@@ -13165,7 +13144,7 @@ snapshots:
       '@nx/nx-linux-x64-musl': 19.2.3
       '@nx/nx-win32-arm64-msvc': 19.2.3
       '@nx/nx-win32-x64-msvc': 19.2.3
-      '@swc-node/register': 1.9.2(@swc/core@1.4.14)(typescript@5.4.5)
+      '@swc-node/register': 1.9.2(@swc/core@1.4.14)(@swc/types@0.1.8)(typescript@5.4.5)
       '@swc/core': 1.4.14
     transitivePeerDependencies:
       - debug
@@ -13217,7 +13196,7 @@ snapshots:
       '@nx/nx-linux-x64-musl': 19.3.0
       '@nx/nx-win32-arm64-msvc': 19.3.0
       '@nx/nx-win32-x64-msvc': 19.3.0
-      '@swc-node/register': 1.9.2(@swc/core@1.4.14)(typescript@5.4.5)
+      '@swc-node/register': 1.9.2(@swc/core@1.4.14)(@swc/types@0.1.8)(typescript@5.4.5)
       '@swc/core': 1.4.14
     transitivePeerDependencies:
       - debug
