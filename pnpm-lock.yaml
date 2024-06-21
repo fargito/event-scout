@@ -16,10 +16,10 @@ importers:
         version: 19.2.2
       '@nrwl/workspace':
         specifier: ^19.0.0
-        version: 19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
+        version: 19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
       '@swarmion/nx-plugin':
         specifier: ^0.32.0
-        version: 0.32.0(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))(typescript@5.5.2)
+        version: 0.32.0(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))(typescript@5.5.2)
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.0.0
         version: 7.13.1(@typescript-eslint/parser@7.13.1(eslint@8.57.0)(typescript@5.5.2))(eslint@8.57.0)(typescript@5.5.2)
@@ -61,7 +61,7 @@ importers:
         version: 15.2.7
       nx:
         specifier: ^19.0.0
-        version: 19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
+        version: 19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
       prettier:
         specifier: ^3.2.2
         version: 3.3.2
@@ -1861,8 +1861,8 @@ packages:
   '@nrwl/devkit@19.2.3':
     resolution: {integrity: sha512-OL6sc70gR/USasvbYzyYY44Hd5ZCde2UfiA5h8VeAYAJbq+JmtscpvjcnZ7OIsXyYEOxe1rypULElqu/8qpKzQ==}
 
-  '@nrwl/devkit@19.3.0':
-    resolution: {integrity: sha512-WRcph/7U37HkTLIRzQ2oburZVfEFkPHJUn7vmo46gCq+N2cAKy3qwONO0RbthhjFIsG94YPXqFWFlV6k4nXpxA==}
+  '@nrwl/devkit@19.3.1':
+    resolution: {integrity: sha512-SUS4P+yOwqGIZYlGMiHyU8Lav6ofal77cNTHuI5g/tHjewA6oSoi7xlrsJpzT6F5dtsoTtrilStfOIp50HkOLw==}
 
   '@nrwl/js@19.2.3':
     resolution: {integrity: sha512-foM72vQZBjUXu/8RuTBK9fwf6Oyezqbv2nQQBmJmUhCeh9Tg3P9JPcSRIdI740qTjRlF05zouJPABFu899vuPQ==}
@@ -1871,15 +1871,15 @@ packages:
     resolution: {integrity: sha512-vwo6ogcy6A9vJggDOsHGi1F0cTRqSqRypbgq/EdNuZqL7rGyZB/ctId69/i8dV6cLkl8BJG/4WpEe5BIrMTsjA==}
     hasBin: true
 
-  '@nrwl/tao@19.3.0':
-    resolution: {integrity: sha512-MyGYeHbh9O4Tv9xmz3Du+/leY5sKUHaPy4ancfNyShHgYi21hemX0/YYjzzoYHi44D8GzSc1XG2rAuwba7Kilw==}
+  '@nrwl/tao@19.3.1':
+    resolution: {integrity: sha512-K3VqTNwJ5/4vAaExIVmESWnQgO95MiJEgo+OzkmfkFvYTCOH2006OwvgCJFTQdjyONJ8Ao/lUPrHSDfsoevSeA==}
     hasBin: true
 
   '@nrwl/workspace@19.2.3':
     resolution: {integrity: sha512-pqT2UDk3DjB+Ny+1Av22vZ4NIYpwRbfPHR9tm4Skxs7dSr5zlf3ChUl+MwrQhzvM3KhBoGEmHhQOR6n45Bo4Sg==}
 
-  '@nrwl/workspace@19.3.0':
-    resolution: {integrity: sha512-h/kMImLdX5NMg0lXB6PmYIxBYI6WU7ATcOI3tGl8z48HHfyfwu87vTQlxFi3jaZv2qj/mE5VFpd+tGADEPNvCw==}
+  '@nrwl/workspace@19.3.1':
+    resolution: {integrity: sha512-skSiVs62WRbPM92yHt1/ezTcT7CczW24A5t7p/A8KJeRIGb+Zdd4ngR88cnQuCumi8CagL04c8STZLU6bs0gyA==}
 
   '@nx/devkit@19.0.2':
     resolution: {integrity: sha512-qHBWQ3ZJ4vO8AVdSlz/u/GXDrDxVsBjC1/pY1ImycnUP4NfOtmBlYdhd5aB9XvWcujSmOap0ZJGr1iapYKoWxQ==}
@@ -1891,8 +1891,8 @@ packages:
     peerDependencies:
       nx: '>= 17 <= 20'
 
-  '@nx/devkit@19.3.0':
-    resolution: {integrity: sha512-Natya5nzvHH0qTOIL1w/EZtwMgDx87Dgz0LgeY7te2fULaNFcj5fVrP+mUKEJZR+NccO7GPumT2RPhuEl9rPnQ==}
+  '@nx/devkit@19.3.1':
+    resolution: {integrity: sha512-sMMPGy6xivhipajvyfR96RMDJiKdmhIRgRxAVW298nKSKwrkRrxW48EtxYqUtI8MZkUPQigNVvqN8fyZ/gE7CA==}
     peerDependencies:
       nx: '>= 17 <= 20'
 
@@ -1922,8 +1922,8 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
-  '@nx/nx-darwin-arm64@19.3.0':
-    resolution: {integrity: sha512-TMTxjrN7Y/UsKFjmz0YfhVItLTGWqvud8cmQchw5NEjdNakfjXk0mREufO5/5PwoiRIsen6MbThoTprLpjOUiQ==}
+  '@nx/nx-darwin-arm64@19.3.1':
+    resolution: {integrity: sha512-B8kpnfBBJJE4YfSvpNPNdKLi63cyd41dZJRePkBrW/7Va/wUiHuKoyAEQZEI2WmH9ZM3RNmw7dp5vESr05Sw5g==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
@@ -1934,8 +1934,8 @@ packages:
     cpu: [x64]
     os: [darwin]
 
-  '@nx/nx-darwin-x64@19.3.0':
-    resolution: {integrity: sha512-GH2L6ftnzdIs7JEdv7ZPCdbpAdB5sW6NijK07riYZSONzq5fEruD1yDWDkyZbYBb8RTxsparUWJnq8q1qxEPHQ==}
+  '@nx/nx-darwin-x64@19.3.1':
+    resolution: {integrity: sha512-XKY76oi7hLQAKZzGlEsqPxNWx7BOS8E801CA9k+hKNVqNJdD6Vz/1hkhzKo/TwBrPkyhdvrq+BqBMLS7ZDefKw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
@@ -1946,8 +1946,8 @@ packages:
     cpu: [x64]
     os: [freebsd]
 
-  '@nx/nx-freebsd-x64@19.3.0':
-    resolution: {integrity: sha512-1ow7Xku1yyjHviCKsWiuHCAnTd3fD+5O5c+e4DXHVthT8wnadKSotvBIWf38DMbMthl7na82e72OzxcdSbrVqQ==}
+  '@nx/nx-freebsd-x64@19.3.1':
+    resolution: {integrity: sha512-ZXDmzosPEq1DKC9r7UxPxF9I2GE11TmmYePcwN2xE1/you9+NUd14+SVW/jh/uH1j1n/41w0g35oNA6X0U+fGw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [freebsd]
@@ -1958,8 +1958,8 @@ packages:
     cpu: [arm]
     os: [linux]
 
-  '@nx/nx-linux-arm-gnueabihf@19.3.0':
-    resolution: {integrity: sha512-mYQMIUvNr2gww8vbg766uk/C1RxoC1fwioeP87bmV5NRUKSzJ8WEJVxAsqc9RGhAOUaNXOgEuKYrMcVhKyIKJQ==}
+  '@nx/nx-linux-arm-gnueabihf@19.3.1':
+    resolution: {integrity: sha512-2Ls+08J14BmkHpkQ6DhHGdW97IcY3vvqmuwogTBrt5ATmJIim3o/O4Kp4Sq+uuotf0kae0NP986BuoFw/WW/xg==}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [linux]
@@ -1970,8 +1970,8 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  '@nx/nx-linux-arm64-gnu@19.3.0':
-    resolution: {integrity: sha512-rHL3eQ0RHkeAXnhHHu/NIyouN/ykiXvgyNU3TuCd50+2MZcAbjB+Xq3mwL0MwiP+BQuptiE+snTuxFUJp4ZH6A==}
+  '@nx/nx-linux-arm64-gnu@19.3.1':
+    resolution: {integrity: sha512-+UbThXaqKmctAavcwdYxmtZIjrojGLK4PJKdivR0awjPEJ9qXnxA0bOQk/GdbD8nse66LR2NnPeNDxxqfsh8tw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -1982,8 +1982,8 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  '@nx/nx-linux-arm64-musl@19.3.0':
-    resolution: {integrity: sha512-im0+OgOD6ShpTkI9ZRz7BjzxhQ/Lk3xjYmmCu+PFGmaybEnkNNDFwsgS0iEVKMdWZ/EQoQvJrqOYsX125iIBuQ==}
+  '@nx/nx-linux-arm64-musl@19.3.1':
+    resolution: {integrity: sha512-JMuBbg2Zqdz4N7i+hiJGr2QdsDarDZ8vyzzeoevFq3b8nhZfqKh/lno7+Y0WkXNpH7aT05GHaUA1r1NXf/5BeQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -1994,8 +1994,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@nx/nx-linux-x64-gnu@19.3.0':
-    resolution: {integrity: sha512-k8q/d6WBSXOeUpBq6Mw69yMKL4n9LaX3o4LBNwBkVCEZ8p6s0njwKefLtjwnKlai0g/k5f0NcilU2zTwP/Ex8g==}
+  '@nx/nx-linux-x64-gnu@19.3.1':
+    resolution: {integrity: sha512-cVmDMtolaqK7PziWxvjus1nCyj2wMNM+N0/4+rBEjG4v47gTtBxlZJoxK02jApdV+XELehsTjd0Z/xVfO4Rl1Q==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -2006,8 +2006,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@nx/nx-linux-x64-musl@19.3.0':
-    resolution: {integrity: sha512-sahEV99glBlpGKG1TIQ5PkJ0QvpHp69wWsBFK2DKtCETxOtsWqwvIjemxTCXRirTqeHiP7BiR6VWsf2YqqqBdw==}
+  '@nx/nx-linux-x64-musl@19.3.1':
+    resolution: {integrity: sha512-UGujK/TLMz9TNJ6+6HLhoOV7pdlgPVosSyeNZcoXCHOg/Mg9NGM7Hgk9jDodtcAY+TP6QMDJIMVGuXBsCE7NLQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -2018,8 +2018,8 @@ packages:
     cpu: [arm64]
     os: [win32]
 
-  '@nx/nx-win32-arm64-msvc@19.3.0':
-    resolution: {integrity: sha512-w03gFwLijStmhUji70QJHYo/U16ovybNczxGO7+5TT330X8/y+ihw9FCGHiIcujAjTAE88h0DKGn05WlNqRmfg==}
+  '@nx/nx-win32-arm64-msvc@19.3.1':
+    resolution: {integrity: sha512-q+2aaRXarh/+HOOW/JXRwEnEEwPdGipsfzXBPDuDDJ7aOYKuyG7g1DlSERKdzI/aEBP+joneZbcbZHaDcEv2xw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
@@ -2030,8 +2030,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@nx/nx-win32-x64-msvc@19.3.0':
-    resolution: {integrity: sha512-M7e2zXGfTjH8NLiwqKLdWC9VlfMSQDYlI4/SM4OSpPqhUTfPlRPa+wNKNTG7perKfDXxE9ei8yjocujknXJk/A==}
+  '@nx/nx-win32-x64-msvc@19.3.1':
+    resolution: {integrity: sha512-TG4DP1lodTnIwY/CiSsc9Pk7o9/JZXgd1pP/xdHNTkrZYjE//z6TbSm+facBLuryuMhp6s/WlJaAlW241qva0Q==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -2039,8 +2039,8 @@ packages:
   '@nx/workspace@19.2.3':
     resolution: {integrity: sha512-LC3CxKDzoLqRGNwVD1wWkxGwCBf9AzyCztXyMIh1ihVL2hLnRna3pLJrk+3R2hXYapRsbhpGT7twLlNZJz9lQw==}
 
-  '@nx/workspace@19.3.0':
-    resolution: {integrity: sha512-mhhQIXPGOysg/1vqGnXzwB3ODckpwi2OxQm4x4R1rX8tnS7I4+K2MZFyQzpa13vPf4h4Y4yxdDUl+TfZa7lVhQ==}
+  '@nx/workspace@19.3.1':
+    resolution: {integrity: sha512-vg9aHidIEgkq3bjMNQSBa9NdpEYs9rpgk/8TQsaacZR8Yr2JTU7DUiGdrYxDigoNyoX4nYBkCZQzdWD3YXYRJg==}
 
   '@octokit/auth-token@3.0.4':
     resolution: {integrity: sha512-TWFX7cZF2LXoCvdmJWY7XVPi74aSY0+FfBZNSXEXFkMpjcqsQwDSYVv5FhRFaI0V1ECnwbz4j59T/G+rXNWaIQ==}
@@ -5141,8 +5141,8 @@ packages:
       '@swc/core':
         optional: true
 
-  nx@19.3.0:
-    resolution: {integrity: sha512-WILWiROUkZWwuPJ12tP24Z0NULPEhxFN9i55/fECuVXYaFtkg6FvEne9C4d4bRqhZPcbrz6WhHnzE3NhdjH7XQ==}
+  nx@19.3.1:
+    resolution: {integrity: sha512-dDkhnXMpnDN5/ZJxJXz7wPlKA3pQwQmwNQ3YmTrCwucNbpwNRdwXiDgbLpjlGCtaeE9yZh2E/dAH1HNbgViJ6g==}
     hasBin: true
     peerDependencies:
       '@swc-node/register': ^1.8.0
@@ -6665,10 +6665,10 @@ snapshots:
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/client-sso-oidc': 3.600.0
-      '@aws-sdk/client-sts': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)
+      '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/core': 3.598.0
-      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
+      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/middleware-host-header': 3.598.0
       '@aws-sdk/middleware-logger': 3.598.0
       '@aws-sdk/middleware-recursion-detection': 3.598.0
@@ -6711,8 +6711,8 @@ snapshots:
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/client-sso-oidc': 3.600.0
-      '@aws-sdk/client-sts': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)
+      '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/core': 3.598.0
       '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/middleware-host-header': 3.598.0
@@ -6759,8 +6759,8 @@ snapshots:
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/client-sso-oidc': 3.600.0
-      '@aws-sdk/client-sts': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)
+      '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/core': 3.598.0
       '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
       '@aws-sdk/middleware-host-header': 3.598.0
@@ -6805,10 +6805,10 @@ snapshots:
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/client-sso-oidc': 3.600.0
-      '@aws-sdk/client-sts': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)
+      '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/core': 3.598.0
-      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
+      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/middleware-endpoint-discovery': 3.598.0
       '@aws-sdk/middleware-host-header': 3.598.0
       '@aws-sdk/middleware-logger': 3.598.0
@@ -6900,10 +6900,10 @@ snapshots:
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/client-sso-oidc': 3.600.0
-      '@aws-sdk/client-sts': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)
+      '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/core': 3.598.0
-      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
+      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/middleware-host-header': 3.598.0
       '@aws-sdk/middleware-logger': 3.598.0
       '@aws-sdk/middleware-recursion-detection': 3.598.0
@@ -6994,8 +6994,8 @@ snapshots:
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/client-sso-oidc': 3.600.0
-      '@aws-sdk/client-sts': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)
+      '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/core': 3.598.0
       '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/middleware-host-header': 3.598.0
@@ -7083,56 +7083,11 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/client-sso-oidc@3.600.0':
-    dependencies:
-      '@aws-crypto/sha256-browser': 5.2.0
-      '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/client-sts': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)
-      '@aws-sdk/core': 3.598.0
-      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
-      '@aws-sdk/middleware-host-header': 3.598.0
-      '@aws-sdk/middleware-logger': 3.598.0
-      '@aws-sdk/middleware-recursion-detection': 3.598.0
-      '@aws-sdk/middleware-user-agent': 3.598.0
-      '@aws-sdk/region-config-resolver': 3.598.0
-      '@aws-sdk/types': 3.598.0
-      '@aws-sdk/util-endpoints': 3.598.0
-      '@aws-sdk/util-user-agent-browser': 3.598.0
-      '@aws-sdk/util-user-agent-node': 3.598.0
-      '@smithy/config-resolver': 3.0.3
-      '@smithy/core': 2.2.3
-      '@smithy/fetch-http-handler': 3.1.0
-      '@smithy/hash-node': 3.0.2
-      '@smithy/invalid-dependency': 3.0.2
-      '@smithy/middleware-content-length': 3.0.2
-      '@smithy/middleware-endpoint': 3.0.3
-      '@smithy/middleware-retry': 3.0.6
-      '@smithy/middleware-serde': 3.0.2
-      '@smithy/middleware-stack': 3.0.2
-      '@smithy/node-config-provider': 3.1.2
-      '@smithy/node-http-handler': 3.1.0
-      '@smithy/protocol-http': 4.0.2
-      '@smithy/smithy-client': 3.1.4
-      '@smithy/types': 3.2.0
-      '@smithy/url-parser': 3.0.2
-      '@smithy/util-base64': 3.0.0
-      '@smithy/util-body-length-browser': 3.0.0
-      '@smithy/util-body-length-node': 3.0.0
-      '@smithy/util-defaults-mode-browser': 3.0.6
-      '@smithy/util-defaults-mode-node': 3.0.6
-      '@smithy/util-endpoints': 2.0.3
-      '@smithy/util-middleware': 3.0.2
-      '@smithy/util-retry': 3.0.2
-      '@smithy/util-utf8': 3.0.0
-      tslib: 2.6.3
-    transitivePeerDependencies:
-      - aws-crt
-
   '@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0)':
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/client-sts': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)
+      '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/core': 3.598.0
       '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/middleware-host-header': 3.598.0
@@ -7306,11 +7261,56 @@ snapshots:
       - '@aws-sdk/client-sso-oidc'
       - aws-crt
 
+  '@aws-sdk/client-sts@3.600.0':
+    dependencies:
+      '@aws-crypto/sha256-browser': 5.2.0
+      '@aws-crypto/sha256-js': 5.2.0
+      '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/core': 3.598.0
+      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/middleware-host-header': 3.598.0
+      '@aws-sdk/middleware-logger': 3.598.0
+      '@aws-sdk/middleware-recursion-detection': 3.598.0
+      '@aws-sdk/middleware-user-agent': 3.598.0
+      '@aws-sdk/region-config-resolver': 3.598.0
+      '@aws-sdk/types': 3.598.0
+      '@aws-sdk/util-endpoints': 3.598.0
+      '@aws-sdk/util-user-agent-browser': 3.598.0
+      '@aws-sdk/util-user-agent-node': 3.598.0
+      '@smithy/config-resolver': 3.0.3
+      '@smithy/core': 2.2.3
+      '@smithy/fetch-http-handler': 3.1.0
+      '@smithy/hash-node': 3.0.2
+      '@smithy/invalid-dependency': 3.0.2
+      '@smithy/middleware-content-length': 3.0.2
+      '@smithy/middleware-endpoint': 3.0.3
+      '@smithy/middleware-retry': 3.0.6
+      '@smithy/middleware-serde': 3.0.2
+      '@smithy/middleware-stack': 3.0.2
+      '@smithy/node-config-provider': 3.1.2
+      '@smithy/node-http-handler': 3.1.0
+      '@smithy/protocol-http': 4.0.2
+      '@smithy/smithy-client': 3.1.4
+      '@smithy/types': 3.2.0
+      '@smithy/url-parser': 3.0.2
+      '@smithy/util-base64': 3.0.0
+      '@smithy/util-body-length-browser': 3.0.0
+      '@smithy/util-body-length-node': 3.0.0
+      '@smithy/util-defaults-mode-browser': 3.0.6
+      '@smithy/util-defaults-mode-node': 3.0.6
+      '@smithy/util-endpoints': 2.0.3
+      '@smithy/util-middleware': 3.0.2
+      '@smithy/util-retry': 3.0.2
+      '@smithy/util-utf8': 3.0.0
+      tslib: 2.6.3
+    transitivePeerDependencies:
+      - aws-crt
+
   '@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0)':
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/client-sso-oidc': 3.600.0
+      '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/core': 3.598.0
       '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
       '@aws-sdk/middleware-host-header': 3.598.0
@@ -7440,11 +7440,11 @@ snapshots:
 
   '@aws-sdk/credential-provider-ini@3.598.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)':
     dependencies:
-      '@aws-sdk/client-sts': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)
+      '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/credential-provider-env': 3.598.0
       '@aws-sdk/credential-provider-http': 3.598.0
       '@aws-sdk/credential-provider-process': 3.598.0
-      '@aws-sdk/credential-provider-sso': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))
+      '@aws-sdk/credential-provider-sso': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0)
       '@aws-sdk/credential-provider-web-identity': 3.598.0(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/types': 3.598.0
       '@smithy/credential-provider-imds': 3.1.2
@@ -7463,7 +7463,7 @@ snapshots:
       '@aws-sdk/credential-provider-http': 3.598.0
       '@aws-sdk/credential-provider-process': 3.598.0
       '@aws-sdk/credential-provider-sso': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0)
-      '@aws-sdk/credential-provider-web-identity': 3.598.0(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/credential-provider-web-identity': 3.598.0(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
       '@aws-sdk/types': 3.598.0
       '@smithy/credential-provider-imds': 3.1.2
       '@smithy/property-provider': 3.1.2
@@ -7499,7 +7499,7 @@ snapshots:
       '@aws-sdk/credential-provider-http': 3.598.0
       '@aws-sdk/credential-provider-ini': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/credential-provider-process': 3.598.0
-      '@aws-sdk/credential-provider-sso': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))
+      '@aws-sdk/credential-provider-sso': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0)
       '@aws-sdk/credential-provider-web-identity': 3.598.0(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/types': 3.598.0
       '@smithy/credential-provider-imds': 3.1.2
@@ -7519,7 +7519,7 @@ snapshots:
       '@aws-sdk/credential-provider-ini': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0)(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
       '@aws-sdk/credential-provider-process': 3.598.0
       '@aws-sdk/credential-provider-sso': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0)
-      '@aws-sdk/credential-provider-web-identity': 3.598.0(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/credential-provider-web-identity': 3.598.0(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
       '@aws-sdk/types': 3.598.0
       '@smithy/credential-provider-imds': 3.1.2
       '@smithy/property-provider': 3.1.2
@@ -7560,19 +7560,6 @@ snapshots:
       - '@aws-sdk/client-sso-oidc'
       - aws-crt
 
-  '@aws-sdk/credential-provider-sso@3.598.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))':
-    dependencies:
-      '@aws-sdk/client-sso': 3.598.0
-      '@aws-sdk/token-providers': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))
-      '@aws-sdk/types': 3.598.0
-      '@smithy/property-provider': 3.1.2
-      '@smithy/shared-ini-file-loader': 3.1.2
-      '@smithy/types': 3.2.0
-      tslib: 2.6.3
-    transitivePeerDependencies:
-      - '@aws-sdk/client-sso-oidc'
-      - aws-crt
-
   '@aws-sdk/credential-provider-sso@3.598.0(@aws-sdk/client-sso-oidc@3.600.0)':
     dependencies:
       '@aws-sdk/client-sso': 3.598.0
@@ -7594,9 +7581,17 @@ snapshots:
       '@smithy/types': 3.2.0
       tslib: 2.6.3
 
-  '@aws-sdk/credential-provider-web-identity@3.598.0(@aws-sdk/client-sts@3.600.0)':
+  '@aws-sdk/credential-provider-web-identity@3.598.0(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))':
     dependencies:
       '@aws-sdk/client-sts': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)
+      '@aws-sdk/types': 3.598.0
+      '@smithy/property-provider': 3.1.2
+      '@smithy/types': 3.2.0
+      tslib: 2.6.3
+
+  '@aws-sdk/credential-provider-web-identity@3.598.0(@aws-sdk/client-sts@3.600.0)':
+    dependencies:
+      '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/types': 3.598.0
       '@smithy/property-provider': 3.1.2
       '@smithy/types': 3.2.0
@@ -7606,14 +7601,14 @@ snapshots:
     dependencies:
       '@aws-sdk/client-cognito-identity': 3.600.0
       '@aws-sdk/client-sso': 3.598.0
-      '@aws-sdk/client-sts': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)
+      '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/credential-provider-cognito-identity': 3.600.0
       '@aws-sdk/credential-provider-env': 3.598.0
       '@aws-sdk/credential-provider-http': 3.598.0
       '@aws-sdk/credential-provider-ini': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/credential-provider-process': 3.598.0
-      '@aws-sdk/credential-provider-sso': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))
+      '@aws-sdk/credential-provider-sso': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0)
       '@aws-sdk/credential-provider-web-identity': 3.598.0(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/types': 3.598.0
       '@smithy/credential-provider-imds': 3.1.2
@@ -7636,7 +7631,7 @@ snapshots:
       '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
       '@aws-sdk/credential-provider-process': 3.598.0
       '@aws-sdk/credential-provider-sso': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0)
-      '@aws-sdk/credential-provider-web-identity': 3.598.0(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/credential-provider-web-identity': 3.598.0(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
       '@aws-sdk/types': 3.598.0
       '@smithy/credential-provider-imds': 3.1.2
       '@smithy/property-provider': 3.1.2
@@ -7822,18 +7817,9 @@ snapshots:
       '@smithy/types': 3.2.0
       tslib: 2.6.3
 
-  '@aws-sdk/token-providers@3.598.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))':
-    dependencies:
-      '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
-      '@aws-sdk/types': 3.598.0
-      '@smithy/property-provider': 3.1.2
-      '@smithy/shared-ini-file-loader': 3.1.2
-      '@smithy/types': 3.2.0
-      tslib: 2.6.3
-
   '@aws-sdk/token-providers@3.598.0(@aws-sdk/client-sso-oidc@3.600.0)':
     dependencies:
-      '@aws-sdk/client-sso-oidc': 3.600.0
+      '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/types': 3.598.0
       '@smithy/property-provider': 3.1.2
       '@smithy/shared-ini-file-loader': 3.1.2
@@ -9013,7 +8999,7 @@ snapshots:
   '@lerna/create@8.1.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(encoding@0.1.13)(typescript@5.5.2)':
     dependencies:
       '@npmcli/run-script': 7.0.2
-      '@nx/devkit': 19.2.3(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nx/devkit': 19.2.3(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 19.0.11(encoding@0.1.13)
       byte-size: 8.1.1
@@ -9050,7 +9036,7 @@ snapshots:
       npm-packlist: 5.1.1
       npm-registry-fetch: 14.0.5
       npmlog: 6.0.2
-      nx: 19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
+      nx: 19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
       p-map: 4.0.0
       p-map-series: 2.1.0
       p-queue: 6.6.2
@@ -9147,27 +9133,27 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@nrwl/devkit@19.0.2(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
+  '@nrwl/devkit@19.0.2(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nx/devkit': 19.0.2(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nx/devkit': 19.0.2(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
     transitivePeerDependencies:
       - nx
 
-  '@nrwl/devkit@19.2.3(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
+  '@nrwl/devkit@19.2.3(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nx/devkit': 19.2.3(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nx/devkit': 19.2.3(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
     transitivePeerDependencies:
       - nx
 
-  '@nrwl/devkit@19.3.0(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
+  '@nrwl/devkit@19.3.1(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nx/devkit': 19.3.0(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nx/devkit': 19.3.1(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
     transitivePeerDependencies:
       - nx
 
-  '@nrwl/js@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))(typescript@5.4.5)':
+  '@nrwl/js@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))(typescript@5.4.5)':
     dependencies:
-      '@nx/js': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))(typescript@5.4.5)
+      '@nx/js': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))(typescript@5.4.5)
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -9189,9 +9175,9 @@ snapshots:
       - '@swc/core'
       - debug
 
-  '@nrwl/tao@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)':
+  '@nrwl/tao@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)':
     dependencies:
-      nx: 19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
+      nx: 19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
       tslib: 2.6.3
     transitivePeerDependencies:
       - '@swc-node/register'
@@ -9206,22 +9192,22 @@ snapshots:
       - '@swc/core'
       - debug
 
-  '@nrwl/workspace@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)':
+  '@nrwl/workspace@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)':
     dependencies:
-      '@nx/workspace': 19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
+      '@nx/workspace': 19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
       - debug
 
-  '@nx/devkit@19.0.2(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
+  '@nx/devkit@19.0.2(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.0.2(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.0.2(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.1
       minimatch: 9.0.3
-      nx: 19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
+      nx: 19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
       semver: 7.6.2
       tmp: 0.2.3
       tslib: 2.6.3
@@ -9229,7 +9215,7 @@ snapshots:
 
   '@nx/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.1
@@ -9240,37 +9226,37 @@ snapshots:
       tslib: 2.6.3
       yargs-parser: 21.1.1
 
-  '@nx/devkit@19.2.3(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
+  '@nx/devkit@19.2.3(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.1
       minimatch: 9.0.3
-      nx: 19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
+      nx: 19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
       semver: 7.6.2
       tmp: 0.2.3
       tslib: 2.6.3
       yargs-parser: 21.1.1
 
-  '@nx/devkit@19.3.0(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
+  '@nx/devkit@19.3.1(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.3.0(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.3.1(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.1
       minimatch: 9.0.3
-      nx: 19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
+      nx: 19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
       semver: 7.6.2
       tmp: 0.2.3
       tslib: 2.6.3
       yargs-parser: 21.1.1
 
-  '@nx/eslint@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
+  '@nx/eslint@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nx/devkit': 19.2.3(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
-      '@nx/js': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))(typescript@5.4.5)
-      '@nx/linter': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nx/devkit': 19.2.3(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nx/js': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))(typescript@5.4.5)
+      '@nx/linter': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
       eslint: 8.57.0
       semver: 7.6.2
       tslib: 2.6.3
@@ -9288,7 +9274,7 @@ snapshots:
       - supports-color
       - verdaccio
 
-  '@nx/js@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))(typescript@5.4.5)':
+  '@nx/js@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))(typescript@5.4.5)':
     dependencies:
       '@babel/core': 7.24.0
       '@babel/plugin-proposal-decorators': 7.24.0(@babel/core@7.24.0)
@@ -9297,8 +9283,8 @@ snapshots:
       '@babel/preset-env': 7.24.0(@babel/core@7.24.0)
       '@babel/preset-typescript': 7.23.3(@babel/core@7.24.0)
       '@babel/runtime': 7.24.5
-      '@nrwl/js': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))(typescript@5.4.5)
-      '@nx/devkit': 19.2.3(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nrwl/js': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))(typescript@5.4.5)
+      '@nx/devkit': 19.2.3(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
       '@nx/workspace': 19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
       babel-plugin-const-enum: 1.2.0(@babel/core@7.24.0)
       babel-plugin-macros: 2.8.0
@@ -9330,9 +9316,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@nx/linter@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
+  '@nx/linter@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nx/eslint': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nx/eslint': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -9349,61 +9335,61 @@ snapshots:
   '@nx/nx-darwin-arm64@19.2.3':
     optional: true
 
-  '@nx/nx-darwin-arm64@19.3.0':
+  '@nx/nx-darwin-arm64@19.3.1':
     optional: true
 
   '@nx/nx-darwin-x64@19.2.3':
     optional: true
 
-  '@nx/nx-darwin-x64@19.3.0':
+  '@nx/nx-darwin-x64@19.3.1':
     optional: true
 
   '@nx/nx-freebsd-x64@19.2.3':
     optional: true
 
-  '@nx/nx-freebsd-x64@19.3.0':
+  '@nx/nx-freebsd-x64@19.3.1':
     optional: true
 
   '@nx/nx-linux-arm-gnueabihf@19.2.3':
     optional: true
 
-  '@nx/nx-linux-arm-gnueabihf@19.3.0':
+  '@nx/nx-linux-arm-gnueabihf@19.3.1':
     optional: true
 
   '@nx/nx-linux-arm64-gnu@19.2.3':
     optional: true
 
-  '@nx/nx-linux-arm64-gnu@19.3.0':
+  '@nx/nx-linux-arm64-gnu@19.3.1':
     optional: true
 
   '@nx/nx-linux-arm64-musl@19.2.3':
     optional: true
 
-  '@nx/nx-linux-arm64-musl@19.3.0':
+  '@nx/nx-linux-arm64-musl@19.3.1':
     optional: true
 
   '@nx/nx-linux-x64-gnu@19.2.3':
     optional: true
 
-  '@nx/nx-linux-x64-gnu@19.3.0':
+  '@nx/nx-linux-x64-gnu@19.3.1':
     optional: true
 
   '@nx/nx-linux-x64-musl@19.2.3':
     optional: true
 
-  '@nx/nx-linux-x64-musl@19.3.0':
+  '@nx/nx-linux-x64-musl@19.3.1':
     optional: true
 
   '@nx/nx-win32-arm64-msvc@19.2.3':
     optional: true
 
-  '@nx/nx-win32-arm64-msvc@19.3.0':
+  '@nx/nx-win32-arm64-msvc@19.3.1':
     optional: true
 
   '@nx/nx-win32-x64-msvc@19.2.3':
     optional: true
 
-  '@nx/nx-win32-x64-msvc@19.3.0':
+  '@nx/nx-win32-x64-msvc@19.3.1':
     optional: true
 
   '@nx/workspace@19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)':
@@ -9420,13 +9406,13 @@ snapshots:
       - '@swc/core'
       - debug
 
-  '@nx/workspace@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)':
+  '@nx/workspace@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)':
     dependencies:
-      '@nrwl/workspace': 19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
-      '@nx/devkit': 19.3.0(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nrwl/workspace': 19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
+      '@nx/devkit': 19.3.1(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
       chalk: 4.1.2
       enquirer: 2.3.6
-      nx: 19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
+      nx: 19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
       tslib: 2.6.3
       yargs-parser: 21.1.1
     transitivePeerDependencies:
@@ -10082,10 +10068,10 @@ snapshots:
       '@smithy/types': 3.2.0
       tslib: 2.6.3
 
-  '@swarmion/nx-plugin@0.32.0(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))(typescript@5.5.2)':
+  '@swarmion/nx-plugin@0.32.0(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))(typescript@5.5.2)':
     dependencies:
-      '@nx/devkit': 19.2.3(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
-      '@nx/linter': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nx/devkit': 19.2.3(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nx/linter': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(@types/node@20.14.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
       typescript: 5.5.2
       yaml: 2.4.5
     transitivePeerDependencies:
@@ -12489,7 +12475,7 @@ snapshots:
     dependencies:
       '@lerna/create': 8.1.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)(encoding@0.1.13)(typescript@5.5.2)
       '@npmcli/run-script': 7.0.2
-      '@nx/devkit': 19.0.2(nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nx/devkit': 19.0.2(nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 19.0.11(encoding@0.1.13)
       byte-size: 8.1.1
@@ -12532,7 +12518,7 @@ snapshots:
       npm-packlist: 5.1.1
       npm-registry-fetch: 14.0.5
       npmlog: 6.0.2
-      nx: 19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
+      nx: 19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
       p-map: 4.0.0
       p-map-series: 2.1.0
       p-pipe: 3.1.0
@@ -13189,9 +13175,9 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  nx@19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14):
+  nx@19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14):
     dependencies:
-      '@nrwl/tao': 19.3.0(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
+      '@nrwl/tao': 19.3.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14)
       '@yarnpkg/lockfile': 1.1.0
       '@yarnpkg/parsers': 3.0.0-rc.46
       '@zkochan/js-yaml': 0.0.7
@@ -13226,16 +13212,16 @@ snapshots:
       yargs: 17.7.2
       yargs-parser: 21.1.1
     optionalDependencies:
-      '@nx/nx-darwin-arm64': 19.3.0
-      '@nx/nx-darwin-x64': 19.3.0
-      '@nx/nx-freebsd-x64': 19.3.0
-      '@nx/nx-linux-arm-gnueabihf': 19.3.0
-      '@nx/nx-linux-arm64-gnu': 19.3.0
-      '@nx/nx-linux-arm64-musl': 19.3.0
-      '@nx/nx-linux-x64-gnu': 19.3.0
-      '@nx/nx-linux-x64-musl': 19.3.0
-      '@nx/nx-win32-arm64-msvc': 19.3.0
-      '@nx/nx-win32-x64-msvc': 19.3.0
+      '@nx/nx-darwin-arm64': 19.3.1
+      '@nx/nx-darwin-x64': 19.3.1
+      '@nx/nx-freebsd-x64': 19.3.1
+      '@nx/nx-linux-arm-gnueabihf': 19.3.1
+      '@nx/nx-linux-arm64-gnu': 19.3.1
+      '@nx/nx-linux-arm64-musl': 19.3.1
+      '@nx/nx-linux-x64-gnu': 19.3.1
+      '@nx/nx-linux-x64-musl': 19.3.1
+      '@nx/nx-win32-arm64-msvc': 19.3.1
+      '@nx/nx-win32-x64-msvc': 19.3.1
       '@swc-node/register': 1.9.2(@swc/core@1.4.14)(typescript@5.5.2)
       '@swc/core': 1.4.14
     transitivePeerDependencies:
