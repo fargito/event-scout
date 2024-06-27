@@ -131,7 +131,7 @@ importers:
         version: link:../../contracts/construct-contracts
       '@smithy/signature-v4':
         specifier: ^3.0.0
-        version: 3.1.1
+        version: 3.1.2
       '@swarmion/serverless-contracts':
         specifier: ^0.32.0
         version: 0.32.0(@serverless/typescript@3.38.0)(ajv@8.16.0)(aws-cdk-lib@2.147.1(constructs@10.3.0))(axios@1.7.2)
@@ -238,7 +238,7 @@ importers:
         version: link:../../contracts/construct-contracts
       '@smithy/signature-v4':
         specifier: ^3.0.0
-        version: 3.1.1
+        version: 3.1.2
       ajv:
         specifier: ^8.12.0
         version: 8.16.0
@@ -362,7 +362,7 @@ importers:
         version: 3.603.0
       '@aws-sdk/credential-providers':
         specifier: ^3.490.0
-        version: 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))
+        version: 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)
       '@aws-sdk/types':
         specifier: ^3.489.0
         version: 3.598.0
@@ -2411,8 +2411,8 @@ packages:
     resolution: {integrity: sha512-tgnXrXbLMO8vo6VeuqabMw/eTzQHlLmZx0TC0TjtjJghnD0Xl4pEnJtBjTJr6XF5fHMNrt5BcczDXHJT9yNQnA==}
     engines: {node: '>=16.0.0'}
 
-  '@smithy/signature-v4@3.1.1':
-    resolution: {integrity: sha512-2/vlG86Sr489XX8TA/F+VDA+P04ESef04pSz0wRtlQBExcSPjqO08rvrkcas2zLnJ51i+7ukOURCkgqixBYjSQ==}
+  '@smithy/signature-v4@3.1.2':
+    resolution: {integrity: sha512-3BcPylEsYtD0esM4Hoyml/+s7WP2LFhcM3J2AGdcL2vx9O60TtfpDOL72gjb4lU8NeRPeKAwR77YNyyGvMbuEA==}
     engines: {node: '>=16.0.0'}
 
   '@smithy/smithy-client@3.1.1':
@@ -2429,6 +2429,10 @@ packages:
 
   '@smithy/types@3.2.0':
     resolution: {integrity: sha512-cKyeKAPazZRVqm7QPvcPD2jEIt2wqDPAL1KJKb0f/5I7uhollvsWZuZKLclmyP6a+Jwmr3OV3t+X0pZUUHS9BA==}
+    engines: {node: '>=16.0.0'}
+
+  '@smithy/types@3.3.0':
+    resolution: {integrity: sha512-IxvBBCTFDHbVoK7zIxqA1ZOdc4QfM5HM7rGleCuHi7L1wnKv5Pn69xXJQ9hgxH60ZVygH9/JG0jRgtUncE3QUA==}
     engines: {node: '>=16.0.0'}
 
   '@smithy/url-parser@3.0.0':
@@ -2490,6 +2494,10 @@ packages:
 
   '@smithy/util-middleware@3.0.2':
     resolution: {integrity: sha512-7WW5SD0XVrpfqljBYzS5rLR+EiDzl7wCVJZ9Lo6ChNFV4VYDk37Z1QI5w/LnYtU/QKnSawYoHRd7VjSyC8QRQQ==}
+    engines: {node: '>=16.0.0'}
+
+  '@smithy/util-middleware@3.0.3':
+    resolution: {integrity: sha512-l+StyYYK/eO3DlVPbU+4Bi06Jjal+PFLSMmlWM1BEwyLxZ3aKkf1ROnoIakfaA7mC6uw3ny7JBkau4Yc+5zfWw==}
     engines: {node: '>=16.0.0'}
 
   '@smithy/util-retry@3.0.0':
@@ -6605,7 +6613,7 @@ snapshots:
       '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/core': 3.598.0
-      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
       '@aws-sdk/middleware-host-header': 3.598.0
       '@aws-sdk/middleware-logger': 3.598.0
       '@aws-sdk/middleware-recursion-detection': 3.598.0
@@ -6651,7 +6659,7 @@ snapshots:
       '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/core': 3.598.0
-      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
       '@aws-sdk/middleware-host-header': 3.598.0
       '@aws-sdk/middleware-logger': 3.598.0
       '@aws-sdk/middleware-recursion-detection': 3.598.0
@@ -6745,7 +6753,7 @@ snapshots:
       '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/core': 3.598.0
-      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
       '@aws-sdk/middleware-endpoint-discovery': 3.598.0
       '@aws-sdk/middleware-host-header': 3.598.0
       '@aws-sdk/middleware-logger': 3.598.0
@@ -6840,7 +6848,7 @@ snapshots:
       '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/core': 3.598.0
-      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
       '@aws-sdk/middleware-host-header': 3.598.0
       '@aws-sdk/middleware-logger': 3.598.0
       '@aws-sdk/middleware-recursion-detection': 3.598.0
@@ -6934,7 +6942,7 @@ snapshots:
       '@aws-sdk/client-sso-oidc': 3.600.0(@aws-sdk/client-sts@3.600.0)
       '@aws-sdk/client-sts': 3.600.0
       '@aws-sdk/core': 3.598.0
-      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
+      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0)(@aws-sdk/client-sts@3.600.0(@aws-sdk/client-sso-oidc@3.600.0))
       '@aws-sdk/middleware-host-header': 3.598.0
       '@aws-sdk/middleware-logger': 3.598.0
       '@aws-sdk/middleware-recursion-detection': 3.598.0
@@ -7293,7 +7301,7 @@ snapshots:
     dependencies:
       '@smithy/core': 2.2.0
       '@smithy/protocol-http': 4.0.0
-      '@smithy/signature-v4': 3.1.1
+      '@smithy/signature-v4': 3.1.2
       '@smithy/smithy-client': 3.1.1
       '@smithy/types': 3.2.0
       fast-xml-parser: 4.2.5
@@ -7303,7 +7311,7 @@ snapshots:
     dependencies:
       '@smithy/core': 2.2.3
       '@smithy/protocol-http': 4.0.2
-      '@smithy/signature-v4': 3.1.1
+      '@smithy/signature-v4': 3.1.2
       '@smithy/smithy-client': 3.1.4
       '@smithy/types': 3.2.0
       fast-xml-parser: 4.2.5
@@ -7534,28 +7542,6 @@ snapshots:
       '@smithy/types': 3.2.0
       tslib: 2.6.3
 
-  '@aws-sdk/credential-providers@3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))':
-    dependencies:
-      '@aws-sdk/client-cognito-identity': 3.600.0
-      '@aws-sdk/client-sso': 3.598.0
-      '@aws-sdk/client-sts': 3.600.0
-      '@aws-sdk/credential-provider-cognito-identity': 3.600.0
-      '@aws-sdk/credential-provider-env': 3.598.0
-      '@aws-sdk/credential-provider-http': 3.598.0
-      '@aws-sdk/credential-provider-ini': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
-      '@aws-sdk/credential-provider-node': 3.600.0(@aws-sdk/client-sso-oidc@3.600.0(@aws-sdk/client-sts@3.600.0))(@aws-sdk/client-sts@3.600.0)
-      '@aws-sdk/credential-provider-process': 3.598.0
-      '@aws-sdk/credential-provider-sso': 3.598.0(@aws-sdk/client-sso-oidc@3.600.0)
-      '@aws-sdk/credential-provider-web-identity': 3.598.0(@aws-sdk/client-sts@3.600.0)
-      '@aws-sdk/types': 3.598.0
-      '@smithy/credential-provider-imds': 3.1.2
-      '@smithy/property-provider': 3.1.2
-      '@smithy/types': 3.2.0
-      tslib: 2.6.3
-    transitivePeerDependencies:
-      - '@aws-sdk/client-sso-oidc'
-      - aws-crt
-
   '@aws-sdk/credential-providers@3.600.0(@aws-sdk/client-sso-oidc@3.600.0)':
     dependencies:
       '@aws-sdk/client-cognito-identity': 3.600.0
@@ -7646,7 +7632,7 @@ snapshots:
       '@aws-sdk/util-arn-parser': 3.568.0
       '@smithy/node-config-provider': 3.1.0
       '@smithy/protocol-http': 4.0.0
-      '@smithy/signature-v4': 3.1.1
+      '@smithy/signature-v4': 3.1.2
       '@smithy/smithy-client': 3.1.1
       '@smithy/types': 3.2.0
       '@smithy/util-config-provider': 3.0.0
@@ -7658,7 +7644,7 @@ snapshots:
       '@aws-sdk/util-arn-parser': 3.568.0
       '@smithy/node-config-provider': 3.1.2
       '@smithy/protocol-http': 4.0.2
-      '@smithy/signature-v4': 3.1.1
+      '@smithy/signature-v4': 3.1.2
       '@smithy/smithy-client': 3.1.4
       '@smithy/types': 3.2.0
       '@smithy/util-config-provider': 3.0.0
@@ -7678,9 +7664,9 @@ snapshots:
       '@aws-sdk/types': 3.577.0
       '@smithy/property-provider': 3.1.2
       '@smithy/protocol-http': 4.0.0
-      '@smithy/signature-v4': 3.1.1
+      '@smithy/signature-v4': 3.1.2
       '@smithy/types': 3.2.0
-      '@smithy/util-middleware': 3.0.2
+      '@smithy/util-middleware': 3.0.3
       tslib: 2.6.3
 
   '@aws-sdk/middleware-signing@3.598.0':
@@ -7688,7 +7674,7 @@ snapshots:
       '@aws-sdk/types': 3.598.0
       '@smithy/property-provider': 3.1.2
       '@smithy/protocol-http': 4.0.2
-      '@smithy/signature-v4': 3.1.1
+      '@smithy/signature-v4': 3.1.2
       '@smithy/types': 3.2.0
       '@smithy/util-middleware': 3.0.2
       tslib: 2.6.3
@@ -7732,7 +7718,7 @@ snapshots:
       '@aws-sdk/middleware-sdk-s3': 3.587.0
       '@aws-sdk/types': 3.577.0
       '@smithy/protocol-http': 4.0.0
-      '@smithy/signature-v4': 3.1.1
+      '@smithy/signature-v4': 3.1.2
       '@smithy/types': 3.2.0
       tslib: 2.6.3
 
@@ -7741,7 +7727,7 @@ snapshots:
       '@aws-sdk/middleware-sdk-s3': 3.598.0
       '@aws-sdk/types': 3.598.0
       '@smithy/protocol-http': 4.0.2
-      '@smithy/signature-v4': 3.1.1
+      '@smithy/signature-v4': 3.1.2
       '@smithy/types': 3.2.0
       tslib: 2.6.3
 
@@ -9159,6 +9145,12 @@ snapshots:
       - bluebird
       - supports-color
 
+  '@nrwl/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
+    dependencies:
+      '@nx/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+    transitivePeerDependencies:
+      - nx
+
   '@nrwl/devkit@19.2.3(nx@19.3.2(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
     dependencies:
       '@nx/devkit': 19.2.3(nx@19.3.2(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
@@ -9228,7 +9220,7 @@ snapshots:
 
   '@nx/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@19.3.2(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.1
@@ -9886,12 +9878,12 @@ snapshots:
       '@smithy/types': 3.2.0
       tslib: 2.6.3
 
-  '@smithy/signature-v4@3.1.1':
+  '@smithy/signature-v4@3.1.2':
     dependencies:
       '@smithy/is-array-buffer': 3.0.0
-      '@smithy/types': 3.2.0
+      '@smithy/types': 3.3.0
       '@smithy/util-hex-encoding': 3.0.0
-      '@smithy/util-middleware': 3.0.2
+      '@smithy/util-middleware': 3.0.3
       '@smithy/util-uri-escape': 3.0.0
       '@smithy/util-utf8': 3.0.0
       tslib: 2.6.3
@@ -9919,6 +9911,10 @@ snapshots:
       tslib: 2.6.3
 
   '@smithy/types@3.2.0':
+    dependencies:
+      tslib: 2.6.3
+
+  '@smithy/types@3.3.0':
     dependencies:
       tslib: 2.6.3
 
@@ -10017,6 +10013,11 @@ snapshots:
   '@smithy/util-middleware@3.0.2':
     dependencies:
       '@smithy/types': 3.2.0
+      tslib: 2.6.3
+
+  '@smithy/util-middleware@3.0.3':
+    dependencies:
+      '@smithy/types': 3.3.0
       tslib: 2.6.3
 
   '@smithy/util-retry@3.0.0':
