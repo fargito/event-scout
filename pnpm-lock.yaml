@@ -31,7 +31,7 @@ importers:
         version: 0.13.7
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.3
+        version: 16.3.4
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -92,7 +92,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.3
+        version: 16.3.4
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -150,7 +150,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.3
+        version: 16.3.4
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -196,7 +196,7 @@ importers:
         version: 1.6.0(vitest@1.6.0(@types/node@20.14.9))
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.3
+        version: 16.3.4
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -266,7 +266,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.3
+        version: 16.3.4
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -329,7 +329,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.3.2
-        version: 16.3.3
+        version: 16.3.4
       esbuild:
         specifier: ^0.21.0
         version: 0.21.5
@@ -399,7 +399,7 @@ importers:
         version: 10.3.0
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.3
+        version: 16.3.4
       esbuild:
         specifier: ^0.21.0
         version: 0.21.5
@@ -2839,8 +2839,12 @@ packages:
     resolution: {integrity: sha512-cjkyv4OtNCIeqhHrfS81QWXoCBPExR/J62oyEqepVw8WaQeSqpW2uhuLPh1m9eWhDuOo/jUXVTlifvesOWp/4A==}
     engines: {node: '>=0.4.0'}
 
-  acorn@8.11.3:
-    resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
+  acorn-walk@8.3.3:
+    resolution: {integrity: sha512-MxXdReSRhGO7VlFe1bRG/oI7/mdLV9B9JJT0N8vZOhF7gFRR5l3M8W9G8JxmKV+JC5mGqJ0QvqfSOLsCPa4nUw==}
+    engines: {node: '>=0.4.0'}
+
+  acorn@8.12.0:
+    resolution: {integrity: sha512-RTvkC4w+KNXrM39/lWCUaG0IbRkWdCv7W/IOW9oU6SawyxulvkQy5HQPVTKxEjczcUvapcrw3cFx/60VN/NRNw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -3516,8 +3520,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dependency-cruiser@16.3.3:
-    resolution: {integrity: sha512-+YHPbd6RqM1nLUUbRVkbYO6mVeeq+VEL+bBkR+KFkYVU20vs1D0TalZ9z/hDLxiYiYCSTctUaoWWaUrRc1I+mw==}
+  dependency-cruiser@16.3.4:
+    resolution: {integrity: sha512-HEuF2BUzt7ZCG/Z3AuvqhdaYbON4zGb6TSLtJu3AlMzOX4lF3CX17wkL4l0G9pVK+8o6Ws93R0//XglES5Vhow==}
     engines: {node: ^18.17||>=20}
     hasBin: true
 
@@ -3861,10 +3865,6 @@ packages:
   figures@3.2.0:
     resolution: {integrity: sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==}
     engines: {node: '>=8'}
-
-  figures@6.1.0:
-    resolution: {integrity: sha512-d+l3qxjSesT4V7v2fh+QnmFnUWv9lSpjarhShNTgBOfA0ttejbQUAlHLitbjkoRiDulW0OPoQPYIGhIC8ohejg==}
-    engines: {node: '>=18'}
 
   file-entry-cache@6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
@@ -4247,10 +4247,6 @@ packages:
   indent-string@4.0.0:
     resolution: {integrity: sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==}
     engines: {node: '>=8'}
-
-  indent-string@5.0.0:
-    resolution: {integrity: sha512-m6FAo/spmsW2Ab2fU35JTYwtOKa2yAwXSwgjSv1TJzh4Mh7mC3lzAOVLBprb72XsTrgkEIsl7YrFNAiDiRhIGg==}
-    engines: {node: '>=12'}
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
@@ -5694,10 +5690,6 @@ packages:
 
   seedrandom@3.0.5:
     resolution: {integrity: sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg==}
-
-  semver-try-require@7.0.0:
-    resolution: {integrity: sha512-LI7GzDuAZmNKOY0/LY4nB3ifh6kYMvBimFTHVpA6wNEl3gw59QrLbTAnJb7vQzPd1qXPz+BtKJZaYORXWMerrA==}
-    engines: {node: ^18.17||>=20}
 
   semver@5.7.2:
     resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
@@ -9055,6 +9047,12 @@ snapshots:
       - bluebird
       - supports-color
 
+  '@nrwl/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
+    dependencies:
+      '@nx/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+    transitivePeerDependencies:
+      - nx
+
   '@nrwl/devkit@19.2.3(nx@19.3.2(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
     dependencies:
       '@nx/devkit': 19.2.3(nx@19.3.2(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
@@ -9124,7 +9122,7 @@ snapshots:
 
   '@nx/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@19.3.2(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.2))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.1
@@ -10325,17 +10323,21 @@ snapshots:
 
   acorn-jsx-walk@2.0.0: {}
 
-  acorn-jsx@5.3.2(acorn@8.11.3):
+  acorn-jsx@5.3.2(acorn@8.12.0):
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.12.0
 
   acorn-loose@8.4.0:
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.12.0
 
   acorn-walk@8.3.2: {}
 
-  acorn@8.11.3: {}
+  acorn-walk@8.3.3:
+    dependencies:
+      acorn: 8.12.0
+
+  acorn@8.12.0: {}
 
   add-stream@1.0.0: {}
 
@@ -11055,20 +11057,18 @@ snapshots:
 
   depd@2.0.0: {}
 
-  dependency-cruiser@16.3.3:
+  dependency-cruiser@16.3.4:
     dependencies:
-      acorn: 8.11.3
-      acorn-jsx: 5.3.2(acorn@8.11.3)
+      acorn: 8.12.0
+      acorn-jsx: 5.3.2(acorn@8.12.0)
       acorn-jsx-walk: 2.0.0
       acorn-loose: 8.4.0
-      acorn-walk: 8.3.2
+      acorn-walk: 8.3.3
       ajv: 8.16.0
       chalk: 5.3.0
       commander: 12.1.0
       enhanced-resolve: 5.17.0
-      figures: 6.1.0
       ignore: 5.3.1
-      indent-string: 5.0.0
       interpret: 3.1.1
       is-installed-globally: 1.0.0
       json5: 2.2.3
@@ -11079,7 +11079,6 @@ snapshots:
       rechoir: 0.8.0
       safe-regex: 2.1.1
       semver: 7.6.2
-      semver-try-require: 7.0.0
       teamcity-service-messages: 0.1.14
       tsconfig-paths-webpack-plugin: 4.1.0
       watskeburt: 4.0.2
@@ -11438,8 +11437,8 @@ snapshots:
 
   espree@9.6.1:
     dependencies:
-      acorn: 8.11.3
-      acorn-jsx: 5.3.2(acorn@8.11.3)
+      acorn: 8.12.0
+      acorn-jsx: 5.3.2(acorn@8.12.0)
       eslint-visitor-keys: 3.4.3
 
   esprima@4.0.1: {}
@@ -11572,10 +11571,6 @@ snapshots:
   figures@3.2.0:
     dependencies:
       escape-string-regexp: 1.0.5
-
-  figures@6.1.0:
-    dependencies:
-      is-unicode-supported: 2.0.0
 
   file-entry-cache@6.0.1:
     dependencies:
@@ -11971,8 +11966,6 @@ snapshots:
 
   indent-string@4.0.0: {}
 
-  indent-string@5.0.0: {}
-
   inflight@1.0.6:
     dependencies:
       once: 1.4.0
@@ -12226,7 +12219,7 @@ snapshots:
 
   jest-diff@29.7.0:
     dependencies:
-      chalk: 4.1.2
+      chalk: 4.1.0
       diff-sequences: 29.6.3
       jest-get-type: 29.6.3
       pretty-format: 29.7.0
@@ -12731,14 +12724,14 @@ snapshots:
 
   mlly@1.6.1:
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.12.0
       pathe: 1.1.2
       pkg-types: 1.1.0
       ufo: 1.5.3
 
   mlly@1.7.0:
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.12.0
       pathe: 1.1.2
       pkg-types: 1.1.0
       ufo: 1.5.3
@@ -13527,7 +13520,7 @@ snapshots:
 
   resolve@1.22.8:
     dependencies:
-      is-core-module: 2.13.1
+      is-core-module: 2.14.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
@@ -13617,10 +13610,6 @@ snapshots:
   scule@1.3.0: {}
 
   seedrandom@3.0.5: {}
-
-  semver-try-require@7.0.0:
-    dependencies:
-      semver: 7.6.2
 
   semver@5.7.2: {}
 
@@ -14014,8 +14003,8 @@ snapshots:
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
       '@types/node': 20.14.9
-      acorn: 8.11.3
-      acorn-walk: 8.3.2
+      acorn: 8.12.0
+      acorn-walk: 8.3.3
       arg: 4.1.3
       create-require: 1.1.1
       diff: 4.0.2
@@ -14034,8 +14023,8 @@ snapshots:
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
       '@types/node': 20.14.9
-      acorn: 8.11.3
-      acorn-walk: 8.3.2
+      acorn: 8.12.0
+      acorn-walk: 8.3.3
       arg: 4.1.3
       create-require: 1.1.1
       diff: 4.0.2
