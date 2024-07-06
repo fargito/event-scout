@@ -31,7 +31,7 @@ importers:
         version: 0.13.7
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.5
+        version: 16.3.6
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -92,7 +92,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.5
+        version: 16.3.6
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -150,7 +150,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.5
+        version: 16.3.6
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -196,7 +196,7 @@ importers:
         version: 1.6.0(vitest@1.6.0(@types/node@20.14.10))
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.5
+        version: 16.3.6
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -266,7 +266,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.5
+        version: 16.3.6
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -329,7 +329,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.3.2
-        version: 16.3.5
+        version: 16.3.6
       esbuild:
         specifier: ^0.23.0
         version: 0.23.0
@@ -399,7 +399,7 @@ importers:
         version: 10.3.0
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.5
+        version: 16.3.6
       esbuild:
         specifier: ^0.23.0
         version: 0.23.0
@@ -2989,8 +2989,8 @@ packages:
     resolution: {integrity: sha512-MxXdReSRhGO7VlFe1bRG/oI7/mdLV9B9JJT0N8vZOhF7gFRR5l3M8W9G8JxmKV+JC5mGqJ0QvqfSOLsCPa4nUw==}
     engines: {node: '>=0.4.0'}
 
-  acorn@8.12.0:
-    resolution: {integrity: sha512-RTvkC4w+KNXrM39/lWCUaG0IbRkWdCv7W/IOW9oU6SawyxulvkQy5HQPVTKxEjczcUvapcrw3cFx/60VN/NRNw==}
+  acorn@8.12.1:
+    resolution: {integrity: sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -3666,8 +3666,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dependency-cruiser@16.3.5:
-    resolution: {integrity: sha512-fUZlIzay3WLwEmzGEfleEdKTLVxehiWf77PhHUxokv9FE9BmUVGVJpQpKSsOli0SslWhIKD1hS3hh+xDmhhGWQ==}
+  dependency-cruiser@16.3.6:
+    resolution: {integrity: sha512-OTkMkN1tMD7d5hEPO8KytzxXryyE25FrwPn/2ltzuon3G/NLC66MmUwPHJTidUC0levq9e1zkon0UTUXPZXZIQ==}
     engines: {node: ^18.17||>=20}
     hasBin: true
 
@@ -6523,8 +6523,8 @@ packages:
   walk-up-path@3.0.1:
     resolution: {integrity: sha512-9YlCL/ynK3CTlrSRrDxZvUauLzAswPCrsaCgilqFevUYpeEW0/3ScEjaa3kbW/T0ghhkEr7mv+fpjqn1Y1YuTA==}
 
-  watskeburt@4.0.2:
-    resolution: {integrity: sha512-w7X8AGrBZExP5/3e3c1X/CUY8Yod/aiAazQCvrg7n8Un6piD+NFFK926G15zRq4+wu0XAEWpSsZ4C+fEfVOCYw==}
+  watskeburt@4.1.0:
+    resolution: {integrity: sha512-KkY5H51ajqy9HYYI+u9SIURcWnqeVVhdH0I+ab6aXPGHfZYxgRCwnR6Lm3+TYB6jJVt5jFqw4GAKmwf1zHmGQw==}
     engines: {node: ^18||>=20}
     hasBin: true
 
@@ -9271,12 +9271,6 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@nrwl/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))':
-    dependencies:
-      '@nx/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))
-    transitivePeerDependencies:
-      - nx
-
   '@nrwl/devkit@19.2.3(nx@19.4.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))':
     dependencies:
       '@nx/devkit': 19.2.3(nx@19.4.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))
@@ -9346,7 +9340,7 @@ snapshots:
 
   '@nx/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@19.4.1(@swc-node/register@1.9.2(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.1
@@ -10550,21 +10544,21 @@ snapshots:
 
   acorn-jsx-walk@2.0.0: {}
 
-  acorn-jsx@5.3.2(acorn@8.12.0):
+  acorn-jsx@5.3.2(acorn@8.12.1):
     dependencies:
-      acorn: 8.12.0
+      acorn: 8.12.1
 
   acorn-loose@8.4.0:
     dependencies:
-      acorn: 8.12.0
+      acorn: 8.12.1
 
   acorn-walk@8.3.2: {}
 
   acorn-walk@8.3.3:
     dependencies:
-      acorn: 8.12.0
+      acorn: 8.12.1
 
-  acorn@8.12.0: {}
+  acorn@8.12.1: {}
 
   add-stream@1.0.0: {}
 
@@ -11284,15 +11278,14 @@ snapshots:
 
   depd@2.0.0: {}
 
-  dependency-cruiser@16.3.5:
+  dependency-cruiser@16.3.6:
     dependencies:
-      acorn: 8.12.0
-      acorn-jsx: 5.3.2(acorn@8.12.0)
+      acorn: 8.12.1
+      acorn-jsx: 5.3.2(acorn@8.12.1)
       acorn-jsx-walk: 2.0.0
       acorn-loose: 8.4.0
       acorn-walk: 8.3.3
       ajv: 8.16.0
-      chalk: 5.3.0
       commander: 12.1.0
       enhanced-resolve: 5.17.0
       ignore: 5.3.1
@@ -11301,6 +11294,7 @@ snapshots:
       json5: 2.2.3
       lodash: 4.17.21
       memoize: 10.0.0
+      picocolors: 1.0.1
       picomatch: 4.0.2
       prompts: 2.4.2
       rechoir: 0.8.0
@@ -11308,7 +11302,7 @@ snapshots:
       semver: 7.6.2
       teamcity-service-messages: 0.1.14
       tsconfig-paths-webpack-plugin: 4.1.0
-      watskeburt: 4.0.2
+      watskeburt: 4.1.0
       wrap-ansi: 9.0.0
 
   deprecation@2.3.1: {}
@@ -11691,8 +11685,8 @@ snapshots:
 
   espree@9.6.1:
     dependencies:
-      acorn: 8.12.0
-      acorn-jsx: 5.3.2(acorn@8.12.0)
+      acorn: 8.12.1
+      acorn-jsx: 5.3.2(acorn@8.12.1)
       eslint-visitor-keys: 3.4.3
 
   esprima@4.0.1: {}
@@ -12979,14 +12973,14 @@ snapshots:
 
   mlly@1.6.1:
     dependencies:
-      acorn: 8.12.0
+      acorn: 8.12.1
       pathe: 1.1.2
       pkg-types: 1.1.0
       ufo: 1.5.3
 
   mlly@1.7.0:
     dependencies:
-      acorn: 8.12.0
+      acorn: 8.12.1
       pathe: 1.1.2
       pkg-types: 1.1.0
       ufo: 1.5.3
@@ -14257,7 +14251,7 @@ snapshots:
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
       '@types/node': 20.14.10
-      acorn: 8.12.0
+      acorn: 8.12.1
       acorn-walk: 8.3.3
       arg: 4.1.3
       create-require: 1.1.1
@@ -14277,7 +14271,7 @@ snapshots:
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
       '@types/node': 20.14.10
-      acorn: 8.12.0
+      acorn: 8.12.1
       acorn-walk: 8.3.3
       arg: 4.1.3
       create-require: 1.1.1
@@ -14555,7 +14549,7 @@ snapshots:
 
   walk-up-path@3.0.1: {}
 
-  watskeburt@4.0.2: {}
+  watskeburt@4.1.0: {}
 
   wcwidth@1.0.1:
     dependencies:
