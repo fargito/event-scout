@@ -130,8 +130,8 @@ importers:
         specifier: workspace:^0.7.6
         version: link:../../contracts/construct-contracts
       '@smithy/signature-v4':
-        specifier: ^3.0.0
-        version: 3.1.2
+        specifier: ^4.0.0
+        version: 4.0.0
       '@swarmion/serverless-contracts':
         specifier: ^0.32.0
         version: 0.32.0(@serverless/typescript@3.38.0)(ajv@8.17.1)(aws-cdk-lib@2.149.0(constructs@10.3.0))(axios@1.7.2)
@@ -237,8 +237,8 @@ importers:
         specifier: workspace:^
         version: link:../../contracts/construct-contracts
       '@smithy/signature-v4':
-        specifier: ^3.0.0
-        version: 3.1.2
+        specifier: ^4.0.0
+        version: 4.0.0
       ajv:
         specifier: ^8.12.0
         version: 8.17.1
@@ -2619,6 +2619,10 @@ packages:
     resolution: {integrity: sha512-3BcPylEsYtD0esM4Hoyml/+s7WP2LFhcM3J2AGdcL2vx9O60TtfpDOL72gjb4lU8NeRPeKAwR77YNyyGvMbuEA==}
     engines: {node: '>=16.0.0'}
 
+  '@smithy/signature-v4@4.0.0':
+    resolution: {integrity: sha512-ervYjQ+ZvmNG51Ui77IOTPri7nOyo8Kembzt9uwwlmtXJPmFXvslOahbA1blvAVs7G0KlYMiOBog1rAt7RVXxg==}
+    engines: {node: '>=16.0.0'}
+
   '@smithy/smithy-client@3.1.1':
     resolution: {integrity: sha512-tj4Ku7MpzZR8cmVuPcSbrLFVxmptWktmJMwST/uIEq4sarabEdF8CbmQdYB7uJ/X51Qq2EYwnRsoS7hdR4B7rA==}
     engines: {node: '>=16.0.0'}
@@ -2686,10 +2690,6 @@ packages:
 
   '@smithy/util-hex-encoding@3.0.0':
     resolution: {integrity: sha512-eFndh1WEK5YMUYvy3lPlVmYY/fZcQE1D8oSf41Id2vCeIkKJXPcYDCZD+4+xViI6b1XSd7tE+s5AmXzz5ilabQ==}
-    engines: {node: '>=16.0.0'}
-
-  '@smithy/util-middleware@3.0.2':
-    resolution: {integrity: sha512-7WW5SD0XVrpfqljBYzS5rLR+EiDzl7wCVJZ9Lo6ChNFV4VYDk37Z1QI5w/LnYtU/QKnSawYoHRd7VjSyC8QRQQ==}
     engines: {node: '>=16.0.0'}
 
   '@smithy/util-middleware@3.0.3':
@@ -7107,7 +7107,7 @@ snapshots:
       '@smithy/util-defaults-mode-browser': 3.0.3
       '@smithy/util-defaults-mode-node': 3.0.3
       '@smithy/util-endpoints': 2.0.1
-      '@smithy/util-middleware': 3.0.2
+      '@smithy/util-middleware': 3.0.3
       '@smithy/util-retry': 3.0.0
       '@smithy/util-utf8': 3.0.0
       tslib: 2.6.3
@@ -9326,12 +9326,6 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@nrwl/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.7(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))':
-    dependencies:
-      '@nx/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.7(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))
-    transitivePeerDependencies:
-      - nx
-
   '@nrwl/devkit@19.2.3(nx@19.4.3(@swc-node/register@1.10.7(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))':
     dependencies:
       '@nx/devkit': 19.2.3(nx@19.4.3(@swc-node/register@1.10.7(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))
@@ -9401,7 +9395,7 @@ snapshots:
 
   '@nx/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.7(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.7(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@19.4.3(@swc-node/register@1.10.7(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.1
@@ -9859,7 +9853,7 @@ snapshots:
       '@smithy/protocol-http': 4.0.0
       '@smithy/smithy-client': 3.1.1
       '@smithy/types': 3.3.0
-      '@smithy/util-middleware': 3.0.2
+      '@smithy/util-middleware': 3.0.3
       tslib: 2.6.3
 
   '@smithy/core@2.2.6':
@@ -10101,6 +10095,16 @@ snapshots:
       '@smithy/util-utf8': 3.0.0
       tslib: 2.6.3
 
+  '@smithy/signature-v4@4.0.0':
+    dependencies:
+      '@smithy/is-array-buffer': 3.0.0
+      '@smithy/types': 3.3.0
+      '@smithy/util-hex-encoding': 3.0.0
+      '@smithy/util-middleware': 3.0.3
+      '@smithy/util-uri-escape': 3.0.0
+      '@smithy/util-utf8': 3.0.0
+      tslib: 2.6.3
+
   '@smithy/smithy-client@3.1.1':
     dependencies:
       '@smithy/middleware-endpoint': 3.0.1
@@ -10213,11 +10217,6 @@ snapshots:
 
   '@smithy/util-hex-encoding@3.0.0':
     dependencies:
-      tslib: 2.6.3
-
-  '@smithy/util-middleware@3.0.2':
-    dependencies:
-      '@smithy/types': 3.3.0
       tslib: 2.6.3
 
   '@smithy/util-middleware@3.0.3':
