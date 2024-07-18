@@ -31,7 +31,7 @@ importers:
         version: 0.13.9(magicast@0.3.4)
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.7
+        version: 16.3.9
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -92,7 +92,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.7
+        version: 16.3.9
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -150,7 +150,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.7
+        version: 16.3.9
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -196,7 +196,7 @@ importers:
         version: 2.0.3(vitest@2.0.3(@types/node@20.14.11))
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.7
+        version: 16.3.9
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -266,7 +266,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.7
+        version: 16.3.9
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -329,7 +329,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.3.2
-        version: 16.3.7
+        version: 16.3.9
       esbuild:
         specifier: ^0.23.0
         version: 0.23.0
@@ -399,7 +399,7 @@ importers:
         version: 10.3.0
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.7
+        version: 16.3.9
       esbuild:
         specifier: ^0.23.0
         version: 0.23.0
@@ -3570,8 +3570,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dependency-cruiser@16.3.7:
-    resolution: {integrity: sha512-3ovyh0WjmIJO/UaapVWFJAQKJ/7F46EtMrsmpHp7tV7dge3j/3MJG55K5EdEYqKL6z6G8wBbbjcmarD98uwjZQ==}
+  dependency-cruiser@16.3.9:
+    resolution: {integrity: sha512-rtYBXmwYGcuwvGHI+gqXMyXXKjJ3d8nfg6hdwOtgm3Z7VHczuDwUJTg1PDQNzhWLWjMKzV5igAIpuxXOhslyZA==}
     engines: {node: ^18.17||>=20}
     hasBin: true
 
@@ -4360,6 +4360,10 @@ packages:
 
   is-core-module@2.14.0:
     resolution: {integrity: sha512-a5dFJih5ZLYlRtDc0dZWP7RiKr6xIKzmn/oAYCDvdLThadVgyJwlaoQPmRtMSpz+rk0OGAgIu+TcM9HUF0fk1A==}
+    engines: {node: '>= 0.4'}
+
+  is-core-module@2.15.0:
+    resolution: {integrity: sha512-Dd+Lb2/zvk9SKy1TGCt1wFJFo/MWBPMX5x7KcvLajWTGuomczdQX61PvY5yK6SVACwpoexWo81IfFyoKY2QnTA==}
     engines: {node: '>= 0.4'}
 
   is-date-object@1.0.5:
@@ -9104,6 +9108,12 @@ snapshots:
       - bluebird
       - supports-color
 
+  '@nrwl/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))':
+    dependencies:
+      '@nx/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))
+    transitivePeerDependencies:
+      - nx
+
   '@nrwl/devkit@19.2.3(nx@19.5.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))':
     dependencies:
       '@nx/devkit': 19.2.3(nx@19.5.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))
@@ -9173,7 +9183,7 @@ snapshots:
 
   '@nx/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@19.5.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(typescript@5.5.3))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.1
@@ -11110,7 +11120,7 @@ snapshots:
 
   depd@2.0.0: {}
 
-  dependency-cruiser@16.3.7:
+  dependency-cruiser@16.3.9:
     dependencies:
       acorn: 8.12.1
       acorn-jsx: 5.3.2(acorn@8.12.1)
@@ -11131,7 +11141,7 @@ snapshots:
       prompts: 2.4.2
       rechoir: 0.8.0
       safe-regex: 2.1.1
-      semver: 7.6.2
+      semver: 7.6.3
       teamcity-service-messages: 0.1.14
       tsconfig-paths-webpack-plugin: 4.1.0
       watskeburt: 4.1.0
@@ -12103,6 +12113,10 @@ snapshots:
       hasown: 2.0.2
 
   is-core-module@2.14.0:
+    dependencies:
+      hasown: 2.0.2
+
+  is-core-module@2.15.0:
     dependencies:
       hasown: 2.0.2
 
@@ -13561,7 +13575,7 @@ snapshots:
 
   resolve@1.22.8:
     dependencies:
-      is-core-module: 2.14.0
+      is-core-module: 2.15.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
