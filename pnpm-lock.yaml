@@ -110,10 +110,10 @@ importers:
         version: 5.5.4
       vite:
         specifier: ^5.0.11
-        version: 5.4.0(@types/node@20.14.15)
+        version: 5.4.1(@types/node@20.14.15)
       vite-tsconfig-paths:
         specifier: ^4.2.3
-        version: 4.3.2(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.15))
+        version: 4.3.2(typescript@5.5.4)(vite@5.4.1(@types/node@20.14.15))
       vitest:
         specifier: ^2.0.0
         version: 2.0.5(@types/node@20.14.15)
@@ -168,10 +168,10 @@ importers:
         version: 5.5.4
       vite:
         specifier: ^5.0.11
-        version: 5.4.0(@types/node@20.14.15)
+        version: 5.4.1(@types/node@20.14.15)
       vite-tsconfig-paths:
         specifier: ^4.2.3
-        version: 4.3.2(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.15))
+        version: 4.3.2(typescript@5.5.4)(vite@5.4.1(@types/node@20.14.15))
       vitest:
         specifier: ^2.0.0
         version: 2.0.5(@types/node@20.14.15)
@@ -214,10 +214,10 @@ importers:
         version: 5.5.4
       vite:
         specifier: ^5.0.11
-        version: 5.4.0(@types/node@20.14.15)
+        version: 5.4.1(@types/node@20.14.15)
       vite-tsconfig-paths:
         specifier: ^4.2.3
-        version: 4.3.2(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.15))
+        version: 4.3.2(typescript@5.5.4)(vite@5.4.1(@types/node@20.14.15))
       vitest:
         specifier: ^2.0.0
         version: 2.0.5(@types/node@20.14.15)
@@ -281,10 +281,10 @@ importers:
         version: 5.5.4
       vite:
         specifier: ^5.0.11
-        version: 5.4.0(@types/node@20.14.15)
+        version: 5.4.1(@types/node@20.14.15)
       vite-tsconfig-paths:
         specifier: ^4.2.3
-        version: 4.3.2(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.15))
+        version: 4.3.2(typescript@5.5.4)(vite@5.4.1(@types/node@20.14.15))
       vitest:
         specifier: ^2.0.0
         version: 2.0.5(@types/node@20.14.15)
@@ -344,7 +344,7 @@ importers:
         version: 5.5.4
       vite-tsconfig-paths:
         specifier: ^4.3.2
-        version: 4.3.2(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.15))
+        version: 4.3.2(typescript@5.5.4)(vite@5.4.1(@types/node@20.14.15))
       vitest:
         specifier: ^2.0.0
         version: 2.0.5(@types/node@20.14.15)
@@ -414,10 +414,10 @@ importers:
         version: 5.5.4
       vite:
         specifier: ^5.0.11
-        version: 5.4.0(@types/node@20.14.15)
+        version: 5.4.1(@types/node@20.14.15)
       vite-tsconfig-paths:
         specifier: ^4.2.3
-        version: 4.3.2(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.15))
+        version: 4.3.2(typescript@5.5.4)(vite@5.4.1(@types/node@20.14.15))
       vitest:
         specifier: ^2.0.0
         version: 2.0.5(@types/node@20.14.15)
@@ -6448,8 +6448,8 @@ packages:
       vite:
         optional: true
 
-  vite@5.4.0:
-    resolution: {integrity: sha512-5xokfMX0PIiwCMCMb9ZJcMyh5wbBun0zUzKib+L65vAZ8GY9ePZMXxFrHbr/Kyll2+LSCY7xtERPpxkBDKngwg==}
+  vite@5.4.1:
+    resolution: {integrity: sha512-1oE6yuNXssjrZdblI9AfBbHCC41nnyoVoEZxQnID6yvQZAFBzxxkqoFLtHUMkYunL8hwOLEjgTuxpkRxvba3kA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -9204,6 +9204,12 @@ snapshots:
       - bluebird
       - supports-color
 
+  '@nrwl/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))':
+    dependencies:
+      '@nx/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))
+    transitivePeerDependencies:
+      - nx
+
   '@nrwl/devkit@19.2.3(nx@19.5.7(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))':
     dependencies:
       '@nx/devkit': 19.2.3(nx@19.5.7(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))
@@ -9273,7 +9279,7 @@ snapshots:
 
   '@nx/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@19.5.7(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.1
@@ -14437,7 +14443,7 @@ snapshots:
       debug: 4.3.6
       pathe: 1.1.2
       tinyrainbow: 1.2.0
-      vite: 5.4.0(@types/node@20.14.15)
+      vite: 5.4.1(@types/node@20.14.15)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -14449,18 +14455,18 @@ snapshots:
       - supports-color
       - terser
 
-  vite-tsconfig-paths@4.3.2(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.15)):
+  vite-tsconfig-paths@4.3.2(typescript@5.5.4)(vite@5.4.1(@types/node@20.14.15)):
     dependencies:
       debug: 4.3.4
       globrex: 0.1.2
       tsconfck: 3.0.3(typescript@5.5.4)
     optionalDependencies:
-      vite: 5.4.0(@types/node@20.14.15)
+      vite: 5.4.1(@types/node@20.14.15)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@5.4.0(@types/node@20.14.15):
+  vite@5.4.1(@types/node@20.14.15):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.41
@@ -14487,7 +14493,7 @@ snapshots:
       tinybench: 2.8.0
       tinypool: 1.0.0
       tinyrainbow: 1.2.0
-      vite: 5.4.0(@types/node@20.14.15)
+      vite: 5.4.1(@types/node@20.14.15)
       vite-node: 2.0.5(@types/node@20.14.15)
       why-is-node-running: 2.3.0
     optionalDependencies:
