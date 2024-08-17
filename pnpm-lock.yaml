@@ -31,7 +31,7 @@ importers:
         version: 0.13.9(magicast@0.3.4)
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.10
+        version: 16.4.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -92,7 +92,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.10
+        version: 16.4.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -150,7 +150,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.10
+        version: 16.4.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -196,7 +196,7 @@ importers:
         version: 2.0.5(vitest@2.0.5(@types/node@20.15.0))
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.10
+        version: 16.4.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -266,7 +266,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.10
+        version: 16.4.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -329,7 +329,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.3.2
-        version: 16.3.10
+        version: 16.4.0
       esbuild:
         specifier: ^0.23.0
         version: 0.23.1
@@ -399,7 +399,7 @@ importers:
         version: 10.3.0
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.3.10
+        version: 16.4.0
       esbuild:
         specifier: ^0.23.0
         version: 0.23.1
@@ -3817,8 +3817,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dependency-cruiser@16.3.10:
-    resolution: {integrity: sha512-WkCnibHBfvaiaQ+S46LZ6h4AR6oj42Vsf5/0Vgtrwdwn7ZekMJdZ/ALoTwNp/RaGlKW+MbV/fhSZOvmhAWVWzQ==}
+  dependency-cruiser@16.4.0:
+    resolution: {integrity: sha512-la/NnD23m6esCox8KMiZ/pcmtec6G/r7LgnJvkBepcErdzlGaxWnyaxtpoYB3fgODrU/7E2u81/nX5FNu5zfyw==}
     engines: {node: ^18.17||>=20}
     hasBin: true
 
@@ -9450,6 +9450,12 @@ snapshots:
       - bluebird
       - supports-color
 
+  '@nrwl/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))':
+    dependencies:
+      '@nx/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))
+    transitivePeerDependencies:
+      - nx
+
   '@nrwl/devkit@19.2.3(nx@19.6.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))':
     dependencies:
       '@nx/devkit': 19.2.3(nx@19.6.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))
@@ -9519,10 +9525,10 @@ snapshots:
 
   '@nx/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@19.6.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
-      ignore: 5.3.1
+      ignore: 5.3.2
       minimatch: 9.0.3
       nx: 19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14)
       semver: 7.6.3
@@ -9535,7 +9541,7 @@ snapshots:
       '@nrwl/devkit': 19.2.3(nx@19.6.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
-      ignore: 5.3.1
+      ignore: 5.3.2
       minimatch: 9.0.3
       nx: 19.6.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.4.14)
       semver: 7.6.3
@@ -11563,7 +11569,7 @@ snapshots:
 
   depd@2.0.0: {}
 
-  dependency-cruiser@16.3.10:
+  dependency-cruiser@16.4.0:
     dependencies:
       acorn: 8.12.1
       acorn-jsx: 5.3.2(acorn@8.12.1)
@@ -11573,7 +11579,7 @@ snapshots:
       ajv: 8.17.1
       commander: 12.1.0
       enhanced-resolve: 5.17.1
-      ignore: 5.3.1
+      ignore: 5.3.2
       interpret: 3.1.1
       is-installed-globally: 1.0.0
       json5: 2.2.3
@@ -12354,7 +12360,7 @@ snapshots:
       array-union: 2.1.0
       dir-glob: 3.0.1
       fast-glob: 3.3.2
-      ignore: 5.3.1
+      ignore: 5.3.2
       merge2: 1.4.1
       slash: 3.0.0
 
