@@ -31,7 +31,7 @@ importers:
         version: 0.13.10(magicast@0.3.4)
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.4.0
+        version: 16.4.1
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -92,7 +92,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.4.0
+        version: 16.4.1
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -150,7 +150,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.4.0
+        version: 16.4.1
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -196,7 +196,7 @@ importers:
         version: 2.0.5(vitest@2.0.5(@types/node@20.16.3))
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.4.0
+        version: 16.4.1
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -266,7 +266,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.4.0
+        version: 16.4.1
       eslint:
         specifier: ^8.56.0
         version: 8.57.0
@@ -329,7 +329,7 @@ importers:
         version: 8.2.2
       dependency-cruiser:
         specifier: ^16.3.2
-        version: 16.4.0
+        version: 16.4.1
       esbuild:
         specifier: ^0.23.0
         version: 0.23.1
@@ -399,7 +399,7 @@ importers:
         version: 10.3.0
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.4.0
+        version: 16.4.1
       esbuild:
         specifier: ^0.23.0
         version: 0.23.1
@@ -3815,8 +3815,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dependency-cruiser@16.4.0:
-    resolution: {integrity: sha512-la/NnD23m6esCox8KMiZ/pcmtec6G/r7LgnJvkBepcErdzlGaxWnyaxtpoYB3fgODrU/7E2u81/nX5FNu5zfyw==}
+  dependency-cruiser@16.4.1:
+    resolution: {integrity: sha512-tmByrPhRMdjg/FsE3eT24QSXKhrZpo9APpDCg5Wgg0ReAhZughE3iKseD++UtSYsLQIjD1aYNSeNiAvqbcup9Q==}
     engines: {node: ^18.17||>=20}
     hasBin: true
 
@@ -4659,6 +4659,10 @@ packages:
 
   is-core-module@2.15.0:
     resolution: {integrity: sha512-Dd+Lb2/zvk9SKy1TGCt1wFJFo/MWBPMX5x7KcvLajWTGuomczdQX61PvY5yK6SVACwpoexWo81IfFyoKY2QnTA==}
+    engines: {node: '>= 0.4'}
+
+  is-core-module@2.15.1:
+    resolution: {integrity: sha512-z0vtXSwucUJtANQWldhbtbt7BnL0vxiFjIdDLAatwhDYty2bad6s+rijD6Ri4YuYJubLzIJLUidCh09e1djEVQ==}
     engines: {node: '>= 0.4'}
 
   is-date-object@1.0.5:
@@ -11580,7 +11584,7 @@ snapshots:
 
   depd@2.0.0: {}
 
-  dependency-cruiser@16.4.0:
+  dependency-cruiser@16.4.1:
     dependencies:
       acorn: 8.12.1
       acorn-jsx: 5.3.2(acorn@8.12.1)
@@ -12629,6 +12633,10 @@ snapshots:
       hasown: 2.0.2
 
   is-core-module@2.15.0:
+    dependencies:
+      hasown: 2.0.2
+
+  is-core-module@2.15.1:
     dependencies:
       hasown: 2.0.2
 
@@ -14102,7 +14110,7 @@ snapshots:
 
   resolve@1.22.8:
     dependencies:
-      is-core-module: 2.15.0
+      is-core-module: 2.15.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
