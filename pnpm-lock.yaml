@@ -28,7 +28,7 @@ importers:
         version: 7.18.0(eslint@8.57.1)(typescript@5.6.2)
       changelogithub:
         specifier: ^0.13.3
-        version: 0.13.10(magicast@0.3.5)
+        version: 0.13.11(magicast@0.3.5)
       dependency-cruiser:
         specifier: ^16.0.0
         version: 16.4.2
@@ -104,7 +104,7 @@ importers:
         version: 1.8.10
       tsup:
         specifier: ^8.0.1
-        version: 8.3.0(@swc/core@1.4.14)(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.0)
+        version: 8.3.0(@swc/core@1.4.14)(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.1)
       typescript:
         specifier: ^5.3.3
         version: 5.6.2
@@ -162,7 +162,7 @@ importers:
         version: 1.8.10
       tsup:
         specifier: ^8.0.1
-        version: 8.3.0(@swc/core@1.4.14)(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.0)
+        version: 8.3.0(@swc/core@1.4.14)(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.1)
       typescript:
         specifier: ^5.3.3
         version: 5.6.2
@@ -208,7 +208,7 @@ importers:
         version: 1.8.10
       tsup:
         specifier: ^8.0.1
-        version: 8.3.0(@swc/core@1.4.14)(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.0)
+        version: 8.3.0(@swc/core@1.4.14)(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.1)
       typescript:
         specifier: ^5.3.3
         version: 5.6.2
@@ -3387,8 +3387,8 @@ packages:
     resolution: {integrity: sha512-tUkzZWK0M/qdoLEqikxBWe4kumyuwjl3HO6zHTr4yEI23EojPtLYXdG1+AQY7MN0cGyNDvEaJ8wiYQm6P2bPxg==}
     engines: {node: '>=12.17'}
 
-  c12@1.11.1:
-    resolution: {integrity: sha512-KDU0TvSvVdaYcQKQ6iPHATGz/7p/KiVjPg4vQrB6Jg/wX9R0yl5RZxWm9IoZqaIHD2+6PZd81+KMGwRr/lRIUg==}
+  c12@1.11.2:
+    resolution: {integrity: sha512-oBs8a4uvSDO9dm8b7OCFW7+dgtVrwmwnrVXYzLm43ta7ep2jCn/0MhoUFygIWtxhyy6+/MG7/agvpY0U1Iemew==}
     peerDependencies:
       magicast: ^0.3.4
     peerDependenciesMeta:
@@ -3453,8 +3453,8 @@ packages:
     resolution: {integrity: sha512-IzgToIJ/R9NhVKmL+PW33ozYkv53bXvufDNUSH3GTKXq1iCHGgkbgbtqEWbo8tnWNnt7nPDpjL8PwSG2iS8RVw==}
     hasBin: true
 
-  changelogithub@0.13.10:
-    resolution: {integrity: sha512-9LouGMOOuT+k2ho+E1q0y8lKD7rMXInWP8mDdZfL1lzfKT1DYykuBqQqLjRWFYuER6Rn6AD2+8d3b/KjD2it0g==}
+  changelogithub@0.13.11:
+    resolution: {integrity: sha512-05RfA0icyiLxXEcC9UsK3yZIClCKGtiVPAzIetM0CbtMOy194/FMNBQZ8fOwjbJ7tQmJs5HrHr7T1vWtx+JJFA==}
     engines: {node: '>=12.0.0'}
     hasBin: true
 
@@ -4140,8 +4140,8 @@ packages:
     resolution: {integrity: sha512-VyhnebXciFV2DESc+p6B+y0LjSm0krU4OgJN44qFAhBY0TJ+1V61tYD2+wHusZ6F9n5K+vl8k0sTy7PEfV4qpg==}
     engines: {node: '>=16.17'}
 
-  execa@9.3.1:
-    resolution: {integrity: sha512-gdhefCCNy/8tpH/2+ajP9IQc14vXchNdd0weyzSJEFURhRMGncQ+zKFxwjAufIewPEJm9BPOaJnvg2UtlH2gPQ==}
+  execa@9.4.0:
+    resolution: {integrity: sha512-yKHlle2YGxZE842MERVIplWwNH5VYmqqcPFgtnlU//K8gxuFFXu0pwd/CrfXTumFpeEiufsP7+opT/bPJa1yVw==}
     engines: {node: ^18.19.0 || >=20.5.0}
 
   exponential-backoff@3.1.1:
@@ -4822,6 +4822,10 @@ packages:
     resolution: {integrity: sha512-FRdAyx5lusK1iHG0TWpVtk9+1i+GjrzRffhDg4ovQ7mcidMQ6mj+MhKPmvh7Xwyv5gIS06ns49CA7Sqg7lC22Q==}
     engines: {node: '>=18'}
 
+  is-unicode-supported@2.1.0:
+    resolution: {integrity: sha512-mE00Gnza5EEB3Ds0HfMyllZzbBrmLOX3vfWoj9A9PEnTfratQ/BcaJOuMhnkhjXvb2+FkY3VuHqtAGpTPmglFQ==}
+    engines: {node: '>=18'}
+
   is-weakref@1.0.2:
     resolution: {integrity: sha512-qctsuLZmIQ0+vSSMfoVvyFe2+GSEvnmZ2ezTup1SBse9+twCCeial6EEi3Nc2KFcf6+qz2FBPnjXsk8xhKSaPQ==}
 
@@ -5430,6 +5434,10 @@ packages:
     resolution: {integrity: sha512-ppwTtiJZq0O/ai0z7yfudtBpWIoxM8yE6nHi1X47eFR2EWORqfbu6CnPlNsjeN683eT0qG6H/Pyf9fCcvjnnnQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
+  npm-run-path@6.0.0:
+    resolution: {integrity: sha512-9qny7Z9DsQU8Ou39ERsPU4OZQlSTP47ShQzuKZ6PRXpYLtIFgl/DEBYEXKlvcEa+9tHVcK8CF81Y2V72qaZhWA==}
+    engines: {node: '>=18'}
+
   nx@19.2.3:
     resolution: {integrity: sha512-SvxFgk9PD2m6tXEaqB6DENOpe4jhov/Ili/2JmOnPAAIGUR6H9WajCzVuHfq3bvQxmGRvkQQRv/rfvAuLTme3g==}
     hasBin: true
@@ -5454,8 +5462,8 @@ packages:
       '@swc/core':
         optional: true
 
-  nypm@0.3.9:
-    resolution: {integrity: sha512-BI2SdqqTHg2d4wJh8P9A1W+bslg33vOE9IZDY6eR2QC+Pu1iNBVZUqczrd43rJb+fMzHU7ltAYKsEFY/kHMFcw==}
+  nypm@0.3.12:
+    resolution: {integrity: sha512-D3pzNDWIvgA+7IORhD/IuWzEk4uXv6GsgOxiid4UU3h9oq5IqV1KtPDi63n4sZJ/xcWlr88c0QM2RgN5VbOhFA==}
     engines: {node: ^14.16.0 || >=16.10.0}
     hasBin: true
 
@@ -5488,11 +5496,11 @@ packages:
   obliterator@1.6.1:
     resolution: {integrity: sha512-9WXswnqINnnhOG/5SLimUlzuU1hFJUc8zkwyD59Sd+dPOMf05PmnYG/d6Q7HZ+KmgkZJa1PxRso6QdM3sTNHig==}
 
-  ofetch@1.3.4:
-    resolution: {integrity: sha512-KLIET85ik3vhEfS+3fDlc/BAZiAp+43QEC/yCo5zkNoY2YaKvNkOaFr/6wCFgFH1kuYQM5pMNi0Tg8koiIemtw==}
+  ofetch@1.4.0:
+    resolution: {integrity: sha512-MuHgsEhU6zGeX+EMh+8mSMrYTnsqJQQrpM00Q6QHMKNqQ0bKy0B43tk8tL1wg+CnsSTy1kg4Ir2T5Ig6rD+dfQ==}
 
-  ohash@1.1.3:
-    resolution: {integrity: sha512-zuHHiGTYTA1sYJ/wZN+t5HKZaH23i4yI1HMwbuXm24Nid7Dv0KcuRlKoNKS9UNfAVSBlnGLcuQrnOKWOZoEGaw==}
+  ohash@1.1.4:
+    resolution: {integrity: sha512-FlDryZAahJmEF3VR3w1KogSEdWX3WhA5GPakFx4J81kEAiHyLMpdLLElS8n8dfNadMgAne/MywcvmogzscVt4g==}
 
   once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
@@ -6626,6 +6634,10 @@ packages:
     resolution: {integrity: sha512-lRfVq8fE8gz6QMBuDM6a+LO3IAzTi05H6gCVaUpir2E1Rwpo4ZUog45KpNXKC/Mn3Yb9UDuHumeFTo9iV/D9FQ==}
     engines: {node: '>=18'}
 
+  unicorn-magic@0.3.0:
+    resolution: {integrity: sha512-+QBBXBCvifc56fsbuxZQ6Sic3wqqc3WWaqxs58gvJrcOuN83HGTCwz3oS5phzU9LthRNE9VrJCFCLUgHeeFnfA==}
+    engines: {node: '>=18'}
+
   unique-filename@3.0.0:
     resolution: {integrity: sha512-afXhuC55wkAmZ0P18QsVE6kp8JaxrEokN2HGIoIVv2ijHQd419H0+6EigAFcIzXeMIkcIkNBpB3L/DXB3cTS/g==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -6878,6 +6890,11 @@ packages:
 
   yaml@2.5.0:
     resolution: {integrity: sha512-2wWLbGbYDiSqqIKoPjar3MPgB94ErzCtrNE1FdqGuaO0pi2JGjmE8aW8TDZwzU7vuxcGRdL/4gPQwQ7hD5AMSw==}
+    engines: {node: '>= 14'}
+    hasBin: true
+
+  yaml@2.5.1:
+    resolution: {integrity: sha512-bLQOjaX/ADgQ20isPJRvF0iRUHIxVhYvr53Of7wGcWlO2jvtUlH5m87DsmulFVxRpNLOnI4tB6p/oh8D7kpn9Q==}
     engines: {node: '>= 14'}
     hasBin: true
 
@@ -11148,7 +11165,7 @@ snapshots:
 
   byte-size@8.1.1: {}
 
-  c12@1.11.1(magicast@0.3.5):
+  c12@1.11.2(magicast@0.3.5):
     dependencies:
       chokidar: 3.6.0
       confbox: 0.1.7
@@ -11157,7 +11174,7 @@ snapshots:
       giget: 1.2.3
       jiti: 1.21.6
       mlly: 1.7.1
-      ohash: 1.1.3
+      ohash: 1.1.4
       pathe: 1.1.2
       perfect-debounce: 1.0.0
       pkg-types: 1.2.0
@@ -11236,34 +11253,34 @@ snapshots:
 
   changelogen@0.5.5(magicast@0.3.5):
     dependencies:
-      c12: 1.11.1(magicast@0.3.5)
+      c12: 1.11.2(magicast@0.3.5)
       colorette: 2.0.20
       consola: 3.2.3
       convert-gitmoji: 0.1.5
       execa: 8.0.1
       mri: 1.2.0
       node-fetch-native: 1.6.4
-      ofetch: 1.3.4
+      ofetch: 1.4.0
       open: 9.1.0
       pathe: 1.1.2
       pkg-types: 1.2.0
       scule: 1.3.0
       semver: 7.6.3
       std-env: 3.7.0
-      yaml: 2.5.0
+      yaml: 2.5.1
     transitivePeerDependencies:
       - magicast
 
-  changelogithub@0.13.10(magicast@0.3.5):
+  changelogithub@0.13.11(magicast@0.3.5):
     dependencies:
       '@antfu/utils': 0.7.10
-      c12: 1.11.1(magicast@0.3.5)
+      c12: 1.11.2(magicast@0.3.5)
       cac: 6.7.14
       changelogen: 0.5.5(magicast@0.3.5)
       convert-gitmoji: 0.1.5
-      execa: 9.3.1
+      execa: 9.4.0
       kolorist: 1.8.0
-      ofetch: 1.3.4
+      ofetch: 1.4.0
       semver: 7.6.3
     transitivePeerDependencies:
       - magicast
@@ -12086,7 +12103,7 @@ snapshots:
       signal-exit: 4.1.0
       strip-final-newline: 3.0.0
 
-  execa@9.3.1:
+  execa@9.4.0:
     dependencies:
       '@sindresorhus/merge-streams': 4.0.0
       cross-spawn: 7.0.3
@@ -12095,7 +12112,7 @@ snapshots:
       human-signals: 8.0.0
       is-plain-obj: 4.1.0
       is-stream: 4.0.1
-      npm-run-path: 5.3.0
+      npm-run-path: 6.0.0
       pretty-ms: 9.1.0
       signal-exit: 4.1.0
       strip-final-newline: 4.0.0
@@ -12166,7 +12183,7 @@ snapshots:
 
   figures@6.1.0:
     dependencies:
-      is-unicode-supported: 2.0.0
+      is-unicode-supported: 2.1.0
 
   file-entry-cache@6.0.1:
     dependencies:
@@ -12323,8 +12340,8 @@ snapshots:
       consola: 3.2.3
       defu: 6.1.4
       node-fetch-native: 1.6.4
-      nypm: 0.3.9
-      ohash: 1.1.3
+      nypm: 0.3.12
+      ohash: 1.1.4
       pathe: 1.1.2
       tar: 6.2.1
 
@@ -12762,6 +12779,8 @@ snapshots:
   is-unicode-supported@1.3.0: {}
 
   is-unicode-supported@2.0.0: {}
+
+  is-unicode-supported@2.1.0: {}
 
   is-weakref@1.0.2:
     dependencies:
@@ -13487,6 +13506,11 @@ snapshots:
     dependencies:
       path-key: 4.0.0
 
+  npm-run-path@6.0.0:
+    dependencies:
+      path-key: 4.0.0
+      unicorn-magic: 0.3.0
+
   nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.2))(@swc/core@1.4.14):
     dependencies:
       '@nrwl/tao': 19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.2))(@swc/core@1.4.14)
@@ -13591,7 +13615,7 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  nypm@0.3.9:
+  nypm@0.3.12:
     dependencies:
       citty: 0.1.6
       consola: 3.2.3
@@ -13634,13 +13658,13 @@ snapshots:
 
   obliterator@1.6.1: {}
 
-  ofetch@1.3.4:
+  ofetch@1.4.0:
     dependencies:
       destr: 2.0.3
       node-fetch-native: 1.6.4
       ufo: 1.5.4
 
-  ohash@1.1.3: {}
+  ohash@1.1.4: {}
 
   once@1.4.0:
     dependencies:
@@ -13922,13 +13946,13 @@ snapshots:
 
   possible-typed-array-names@1.0.0: {}
 
-  postcss-load-config@6.0.1(jiti@1.21.6)(postcss@8.4.47)(yaml@2.5.0):
+  postcss-load-config@6.0.1(jiti@1.21.6)(postcss@8.4.47)(yaml@2.5.1):
     dependencies:
       lilconfig: 3.1.2
     optionalDependencies:
       jiti: 1.21.6
       postcss: 8.4.47
-      yaml: 2.5.0
+      yaml: 2.5.1
 
   postcss-selector-parser@6.1.1:
     dependencies:
@@ -14692,7 +14716,7 @@ snapshots:
 
   tslib@2.7.0: {}
 
-  tsup@8.3.0(@swc/core@1.4.14)(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.0):
+  tsup@8.3.0(@swc/core@1.4.14)(jiti@1.21.6)(postcss@8.4.47)(typescript@5.6.2)(yaml@2.5.1):
     dependencies:
       bundle-require: 5.0.0(esbuild@0.23.1)
       cac: 6.7.14
@@ -14703,7 +14727,7 @@ snapshots:
       execa: 5.1.1
       joycon: 3.1.1
       picocolors: 1.1.0
-      postcss-load-config: 6.0.1(jiti@1.21.6)(postcss@8.4.47)(yaml@2.5.0)
+      postcss-load-config: 6.0.1(jiti@1.21.6)(postcss@8.4.47)(yaml@2.5.1)
       resolve-from: 5.0.0
       rollup: 4.21.3
       source-map: 0.8.0-beta.0
@@ -14805,6 +14829,8 @@ snapshots:
   unicode-property-aliases-ecmascript@2.1.0: {}
 
   unicorn-magic@0.1.0: {}
+
+  unicorn-magic@0.3.0: {}
 
   unique-filename@3.0.0:
     dependencies:
@@ -15047,6 +15073,8 @@ snapshots:
   yaml@2.4.5: {}
 
   yaml@2.5.0: {}
+
+  yaml@2.5.1: {}
 
   yargs-parser@20.2.9: {}
 
