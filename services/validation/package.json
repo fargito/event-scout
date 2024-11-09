@@ -9,6 +9,7 @@
     "bootstrap": "cdk bootstrap --profile event-scout-developer",
     "bootstrap-production": "cdk bootstrap --context stage=production",
     "bootstrap-staging": "cdk bootstrap --context stage=staging",
+    "cdk-gc": "cdk gc --unstable='gc' --type='s3' --created-buffer-days=1 --confirm=false",
     "deploy": "cdk deploy --profile event-scout-developer",
     "deploy-production": "cdk deploy --context stage=production",
     "deploy-staging": "cdk deploy --context stage=staging",

@@ -70,6 +70,9 @@ jobs:
       - name: '🔎 Run integration tests on production'
         run: SLS_ENV=production pnpm nx affected --target=test-integration --parallel=2
 
+      - name: '🧹 Clean Unused CDK assets'
+        run: pnpm nx affected --target=cdk-gc
+
       - name: Get latest release matching release tag type
         id: get-latest-release
         uses: rez0n/actions-github-release@main

@@ -49,6 +49,7 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
       - name: 💾 Cache Nx cache
         id: package-cache
         uses: actions/cache@v4
@@ -57,16 +58,24 @@ jobs:
             nx-cache
           # Cache will be updated at every run: https://github.com/actions/cache/blob/main/workarounds.md#update-a-cache
           key: ${{ runner.os }}-nx-cache-${{ steps.setup-node.outputs.node-version }}-${{ github.run_id }}
+
       - name: '🏗 Package'
         run: pnpm nx affected --targets=package,build --parallel=2
+
       - name: '🧪 Run tests'
         run: pnpm nx affected --targets=test-linter,test-type,test-unit,test-circular,test-cdk --parallel=2
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_STAGING }}
+
       - name: '🚀 Deploy staging'
         run: pnpm nx affected --target=deploy-staging --parallel=2
+
       - name: '🔎 Run integration tests on staging'
         run: SLS_ENV=staging pnpm nx affected --target=test-integration --parallel=2
+
+      - name: '🧹 Clean Unused CDK assets'
+        run: pnpm nx affected --target=cdk-gc
