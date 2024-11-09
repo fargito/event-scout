@@ -113,7 +113,7 @@ importers:
         version: 5.4.10(@types/node@20.17.6)
       vite-tsconfig-paths:
         specifier: ^5.0.0
-        version: 5.1.0(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6))
+        version: 5.1.1(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6))
       vitest:
         specifier: ^2.0.0
         version: 2.1.4(@types/node@20.17.6)
@@ -171,7 +171,7 @@ importers:
         version: 5.4.10(@types/node@20.17.6)
       vite-tsconfig-paths:
         specifier: ^5.0.0
-        version: 5.1.0(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6))
+        version: 5.1.1(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6))
       vitest:
         specifier: ^2.0.0
         version: 2.1.4(@types/node@20.17.6)
@@ -217,7 +217,7 @@ importers:
         version: 5.4.10(@types/node@20.17.6)
       vite-tsconfig-paths:
         specifier: ^5.0.0
-        version: 5.1.0(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6))
+        version: 5.1.1(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6))
       vitest:
         specifier: ^2.0.0
         version: 2.1.4(@types/node@20.17.6)
@@ -284,7 +284,7 @@ importers:
         version: 5.4.10(@types/node@20.17.6)
       vite-tsconfig-paths:
         specifier: ^5.0.0
-        version: 5.1.0(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6))
+        version: 5.1.1(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6))
       vitest:
         specifier: ^2.0.0
         version: 2.1.4(@types/node@20.17.6)
@@ -344,7 +344,7 @@ importers:
         version: 5.6.3
       vite-tsconfig-paths:
         specifier: ^5.0.0
-        version: 5.1.0(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6))
+        version: 5.1.1(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6))
       vitest:
         specifier: ^2.0.0
         version: 2.1.4(@types/node@20.17.6)
@@ -417,7 +417,7 @@ importers:
         version: 5.4.10(@types/node@20.17.6)
       vite-tsconfig-paths:
         specifier: ^5.0.0
-        version: 5.1.0(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6))
+        version: 5.1.1(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6))
       vitest:
         specifier: ^2.0.0
         version: 2.1.4(@types/node@20.17.6)
@@ -6534,8 +6534,8 @@ packages:
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
 
-  vite-tsconfig-paths@5.1.0:
-    resolution: {integrity: sha512-Y1PLGHCJfAq1Zf4YIGEsmuU/NCX1epoZx9zwSr32Gjn3aalwQHRKr5aUmbo6r0JHeHkqmWpmDg7WOynhYXw1og==}
+  vite-tsconfig-paths@5.1.1:
+    resolution: {integrity: sha512-0nLY3qQI4GlYw3We4rps16ntW+nAZYCUrJwsuvqxIUCY9Bk3VnSeJDm/VPCmjOcAJ9Kud4k+CK2ZEnf9pbzK9Q==}
     peerDependencies:
       vite: '*'
     peerDependenciesMeta:
@@ -9336,12 +9336,6 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@nrwl/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.3))(@swc/core@1.4.14))':
-    dependencies:
-      '@nx/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.3))(@swc/core@1.4.14))
-    transitivePeerDependencies:
-      - nx
-
   '@nrwl/devkit@19.2.3(nx@20.0.12(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.3))(@swc/core@1.4.14))':
     dependencies:
       '@nx/devkit': 19.2.3(nx@20.0.12(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.3))(@swc/core@1.4.14))
@@ -9405,7 +9399,7 @@ snapshots:
 
   '@nx/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.3))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.3))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@20.0.12(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.3))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.2
@@ -14645,7 +14639,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite-tsconfig-paths@5.1.0(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6)):
+  vite-tsconfig-paths@5.1.1(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6)):
     dependencies:
       debug: 4.3.7
       globrex: 0.1.2
