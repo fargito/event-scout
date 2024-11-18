@@ -353,7 +353,7 @@ importers:
     dependencies:
       '@aws-sdk/client-cloudformation':
         specifier: ^3.490.0
-        version: 3.693.0
+        version: 3.695.0
       '@aws-sdk/client-eventbridge':
         specifier: ^3.490.0
         version: 3.693.0
@@ -478,8 +478,8 @@ packages:
     resolution: {integrity: sha512-WhlMoet4enHjdgtbEJBxGBmAn8X9JNXqtGvy+CbqUfpHEgJt/RGjC80/a3LoNX37vaPNLqy4IiEHVjXkt+DJ+Q==}
     engines: {node: '>=16.0.0'}
 
-  '@aws-sdk/client-cloudformation@3.693.0':
-    resolution: {integrity: sha512-Y0dWF4uMPICGG4SS/QGu5hmnUxoCEPlJ1UMcKABLfAhmP0qBeTHxvVLb35rYyfM0QK34n4AjGgAVago8ImgVZg==}
+  '@aws-sdk/client-cloudformation@3.695.0':
+    resolution: {integrity: sha512-8DlNmqywQPC1YCfZXHsIRETs1BaBwcX+4D3FOLEGg/TX5t7OTbN/AXbbyr2frSEgAUgJm8DJAuHZsDMYhGo7Yw==}
     engines: {node: '>=16.0.0'}
 
   '@aws-sdk/client-cognito-identity@3.693.0':
@@ -6995,7 +6995,7 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/client-cloudformation@3.693.0':
+  '@aws-sdk/client-cloudformation@3.695.0':
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
@@ -9443,6 +9443,12 @@ snapshots:
       - bluebird
       - supports-color
 
+  '@nrwl/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.3))(@swc/core@1.4.14))':
+    dependencies:
+      '@nx/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.3))(@swc/core@1.4.14))
+    transitivePeerDependencies:
+      - nx
+
   '@nrwl/devkit@19.2.3(nx@20.1.2(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.3))(@swc/core@1.4.14))':
     dependencies:
       '@nx/devkit': 19.2.3(nx@20.1.2(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.3))(@swc/core@1.4.14))
@@ -9506,7 +9512,7 @@ snapshots:
 
   '@nx/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.3))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@20.1.2(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.3))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.12)(typescript@5.6.3))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.2
