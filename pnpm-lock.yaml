@@ -49,7 +49,7 @@ importers:
         version: 1.2.3(eslint@8.57.1)
       eslint-plugin-prettier:
         specifier: ^5.1.3
-        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.3.3)
+        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.4.0)
       husky:
         specifier: ^9.0.0
         version: 9.1.7
@@ -64,7 +64,7 @@ importers:
         version: 20.1.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)
       prettier:
         specifier: ^3.2.2
-        version: 3.3.3
+        version: 3.4.0
       syncpack:
         specifier: ^13.0.0
         version: 13.0.0(typescript@5.7.2)
@@ -98,7 +98,7 @@ importers:
         version: 8.57.1
       prettier:
         specifier: ^3.2.2
-        version: 3.3.3
+        version: 3.4.0
       tsc-alias:
         specifier: ^1.8.8
         version: 1.8.10
@@ -156,7 +156,7 @@ importers:
         version: 8.57.1
       prettier:
         specifier: ^3.2.2
-        version: 3.3.3
+        version: 3.4.0
       tsc-alias:
         specifier: ^1.8.8
         version: 1.8.10
@@ -202,7 +202,7 @@ importers:
         version: 8.57.1
       prettier:
         specifier: ^3.2.2
-        version: 3.3.3
+        version: 3.4.0
       tsc-alias:
         specifier: ^1.8.8
         version: 1.8.10
@@ -272,7 +272,7 @@ importers:
         version: 8.57.1
       prettier:
         specifier: ^3.2.2
-        version: 3.3.3
+        version: 3.4.0
       tsc-alias:
         specifier: ^1.8.8
         version: 1.8.10
@@ -338,7 +338,7 @@ importers:
         version: 8.57.1
       prettier:
         specifier: ^3.2.5
-        version: 3.3.3
+        version: 3.4.0
       typescript:
         specifier: ^5.4.5
         version: 5.7.2
@@ -5724,8 +5724,8 @@ packages:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
 
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+  prettier@3.4.0:
+    resolution: {integrity: sha512-/OXNZcLyWkfo13ofOW5M7SLh+k5pnIs07owXK2teFpnfaOEcycnSy7HQxldaVX1ZP/7Q8oO1eDuQJNwbomQq5Q==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -9416,12 +9416,6 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@nrwl/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))':
-    dependencies:
-      '@nx/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
-    transitivePeerDependencies:
-      - nx
-
   '@nrwl/devkit@19.2.3(nx@20.1.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))':
     dependencies:
       '@nx/devkit': 19.2.3(nx@20.1.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
@@ -9485,7 +9479,7 @@ snapshots:
 
   '@nx/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@20.1.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.2
@@ -11831,10 +11825,10 @@ snapshots:
     dependencies:
       eslint: 8.57.1
 
-  eslint-plugin-prettier@5.2.1(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.3.3):
+  eslint-plugin-prettier@5.2.1(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.4.0):
     dependencies:
       eslint: 8.57.1
-      prettier: 3.3.3
+      prettier: 3.4.0
       prettier-linter-helpers: 1.0.0
       synckit: 0.9.1
     optionalDependencies:
@@ -13880,7 +13874,7 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier@3.3.3: {}
+  prettier@3.4.0: {}
 
   pretty-format@29.7.0:
     dependencies:
