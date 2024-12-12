@@ -31,7 +31,7 @@ importers:
         version: 0.13.11(magicast@0.3.5)
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.7.0
+        version: 16.8.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -92,7 +92,7 @@ importers:
         version: 9.1.0
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.7.0
+        version: 16.8.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -150,7 +150,7 @@ importers:
         version: 9.1.0
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.7.0
+        version: 16.8.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -196,7 +196,7 @@ importers:
         version: 2.1.6(vitest@2.1.6(@types/node@20.17.10)(jiti@1.21.6)(yaml@2.6.1))
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.7.0
+        version: 16.8.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -266,7 +266,7 @@ importers:
         version: 9.1.0
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.7.0
+        version: 16.8.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -329,7 +329,7 @@ importers:
         version: 9.1.0
       dependency-cruiser:
         specifier: ^16.3.2
-        version: 16.7.0
+        version: 16.8.0
       esbuild:
         specifier: ^0.24.0
         version: 0.24.0
@@ -399,7 +399,7 @@ importers:
         version: 10.4.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.7.0
+        version: 16.8.0
       esbuild:
         specifier: ^0.24.0
         version: 0.24.0
@@ -3609,8 +3609,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dependency-cruiser@16.7.0:
-    resolution: {integrity: sha512-522LLjHINl9r0RIZ8/6s6TqIHTuEJG3XDU2WPSm9dG0rvLUYVyQwE9ID31tDFs4OOyEhdOPaqAaAG1jRv/Zwbg==}
+  dependency-cruiser@16.8.0:
+    resolution: {integrity: sha512-VyBzIrLHfG7rT36URln+CTy8VSjrLB7YDlMx5vtBSHRHCOXgLUCcP4n5ZoD+s166T0i5LN33q1CvBkEOGsDTSg==}
     engines: {node: ^18.17||>=20}
     hasBin: true
 
@@ -6561,8 +6561,8 @@ packages:
   walk-up-path@3.0.1:
     resolution: {integrity: sha512-9YlCL/ynK3CTlrSRrDxZvUauLzAswPCrsaCgilqFevUYpeEW0/3ScEjaa3kbW/T0ghhkEr7mv+fpjqn1Y1YuTA==}
 
-  watskeburt@4.1.1:
-    resolution: {integrity: sha512-6eghVVn6VlfYnlg23I2wABhXQFNdVdDzbXRTj0PKnDAgYJMuBcDt4fiHNAFMoBzLqM/fjFYj9QxTDfFskB3+Xg==}
+  watskeburt@4.2.2:
+    resolution: {integrity: sha512-AOCg1UYxWpiHW1tUwqpJau8vzarZYTtzl2uu99UptBmbzx6kOzCGMfRLF6KIRX4PYekmryn89MzxlRNkL66YyA==}
     engines: {node: ^18||>=20}
     hasBin: true
 
@@ -6992,8 +6992,8 @@ snapshots:
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sso-oidc': 3.592.0
-      '@aws-sdk/client-sts': 3.592.0(@aws-sdk/client-sso-oidc@3.592.0)
+      '@aws-sdk/client-sso-oidc': 3.592.0(@aws-sdk/client-sts@3.592.0)
+      '@aws-sdk/client-sts': 3.592.0
       '@aws-sdk/core': 3.592.0
       '@aws-sdk/credential-provider-node': 3.592.0(@aws-sdk/client-sso-oidc@3.592.0)(@aws-sdk/client-sts@3.592.0)
       '@aws-sdk/middleware-host-header': 3.577.0
@@ -7085,8 +7085,8 @@ snapshots:
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sso-oidc': 3.592.0
-      '@aws-sdk/client-sts': 3.592.0(@aws-sdk/client-sso-oidc@3.592.0)
+      '@aws-sdk/client-sso-oidc': 3.592.0(@aws-sdk/client-sts@3.592.0)
+      '@aws-sdk/client-sts': 3.592.0
       '@aws-sdk/core': 3.592.0
       '@aws-sdk/credential-provider-node': 3.592.0(@aws-sdk/client-sso-oidc@3.592.0)(@aws-sdk/client-sts@3.592.0)
       '@aws-sdk/middleware-host-header': 3.577.0
@@ -7178,11 +7178,11 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/client-sso-oidc@3.592.0':
+  '@aws-sdk/client-sso-oidc@3.592.0(@aws-sdk/client-sts@3.592.0)':
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sts': 3.592.0(@aws-sdk/client-sso-oidc@3.592.0)
+      '@aws-sdk/client-sts': 3.592.0
       '@aws-sdk/core': 3.592.0
       '@aws-sdk/credential-provider-node': 3.592.0(@aws-sdk/client-sso-oidc@3.592.0)(@aws-sdk/client-sts@3.592.0)
       '@aws-sdk/middleware-host-header': 3.577.0
@@ -7221,6 +7221,7 @@ snapshots:
       '@smithy/util-utf8': 3.0.0
       tslib: 2.8.1
     transitivePeerDependencies:
+      - '@aws-sdk/client-sts'
       - aws-crt
 
   '@aws-sdk/client-sso-oidc@3.709.0(@aws-sdk/client-sts@3.709.0)':
@@ -7354,11 +7355,11 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/client-sts@3.592.0(@aws-sdk/client-sso-oidc@3.592.0)':
+  '@aws-sdk/client-sts@3.592.0':
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sso-oidc': 3.592.0
+      '@aws-sdk/client-sso-oidc': 3.592.0(@aws-sdk/client-sts@3.592.0)
       '@aws-sdk/core': 3.592.0
       '@aws-sdk/credential-provider-node': 3.592.0(@aws-sdk/client-sso-oidc@3.592.0)(@aws-sdk/client-sts@3.592.0)
       '@aws-sdk/middleware-host-header': 3.577.0
@@ -7397,7 +7398,6 @@ snapshots:
       '@smithy/util-utf8': 3.0.0
       tslib: 2.8.1
     transitivePeerDependencies:
-      - '@aws-sdk/client-sso-oidc'
       - aws-crt
 
   '@aws-sdk/client-sts@3.709.0':
@@ -7521,7 +7521,7 @@ snapshots:
 
   '@aws-sdk/credential-provider-ini@3.592.0(@aws-sdk/client-sso-oidc@3.592.0)(@aws-sdk/client-sts@3.592.0)':
     dependencies:
-      '@aws-sdk/client-sts': 3.592.0(@aws-sdk/client-sso-oidc@3.592.0)
+      '@aws-sdk/client-sts': 3.592.0
       '@aws-sdk/credential-provider-env': 3.587.0
       '@aws-sdk/credential-provider-http': 3.587.0
       '@aws-sdk/credential-provider-process': 3.587.0
@@ -7640,7 +7640,7 @@ snapshots:
 
   '@aws-sdk/credential-provider-web-identity@3.587.0(@aws-sdk/client-sts@3.592.0)':
     dependencies:
-      '@aws-sdk/client-sts': 3.592.0(@aws-sdk/client-sso-oidc@3.592.0)
+      '@aws-sdk/client-sts': 3.592.0
       '@aws-sdk/types': 3.577.0
       '@smithy/property-provider': 3.1.11
       '@smithy/types': 3.7.2
@@ -7846,7 +7846,7 @@ snapshots:
 
   '@aws-sdk/token-providers@3.587.0(@aws-sdk/client-sso-oidc@3.592.0)':
     dependencies:
-      '@aws-sdk/client-sso-oidc': 3.592.0
+      '@aws-sdk/client-sso-oidc': 3.592.0(@aws-sdk/client-sts@3.592.0)
       '@aws-sdk/types': 3.577.0
       '@smithy/property-provider': 3.1.11
       '@smithy/shared-ini-file-loader': 3.1.12
@@ -9218,6 +9218,12 @@ snapshots:
       - bluebird
       - supports-color
 
+  '@nrwl/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))':
+    dependencies:
+      '@nx/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
+    transitivePeerDependencies:
+      - nx
+
   '@nrwl/devkit@19.2.3(nx@20.2.2(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))':
     dependencies:
       '@nx/devkit': 19.2.3(nx@20.2.2(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
@@ -9281,7 +9287,7 @@ snapshots:
 
   '@nx/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@20.2.2(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.2
@@ -11312,7 +11318,7 @@ snapshots:
 
   depd@2.0.0: {}
 
-  dependency-cruiser@16.7.0:
+  dependency-cruiser@16.8.0:
     dependencies:
       acorn: 8.14.0
       acorn-jsx: 5.3.2(acorn@8.14.0)
@@ -11335,7 +11341,7 @@ snapshots:
       semver: 7.6.3
       teamcity-service-messages: 0.1.14
       tsconfig-paths-webpack-plugin: 4.2.0
-      watskeburt: 4.1.1
+      watskeburt: 4.2.2
 
   deprecation@2.3.1: {}
 
@@ -14644,7 +14650,7 @@ snapshots:
 
   walk-up-path@3.0.1: {}
 
-  watskeburt@4.1.1: {}
+  watskeburt@4.2.2: {}
 
   wcwidth@1.0.1:
     dependencies:
