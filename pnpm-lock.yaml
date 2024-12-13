@@ -310,8 +310,8 @@ importers:
         specifier: ^0.32.0
         version: 0.32.0(@serverless/typescript@3.38.0)(ajv@8.17.1)(aws-cdk-lib@2.173.0(constructs@10.4.2))(axios@1.7.9)
       '@swarmion/serverless-helpers':
-        specifier: ^0.32.0
-        version: 0.32.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.173.0(constructs@10.4.2))
+        specifier: ^0.33.0
+        version: 0.33.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.173.0(constructs@10.4.2))
       '@types/aws-lambda':
         specifier: ^8.10.131
         version: 8.10.146
@@ -374,8 +374,8 @@ importers:
         version: link:../../packages/construct
     devDependencies:
       '@swarmion/serverless-helpers':
-        specifier: ^0.32.0
-        version: 0.32.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.173.0(constructs@10.4.2))
+        specifier: ^0.33.0
+        version: 0.33.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.173.0(constructs@10.4.2))
       '@swc-node/register':
         specifier: 1.10.9
         version: 1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2)
@@ -2630,6 +2630,12 @@ packages:
     resolution: {integrity: sha512-iXzEASnMtXzO1Ab2WhfzKj9CVKY9mQXKoTFhhyd/X3GD8qvIFqahgwV8E3K6bOM0DYFJIX6E39KVtVZ8VylaIg==}
     peerDependencies:
       '@serverless/typescript': '>=3'
+      aws-cdk-lib: ^2.60.0
+
+  '@swarmion/serverless-helpers@0.33.0':
+    resolution: {integrity: sha512-auutWY6VKV8c4hOtEjYGldS2lfnHrh/PEX7LXq0E1lxuUjIToHByYXRJyfxEs8yn482JsPqJSnMKhLX5lhjdpA==}
+    peerDependencies:
+      '@serverless/typescript': ^3.0.0
       aws-cdk-lib: ^2.60.0
 
   '@swc-node/core@1.13.3':
@@ -10291,6 +10297,12 @@ snapshots:
       - aws-crt
 
   '@swarmion/serverless-helpers@0.32.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.173.0(constructs@10.4.2))':
+    dependencies:
+      '@serverless/typescript': 3.38.0
+      aws-cdk-lib: 2.173.0(constructs@10.4.2)
+      json-schema-to-ts: 3.1.1
+
+  '@swarmion/serverless-helpers@0.33.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.173.0(constructs@10.4.2))':
     dependencies:
       '@serverless/typescript': 3.38.0
       aws-cdk-lib: 2.173.0(constructs@10.4.2)
