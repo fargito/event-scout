@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.0.0
-        version: 19.6.1(@types/node@22.10.2)(typescript@5.7.2)
+        version: 19.6.1(@types/node@22.10.3)(typescript@5.7.2)
       '@commitlint/config-conventional':
         specifier: ^19.0.0
         version: 19.6.0
@@ -19,7 +19,7 @@ importers:
         version: 19.8.4(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)
       '@swarmion/nx-plugin':
         specifier: ^0.33.0
-        version: 0.33.0(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.2)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))(typescript@5.7.2)
+        version: 0.33.0(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.3)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))(typescript@5.7.2)
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.0.0
         version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)
@@ -83,10 +83,10 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.11.4
-        version: 20.17.10
+        version: 20.17.11
       '@vitest/coverage-v8':
         specifier: ^2.0.0
-        version: 2.1.6(vitest@2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))
+        version: 2.1.6(vitest@2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))
       concurrently:
         specifier: ^9.0.0
         version: 9.1.2
@@ -110,13 +110,13 @@ importers:
         version: 5.7.2
       vite:
         specifier: ^6.0.0
-        version: 6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+        version: 6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
       vite-tsconfig-paths:
         specifier: ^5.0.0
-        version: 5.1.4(typescript@5.7.2)(vite@6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))
+        version: 5.1.4(typescript@5.7.2)(vite@6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))
       vitest:
         specifier: ^2.0.0
-        version: 2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+        version: 2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
 
   packages/client:
     dependencies:
@@ -141,10 +141,10 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.11.4
-        version: 20.17.10
+        version: 20.17.11
       '@vitest/coverage-v8':
         specifier: ^2.0.0
-        version: 2.1.6(vitest@2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))
+        version: 2.1.6(vitest@2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))
       concurrently:
         specifier: ^9.0.0
         version: 9.1.2
@@ -168,13 +168,13 @@ importers:
         version: 5.7.2
       vite:
         specifier: ^6.0.0
-        version: 6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+        version: 6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
       vite-tsconfig-paths:
         specifier: ^5.0.0
-        version: 5.1.4(typescript@5.7.2)(vite@6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))
+        version: 5.1.4(typescript@5.7.2)(vite@6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))
       vitest:
         specifier: ^2.0.0
-        version: 2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+        version: 2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
 
   packages/construct:
     dependencies:
@@ -190,10 +190,10 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.11.4
-        version: 20.17.10
+        version: 20.17.11
       '@vitest/coverage-v8':
         specifier: ^2.0.0
-        version: 2.1.6(vitest@2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))
+        version: 2.1.6(vitest@2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))
       dependency-cruiser:
         specifier: ^16.0.0
         version: 16.8.0
@@ -214,13 +214,13 @@ importers:
         version: 5.7.2
       vite:
         specifier: ^6.0.0
-        version: 6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+        version: 6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
       vite-tsconfig-paths:
         specifier: ^5.0.0
-        version: 5.1.4(typescript@5.7.2)(vite@6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))
+        version: 5.1.4(typescript@5.7.2)(vite@6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))
       vitest:
         specifier: ^2.0.0
-        version: 2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+        version: 2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
 
   packages/event-scout:
     dependencies:
@@ -251,7 +251,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.11.4
-        version: 20.17.10
+        version: 20.17.11
       '@types/ws':
         specifier: ^8.5.10
         version: 8.5.13
@@ -260,7 +260,7 @@ importers:
         version: 0.38.3
       '@vitest/coverage-v8':
         specifier: ^2.0.0
-        version: 2.1.6(vitest@2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))
+        version: 2.1.6(vitest@2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))
       concurrently:
         specifier: ^9.0.0
         version: 9.1.2
@@ -281,13 +281,13 @@ importers:
         version: 5.7.2
       vite:
         specifier: ^6.0.0
-        version: 6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+        version: 6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
       vite-tsconfig-paths:
         specifier: ^5.0.0
-        version: 5.1.4(typescript@5.7.2)(vite@6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))
+        version: 5.1.4(typescript@5.7.2)(vite@6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))
       vitest:
         specifier: ^2.0.0
-        version: 2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+        version: 2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
 
   packages/lambda-assets:
     devDependencies:
@@ -317,10 +317,10 @@ importers:
         version: 8.10.146
       '@types/node':
         specifier: ^20.12.11
-        version: 20.17.10
+        version: 20.17.11
       '@vitest/coverage-v8':
         specifier: ^2.0.0
-        version: 2.1.6(vitest@2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))
+        version: 2.1.6(vitest@2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))
       ajv:
         specifier: ^8.12.0
         version: 8.17.1
@@ -344,10 +344,10 @@ importers:
         version: 5.7.2
       vite-tsconfig-paths:
         specifier: ^5.0.0
-        version: 5.1.4(typescript@5.7.2)(vite@6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))
+        version: 5.1.4(typescript@5.7.2)(vite@6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))
       vitest:
         specifier: ^2.0.0
-        version: 2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+        version: 2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
 
   services/validation:
     dependencies:
@@ -384,10 +384,10 @@ importers:
         version: 0.1.17
       '@types/node':
         specifier: ^20.11.4
-        version: 20.17.10
+        version: 20.17.11
       '@vitest/coverage-v8':
         specifier: ^2.0.0
-        version: 2.1.6(vitest@2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))
+        version: 2.1.6(vitest@2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))
       aws-cdk:
         specifier: ^2.121.1
         version: 2.173.4
@@ -414,13 +414,13 @@ importers:
         version: 5.7.2
       vite:
         specifier: ^6.0.0
-        version: 6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+        version: 6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
       vite-tsconfig-paths:
         specifier: ^5.0.0
-        version: 5.1.4(typescript@5.7.2)(vite@6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))
+        version: 5.1.4(typescript@5.7.2)(vite@6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))
       vitest:
         specifier: ^2.0.0
-        version: 2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+        version: 2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
 
 packages:
 
@@ -2960,11 +2960,11 @@ packages:
   '@types/minimist@1.2.5':
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
 
-  '@types/node@20.17.10':
-    resolution: {integrity: sha512-/jrvh5h6NXhEauFFexRin69nA0uHJ5gwk4iDivp/DeoEua3uwCUto6PC86IpRITBOs4+6i2I56K5x5b6WYGXHA==}
+  '@types/node@20.17.11':
+    resolution: {integrity: sha512-Ept5glCK35R8yeyIeYlRIZtX6SLRyqMhOFTgj5SOkMpLTdw3SEHI9fHx60xaUZ+V1aJxQJODE+7/j5ocZydYTg==}
 
-  '@types/node@22.10.2':
-    resolution: {integrity: sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==}
+  '@types/node@22.10.3':
+    resolution: {integrity: sha512-DifAyw4BkrufCILvD3ucnuN8eydUfc/C1GlyrnI+LK6543w5/L3VeVgf05o3B4fqSXP1dKYLOZsKfutpxPzZrw==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -9209,11 +9209,11 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@commitlint/cli@19.6.1(@types/node@22.10.2)(typescript@5.7.2)':
+  '@commitlint/cli@19.6.1(@types/node@22.10.3)(typescript@5.7.2)':
     dependencies:
       '@commitlint/format': 19.5.0
       '@commitlint/lint': 19.6.0
-      '@commitlint/load': 19.6.1(@types/node@22.10.2)(typescript@5.7.2)
+      '@commitlint/load': 19.6.1(@types/node@22.10.3)(typescript@5.7.2)
       '@commitlint/read': 19.5.0
       '@commitlint/types': 19.5.0
       tinyexec: 0.3.1
@@ -9260,7 +9260,7 @@ snapshots:
       '@commitlint/rules': 19.6.0
       '@commitlint/types': 19.5.0
 
-  '@commitlint/load@19.6.1(@types/node@22.10.2)(typescript@5.7.2)':
+  '@commitlint/load@19.6.1(@types/node@22.10.3)(typescript@5.7.2)':
     dependencies:
       '@commitlint/config-validator': 19.5.0
       '@commitlint/execute-rule': 19.5.0
@@ -9268,7 +9268,7 @@ snapshots:
       '@commitlint/types': 19.5.0
       chalk: 5.4.1
       cosmiconfig: 9.0.0(typescript@5.7.2)
-      cosmiconfig-typescript-loader: 6.1.0(@types/node@22.10.2)(cosmiconfig@9.0.0(typescript@5.7.2))(typescript@5.7.2)
+      cosmiconfig-typescript-loader: 6.1.0(@types/node@22.10.3)(cosmiconfig@9.0.0(typescript@5.7.2))(typescript@5.7.2)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -9832,9 +9832,9 @@ snapshots:
     transitivePeerDependencies:
       - nx
 
-  '@nrwl/js@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.2)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))(typescript@5.4.5)':
+  '@nrwl/js@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.3)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))(typescript@5.4.5)':
     dependencies:
-      '@nx/js': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.2)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))(typescript@5.4.5)
+      '@nx/js': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.3)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))(typescript@5.4.5)
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -9932,11 +9932,11 @@ snapshots:
       tslib: 2.8.1
       yargs-parser: 21.1.1
 
-  '@nx/eslint@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.2)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))':
+  '@nx/eslint@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.3)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))':
     dependencies:
       '@nx/devkit': 19.2.3(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
-      '@nx/js': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.2)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))(typescript@5.4.5)
-      '@nx/linter': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.2)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
+      '@nx/js': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.3)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))(typescript@5.4.5)
+      '@nx/linter': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.3)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
       eslint: 8.57.1
       semver: 7.6.3
       tslib: 2.8.1
@@ -9954,7 +9954,7 @@ snapshots:
       - supports-color
       - verdaccio
 
-  '@nx/js@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.2)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))(typescript@5.4.5)':
+  '@nx/js@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.3)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))(typescript@5.4.5)':
     dependencies:
       '@babel/core': 7.24.0
       '@babel/plugin-proposal-decorators': 7.24.0(@babel/core@7.24.0)
@@ -9963,7 +9963,7 @@ snapshots:
       '@babel/preset-env': 7.24.0(@babel/core@7.24.0)
       '@babel/preset-typescript': 7.23.3(@babel/core@7.24.0)
       '@babel/runtime': 7.25.6
-      '@nrwl/js': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.2)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))(typescript@5.4.5)
+      '@nrwl/js': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.3)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))(typescript@5.4.5)
       '@nx/devkit': 19.2.3(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
       '@nx/workspace': 19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)
       babel-plugin-const-enum: 1.2.0(@babel/core@7.24.0)
@@ -9982,7 +9982,7 @@ snapshots:
       ora: 5.3.0
       semver: 7.6.3
       source-map-support: 0.5.19
-      ts-node: 10.9.1(@swc/core@1.4.14)(@types/node@22.10.2)(typescript@5.4.5)
+      ts-node: 10.9.1(@swc/core@1.4.14)(@types/node@22.10.3)(typescript@5.4.5)
       tsconfig-paths: 4.2.0
       tslib: 2.8.1
     transitivePeerDependencies:
@@ -9996,9 +9996,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@nx/linter@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.2)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))':
+  '@nx/linter@19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.3)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nx/eslint': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.2)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
+      '@nx/eslint': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.3)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -10748,10 +10748,10 @@ snapshots:
       '@smithy/types': 3.7.2
       tslib: 2.8.1
 
-  '@swarmion/nx-plugin@0.33.0(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.2)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))(typescript@5.7.2)':
+  '@swarmion/nx-plugin@0.33.0(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.3)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))(typescript@5.7.2)':
     dependencies:
       '@nx/devkit': 20.0.6(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
-      '@nx/linter': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.2)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
+      '@nx/linter': 19.2.3(@babel/traverse@7.24.0)(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14)(@types/node@22.10.3)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.3.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.2))(@swc/core@1.4.14))
       typescript: 5.7.2
       yaml: 2.6.1
     transitivePeerDependencies:
@@ -10898,7 +10898,7 @@ snapshots:
 
   '@types/conventional-commits-parser@5.0.1':
     dependencies:
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
 
   '@types/estree@1.0.6': {}
 
@@ -10910,11 +10910,11 @@ snapshots:
 
   '@types/minimist@1.2.5': {}
 
-  '@types/node@20.17.10':
+  '@types/node@20.17.11':
     dependencies:
       undici-types: 6.19.8
 
-  '@types/node@22.10.2':
+  '@types/node@22.10.3':
     dependencies:
       undici-types: 6.20.0
 
@@ -10926,7 +10926,7 @@ snapshots:
 
   '@types/ws@8.5.13':
     dependencies:
-      '@types/node': 20.17.10
+      '@types/node': 20.17.11
 
   '@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)(typescript@5.7.2)':
     dependencies:
@@ -11013,7 +11013,7 @@ snapshots:
 
   '@vercel/ncc@0.38.3': {}
 
-  '@vitest/coverage-v8@2.1.6(vitest@2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))':
+  '@vitest/coverage-v8@2.1.6(vitest@2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -11027,7 +11027,7 @@ snapshots:
       std-env: 3.8.0
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+      vitest: 2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -11038,13 +11038,13 @@ snapshots:
       chai: 5.1.2
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.6(vite@6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))':
+  '@vitest/mocker@2.1.6(vite@6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))':
     dependencies:
       '@vitest/spy': 2.1.6
       estree-walker: 3.0.3
       magic-string: 0.30.14
     optionalDependencies:
-      vite: 6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+      vite: 6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
 
   '@vitest/pretty-format@2.1.6':
     dependencies:
@@ -11701,9 +11701,9 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cosmiconfig-typescript-loader@6.1.0(@types/node@22.10.2)(cosmiconfig@9.0.0(typescript@5.7.2))(typescript@5.7.2):
+  cosmiconfig-typescript-loader@6.1.0(@types/node@22.10.3)(cosmiconfig@9.0.0(typescript@5.7.2))(typescript@5.7.2):
     dependencies:
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
       cosmiconfig: 9.0.0(typescript@5.7.2)
       jiti: 2.4.1
       typescript: 5.7.2
@@ -14884,14 +14884,14 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  ts-node@10.9.1(@swc/core@1.4.14)(@types/node@22.10.2)(typescript@5.4.5):
+  ts-node@10.9.1(@swc/core@1.4.14)(@types/node@22.10.3)(typescript@5.4.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
       acorn: 8.14.0
       acorn-walk: 8.3.4
       arg: 4.1.3
@@ -15106,13 +15106,13 @@ snapshots:
 
   validate-npm-package-name@5.0.1: {}
 
-  vite-node@2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1):
+  vite-node@2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1):
     dependencies:
       cac: 6.7.14
       debug: 4.3.7
       es-module-lexer: 1.5.4
       pathe: 1.1.2
-      vite: 6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+      vite: 6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -15127,32 +15127,32 @@ snapshots:
       - tsx
       - yaml
 
-  vite-tsconfig-paths@5.1.4(typescript@5.7.2)(vite@6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)):
+  vite-tsconfig-paths@5.1.4(typescript@5.7.2)(vite@6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)):
     dependencies:
       debug: 4.4.0
       globrex: 0.1.2
       tsconfck: 3.1.4(typescript@5.7.2)
     optionalDependencies:
-      vite: 6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+      vite: 6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1):
+  vite@6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.4.49
       rollup: 4.29.1
     optionalDependencies:
-      '@types/node': 20.17.10
+      '@types/node': 20.17.11
       fsevents: 2.3.3
       jiti: 2.4.1
       yaml: 2.6.1
 
-  vitest@2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1):
+  vitest@2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1):
     dependencies:
       '@vitest/expect': 2.1.6
-      '@vitest/mocker': 2.1.6(vite@6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1))
+      '@vitest/mocker': 2.1.6(vite@6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1))
       '@vitest/pretty-format': 2.1.6
       '@vitest/runner': 2.1.6
       '@vitest/snapshot': 2.1.6
@@ -15168,11 +15168,11 @@ snapshots:
       tinyexec: 0.3.1
       tinypool: 1.0.2
       tinyrainbow: 1.2.0
-      vite: 6.0.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
-      vite-node: 2.1.6(@types/node@20.17.10)(jiti@2.4.1)(yaml@2.6.1)
+      vite: 6.0.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
+      vite-node: 2.1.6(@types/node@20.17.11)(jiti@2.4.1)(yaml@2.6.1)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 20.17.10
+      '@types/node': 20.17.11
     transitivePeerDependencies:
       - jiti
       - less
