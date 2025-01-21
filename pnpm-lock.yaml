@@ -244,7 +244,7 @@ importers:
         version: 8.17.1
       commander:
         specifier: ^13.0.0
-        version: 13.0.0
+        version: 13.1.0
       ws:
         specifier: ^8.16.0
         version: 8.18.0
@@ -3703,6 +3703,10 @@ packages:
 
   commander@13.0.0:
     resolution: {integrity: sha512-oPYleIY8wmTVzkvQq10AEok6YcTC4sRUBl8F9gVuwchGVUCTbl/vhLTaQqutuuySYOsu8YTgV+OxKc/8Yvx+mQ==}
+    engines: {node: '>=18'}
+
+  commander@13.1.0:
+    resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
     engines: {node: '>=18'}
 
   commander@4.1.1:
@@ -9929,12 +9933,6 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@nrwl/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.4.14))':
-    dependencies:
-      '@nx/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.4.14))
-    transitivePeerDependencies:
-      - nx
-
   '@nrwl/devkit@19.2.3(nx@20.3.2(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.4.14))':
     dependencies:
       '@nx/devkit': 19.2.3(nx@20.3.2(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.4.14))
@@ -9998,7 +9996,7 @@ snapshots:
 
   '@nx/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@20.3.2(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.17)(typescript@5.7.3))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.2
@@ -11937,6 +11935,8 @@ snapshots:
   commander@12.1.0: {}
 
   commander@13.0.0: {}
+
+  commander@13.1.0: {}
 
   commander@4.1.1: {}
 
