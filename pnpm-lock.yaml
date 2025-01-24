@@ -359,7 +359,7 @@ importers:
         version: 3.734.0
       '@aws-sdk/client-ssm':
         specifier: ^3.490.0
-        version: 3.734.0
+        version: 3.735.0
       '@aws-sdk/credential-providers':
         specifier: ^3.490.0
         version: 3.734.0
@@ -502,8 +502,8 @@ packages:
     resolution: {integrity: sha512-yJRXrE6qFogrguETGbc/ReakM/EFEHUmlJ3rzYg7KH8jPtQg+n1a0HXjKxX2m8QReZHvCdOQLdAK2rDLpkl8IA==}
     engines: {node: '>=16.0.0'}
 
-  '@aws-sdk/client-ssm@3.734.0':
-    resolution: {integrity: sha512-7zfhBy3Y2jgXzsKT8zq9O3Sh+7fMf+4lPSPbIIYOaLmUk3JRJYsbSkqDGiHfVdSPsb0YZoGLTwzYu/rTkG4M+A==}
+  '@aws-sdk/client-ssm@3.735.0':
+    resolution: {integrity: sha512-2c8WioubGgXKN4mIpc+VGLfBLXZpGvLjo2AkDAAj6KZ6SieYuNXH+xbPpLA4Spm47diZRP3diyuAZcl7d1/isQ==}
     engines: {node: '>=18.0.0'}
 
   '@aws-sdk/client-sso-oidc@3.592.0':
@@ -7492,7 +7492,7 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/client-ssm@3.734.0':
+  '@aws-sdk/client-ssm@3.735.0':
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
@@ -10630,7 +10630,7 @@ snapshots:
 
   '@smithy/is-array-buffer@2.2.0':
     dependencies:
-      tslib: 2.8.1
+      tslib: 2.6.2
 
   '@smithy/is-array-buffer@3.0.0':
     dependencies:
@@ -10925,7 +10925,7 @@ snapshots:
   '@smithy/util-buffer-from@2.2.0':
     dependencies:
       '@smithy/is-array-buffer': 2.2.0
-      tslib: 2.8.1
+      tslib: 2.6.2
 
   '@smithy/util-buffer-from@3.0.0':
     dependencies:
@@ -11056,7 +11056,7 @@ snapshots:
   '@smithy/util-utf8@2.3.0':
     dependencies:
       '@smithy/util-buffer-from': 2.2.0
-      tslib: 2.8.1
+      tslib: 2.6.2
 
   '@smithy/util-utf8@3.0.0':
     dependencies:
