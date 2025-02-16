@@ -31,7 +31,7 @@ importers:
         version: 13.12.1(magicast@0.3.5)
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.9.0
+        version: 16.10.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -92,7 +92,7 @@ importers:
         version: 9.1.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.9.0
+        version: 16.10.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -150,7 +150,7 @@ importers:
         version: 9.1.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.9.0
+        version: 16.10.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -196,7 +196,7 @@ importers:
         version: 3.0.5(vitest@3.0.5(@types/node@20.17.19)(jiti@2.4.2)(yaml@2.7.0))
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.9.0
+        version: 16.10.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -266,7 +266,7 @@ importers:
         version: 9.1.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.9.0
+        version: 16.10.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -329,7 +329,7 @@ importers:
         version: 9.1.2
       dependency-cruiser:
         specifier: ^16.3.2
-        version: 16.9.0
+        version: 16.10.0
       esbuild:
         specifier: ^0.25.0
         version: 0.25.0
@@ -399,7 +399,7 @@ importers:
         version: 10.4.2
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.9.0
+        version: 16.10.0
       esbuild:
         specifier: ^0.25.0
         version: 0.25.0
@@ -3696,10 +3696,6 @@ packages:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
 
-  commander@13.0.0:
-    resolution: {integrity: sha512-oPYleIY8wmTVzkvQq10AEok6YcTC4sRUBl8F9gVuwchGVUCTbl/vhLTaQqutuuySYOsu8YTgV+OxKc/8Yvx+mQ==}
-    engines: {node: '>=18'}
-
   commander@13.1.0:
     resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
     engines: {node: '>=18'}
@@ -3952,8 +3948,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dependency-cruiser@16.9.0:
-    resolution: {integrity: sha512-Gc/xHNOBq1nk5i7FPCuexCD0m2OXB/WEfiSHfNYQaQaHZiZltnl5Ixp/ZG38Jvi8aEhKBQTHV4Aw6gmR7rWlOw==}
+  dependency-cruiser@16.10.0:
+    resolution: {integrity: sha512-o6pEB8X/XS0AjpQBhPJW3pSY7HIviRM7+G601T9ruV63NVJC4DxLMA+a1VzZlKOzO2fO6JKRHjRmGjzZZHEFYA==}
     engines: {node: ^18.17||>=20}
     hasBin: true
 
@@ -4042,10 +4038,6 @@ packages:
 
   end-of-stream@1.4.4:
     resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
-
-  enhanced-resolve@5.18.0:
-    resolution: {integrity: sha512-0/r0MySGYG8YqlayBZ6MuCfECmHFdJ5qyPh8s8wa5Hnm6SaFLSK1VYCbj+NKp090Nm1caZhD+QTnmxO7esYGyQ==}
-    engines: {node: '>=10.13.0'}
 
   enhanced-resolve@5.18.1:
     resolution: {integrity: sha512-ZSW3ma5GkcQBIpwZTSRAI8N71Uuwgs93IezB7mf7R60tC8ZbJideoDNKjHn2O9KIlx6rkGTTEk1xUCK2E1Y2Yg==}
@@ -4684,8 +4676,8 @@ packages:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
 
-  ignore@7.0.0:
-    resolution: {integrity: sha512-lcX8PNQygAa22u/0BysEY8VhaFRzlOkvdlKczDPnJvrkJD1EuqzEky5VYYKM2iySIuaVIDv9N190DfSreSLw2A==}
+  ignore@7.0.3:
+    resolution: {integrity: sha512-bAH5jbK/F3T3Jls4I0SO1hmPR0dKU0a7+SY6n1yzRtG54FLO8d6w/nxLFX2Nb7dBu6cCWXPaAME6cYqFUMmuCA==}
     engines: {node: '>= 4'}
 
   import-fresh@3.3.0:
@@ -6936,8 +6928,8 @@ packages:
   walk-up-path@3.0.1:
     resolution: {integrity: sha512-9YlCL/ynK3CTlrSRrDxZvUauLzAswPCrsaCgilqFevUYpeEW0/3ScEjaa3kbW/T0ghhkEr7mv+fpjqn1Y1YuTA==}
 
-  watskeburt@4.2.2:
-    resolution: {integrity: sha512-AOCg1UYxWpiHW1tUwqpJau8vzarZYTtzl2uu99UptBmbzx6kOzCGMfRLF6KIRX4PYekmryn89MzxlRNkL66YyA==}
+  watskeburt@4.2.3:
+    resolution: {integrity: sha512-uG9qtQYoHqAsnT711nG5iZc/8M5inSmkGCOp7pFaytKG2aTfIca7p//CjiVzAE4P7hzaYuCozMjNNaLgmhbK5g==}
     engines: {node: ^18||>=20}
     hasBin: true
 
@@ -11919,8 +11911,6 @@ snapshots:
     dependencies:
       delayed-stream: 1.0.0
 
-  commander@13.0.0: {}
-
   commander@13.1.0: {}
 
   commander@4.1.1: {}
@@ -12148,7 +12138,7 @@ snapshots:
 
   depd@2.0.0: {}
 
-  dependency-cruiser@16.9.0:
+  dependency-cruiser@16.10.0:
     dependencies:
       acorn: 8.14.0
       acorn-jsx: 5.3.2(acorn@8.14.0)
@@ -12156,9 +12146,9 @@ snapshots:
       acorn-loose: 8.4.0
       acorn-walk: 8.3.4
       ajv: 8.17.1
-      commander: 13.0.0
-      enhanced-resolve: 5.18.0
-      ignore: 7.0.0
+      commander: 13.1.0
+      enhanced-resolve: 5.18.1
+      ignore: 7.0.3
       interpret: 3.1.1
       is-installed-globally: 1.0.0
       json5: 2.2.3
@@ -12168,10 +12158,10 @@ snapshots:
       prompts: 2.4.2
       rechoir: 0.8.0
       safe-regex: 2.1.1
-      semver: 7.6.3
+      semver: 7.7.1
       teamcity-service-messages: 0.1.14
       tsconfig-paths-webpack-plugin: 4.2.0
-      watskeburt: 4.2.2
+      watskeburt: 4.2.3
 
   deprecation@2.3.1: {}
 
@@ -12244,11 +12234,6 @@ snapshots:
   end-of-stream@1.4.4:
     dependencies:
       once: 1.4.0
-
-  enhanced-resolve@5.18.0:
-    dependencies:
-      graceful-fs: 4.2.11
-      tapable: 2.2.1
 
   enhanced-resolve@5.18.1:
     dependencies:
@@ -13046,7 +13031,7 @@ snapshots:
 
   ignore@5.3.2: {}
 
-  ignore@7.0.0: {}
+  ignore@7.0.3: {}
 
   import-fresh@3.3.0:
     dependencies:
@@ -15256,7 +15241,7 @@ snapshots:
   tsconfig-paths-webpack-plugin@4.2.0:
     dependencies:
       chalk: 4.1.2
-      enhanced-resolve: 5.18.0
+      enhanced-resolve: 5.18.1
       tapable: 2.2.1
       tsconfig-paths: 4.2.0
 
@@ -15523,7 +15508,7 @@ snapshots:
 
   walk-up-path@3.0.1: {}
 
-  watskeburt@4.2.2: {}
+  watskeburt@4.2.3: {}
 
   wcwidth@1.0.1:
     dependencies:
