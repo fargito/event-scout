@@ -14,8 +14,13 @@
     "moduleResolution": "node",
     "strict": true,
     "target": "esnext",
-    "types": ["node", "vitest/globals"],
-    "lib": ["es2020"],
+    "types": [
+      "node",
+      "vitest/globals"
+    ],
+    "lib": [
+      "es2022"
+    ],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "sourceMap": true,

@@ -22,7 +22,7 @@ test('Resources are properly created', () => {
     // all functions should have json logging
     LoggingConfig: { LogFormat: 'JSON' },
     // all functions should have the same runtime
-    Runtime: 'nodejs20.x',
+    Runtime: 'nodejs22.x',
   });
 
   // we should only have one log group

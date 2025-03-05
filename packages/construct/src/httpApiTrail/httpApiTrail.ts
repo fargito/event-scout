@@ -131,7 +131,7 @@ export class HttpApiTrail extends Construct {
       // create the lambda
       const lambda = new LambdaFunction(this, lambdaName, {
         architecture: Architecture.ARM_64,
-        runtime: Runtime.NODEJS_20_X,
+        runtime: Runtime.NODEJS_22_X,
         code: Code.fromAsset(
           require.resolve(
             `@event-scout/lambda-assets/${lambdaConfig.codePath}`,

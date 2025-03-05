@@ -34,7 +34,7 @@ export class StoreEventsFunction extends Construct {
         require.resolve('@event-scout/lambda-assets/storeEvents'),
       ),
       handler: 'handler.main',
-      runtime: Runtime.NODEJS_20_X,
+      runtime: Runtime.NODEJS_22_X,
       architecture: Architecture.ARM_64,
       environment: {
         AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
