@@ -34,7 +34,7 @@ export class OnStartTrailFunction extends Construct {
         require.resolve('@event-scout/lambda-assets/onStartTrail'),
       ),
       handler: 'handler.main',
-      runtime: Runtime.NODEJS_20_X,
+      runtime: Runtime.NODEJS_22_X,
       architecture: Architecture.ARM_64,
       timeout: Duration.seconds(15),
       environment: {

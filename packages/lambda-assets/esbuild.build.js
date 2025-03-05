@@ -24,8 +24,8 @@ await esbuild.build({
   entryNames: '[name]/handler',
   keepNames: true,
   sourcemap: true,
-  external: ['@aws-sdk/*'], // since we are on node20, we should get these out-of the box from the runtime
-  target: 'node20',
+  external: ['@aws-sdk/*'], // since we are on node22, we should get these out-of the box from the runtime
+  target: 'node22',
   platform: 'node',
   /**
    * Sets the resolution order for esbuild.
