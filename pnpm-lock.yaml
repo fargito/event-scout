@@ -58,7 +58,7 @@ importers:
         version: 8.2.1(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.19)(typescript@5.8.2))(@swc/core@1.4.14)(encoding@0.1.13)
       lint-staged:
         specifier: ^15.2.0
-        version: 15.4.3
+        version: 15.5.0
       nx:
         specifier: ^20.0.0
         version: 20.5.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.19)(typescript@5.8.2))(@swc/core@1.4.14)
@@ -5175,8 +5175,8 @@ packages:
     resolution: {integrity: sha512-wM1+Z03eypVAVUCE7QdSqpVIvelbOakn1M0bPDoA4SGWPx3sNDVUiMo3L6To6WWGClB7VyXnhQ4Sn7gxiJbE6A==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  lint-staged@15.4.3:
-    resolution: {integrity: sha512-FoH1vOeouNh1pw+90S+cnuoFwRfUD9ijY2GKy5h7HS3OR7JVir2N2xrsa0+Twc1B7cW72L+88geG5cW4wIhn7g==}
+  lint-staged@15.5.0:
+    resolution: {integrity: sha512-WyCzSbfYGhK7cU+UuDDkzUiytbfbi0ZdPy2orwtM75P3WTtQBzmG40cCxIa8Ii2+XjfxzLH6Be46tUfWS85Xfg==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -9947,12 +9947,6 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@nrwl/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.19)(typescript@5.8.2))(@swc/core@1.4.14))':
-    dependencies:
-      '@nx/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.19)(typescript@5.8.2))(@swc/core@1.4.14))
-    transitivePeerDependencies:
-      - nx
-
   '@nrwl/devkit@19.2.3(nx@20.5.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.19)(typescript@5.8.2))(@swc/core@1.4.14))':
     dependencies:
       '@nx/devkit': 19.2.3(nx@20.5.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.19)(typescript@5.8.2))(@swc/core@1.4.14))
@@ -10016,7 +10010,7 @@ snapshots:
 
   '@nx/devkit@19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.19)(typescript@5.8.2))(@swc/core@1.4.14))':
     dependencies:
-      '@nrwl/devkit': 19.2.3(nx@19.2.3(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.19)(typescript@5.8.2))(@swc/core@1.4.14))
+      '@nrwl/devkit': 19.2.3(nx@20.5.0(@swc-node/register@1.10.9(@swc/core@1.4.14)(@swc/types@0.1.19)(typescript@5.8.2))(@swc/core@1.4.14))
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.2
@@ -13600,7 +13594,7 @@ snapshots:
 
   lines-and-columns@2.0.4: {}
 
-  lint-staged@15.4.3:
+  lint-staged@15.5.0:
     dependencies:
       chalk: 5.4.1
       commander: 13.1.0
