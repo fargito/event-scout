@@ -229,7 +229,7 @@ importers:
         version: 5.2.0
       '@aws-sdk/credential-providers':
         specifier: ^3.490.0
-        version: 3.777.0
+        version: 3.778.0
       '@aws-sdk/types':
         specifier: ^3.489.0
         version: 3.775.0
@@ -302,7 +302,7 @@ importers:
         version: 3.777.0
       '@aws-sdk/lib-dynamodb':
         specifier: ^3.564.0
-        version: 3.777.0(@aws-sdk/client-dynamodb@3.777.0)
+        version: 3.778.0(@aws-sdk/client-dynamodb@3.777.0)
       '@event-scout/construct-contracts':
         specifier: workspace:^0.8.0
         version: link:../../contracts/construct-contracts
@@ -362,7 +362,7 @@ importers:
         version: 3.777.0
       '@aws-sdk/credential-providers':
         specifier: ^3.490.0
-        version: 3.777.0
+        version: 3.778.0
       '@aws-sdk/types':
         specifier: ^3.489.0
         version: 3.775.0
@@ -639,16 +639,16 @@ packages:
     resolution: {integrity: sha512-uGCqr47fnthkqwq5luNl2dksgcpHHjSXz2jUra7TXtFOpqvnhOW8qXjoa1ivlkq8qhqlaZwCzPdbcN0lXpmLzQ==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/credential-providers@3.777.0':
-    resolution: {integrity: sha512-t1UyC1dUa4aph+kFixR0+5naKtDYZEtN2+PrDig4l1IvxJlD5rRRGodcVqi1duQjqfvhBwa7UPiHz5M4eRli7g==}
+  '@aws-sdk/credential-providers@3.778.0':
+    resolution: {integrity: sha512-Yy1RSBvoDp/iqGDpmgy5/YnSP2ac9NxTv3wdAjKlqVVStlKWU9nG8MPHZRfy01oPNJ5YWZL9stxHjNKC9hg9eg==}
     engines: {node: '>=18.0.0'}
 
   '@aws-sdk/endpoint-cache@3.723.0':
     resolution: {integrity: sha512-2+a4WXRc+07uiPR+zJiPGKSOWaNJQNqitkks+6Hhm/haTLJqNVTgY2OWDh2PXvwMNpKB+AlGdhE65Oy6NzUgXg==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/lib-dynamodb@3.777.0':
-    resolution: {integrity: sha512-4MWCtzHWYlW1ebN/R+3KXt7raVA9zUfhch5yotV+pgWlylsd6uMXS/c/Un1dpK+yu8lEtcZ2uPj7ctMgFBVKgA==}
+  '@aws-sdk/lib-dynamodb@3.778.0':
+    resolution: {integrity: sha512-zyFo58UldyLOhVdnhvx4u4YkprIcrpMAYX3cI14JIH5KcwebreGrUA4lzko2sn7r/uqEArqFJWgGO3AJLBUW8w==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       '@aws-sdk/client-dynamodb': ^3.777.0
@@ -8249,7 +8249,7 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/credential-providers@3.777.0':
+  '@aws-sdk/credential-providers@3.778.0':
     dependencies:
       '@aws-sdk/client-cognito-identity': 3.777.0
       '@aws-sdk/core': 3.775.0
@@ -8263,8 +8263,10 @@ snapshots:
       '@aws-sdk/credential-provider-web-identity': 3.777.0
       '@aws-sdk/nested-clients': 3.777.0
       '@aws-sdk/types': 3.775.0
+      '@smithy/config-resolver': 4.1.0
       '@smithy/core': 3.2.0
       '@smithy/credential-provider-imds': 4.0.2
+      '@smithy/node-config-provider': 4.0.2
       '@smithy/property-provider': 4.0.2
       '@smithy/types': 4.2.0
       tslib: 2.8.1
@@ -8276,7 +8278,7 @@ snapshots:
       mnemonist: 0.38.3
       tslib: 2.8.1
 
-  '@aws-sdk/lib-dynamodb@3.777.0(@aws-sdk/client-dynamodb@3.777.0)':
+  '@aws-sdk/lib-dynamodb@3.778.0(@aws-sdk/client-dynamodb@3.777.0)':
     dependencies:
       '@aws-sdk/client-dynamodb': 3.777.0
       '@aws-sdk/core': 3.775.0
