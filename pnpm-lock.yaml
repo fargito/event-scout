@@ -31,7 +31,7 @@ importers:
         version: 13.13.0(magicast@0.3.5)
       dependency-cruiser:
         specifier: ^16.0.0
-        version: 16.10.0
+        version: 16.10.1
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -3353,6 +3353,11 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
+  acorn@8.14.1:
+    resolution: {integrity: sha512-OvQ/2pUDKmgfCg++xsTX1wGxfTaszcHVcTctW4UJB4hibJx2HXxxO5UmVgyjMa+ZDsiaf5wWLXYpRWMmBI0QHg==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
   add-stream@1.0.0:
     resolution: {integrity: sha512-qQLMr+8o0WC4FZGQTcJiKBVC59JylcPSrTtk6usvmIDFUOCKegapy1VHQwRbFMOFyb/inzUVqHs+eMYKDM1YeQ==}
 
@@ -4024,6 +4029,11 @@ packages:
 
   dependency-cruiser@16.10.0:
     resolution: {integrity: sha512-o6pEB8X/XS0AjpQBhPJW3pSY7HIviRM7+G601T9ruV63NVJC4DxLMA+a1VzZlKOzO2fO6JKRHjRmGjzZZHEFYA==}
+    engines: {node: ^18.17||>=20}
+    hasBin: true
+
+  dependency-cruiser@16.10.1:
+    resolution: {integrity: sha512-Uw8/emAfzD+Zcua6Hfg1wCnskJd2QSRGKw5tUWrCtA8PBSz+n/zfUYCTjFi9MwdiTA5oecN93FBvh9jJhTLs4A==}
     engines: {node: ^18.17||>=20}
     hasBin: true
 
@@ -5381,6 +5391,10 @@ packages:
 
   memoize@10.0.0:
     resolution: {integrity: sha512-H6cBLgsi6vMWOcCpvVCdFFnl3kerEXbrYh9q+lY6VXvQSmM6CkmV08VOwT+WE2tzIEqRPFfAq3fm4v/UIW6mSA==}
+    engines: {node: '>=18'}
+
+  memoize@10.1.0:
+    resolution: {integrity: sha512-MMbFhJzh4Jlg/poq1si90XRlTZRDHVqdlz2mPyGJ6kqMpyHUyVpDd5gpFAvVehW64+RA1eKE9Yt8aSLY7w2Kgg==}
     engines: {node: '>=18'}
 
   meow@12.1.1:
@@ -11563,15 +11577,21 @@ snapshots:
     dependencies:
       acorn: 8.14.0
 
+  acorn-jsx@5.3.2(acorn@8.14.1):
+    dependencies:
+      acorn: 8.14.1
+
   acorn-loose@8.4.0:
     dependencies:
-      acorn: 8.14.0
+      acorn: 8.14.1
 
   acorn-walk@8.3.4:
     dependencies:
-      acorn: 8.14.0
+      acorn: 8.14.1
 
   acorn@8.14.0: {}
+
+  acorn@8.14.1: {}
 
   add-stream@1.0.0: {}
 
@@ -12304,6 +12324,31 @@ snapshots:
       tsconfig-paths-webpack-plugin: 4.2.0
       watskeburt: 4.2.3
 
+  dependency-cruiser@16.10.1:
+    dependencies:
+      acorn: 8.14.1
+      acorn-jsx: 5.3.2(acorn@8.14.1)
+      acorn-jsx-walk: 2.0.0
+      acorn-loose: 8.4.0
+      acorn-walk: 8.3.4
+      ajv: 8.17.1
+      commander: 13.1.0
+      enhanced-resolve: 5.18.1
+      ignore: 7.0.3
+      interpret: 3.1.1
+      is-installed-globally: 1.0.0
+      json5: 2.2.3
+      memoize: 10.1.0
+      picocolors: 1.1.1
+      picomatch: 4.0.2
+      prompts: 2.4.2
+      rechoir: 0.8.0
+      safe-regex: 2.1.1
+      semver: 7.7.1
+      teamcity-service-messages: 0.1.14
+      tsconfig-paths-webpack-plugin: 4.2.0
+      watskeburt: 4.2.3
+
   deprecation@2.3.1: {}
 
   destr@2.0.3: {}
@@ -12673,8 +12718,8 @@ snapshots:
 
   espree@9.6.1:
     dependencies:
-      acorn: 8.14.0
-      acorn-jsx: 5.3.2(acorn@8.14.0)
+      acorn: 8.14.1
+      acorn-jsx: 5.3.2(acorn@8.14.1)
       eslint-visitor-keys: 3.4.3
 
   esprima@4.0.1: {}
@@ -13881,6 +13926,10 @@ snapshots:
     dependencies:
       mimic-function: 5.0.1
 
+  memoize@10.1.0:
+    dependencies:
+      mimic-function: 5.0.1
+
   meow@12.1.1: {}
 
   meow@8.1.2:
@@ -13995,7 +14044,7 @@ snapshots:
 
   mlly@1.7.4:
     dependencies:
-      acorn: 8.14.0
+      acorn: 8.14.1
       pathe: 2.0.3
       pkg-types: 1.3.1
       ufo: 1.5.4
@@ -15401,7 +15450,7 @@ snapshots:
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
       '@types/node': 22.13.14
-      acorn: 8.14.0
+      acorn: 8.14.1
       acorn-walk: 8.3.4
       arg: 4.1.3
       create-require: 1.1.1
