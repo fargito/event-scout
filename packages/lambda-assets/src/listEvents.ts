@@ -5,8 +5,8 @@ import Ajv from 'ajv';
 
 import { listEventsContract } from '@event-scout/construct-contracts';
 
-import { buildListAllTrailEvents } from './utils/listAllTrailEvents';
 import { version } from '../package.json';
+import { buildListAllTrailEvents } from './utils/listAllTrailEvents';
 
 const tableName = getEnvVariable('EVENT_SCOUT_TABLE_NAME');
 const dynamodbClient = new DynamoDBClient();

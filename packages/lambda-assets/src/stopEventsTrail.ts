@@ -7,8 +7,8 @@ import Ajv from 'ajv';
 
 import { stopEventsTrailContract } from '@event-scout/construct-contracts';
 
-import { buildDeleteEventBridgeRuleAndTarget } from './utils/deleteEventBridgeRuleAndTarget';
 import { version } from '../package.json';
+import { buildDeleteEventBridgeRuleAndTarget } from './utils/deleteEventBridgeRuleAndTarget';
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');

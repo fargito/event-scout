@@ -5,8 +5,8 @@ import { HttpStatusCodes } from '@swarmion/serverless-contracts';
 import { getEnvVariable } from '@swarmion/serverless-helpers';
 import type { APIGatewayProxyWebsocketHandlerV2 } from 'aws-lambda';
 
-import { buildDeleteEventBridgeRuleAndTarget } from './utils/deleteEventBridgeRuleAndTarget';
 import { version } from '../package.json';
+import { buildDeleteEventBridgeRuleAndTarget } from './utils/deleteEventBridgeRuleAndTarget';
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');
