@@ -11,8 +11,8 @@ import {
   startWebsocketEventTrailBodySchema,
 } from '@event-scout/construct-contracts';
 
-import { buildCreateEventBridgeRuleAndTarget } from './utils/createEventBridgeRuleAndTarget';
 import { version } from '../package.json';
+import { buildCreateEventBridgeRuleAndTarget } from './utils/createEventBridgeRuleAndTarget';
 
 const eventBridgeClient = new EventBridgeClient({});
 const eventBusName = getEnvVariable('EVENT_BUS_NAME');
