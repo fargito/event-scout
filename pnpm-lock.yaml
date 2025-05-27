@@ -310,8 +310,8 @@ importers:
         specifier: 0.34.0
         version: 0.34.0(@serverless/typescript@3.38.0)(ajv@8.17.1)(aws-cdk-lib@2.198.0(constructs@10.4.2))(axios@1.9.0)
       '@swarmion/serverless-helpers':
-        specifier: 0.34.0
-        version: 0.34.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.198.0(constructs@10.4.2))
+        specifier: 0.35.0
+        version: 0.35.0(@serverless/typescript@3.38.0)(@types/aws-lambda@8.10.149)(aws-cdk-lib@2.198.0(constructs@10.4.2))
       '@types/aws-lambda':
         specifier: 8.10.149
         version: 8.10.149
@@ -374,8 +374,8 @@ importers:
         version: link:../../packages/construct
     devDependencies:
       '@swarmion/serverless-helpers':
-        specifier: 0.34.0
-        version: 0.34.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.198.0(constructs@10.4.2))
+        specifier: 0.35.0
+        version: 0.35.0(@serverless/typescript@3.38.0)(@types/aws-lambda@8.10.149)(aws-cdk-lib@2.198.0(constructs@10.4.2))
       '@swc-node/register':
         specifier: 1.10.10
         version: 1.10.10(@swc/core@1.4.14)(@swc/types@0.1.21)(typescript@5.8.3)
@@ -2848,6 +2848,13 @@ packages:
     resolution: {integrity: sha512-X9Ei4hpxP5HkytzwaHuMQW0REy3HMLebq51wrOIbnEQgO/riMUqsveiNQ2iaRBikQ3L9obx4+NDa77t4eTXLNg==}
     peerDependencies:
       '@serverless/typescript': ^4.0.0
+      aws-cdk-lib: ^2.60.0
+
+  '@swarmion/serverless-helpers@0.35.0':
+    resolution: {integrity: sha512-d7VJ+ZuVo/7iWa65sB90ENDv/VGgdcp77vssJMs25mt+N8Q6jomRkciRaD/lV8ecs29MMIcl2Ekk11jRE73aag==}
+    peerDependencies:
+      '@serverless/typescript': ^4.0.0
+      '@types/aws-lambda': ^8.0.0
       aws-cdk-lib: ^2.60.0
 
   '@swc-node/core@1.13.3':
@@ -10817,6 +10824,13 @@ snapshots:
   '@swarmion/serverless-helpers@0.34.0(@serverless/typescript@3.38.0)(aws-cdk-lib@2.198.0(constructs@10.4.2))':
     dependencies:
       '@serverless/typescript': 3.38.0
+      aws-cdk-lib: 2.198.0(constructs@10.4.2)
+      json-schema-to-ts: 3.1.1
+
+  '@swarmion/serverless-helpers@0.35.0(@serverless/typescript@3.38.0)(@types/aws-lambda@8.10.149)(aws-cdk-lib@2.198.0(constructs@10.4.2))':
+    dependencies:
+      '@serverless/typescript': 3.38.0
+      '@types/aws-lambda': 8.10.149
       aws-cdk-lib: 2.198.0(constructs@10.4.2)
       json-schema-to-ts: 3.1.1
 
