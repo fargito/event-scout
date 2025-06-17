@@ -27,8 +27,8 @@ importers:
         specifier: ^7.0.0
         version: 7.18.0(eslint@8.57.1)(typescript@5.8.3)
       changelogithub:
-        specifier: 13.15.0
-        version: 13.15.0(magicast@0.3.5)
+        specifier: 13.16.0
+        version: 13.16.0(magicast@0.3.5)
       dependency-cruiser:
         specifier: 16.10.3
         version: 16.10.3
@@ -3629,8 +3629,8 @@ packages:
     resolution: {integrity: sha512-cTZXBcJMl3pudE40WENOakXkcVtrbBpbkmSkM20NdRiUqa4+VYRdXdEsgQ0BNQ6JBE2YymTNWtPKVF7UCTN5+g==}
     hasBin: true
 
-  changelogithub@13.15.0:
-    resolution: {integrity: sha512-qPQ896hrTKXYHzFTH1c1O4KRfk4IwxOp22fKBUBGYqcB13z8B6bNoViSX50Z6SbmcQjHLHwyOMfACJVn74x5LA==}
+  changelogithub@13.16.0:
+    resolution: {integrity: sha512-O+OiuYG/JgUGENXt6M+eyjLBtGYwUPL5SqKU/9sngZS14fJ3LCIU7xPdWJoyzjAixGYwjuVLC1tZFbboxZ7zbQ==}
     engines: {node: '>=12.0.0'}
     hasBin: true
 
@@ -11748,7 +11748,7 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  changelogithub@13.15.0(magicast@0.3.5):
+  changelogithub@13.16.0(magicast@0.3.5):
     dependencies:
       ansis: 4.1.0
       c12: 3.0.4(magicast@0.3.5)
@@ -11758,6 +11758,7 @@ snapshots:
       execa: 9.6.0
       ofetch: 1.4.1
       semver: 7.7.2
+      tinyglobby: 0.2.14
     transitivePeerDependencies:
       - magicast
 
