@@ -295,14 +295,14 @@ importers:
         specifier: 3.864.0
         version: 3.864.0
       '@aws-sdk/client-dynamodb':
-        specifier: 3.864.0
-        version: 3.864.0
+        specifier: 3.868.0
+        version: 3.868.0
       '@aws-sdk/client-eventbridge':
         specifier: 3.864.0
         version: 3.864.0
       '@aws-sdk/lib-dynamodb':
-        specifier: 3.864.0
-        version: 3.864.0(@aws-sdk/client-dynamodb@3.864.0)
+        specifier: 3.868.0
+        version: 3.868.0(@aws-sdk/client-dynamodb@3.868.0)
       '@event-scout/construct-contracts':
         specifier: workspace:^0.8.0
         version: link:../../contracts/construct-contracts
@@ -466,8 +466,8 @@ packages:
     resolution: {integrity: sha512-IH3RSg/Zy2+yXQ2d4jmMk2U8A+BuJ9uNUYPWAg144yUUxanN1Czb+GyFKeJO4NGhVnn5D+j1YoRLpJN8PW2B0g==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/client-dynamodb@3.864.0':
-    resolution: {integrity: sha512-Z+8qCU8A8RKI/vaMZx3bUG3ZIvEBZzYRIEZA06Qx0QHttkDV/i2Q31Bs98Za/UV0aMXJYsgpHCvXeRgR7r8hYA==}
+  '@aws-sdk/client-dynamodb@3.868.0':
+    resolution: {integrity: sha512-a2uKLRplH3vTHgTHr+MaZ1YH0Sy0yVHK9rhM/drktxgXehMf4p7dZtt783c9SEupZvo46LxXryvwifoUdL4nRg==}
     engines: {node: '>=18.0.0'}
 
   '@aws-sdk/client-eventbridge@3.817.0':
@@ -570,11 +570,11 @@ packages:
     resolution: {integrity: sha512-TQVDkA/lV6ua75ELZaichMzlp6x7tDa1bqdy/+0ZftmODPtKXuOOEcJxmdN7Ui/YRo1gkRz2D9txYy7IlNg1Og==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/lib-dynamodb@3.864.0':
-    resolution: {integrity: sha512-arPH8sFUlF7Ul0xui6lr+eilpxnJ60yoF+oxu2TnGZ9NHsy1q+IAH0oJYuoxDlAGsbBtmdaZZZeKtYl6AyMYbw==}
+  '@aws-sdk/lib-dynamodb@3.868.0':
+    resolution: {integrity: sha512-VIdISBhlWDIaHaMF/Cg+xYdIct6nsc1oFV+LomW/Ebjq8J14yieZWnv10Iddy/YYGE0hS214La5KCaQBQ75Trw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
-      '@aws-sdk/client-dynamodb': ^3.864.0
+      '@aws-sdk/client-dynamodb': ^3.868.0
 
   '@aws-sdk/middleware-endpoint-discovery@3.862.0':
     resolution: {integrity: sha512-43KnrSlzsa6/locegW9SLe/kMv51PPPAslDbBuLVtLcFUNWuCE7wgKTTzMPeA+NJQHKuJTFRR2TLKPYEs+4VJA==}
@@ -668,11 +668,11 @@ packages:
     resolution: {integrity: sha512-wmBJqn1DRXnZu3b4EkE6CWnoWMo1ZMvlfkqU5zPz67xx1GMaXlDCchFvKAXMjk4jn/L1O3tKnoFDNsoLV1kgNQ==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/util-dynamodb@3.864.0':
-    resolution: {integrity: sha512-u1uYG/1KTXM5R+mzqKcJRsOVBEuRNGwj/rDoINAMx+vImF8TPZtaFR/PuoZqrDKsXMk9Xd3rADYCgdDjJM8+nQ==}
+  '@aws-sdk/util-dynamodb@3.868.0':
+    resolution: {integrity: sha512-Y+SBOBtAcLdRbBv8T2WtVOVYvTHxH23M0Ssm9WPQgJXiYtBDHvB4i1pgw/ECu/F4KRHKrkxzn4lwrF2XlryldA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
-      '@aws-sdk/client-dynamodb': ^3.864.0
+      '@aws-sdk/client-dynamodb': ^3.868.0
 
   '@aws-sdk/util-endpoints@3.808.0':
     resolution: {integrity: sha512-N6Lic98uc4ADB7fLWlzx+1uVnq04VgVjngZvwHoujcRg9YDhIg9dUDiTzD5VZv13g1BrPYmvYP1HhsildpGV6w==}
@@ -7588,7 +7588,7 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/client-dynamodb@3.864.0':
+  '@aws-sdk/client-dynamodb@3.868.0':
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
@@ -8154,11 +8154,11 @@ snapshots:
       mnemonist: 0.38.3
       tslib: 2.8.1
 
-  '@aws-sdk/lib-dynamodb@3.864.0(@aws-sdk/client-dynamodb@3.864.0)':
+  '@aws-sdk/lib-dynamodb@3.868.0(@aws-sdk/client-dynamodb@3.868.0)':
     dependencies:
-      '@aws-sdk/client-dynamodb': 3.864.0
+      '@aws-sdk/client-dynamodb': 3.868.0
       '@aws-sdk/core': 3.864.0
-      '@aws-sdk/util-dynamodb': 3.864.0(@aws-sdk/client-dynamodb@3.864.0)
+      '@aws-sdk/util-dynamodb': 3.868.0(@aws-sdk/client-dynamodb@3.868.0)
       '@smithy/core': 3.8.0
       '@smithy/smithy-client': 4.4.10
       '@smithy/types': 4.3.2
@@ -8436,9 +8436,9 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@aws-sdk/util-dynamodb@3.864.0(@aws-sdk/client-dynamodb@3.864.0)':
+  '@aws-sdk/util-dynamodb@3.868.0(@aws-sdk/client-dynamodb@3.868.0)':
     dependencies:
-      '@aws-sdk/client-dynamodb': 3.864.0
+      '@aws-sdk/client-dynamodb': 3.868.0
       tslib: 2.8.1
 
   '@aws-sdk/util-endpoints@3.808.0':
