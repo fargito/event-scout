@@ -30,8 +30,8 @@ importers:
         specifier: 13.16.0
         version: 13.16.0(magicast@0.3.5)
       dependency-cruiser:
-        specifier: 17.0.1
-        version: 17.0.1
+        specifier: 17.0.2
+        version: 17.0.2
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -91,8 +91,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.0.1
-        version: 17.0.1
+        specifier: 17.0.2
+        version: 17.0.2
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -149,8 +149,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.0.1
-        version: 17.0.1
+        specifier: 17.0.2
+        version: 17.0.2
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -195,8 +195,8 @@ importers:
         specifier: 3.2.4
         version: 3.2.4(vitest@3.2.4(@types/node@22.18.8)(jiti@2.4.2)(yaml@2.8.1))
       dependency-cruiser:
-        specifier: 17.0.1
-        version: 17.0.1
+        specifier: 17.0.2
+        version: 17.0.2
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -265,8 +265,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.0.1
-        version: 17.0.1
+        specifier: 17.0.2
+        version: 17.0.2
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -328,8 +328,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.0.1
-        version: 17.0.1
+        specifier: 17.0.2
+        version: 17.0.2
       esbuild:
         specifier: 0.25.10
         version: 0.25.10
@@ -398,8 +398,8 @@ importers:
         specifier: 10.4.2
         version: 10.4.2
       dependency-cruiser:
-        specifier: 17.0.1
-        version: 17.0.1
+        specifier: 17.0.2
+        version: 17.0.2
       esbuild:
         specifier: 0.25.10
         version: 0.25.10
@@ -3841,10 +3841,6 @@ packages:
     resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
     engines: {node: '>=18'}
 
-  commander@14.0.0:
-    resolution: {integrity: sha512-2uM9rYjPvyq39NwLRqaiLtWHyDC1FvryJDa2ATTVims5YAS4PupsEQsDvP14FqhFr0P49CYDugi59xaxJlTXRA==}
-    engines: {node: '>=20'}
-
   commander@14.0.1:
     resolution: {integrity: sha512-2JkV3gUZUVrbNA+1sjBOYLsMZ5cEEl8GTFP2a4AVz5hvasAMCQ1D2l2le/cX+pV4N6ZU17zjUahLpIXRrnWL8A==}
     engines: {node: '>=20'}
@@ -4112,8 +4108,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dependency-cruiser@17.0.1:
-    resolution: {integrity: sha512-4clZ8EPsOVoxGA8NMjaE95aJEO118Cd9D7gT5rysx5azij9cPiCSrnjYlZtV+90PFazlD2lZvjzBHkD1ZqGqlw==}
+  dependency-cruiser@17.0.2:
+    resolution: {integrity: sha512-Aryg/E8ostay8B7OBPqrxcxeGSgtPRKosP6do3L3TiPg4dAvIJFl2EFuG/mO8JAZv70pBTveKvKxhABPyNduvg==}
     engines: {node: ^20.12||^22||>=24}
     hasBin: true
 
@@ -4211,8 +4207,8 @@ packages:
   end-of-stream@1.4.4:
     resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
 
-  enhanced-resolve@5.18.2:
-    resolution: {integrity: sha512-6Jw4sE1maoRJo3q8MsSIn2onJFbLTOjY9hlx4DZXmOKvLRd1Ok2kXmAGXaafL2+ijsJZ1ClYbl/pmqr9+k4iUQ==}
+  enhanced-resolve@5.18.3:
+    resolution: {integrity: sha512-d4lC8xfavMeBjzGr2vECC3fsGXziXZQyJxD868h2M/mBI3PwAuODxAkLkq5HYuvrPYcUtiLzsTo8U3PgX3Ocww==}
     engines: {node: '>=10.13.0'}
 
   enquirer@2.3.6:
@@ -12026,8 +12022,6 @@ snapshots:
 
   commander@13.1.0: {}
 
-  commander@14.0.0: {}
-
   commander@14.0.1: {}
 
   commander@4.1.1: {}
@@ -12274,7 +12268,7 @@ snapshots:
 
   depd@2.0.0: {}
 
-  dependency-cruiser@17.0.1:
+  dependency-cruiser@17.0.2:
     dependencies:
       acorn: 8.15.0
       acorn-jsx: 5.3.2(acorn@8.15.0)
@@ -12282,8 +12276,8 @@ snapshots:
       acorn-loose: 8.5.2
       acorn-walk: 8.3.4
       ajv: 8.17.1
-      commander: 14.0.0
-      enhanced-resolve: 5.18.2
+      commander: 14.0.1
+      enhanced-resolve: 5.18.3
       ignore: 7.0.5
       interpret: 3.1.1
       is-installed-globally: 1.0.0
@@ -12378,7 +12372,7 @@ snapshots:
     dependencies:
       once: 1.4.0
 
-  enhanced-resolve@5.18.2:
+  enhanced-resolve@5.18.3:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.2.1
@@ -15671,7 +15665,7 @@ snapshots:
   tsconfig-paths-webpack-plugin@4.2.0:
     dependencies:
       chalk: 4.1.2
-      enhanced-resolve: 5.18.2
+      enhanced-resolve: 5.18.3
       tapable: 2.2.1
       tsconfig-paths: 4.2.0
 
