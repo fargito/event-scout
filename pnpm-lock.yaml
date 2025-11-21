@@ -352,8 +352,8 @@ importers:
   services/validation:
     dependencies:
       '@aws-sdk/client-cloudformation':
-        specifier: 3.936.0
-        version: 3.936.0
+        specifier: 3.938.0
+        version: 3.938.0
       '@aws-sdk/client-eventbridge':
         specifier: 3.936.0
         version: 3.936.0
@@ -458,8 +458,8 @@ packages:
     resolution: {integrity: sha512-GHVNRQ6CxlaKM8LOdd7gnhmQ82Cd4sUC4XNfgOIvhqg2YyK9XyqWPXVmg3yPH74UrHo2ZXsYScggmuQlLP1DXg==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/client-cloudformation@3.936.0':
-    resolution: {integrity: sha512-4+b1LlMaCToy3RflETH6YPzqOa98ovbtjzCreSoMXTdcoiuZ/ZnunRtUeJ2TVXMRA+WVzaIc68Wes2ee75nq6Q==}
+  '@aws-sdk/client-cloudformation@3.938.0':
+    resolution: {integrity: sha512-UjJe3ncOaVaNywc+ScqbnwQX+tKnsHSPNHM42xk63hpokE6BkCkdHsodVzD+zYIFp9/brfnhQreL17gW2dJ0cg==}
     engines: {node: '>=18.0.0'}
 
   '@aws-sdk/client-cognito-identity@3.936.0':
@@ -7421,7 +7421,7 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/client-cloudformation@3.936.0':
+  '@aws-sdk/client-cloudformation@3.938.0':
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
