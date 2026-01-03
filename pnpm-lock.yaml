@@ -30,8 +30,8 @@ importers:
         specifier: 14.0.0
         version: 14.0.0(magicast@0.3.5)
       dependency-cruiser:
-        specifier: 17.3.5
-        version: 17.3.5
+        specifier: 17.3.6
+        version: 17.3.6
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -91,8 +91,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.3.5
-        version: 17.3.5
+        specifier: 17.3.6
+        version: 17.3.6
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -149,8 +149,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.3.5
-        version: 17.3.5
+        specifier: 17.3.6
+        version: 17.3.6
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -195,8 +195,8 @@ importers:
         specifier: 4.0.16
         version: 4.0.16(vitest@4.0.16(@types/node@22.19.3)(jiti@2.6.1)(yaml@2.8.1))
       dependency-cruiser:
-        specifier: 17.3.5
-        version: 17.3.5
+        specifier: 17.3.6
+        version: 17.3.6
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -265,8 +265,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.3.5
-        version: 17.3.5
+        specifier: 17.3.6
+        version: 17.3.6
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -328,8 +328,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.3.5
-        version: 17.3.5
+        specifier: 17.3.6
+        version: 17.3.6
       esbuild:
         specifier: 0.27.2
         version: 0.27.2
@@ -398,8 +398,8 @@ importers:
         specifier: 10.4.4
         version: 10.4.4
       dependency-cruiser:
-        specifier: 17.3.5
-        version: 17.3.5
+        specifier: 17.3.6
+        version: 17.3.6
       esbuild:
         specifier: 0.27.2
         version: 0.27.2
@@ -4225,8 +4225,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dependency-cruiser@17.3.5:
-    resolution: {integrity: sha512-eAkyhfopzKfwes9ZZcuTPtrAJrdSRX1ASnRbgCN5Dvf69XshhGspRDUGhO6ugqKZyyVfEm8IF81UFWMTEzGXCw==}
+  dependency-cruiser@17.3.6:
+    resolution: {integrity: sha512-k0mXZaNvR2hZC0Dh2y4NGZZGqWLM6AbxQXmKL0T2m+KRE19nK5gAhm+PdV7f1L+AhdwwSOnebok7C6P27l2xXA==}
     engines: {node: ^20.12||^22||>=24}
     hasBin: true
 
@@ -5632,10 +5632,6 @@ packages:
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
     engines: {node: '>= 0.4'}
-
-  memoize@10.2.0:
-    resolution: {integrity: sha512-DeC6b7QBrZsRs3Y02A6A7lQyzFbsQbqgjI6UW0GigGWV+u1s25TycMr0XHZE4cJce7rY/vyw2ctMQqfDkIhUEA==}
-    engines: {node: '>=18'}
 
   meow@12.1.1:
     resolution: {integrity: sha512-BhXM0Au22RwUneMPwSCnyhTOizdWoIEPU9sp0Aqa1PnDMR5Wv2FGXYDjuzJEIX+Eo2Rb8xuYe5jrnm5QowQFkw==}
@@ -12469,7 +12465,7 @@ snapshots:
 
   depd@2.0.0: {}
 
-  dependency-cruiser@17.3.5:
+  dependency-cruiser@17.3.6:
     dependencies:
       acorn: 8.15.0
       acorn-jsx: 5.3.2(acorn@8.15.0)
@@ -12482,7 +12478,6 @@ snapshots:
       interpret: 3.1.1
       is-installed-globally: 1.0.0
       json5: 2.2.3
-      memoize: 10.2.0
       picomatch: 4.0.3
       prompts: 2.4.2
       rechoir: 0.8.0
@@ -14207,10 +14202,6 @@ snapshots:
   map-obj@4.3.0: {}
 
   math-intrinsics@1.1.0: {}
-
-  memoize@10.2.0:
-    dependencies:
-      mimic-function: 5.0.1
 
   meow@12.1.1: {}
 
