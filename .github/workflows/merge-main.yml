@@ -66,7 +66,7 @@ jobs:
         run: pnpm nx affected --targets=test-linter,test-type,test-unit,test-circular,test-cdk --parallel=2
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v5
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_STAGING }}
