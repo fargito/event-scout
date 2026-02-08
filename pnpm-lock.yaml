@@ -30,8 +30,8 @@ importers:
         specifier: 14.0.0
         version: 14.0.0(magicast@0.3.5)
       dependency-cruiser:
-        specifier: 17.3.7
-        version: 17.3.7
+        specifier: 17.3.8
+        version: 17.3.8
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -91,8 +91,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.3.7
-        version: 17.3.7
+        specifier: 17.3.8
+        version: 17.3.8
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -149,8 +149,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.3.7
-        version: 17.3.7
+        specifier: 17.3.8
+        version: 17.3.8
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -195,8 +195,8 @@ importers:
         specifier: 4.0.18
         version: 4.0.18(vitest@4.0.18(@types/node@22.19.10)(jiti@2.6.1)(yaml@2.8.1))
       dependency-cruiser:
-        specifier: 17.3.7
-        version: 17.3.7
+        specifier: 17.3.8
+        version: 17.3.8
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -265,8 +265,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.3.7
-        version: 17.3.7
+        specifier: 17.3.8
+        version: 17.3.8
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -328,8 +328,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.3.7
-        version: 17.3.7
+        specifier: 17.3.8
+        version: 17.3.8
       esbuild:
         specifier: 0.27.3
         version: 0.27.3
@@ -398,8 +398,8 @@ importers:
         specifier: 10.4.5
         version: 10.4.5
       dependency-cruiser:
-        specifier: 17.3.7
-        version: 17.3.7
+        specifier: 17.3.8
+        version: 17.3.8
       esbuild:
         specifier: 0.27.3
         version: 0.27.3
@@ -3929,10 +3929,6 @@ packages:
     resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
     engines: {node: '>=18'}
 
-  commander@14.0.2:
-    resolution: {integrity: sha512-TywoWNNRbhoD0BXs1P3ZEScW8W5iKrnbithIl0YH+uCmBd0QpPOA8yc82DS3BIE5Ma6FnBVUsJ7wVUDz4dvOWQ==}
-    engines: {node: '>=20'}
-
   commander@14.0.3:
     resolution: {integrity: sha512-H+y0Jo/T1RZ9qPP4Eh1pkcQcLRglraJaSLoyOtHxu6AapkjWVCy2Sit1QQ4x3Dng8qDlSsZEet7g5Pq06MvTgw==}
     engines: {node: '>=20'}
@@ -4200,8 +4196,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dependency-cruiser@17.3.7:
-    resolution: {integrity: sha512-WEEOrnf0eshNirg4CMWuB7kK+qVZ+fecW6EBJa6AomEFhDDZKi3Zel1Tyl4ihcWtiSDhF+vALQb8NJS+wQiwLA==}
+  dependency-cruiser@17.3.8:
+    resolution: {integrity: sha512-ziP2ziP7D6MVFK/mFTOQAAb7t2VAD6mhBMjD1Pu9CWDMzozssDN49RprKn8u85mTuK/W6kyiRg9WOyr1Y7lNqg==}
     engines: {node: ^20.12||^22||>=24}
     hasBin: true
 
@@ -4306,8 +4302,8 @@ packages:
   end-of-stream@1.4.4:
     resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
 
-  enhanced-resolve@5.18.4:
-    resolution: {integrity: sha512-LgQMM4WXU3QI+SYgEc2liRgznaD5ojbmY3sb8LxyguVkIg5FxdpTkvk72te2R38/TGKxH634oLxXRGY6d7AP+Q==}
+  enhanced-resolve@5.19.0:
+    resolution: {integrity: sha512-phv3E1Xl4tQOShqSte26C7Fl84EwUdZsyOuSSk9qtAGyyQs2s3jJzComh+Abf4g187lUUAvH+H26omrqia2aGg==}
     engines: {node: '>=10.13.0'}
 
   enquirer@2.3.6:
@@ -6567,6 +6563,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.7.4:
+    resolution: {integrity: sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   set-blocking@2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
 
@@ -6847,6 +6848,10 @@ packages:
 
   tapable@2.2.1:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
+    engines: {node: '>=6'}
+
+  tapable@2.3.0:
+    resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
     engines: {node: '>=6'}
 
   tar-stream@2.2.0:
@@ -12074,8 +12079,6 @@ snapshots:
 
   commander@13.1.0: {}
 
-  commander@14.0.2: {}
-
   commander@14.0.3: {}
 
   commander@4.1.1: {}
@@ -12321,15 +12324,15 @@ snapshots:
 
   depd@2.0.0: {}
 
-  dependency-cruiser@17.3.7:
+  dependency-cruiser@17.3.8:
     dependencies:
       acorn: 8.15.0
       acorn-jsx: 5.3.2(acorn@8.15.0)
       acorn-jsx-walk: 2.0.0
       acorn-loose: 8.5.2
       acorn-walk: 8.3.4
-      commander: 14.0.2
-      enhanced-resolve: 5.18.4
+      commander: 14.0.3
+      enhanced-resolve: 5.19.0
       ignore: 7.0.5
       interpret: 3.1.1
       is-installed-globally: 1.0.0
@@ -12338,7 +12341,7 @@ snapshots:
       prompts: 2.4.2
       rechoir: 0.8.0
       safe-regex: 2.1.1
-      semver: 7.7.3
+      semver: 7.7.4
       tsconfig-paths-webpack-plugin: 4.2.0
       watskeburt: 5.0.2
 
@@ -12427,10 +12430,10 @@ snapshots:
     dependencies:
       once: 1.4.0
 
-  enhanced-resolve@5.18.4:
+  enhanced-resolve@5.19.0:
     dependencies:
       graceful-fs: 4.2.11
-      tapable: 2.2.1
+      tapable: 2.3.0
 
   enquirer@2.3.6:
     dependencies:
@@ -15197,6 +15200,8 @@ snapshots:
 
   semver@7.7.3: {}
 
+  semver@7.7.4: {}
+
   set-blocking@2.0.0: {}
 
   set-function-length@1.2.2:
@@ -15511,6 +15516,8 @@ snapshots:
 
   tapable@2.2.1: {}
 
+  tapable@2.3.0: {}
+
   tar-stream@2.2.0:
     dependencies:
       bl: 4.1.0
@@ -15643,7 +15650,7 @@ snapshots:
   tsconfig-paths-webpack-plugin@4.2.0:
     dependencies:
       chalk: 4.1.2
-      enhanced-resolve: 5.18.4
+      enhanced-resolve: 5.19.0
       tapable: 2.2.1
       tsconfig-paths: 4.2.0
 
