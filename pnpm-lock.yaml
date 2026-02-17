@@ -76,7 +76,7 @@ importers:
     dependencies:
       '@swarmion/serverless-contracts':
         specifier: 0.35.0
-        version: 0.35.0(@serverless/typescript@3.38.0)(ajv@8.18.0)(aws-cdk-lib@2.238.0(constructs@10.4.5))(axios@1.13.5)
+        version: 0.35.0(@serverless/typescript@3.38.0)(ajv@8.18.0)(aws-cdk-lib@2.238.0(constructs@10.5.0))(axios@1.13.5)
       json-schema-to-ts:
         specifier: 3.1.1
         version: 3.1.1
@@ -134,7 +134,7 @@ importers:
         version: 5.3.8
       '@swarmion/serverless-contracts':
         specifier: 0.35.0
-        version: 0.35.0(@serverless/typescript@3.38.0)(ajv@8.18.0)(aws-cdk-lib@2.238.0(constructs@10.4.5))(axios@1.13.5)
+        version: 0.35.0(@serverless/typescript@3.38.0)(ajv@8.18.0)(aws-cdk-lib@2.238.0(constructs@10.5.0))(axios@1.13.5)
       axios:
         specifier: 1.13.5
         version: 1.13.5
@@ -183,10 +183,10 @@ importers:
         version: link:../lambda-assets
       aws-cdk-lib:
         specifier: 2.238.0
-        version: 2.238.0(constructs@10.4.5)
+        version: 2.238.0(constructs@10.5.0)
       constructs:
-        specifier: 10.4.5
-        version: 10.4.5
+        specifier: 10.5.0
+        version: 10.5.0
     devDependencies:
       '@types/node':
         specifier: 22.19.11
@@ -308,10 +308,10 @@ importers:
         version: link:../../contracts/construct-contracts
       '@swarmion/serverless-contracts':
         specifier: 0.35.0
-        version: 0.35.0(@serverless/typescript@3.38.0)(ajv@8.18.0)(aws-cdk-lib@2.238.0(constructs@10.4.5))(axios@1.13.5)
+        version: 0.35.0(@serverless/typescript@3.38.0)(ajv@8.18.0)(aws-cdk-lib@2.238.0(constructs@10.5.0))(axios@1.13.5)
       '@swarmion/serverless-helpers':
         specifier: 0.35.0
-        version: 0.35.0(@serverless/typescript@3.38.0)(@types/aws-lambda@8.10.160)(aws-cdk-lib@2.238.0(constructs@10.4.5))
+        version: 0.35.0(@serverless/typescript@3.38.0)(@types/aws-lambda@8.10.160)(aws-cdk-lib@2.238.0(constructs@10.5.0))
       '@types/aws-lambda':
         specifier: 8.10.160
         version: 8.10.160
@@ -375,7 +375,7 @@ importers:
     devDependencies:
       '@swarmion/serverless-helpers':
         specifier: 0.35.0
-        version: 0.35.0(@serverless/typescript@3.38.0)(@types/aws-lambda@8.10.160)(aws-cdk-lib@2.238.0(constructs@10.4.5))
+        version: 0.35.0(@serverless/typescript@3.38.0)(@types/aws-lambda@8.10.160)(aws-cdk-lib@2.238.0(constructs@10.5.0))
       '@swc-node/register':
         specifier: 1.11.1
         version: 1.11.1(@swc/core@1.4.14)(@swc/types@0.1.25)(typescript@5.9.3)
@@ -393,10 +393,10 @@ importers:
         version: 2.1106.0
       aws-cdk-lib:
         specifier: 2.238.0
-        version: 2.238.0(constructs@10.4.5)
+        version: 2.238.0(constructs@10.5.0)
       constructs:
-        specifier: 10.4.5
-        version: 10.4.5
+        specifier: 10.5.0
+        version: 10.5.0
       dependency-cruiser:
         specifier: 17.3.8
         version: 17.3.8
@@ -3928,8 +3928,8 @@ packages:
   console-control-strings@1.1.0:
     resolution: {integrity: sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==}
 
-  constructs@10.4.5:
-    resolution: {integrity: sha512-fOoP70YLevMZr5avJHx2DU3LNYmC6wM8OwdrNewMZou1kZnPGOeVzBrRjZNgFDHUlulYUjkpFRSpTE3D+n+ZSg==}
+  constructs@10.5.0:
+    resolution: {integrity: sha512-zWjwqIgk4nAWmQGrPnDWv+M2Yly6m7ROyqmmQVLgJiHnWP762It22uWFaF2Pu/sSx0u8WsoUcvt0PZ4DQIQYwQ==}
 
   conventional-changelog-angular@7.0.0:
     resolution: {integrity: sha512-ROjNchA9LgfNMTTFSIWPzebCwOGFdgkEq45EnvvrmSLvCtAw0HSmrCs7/ty+wAeYUZyNay0YMUNYFTRL72PkBQ==}
@@ -11060,11 +11060,11 @@ snapshots:
       - supports-color
       - verdaccio
 
-  '@swarmion/serverless-contracts@0.35.0(@serverless/typescript@3.38.0)(ajv@8.18.0)(aws-cdk-lib@2.238.0(constructs@10.4.5))(axios@1.13.5)':
+  '@swarmion/serverless-contracts@0.35.0(@serverless/typescript@3.38.0)(ajv@8.18.0)(aws-cdk-lib@2.238.0(constructs@10.5.0))(axios@1.13.5)':
     dependencies:
       '@aws-sdk/client-eventbridge': 3.817.0
       '@aws-sdk/client-sqs': 3.817.0
-      '@swarmion/serverless-helpers': 0.35.0(@serverless/typescript@3.38.0)(@types/aws-lambda@8.10.149)(aws-cdk-lib@2.238.0(constructs@10.4.5))
+      '@swarmion/serverless-helpers': 0.35.0(@serverless/typescript@3.38.0)(@types/aws-lambda@8.10.149)(aws-cdk-lib@2.238.0(constructs@10.5.0))
       '@types/aws-lambda': 8.10.149
       '@types/http-errors': 2.0.4
       http-errors: 2.0.0
@@ -11085,18 +11085,18 @@ snapshots:
       - aws-cdk-lib
       - aws-crt
 
-  '@swarmion/serverless-helpers@0.35.0(@serverless/typescript@3.38.0)(@types/aws-lambda@8.10.149)(aws-cdk-lib@2.238.0(constructs@10.4.5))':
+  '@swarmion/serverless-helpers@0.35.0(@serverless/typescript@3.38.0)(@types/aws-lambda@8.10.149)(aws-cdk-lib@2.238.0(constructs@10.5.0))':
     dependencies:
       '@serverless/typescript': 3.38.0
       '@types/aws-lambda': 8.10.149
-      aws-cdk-lib: 2.238.0(constructs@10.4.5)
+      aws-cdk-lib: 2.238.0(constructs@10.5.0)
       json-schema-to-ts: 3.1.1
 
-  '@swarmion/serverless-helpers@0.35.0(@serverless/typescript@3.38.0)(@types/aws-lambda@8.10.160)(aws-cdk-lib@2.238.0(constructs@10.4.5))':
+  '@swarmion/serverless-helpers@0.35.0(@serverless/typescript@3.38.0)(@types/aws-lambda@8.10.160)(aws-cdk-lib@2.238.0(constructs@10.5.0))':
     dependencies:
       '@serverless/typescript': 3.38.0
       '@types/aws-lambda': 8.10.160
-      aws-cdk-lib: 2.238.0(constructs@10.4.5)
+      aws-cdk-lib: 2.238.0(constructs@10.5.0)
       json-schema-to-ts: 3.1.1
 
   '@swc-node/core@1.14.1(@swc/core@1.4.14)(@swc/types@0.1.25)':
@@ -11602,12 +11602,12 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  aws-cdk-lib@2.238.0(constructs@10.4.5):
+  aws-cdk-lib@2.238.0(constructs@10.5.0):
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.263
       '@aws-cdk/asset-node-proxy-agent-v6': 2.1.0
       '@aws-cdk/cloud-assembly-schema': 48.20.0
-      constructs: 10.4.5
+      constructs: 10.5.0
 
   aws-cdk@2.1106.0: {}
 
@@ -11990,7 +11990,7 @@ snapshots:
 
   console-control-strings@1.1.0: {}
 
-  constructs@10.4.5: {}
+  constructs@10.5.0: {}
 
   conventional-changelog-angular@7.0.0:
     dependencies:
