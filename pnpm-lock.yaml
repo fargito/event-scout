@@ -30,8 +30,8 @@ importers:
         specifier: 14.0.0
         version: 14.0.0(magicast@0.3.5)
       dependency-cruiser:
-        specifier: 17.3.10
-        version: 17.3.10
+        specifier: 17.4.0
+        version: 17.4.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -91,8 +91,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.3.10
-        version: 17.3.10
+        specifier: 17.4.0
+        version: 17.4.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -149,8 +149,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.3.10
-        version: 17.3.10
+        specifier: 17.4.0
+        version: 17.4.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -195,8 +195,8 @@ importers:
         specifier: 4.1.5
         version: 4.1.5(vitest@4.1.5)
       dependency-cruiser:
-        specifier: 17.3.10
-        version: 17.3.10
+        specifier: 17.4.0
+        version: 17.4.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -265,8 +265,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.3.10
-        version: 17.3.10
+        specifier: 17.4.0
+        version: 17.4.0
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -328,8 +328,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1
       dependency-cruiser:
-        specifier: 17.3.10
-        version: 17.3.10
+        specifier: 17.4.0
+        version: 17.4.0
       esbuild:
         specifier: 0.28.0
         version: 0.28.0
@@ -398,8 +398,8 @@ importers:
         specifier: 10.6.0
         version: 10.6.0
       dependency-cruiser:
-        specifier: 17.3.10
-        version: 17.3.10
+        specifier: 17.4.0
+        version: 17.4.0
       esbuild:
         specifier: 0.28.0
         version: 0.28.0
@@ -4109,8 +4109,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dependency-cruiser@17.3.10:
-    resolution: {integrity: sha512-jF5WaIb+O+wLabXrQE7iBY2zYBEW8VlnuuL0+iZPvZHGhTaAYdLk31DI0zkwhcGE8CiHcDwGhMnn3PfOAYnVdQ==}
+  dependency-cruiser@17.4.0:
+    resolution: {integrity: sha512-+WdFoOb+fT1XNC0iPqOyLpfhLd8xVh7eLXJxPAtiXCS+YmXzGrjqVTte7+L8SZIsnJj0aFhb8LxECIBJY5TTIA==}
     engines: {node: ^20.12||^22||>=24}
     hasBin: true
 
@@ -4224,8 +4224,8 @@ packages:
   end-of-stream@1.4.5:
     resolution: {integrity: sha512-ooEGc6HP26xXq/N+GCGOT0JKCLDGrq2bQUZrQ7gyrJiZANJ/8YDTxTpQBXGMn+WbIQXNVpyWymm7KYVICQnyOg==}
 
-  enhanced-resolve@5.20.1:
-    resolution: {integrity: sha512-Qohcme7V1inbAfvjItgw0EaxVX5q2rdVEZHRBrEQdRZTssLDGsL8Lwrznl8oQ/6kuTJONLaDcGjkNP247XEhcA==}
+  enhanced-resolve@5.21.0:
+    resolution: {integrity: sha512-otxSQPw4lkOZWkHpB3zaEQs6gWYEsmX4xQF68ElXC/TWvGxGMSGOvoNbaLXm6/cS/fSfHtsEdw90y20PCd+sCA==}
     engines: {node: '>=10.13.0'}
 
   enquirer@2.3.6:
@@ -6799,6 +6799,10 @@ packages:
 
   tapable@2.3.0:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
+    engines: {node: '>=6'}
+
+  tapable@2.3.3:
+    resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
     engines: {node: '>=6'}
 
   tar-stream@2.2.0:
@@ -11989,7 +11993,7 @@ snapshots:
 
   depd@2.0.0: {}
 
-  dependency-cruiser@17.3.10:
+  dependency-cruiser@17.4.0:
     dependencies:
       acorn: 8.16.0
       acorn-jsx: 5.3.2(acorn@8.16.0)
@@ -11997,7 +12001,7 @@ snapshots:
       acorn-loose: 8.5.2
       acorn-walk: 8.3.5
       commander: 14.0.3
-      enhanced-resolve: 5.20.1
+      enhanced-resolve: 5.21.0
       ignore: 7.0.5
       interpret: 3.1.1
       is-installed-globally: 1.0.0
@@ -12101,10 +12105,10 @@ snapshots:
     dependencies:
       once: 1.4.0
 
-  enhanced-resolve@5.20.1:
+  enhanced-resolve@5.21.0:
     dependencies:
       graceful-fs: 4.2.11
-      tapable: 2.3.0
+      tapable: 2.3.3
 
   enquirer@2.3.6:
     dependencies:
@@ -15241,6 +15245,8 @@ snapshots:
 
   tapable@2.3.0: {}
 
+  tapable@2.3.3: {}
+
   tar-stream@2.2.0:
     dependencies:
       bl: 4.1.0
@@ -15376,7 +15382,7 @@ snapshots:
   tsconfig-paths-webpack-plugin@4.2.0:
     dependencies:
       chalk: 4.1.2
-      enhanced-resolve: 5.20.1
+      enhanced-resolve: 5.21.0
       tapable: 2.3.0
       tsconfig-paths: 4.2.0
 
