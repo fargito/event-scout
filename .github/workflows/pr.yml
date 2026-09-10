@@ -39,7 +39,7 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: 💾 Cache Nx cache
         id: package-cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: |
             nx-cache
